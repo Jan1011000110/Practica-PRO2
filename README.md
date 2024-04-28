@@ -1,5 +1,13 @@
 # PRACTICA-PRO2
 
+
+Clase Cuenca:
+    - Contiene:
+        - Clase Barco
+        - Clase Ciudades
+        - Clase Productos
+        - Clase Bintree
+
 Clase Barco:
     - Contiene:
         - Clase ciudades
@@ -12,11 +20,10 @@ Clase Barco:
 Clase Ciudades:
     - Contiene:
         - Clase Ciudad
-        - Clase BinTree
     - Resuelve principales:
         - Leer rio
         - Leer inventarios
-        - Escribir ciudad
+        - Devuelve inventario ciudad
         - Poner producto ciudad
         - Modificar producto ciudad
         - Quitar producto ciudad
@@ -26,14 +33,25 @@ Clase Ciudades:
     - Resuelve secundarias:
         - Existe ciudad
 
+Clase Productos:
+    - Contiene:
+        - Producto
+    - Resuelve principales:
+        - Numero productos
+        - Escribir producto
+        - Leer conjunto de productos
+        - Consultar producto
+    - Resuelve secundarias:
+        - Existe producto
+
 Clase Ciudad:
     - Contiene:
         - Inventario
     - Resuelve principales:
         - Leer inventario
     - Resuelve secundarias
-        - Existe producto en inventario
-        - Escribir inventario
+        - Inventario contiene producto
+        - Devuelve inventario
         - Poner producto inventario
         - Modificar producto inventario
         - Quitar producto inventario
@@ -45,8 +63,8 @@ Clase Inventario:
         - Producto
     - Resuelve principales:
     - Resuelve secundarias:
-        - Existe producto
-        - Escribe producto
+        - Imprimir peso y volumen totales
+        - Contiene producto
         - Poner producto
         - Modificar producto
         - Quitar producto
@@ -56,21 +74,13 @@ Clase Inventario:
         - Consultar cantidad actual producto
         - Consultar cantidad necesitada producto
 
-Clase Productos:
-    - Contiene:
-        - Producto
-    - Resuelve principales:
-        - Numero productos
-        - Escribir producto
-        - Leer conjunto de productos
-    - Resuelve secundarias:
-        - Existe producto
-
 Clase Producto:
     - Contiene
     - Resuelve principales:
     - Resuelve secundarias:
         - Escribir
         - Leer
+        - Consultar Volumen
+        - Consultar Peso
 
 

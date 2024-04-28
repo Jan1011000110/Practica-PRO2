@@ -48,6 +48,13 @@ public:
 
     bool existe_producto(int id) const;
 
+    /** @brief Devuelve el producto con identificador id.
+     *      \pre <em>Existe un producto con identificador id.</em>
+     *      \post Devuelve el producto con identificador id.
+    */
+
+    Producto consultar_producto(int id) const;
+
     // Escritura
     
     /** @brief Escribe el producto con identificador id

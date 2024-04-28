@@ -9,7 +9,12 @@ int Cjt_productos::numero_productos() const
 
 bool Cjt_productos::existe_producto(int id) const
 {
-    return id <= numero_de_productos; 
+    return id <= numero_productos(); 
+}
+
+Producto Cjt_productos::consultar_producto(int id) const
+{
+    return productos[id - 1];
 }
 
 void Cjt_productos::escribir_producto(int id) const 

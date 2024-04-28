@@ -13,15 +13,15 @@ using namespace std;
 
 /** @class
  *      @brief Representa un producto.
- *      
- *      Dispone de ciertos atributos que definen al producto.
 */
 
 
 class Producto 
 {
 private:    
+    /** @brief Peso del producto.*/
     int peso;
+    /** @brief Volumen del producto.*/
     int volumen;
 public:
     // Constructoras
@@ -40,6 +40,22 @@ public:
     */
 
     Producto(int peso, int volumen);
+
+    // Consultoras
+
+    /** @brief Devuelve el peso del parametro implicito.
+     *      \pre <em>Cierto.</em>
+     *      \post Devuelve el peso del parametro implicito.
+    */
+
+    int consultar_peso() const;
+
+    /** @brief Devuelve el volumen del parametro implicito.
+     *      \pre <em>Cierto.</em>
+     *      \post Devuelve el volumen del parametro implicito.
+    */
+
+    int consultar_volumen() const;
 
     // Escritura
 
