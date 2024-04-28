@@ -62,7 +62,7 @@ Clase Productos:
     - Resuelve principales:
         - Numero productos
         - Escribir producto
-        - Agregar producto
+        - Leer conjunto de productos
     - Resuelve secundarias:
         - Existe producto
 
@@ -71,5 +71,6 @@ Clase Producto:
     - Resuelve principales:
     - Resuelve secundarias:
         - Escribir
+        - Leer
 
 

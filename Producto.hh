@@ -43,11 +43,20 @@ public:
 
     // Escritura
 
-    /** @brief Operacion de escritura.
+    /** @brief Operación de escritura.
      *      \pre <em>Cierto.</em>
      *      \post Se han escrito los atributos del parámetro implicito en el canal standard de salida.
     */
     void escribir() const;
+
+    // Lectura
+
+    /** @brief Operación de lectura.
+     *      \pre <em>Està disponible en el canal estandard de entrada dos enteros, los atributos del parametro implicito.</em>
+     *      \post El paramentro implicito ahora tiene los atributos con los valores leidos.
+    */      
+
+    void leer();
 
 };
 

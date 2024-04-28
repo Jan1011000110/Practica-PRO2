@@ -13,3 +13,9 @@ void Producto::escribir() const
     cout << "Peso: " << peso << endl;
     cout << "Volumen: " << volumen << endl;
 }
+
+void Producto::leer()
+{
+    cin >> peso;
+    cin >> volumen;
+}
