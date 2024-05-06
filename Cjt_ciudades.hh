@@ -3,12 +3,10 @@
  *    
  */
 
-
 #ifndef CJT_CIUDADES_HH
 #define CJT_CIUDADES_HH
 
 #include "Ciudad.hh"
-
 
 #ifndef NO_DIAGRAM
 #include <string>
@@ -27,7 +25,7 @@ public:
     // Constructoras
 
     /** @brief Creadora por defecto.
-     *      Se ejecuta automáticamente al declarar un inventario.
+     *      Se ejecuta automáticamente al declarar un conjunto de ciudades.
      *      \pre <em>Cierto.</em>
      *      \post El resultado es un conjunto de ciudades el cual todos sus atributos no estan inicializados.
     */
@@ -42,7 +40,7 @@ public:
      *      con la cantidad indicada y se ha modificado el peso y el volumen total del inventario.
     */
 
-    void modifica_cantidad_disponible(string &ciudad_id, int prod_id, int cantidad_disponible, Producto &prod);
+    void modificar_cantidad_disponible(string &ciudad_id, int prod_id, int cantidad_disponible, Producto &prod);
 
     /** @brief Modifica la cantidad requerida del producto tipo prod_id de la ciudad con identificador ciudad_id.
      *      \pre <em>La ciudad con identificador ciudad_id existe y contiene el producto tipo prod_id.</em>
@@ -50,7 +48,7 @@ public:
      *      con la cantidad indicada.
     */
 
-    void modifica_cantidad_requerida(string &ciudad_id, int prod_id, int cantidad_requerida, Producto &prod);
+    void modificar_cantidad_requerida(string &ciudad_id, int prod_id, int cantidad_requerida);
 
 
     /** @brief Quita el producto tipo prod_id de la ciudad con identificador ciudad_id.
@@ -63,12 +61,19 @@ public:
 
     // Consultoras
 
+    /** @brief Devuelve si la ciudad con identificador ciudad_id existe.
+     *      \pre <em>Cierto.</em>
+     *      \post Devuelve cierto si la ciudad con identificador ciudad_id existe, falso en caso contrario.
+     */
+
+    bool existe_ciudad(string &ciudad_id) const;
+
     /** @brief Devuelve el inventario de la ciudad con identificador ciudad_id.
      *      \pre <em>La ciudad con identificador ciudad_id existe</em>
      *      \post Devuelve el inventario de la ciudad con identificador ciudad_id.
      */
 
-    Inventario consulta_inventario(string &ciudad_id);
+    Inventario consultar_inventario(string &ciudad_id);
 
     /** @brief Comprueba si la ciudad con identificador ciudad_id contiene un producto tipo prod_id.
      *      \pre <em>La ciudad con identificador ciudad_id existe.</em>
@@ -82,14 +87,25 @@ public:
      *      \post Devuelve la cantidad disponible del producto tipo prod_id de la ciuadd con identificador ciudad_id.
     */
 
-    int consulta_cantidad_disponible(string &ciudad_id, int prod_id);
+    int consultar_cantidad_disponible(string &ciudad_id, int prod_id);
 
     /** @brief Devuelve la cantidad requerida del producto tipo prod_id de la ciudad con identificador ciudad_id.
      *      \pre <em>La ciudad con identificador ciudad_id existe y contiene el producto tipo prod_id.</em>
      *      \post Devuelve la cantidad requerida del producto tipo prod_id de la ciuadd con identificador ciudad_id.
     */
 
-    int consulta_cantidad_requerida(string &ciudad_id, int prod_id);
+    int consultar_cantidad_requerida(string &ciudad_id, int prod_id);
+
+    // Lectura
+
+    /** @brief Lee el inventario de la ciudad con identificador ciudad_id.
+     *      \pre <em>Está disponible en el canal de entrada un entero n positivo 
+     *      y a continuación n lineas, cada una de ellas con el identificador del producto, 
+     *      cuantas unidades tiene la ciudad y cuantas necesita de ese producto.</em>
+     *      \post Se han agregado n productos al inventario de la ciudad con identificador ciudad_id.
+     */
+
+    void leer_inventario(string &ciudad_id, Cjt_productos &productos);
 
     // Escritura
 

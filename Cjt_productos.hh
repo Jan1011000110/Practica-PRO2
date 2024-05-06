@@ -69,7 +69,7 @@ public:
     /** @brief Lee un conjunto de productos nuevos
      *      \pre <em>Está disponible en el canal de entrada un entero n positivo 
      *      y a continuación los parametros de n productos nuevos.</em>
-     *      \post Se han agregado n productos nuevos al vector productos y se ha actualizado el numero de productos totales
+     *      \post Se han agregado n productos nuevos al vector productos y se ha actualizado el numero de productos totales.
     */
 
     void leer_productos();

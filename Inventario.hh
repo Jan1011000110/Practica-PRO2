@@ -54,7 +54,7 @@ public:
      *      con la cantidad indicada y se ha modificado el peso y el volumen total del inventario.
     */
 
-    void modifica_cantidad_disponible(int id, int cantidad_disponible, Producto &prod);
+    void modificar_cantidad_disponible(int id, int cantidad_disponible, Producto &prod);
 
     /** @brief Modifica la cantidad disponible del producto con identificador id.
      *      \pre <em>El inventario contiene el producto con identificador id.</em>
@@ -62,14 +62,20 @@ public:
      *      con la cantidad indicada.
     */
 
-    void modifica_cantidad_requerida(int id, int cantidad_requerida, Producto &prod);
+    void modificar_cantidad_requerida(int id, int cantidad_requerida);
+
+    /** @brief Modifica la cantidad disponible y requerida del producto con identificador id.
+     *      \pre <em>El inventario contiene el producto con identificador id.</em>
+     *      \post Se ha modificado las cantidad requerida y disponible del producto con identificador id del inventario 
+     *      con la cantidad indicada y se ha modificado el peso y el volumen total del inventario.
+    */
+
+    void poner_producto(int id, int cantidad_disponible, int cantidad_requerida, Producto &prod);
 
     /** @brief Quita el producto prod con identificador id del inventario.
      *      \pre <em>El inventario contiene el producto con identificador id.</em>
      *      \post Se ha eliminado el producto con identificador id del inventario.
     */
-
-
 
     void quitar_producto(int id, Producto &prod);
 
@@ -88,14 +94,14 @@ public:
      *      \post Devuelve la cantidad disponible del producto con identificador id.
     */
 
-    int consulta_cantidad_disponible(int id);
+    int consultar_cantidad_disponible(int id);
 
     /** @brief Devuelve la cantidad requerida del producto con identificador id.
      *      \pre <em>El inventario contiene el producto con identificador id.</em>
      *      \post Devuelve la cantidad requerida del producto con identificador id.
     */
 
-    int consulta_cantidad_requerida(int id);
+    int consultar_cantidad_requerida(int id);
 
     // Escritura
 

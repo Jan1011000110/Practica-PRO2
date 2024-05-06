@@ -6,6 +6,7 @@
 #define CIUDAD_HH
 
 #include "Inventario.hh"
+#include "Cjt_productos.hh"
 
 #ifndef NO_DIAGRAM
 #include <map>
@@ -44,7 +45,7 @@ public:
      *      con la cantidad indicada y se ha modificado el peso y el volumen total del inventario.
     */
 
-    void modifica_cantidad_disponible(int id, int cantidad_disponible, Producto &prod);
+    void modificar_cantidad_disponible(int id, int cantidad_disponible, Producto &prod);
 
     /** @brief Modifica la cantidad disponible del producto con identificador id.
      *      \pre <em>El inventario contiene el producto con identificador id.</em>
@@ -52,7 +53,7 @@ public:
      *      con la cantidad indicada.
     */
 
-    void modifica_cantidad_requerida(int id, int cantidad_requerida, Producto &prod);
+    void modificar_cantidad_requerida(int id, int cantidad_requerida);
 
 
     /** @brief Quita el producto prod con identificador id del inventario.
@@ -70,7 +71,7 @@ public:
      *      \post Devuelve el inventario del parametro implicito.
      */
 
-    Inventario consulta_inventario() const;
+    Inventario consultar_inventario() const;
 
     /** @brief Comprueba si el inventario contiene un producto con identificador id.
      *      \pre <em>Cierto.</em>
@@ -84,16 +85,25 @@ public:
      *      \post Devuelve la cantidad disponible del producto con identificador id.
     */
 
-    int consulta_cantidad_disponible(int id);
+    int consultar_cantidad_disponible(int id);
 
     /** @brief Devuelve la cantidad requerida del producto con identificador id.
      *      \pre <em>El inventario contiene el producto con identificador id.</em>
      *      \post Devuelve la cantidad requerida del producto con identificador id.
     */
 
-    int consulta_cantidad_requerida(int id);
+    int consultar_cantidad_requerida(int id);
 
     // Lectura
+
+    /** @brief Lee el inventario de la ciudad.
+     *      \pre <em>Está disponible en el canal de entrada un entero n positivo 
+     *      y a continuación n lineas, cada una de ellas con el identificador del producto, 
+     *      cuantas unidades tiene la ciudad y cuantas necesita de ese producto.</em>
+     *      \post Se han agregado n productos al inventario de la ciudad.
+     */
+
+    void leer_inventario(Cjt_productos &productos);
 
     // Escritura
 
