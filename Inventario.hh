@@ -54,7 +54,7 @@ public:
      *      con la cantidad indicada y se ha modificado el peso y el volumen total del inventario.
     */
 
-    void modificar_cantidad_disponible(int id, int cantidad_disponible, Producto &prod);
+    void modificar_cantidad_disponible(int id, int cantidad_disponible, const Producto &prod);
 
     /** @brief Modifica la cantidad disponible del producto con identificador id.
      *      \pre <em>El inventario contiene el producto con identificador id.</em>
@@ -70,14 +70,14 @@ public:
      *      con la cantidad indicada y se ha modificado el peso y el volumen total del inventario.
     */
 
-    void poner_producto(int id, int cantidad_disponible, int cantidad_requerida, Producto &prod);
+    void poner_producto(int id, int cantidad_disponible, int cantidad_requerida, const Producto &prod);
 
     /** @brief Quita el producto prod con identificador id del inventario.
      *      \pre <em>El inventario contiene el producto con identificador id.</em>
      *      \post Se ha eliminado el producto con identificador id del inventario.
     */
 
-    void quitar_producto(int id, Producto &prod);
+    void quitar_producto(int id, const Producto &prod);
 
 
     // Consultoras

@@ -1,6 +1,10 @@
 #include "Cjt_productos.hh"
 
-Cjt_productos::Cjt_productos() {}
+Cjt_productos::Cjt_productos() 
+{
+    numero_de_productos = 0;
+    productos = {Producto()}; // fill with empty producto to get 1-indexing
+}
 
 int Cjt_productos::numero_productos() const
 {
@@ -9,17 +13,17 @@ int Cjt_productos::numero_productos() const
 
 bool Cjt_productos::existe_producto(int id) const
 {
-    return id <= numero_productos(); 
+    return 1 <= id and id <= numero_productos(); 
 }
 
 Producto Cjt_productos::consultar_producto(int id) const
 {
-    return productos[id - 1];
+    return productos[id];
 }
 
 void Cjt_productos::escribir_producto(int id) const 
 {
-    productos[id - 1].escribir();
+    productos[id].escribir();
 }
 
 void Cjt_productos::leer_productos()

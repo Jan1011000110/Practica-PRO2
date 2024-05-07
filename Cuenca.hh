@@ -36,16 +36,37 @@ public:
 
     void redistribuir();
 
+    void modificar_barco();
+
+    void poner_producto(string &ciudad_id, int prod_id, int cantidad_disponible, int cantidad_requerida);
+
+    void modificar_producto(string &ciudad_id, int prod_id, int cantidad_disponible, int cantidad_requerida);
+
+    void quitar_producto(string &ciudad_id, int prod_id);
+
+    // Consultoras
+
+    void numero_productos() const;
+
     // Lectura
 
     void leer_productos();
 
     void leer_inventario(string &ciudad_id);
 
+    void leer_inventarios();
+
     void leer_rio();
 
     BinTree<string> construir_estructura();
 
+    // Escritura
+
+    void escribir_barco() const;
+
+    void escribir_producto(int prod_id) const;
+
+    void escribir_ciudad(string &ciudad_id);
 };
 
 #endif

@@ -34,13 +34,17 @@ public:
 
     // Modificadoras
 
+    void poner_ciudad(string &ciudad_id);
+
+    void poner_producto(string &ciudad_id, int prod_id, int cantidad_disponible, int cantidad_requerida, const Producto &prod);
+
     /** @brief Modifica la cantidad disponible del producto tipo prod_id de la ciudad con identificador ciudad_id.
      *      \pre <em>La ciudad con identificador ciudad_id existe y contiene el producto con tipo prod_id.</em>
      *      \post Se ha modificado las cantidad disponible del producto tipo prod_id de la ciudad con identificador ciudad_id 
      *      con la cantidad indicada y se ha modificado el peso y el volumen total del inventario.
     */
 
-    void modificar_cantidad_disponible(string &ciudad_id, int prod_id, int cantidad_disponible, Producto &prod);
+    void modificar_cantidad_disponible(string &ciudad_id, int prod_id, int cantidad_disponible, const Producto &prod);
 
     /** @brief Modifica la cantidad requerida del producto tipo prod_id de la ciudad con identificador ciudad_id.
      *      \pre <em>La ciudad con identificador ciudad_id existe y contiene el producto tipo prod_id.</em>
@@ -56,7 +60,7 @@ public:
      *      \post Se ha eliminado el producto tipo prod_id de la ciuad con identificador ciudad_id.
     */
 
-    void quitar_producto(string &ciudad_id, int id, Producto &prod);
+    void quitar_producto(string &ciudad_id, int id, const Producto &prod);
 
 
     // Consultoras
@@ -105,7 +109,7 @@ public:
      *      \post Se han agregado n productos al inventario de la ciudad con identificador ciudad_id.
      */
 
-    void leer_inventario(string &ciudad_id, Cjt_productos &productos);
+    void leer_inventario(string &ciudad_id, const Cjt_productos &productos);
 
     // Escritura
 

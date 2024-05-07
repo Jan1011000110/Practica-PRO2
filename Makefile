@@ -1,41 +1,54 @@
 # OPCIONS = -D_JUDGE_ -D_GLIBCXX_DEBUG -O2 -Wall -Wextra -Werror -Wno-uninitialized -Wno-sign-compare -std=c++11
 
-# SRCS = Cuenca.cc Barco.cc Cjt_ciudades.cc Cjt_productos.cc Ciudad.cc Producto.cc Inventario.cc program.cc
-# OBJS = $(SRCS:.cc=.o)
-# EXEC = program.exe
+# program.exe: program.o Cuenca.o Barco.o Cjt_ciudades.o Ciudad.o Cjt_productos.o Producto.o Inventario.o
+# 	g++ -o program.exe *.o
 
-# $(EXEC): $(OBJS)
-# 	g++ $(OPCIONS) $(OBJS) -o $(EXEC)
+# Cuenca.o: Cuenca.cc Cuenca.hh Cjt_ciudades.hh Cjt_productos.hh Barco.hh BinTree.hh
+# 	g++ -c Cuenca.cc $(OPCIONS)
 
-# .cc.o:
-# 	$(OPCIONS) -c $< -o $@
+# Cjt_ciudades.o: Cjt_ciudades.cc Cjt_ciudades.hh Ciudad.hh
+# 	g++ -c Cjt_ciudades.cc $(OPCIONS)
 
-OPCIONS = -D_JUDGE_ -D_GLIBCXX_DEBUG -O2 -Wall -Wextra -Werror -Wno-uninitialized -Wno-sign-compare -std=c++11
+# Ciudad.o: Ciudad.cc Ciudad.hh Inventario.hh Cjt_productos.hh 
+# 	g++ -c Ciudad.cc $(OPCIONS)
 
-program.exe: program.o Cuenca.o Barco.o Cjt_ciudades.o Ciudad.o Cjt_productos.o Producto.o Inventario.o
-	g++ -o program.exe *.o
+# Inventario.o: Inventario.cc Inventario.hh Producto.hh
+# 	g++ -c Inventario.cc $(OPCIONS)
 
-Cuenca.o: Cuenca.cc Cuenca.hh Cjt_ciudades.hh Cjt_productos.hh Barco.hh BinTree.hh
-	g++ -c Cuenca.cc $(OPCIONS)
+# Cjt_productos.o: Cjt_productos.cc Cjt_productos.hh Producto.hh
+# 	g++ -c Cjt_productos.cc $(OPCIONS)
 
-Cjt_ciudades.o: Cjt_ciudades.cc Cjt_ciudades.hh Ciudad.hh
-	g++ -c Cjt_ciudades.cc $(OPCIONS)
+# Producto.o: Producto.cc Producto.hh
+# 	g++ -c Producto.cc $(OPCIONS)
 
-Ciudad.o: Ciudad.cc Ciudad.hh Inventario.hh Cjt_productos.hh 
-	g++ -c Ciudad.cc $(OPCIONS)
+# run: program.exe
+# 	./program.exe < sample/sample.inp
 
-Inventario.o: Inventario.cc Inventario.hh Producto.hh
-	g++ -c Inventario.cc $(OPCIONS)
+# clean:
+# 	rm *.o
+# 	rm *.exe
 
-Cjt_productos.o: Cjt_productos.cc Cjt_productos.hh Producto.hh
-	g++ -c Cjt_productos.cc $(OPCIONS)
+CC=g++
+CFLAGS=-c -Wall
+LDFLAGS=
 
-Producto.o: Producto.cc Producto.hh
-	g++ -c Producto.cc $(OPCIONS)
+# Source files
+SOURCES=program.cc Cuenca.cc Cjt_ciudades.cc Barco.cc Cjt_productos.cc Ciudad.cc Inventario.cc Producto.cc
+# Object files
+OBJECTS=$(SOURCES:.cc=.o)
+# Executable name
+EXECUTABLE=program
 
-run: program.exe
-	./program.exe < sample/sample.inp
+all: $(SOURCES) $(EXECUTABLE)
+
+$(EXECUTABLE): $(OBJECTS)
+	$(CC) $(LDFLAGS) $(OBJECTS) -o $@
+
+.cc.o:
+	$(CC) $(CFLAGS) $< -o $@
+
+run: $(EXECUTABLE)
+	./$(EXECUTABLE) < sample/sample.inp
 
 clean:
-	rm *.o
-	rm *.exe
+	rm -f $(OBJECTS) $(EXECUTABLE)

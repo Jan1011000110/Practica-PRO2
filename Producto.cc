@@ -20,8 +20,7 @@ int Producto::consultar_volumen() const
 
 void Producto::escribir() const 
 {
-    cout << "Peso: " << peso << endl;
-    cout << "Volumen: " << volumen << endl;
+    cout << peso << " " << volumen << endl;
 }
 
 void Producto::leer()

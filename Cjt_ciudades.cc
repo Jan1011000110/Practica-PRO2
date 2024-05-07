@@ -2,7 +2,17 @@
 
 Cjt_ciudades::Cjt_ciudades() {}
 
-void Cjt_ciudades::modificar_cantidad_disponible(string &ciudad_id, int prod_id, int cantidad_disponible, Producto &prod) 
+void Cjt_ciudades::poner_ciudad(string &ciudad_id) 
+{
+    ciudades[ciudad_id] = Ciudad();
+}
+
+void Cjt_ciudades::poner_producto(string &ciudad_id, int prod_id, int cantidad_disponible, int cantidad_requerida, const Producto &prod)
+{
+    ciudades[ciudad_id].poner_producto(prod_id, cantidad_disponible, cantidad_requerida, prod);
+}
+
+void Cjt_ciudades::modificar_cantidad_disponible(string &ciudad_id, int prod_id, int cantidad_disponible, const Producto &prod) 
 {
     ciudades[ciudad_id].modificar_cantidad_disponible(prod_id, cantidad_disponible, prod);
 }
@@ -12,7 +22,7 @@ void Cjt_ciudades::modificar_cantidad_requerida(string &ciudad_id, int prod_id, 
     ciudades[ciudad_id].modificar_cantidad_requerida(prod_id, cantidad_requerida);
 }
 
-void Cjt_ciudades::quitar_producto(string &ciudad_id, int prod_id, Producto &prod) 
+void Cjt_ciudades::quitar_producto(string &ciudad_id, int prod_id, const Producto &prod) 
 {
     ciudades[ciudad_id].quitar_producto(prod_id, prod);
 }
@@ -42,7 +52,7 @@ int Cjt_ciudades::consultar_cantidad_requerida(string &ciudad_id, int prod_id)
     return ciudades[ciudad_id].consultar_cantidad_requerida(prod_id);
 }
 
-void Cjt_ciudades::leer_inventario(string &ciudad_id, Cjt_productos &productos)
+void Cjt_ciudades::leer_inventario(string &ciudad_id, const Cjt_productos &productos)
 {
     ciudades[ciudad_id].leer_inventario(productos);
 }

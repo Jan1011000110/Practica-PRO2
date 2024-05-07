@@ -6,7 +6,7 @@ Inventario::Inventario()
     volumen_total = 0;
 }
 
-void Inventario::modificar_cantidad_disponible(int id, int cantidad_disponible, Producto &prod) 
+void Inventario::modificar_cantidad_disponible(int id, int cantidad_disponible, const Producto &prod) 
 {
     peso_total += (cantidad_disponible - cantidad_productos[id].disponible)  * prod.consultar_peso();
     volumen_total += (cantidad_disponible - cantidad_productos[id].disponible) * prod.consultar_volumen();
@@ -18,7 +18,7 @@ void Inventario::modificar_cantidad_requerida(int id, int cantidad_requerida)
     cantidad_productos[id].requerido = cantidad_requerida;
 }
 
-void Inventario::poner_producto(int id, int cantidad_disponible, int cantidad_requerida, Producto &prod) 
+void Inventario::poner_producto(int id, int cantidad_disponible, int cantidad_requerida, const Producto &prod) 
 {
     cantidad_productos[id].disponible = 0;
     cantidad_productos[id].requerido = 0;
@@ -26,7 +26,7 @@ void Inventario::poner_producto(int id, int cantidad_disponible, int cantidad_re
     modificar_cantidad_requerida(id, cantidad_requerida);
 }
 
-void Inventario::quitar_producto(int id, Producto &prod) 
+void Inventario::quitar_producto(int id, const Producto &prod) 
 {
     modificar_cantidad_disponible(id, 0, prod);
     cantidad_productos.erase(id);
@@ -55,6 +55,5 @@ void Inventario::consultar_producto(int id)
 
 void Inventario::escribir_atributos_totales() const
 {
-    cout << peso_total << endl;
-    cout << volumen_total << endl;
+    cout << peso_total << " " << volumen_total << endl;
 }
