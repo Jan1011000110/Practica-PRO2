@@ -2,6 +2,11 @@
 
 Cuenca::Cuenca() {}
 
+void Cuenca::redistribuir()
+{
+
+}
+
 void Cuenca::modificar_barco()
 {
     int prod_id_comprar, unidades_comprar, prod_id_vender, unidades_vender;
@@ -21,7 +26,7 @@ void Cuenca::modificar_barco()
     }
 }
 
-void Cuenca::poner_producto(string &ciudad_id, int prod_id, int cantidad_disponible, int cantidad_requerida)
+void Cuenca::poner_producto(const string &ciudad_id, int prod_id, int cantidad_disponible, int cantidad_requerida)
 {
     if (not productos.existe_producto(prod_id))
     {
@@ -41,7 +46,7 @@ void Cuenca::poner_producto(string &ciudad_id, int prod_id, int cantidad_disponi
     }
 }
 
-void Cuenca::modificar_producto(string &ciudad_id, int prod_id, int cantidad_disponible, int cantidad_requerida)
+void Cuenca::modificar_producto(const string &ciudad_id, int prod_id, int cantidad_disponible, int cantidad_requerida)
 {
     if (not productos.existe_producto(prod_id))
     {
@@ -58,10 +63,11 @@ void Cuenca::modificar_producto(string &ciudad_id, int prod_id, int cantidad_dis
     else {
         ciudades.modificar_cantidad_disponible(ciudad_id, prod_id, cantidad_disponible, productos.consultar_producto(prod_id));
         ciudades.modificar_cantidad_requerida(ciudad_id, prod_id, cantidad_requerida);
+        ciudades.escribir_atributos_totales(ciudad_id);
     }
 }
 
-void Cuenca::quitar_producto(string &ciudad_id, int prod_id) 
+void Cuenca::quitar_producto(const string &ciudad_id, int prod_id) 
 {
     if (not productos.existe_producto(prod_id))
     {
@@ -71,11 +77,18 @@ void Cuenca::quitar_producto(string &ciudad_id, int prod_id)
     {
         cout << "error: no existe la ciudad" << endl;
     }
+    else if (not ciudades.contiene_producto(ciudad_id, prod_id))
+    {
+        cout << "error: la ciudad no tiene el producto" << endl;
+    }
     else 
     {
         ciudades.quitar_producto(ciudad_id, prod_id, productos.consultar_producto(prod_id));
+        ciudades.escribir_atributos_totales(ciudad_id);
     }
 }
+
+
 
 void Cuenca::numero_productos() const
 {
@@ -88,7 +101,7 @@ void Cuenca::leer_productos()
 }
 
 
-void Cuenca::leer_inventario(string &ciudad_id)
+void Cuenca::leer_inventario(const string &ciudad_id)
 {
     if (not ciudades.existe_ciudad(ciudad_id)) 
     {
@@ -150,7 +163,7 @@ void Cuenca::escribir_producto(int prod_id) const
     }
 }
 
-void Cuenca::escribir_ciudad(string &ciudad_id)
+void Cuenca::escribir_ciudad(const string &ciudad_id)
 {
     if (not ciudades.existe_ciudad(ciudad_id))
     {
@@ -159,7 +172,23 @@ void Cuenca::escribir_ciudad(string &ciudad_id)
     else 
     {
         // FALTA ESCIURE INVENTARI
-        
+        ciudades.escribir_inventario(ciudad_id);
         ciudades.escribir_atributos_totales(ciudad_id);
+    }
+}
+
+void Cuenca::consultar_producto_ciudad(const string &ciudad_id, int prod_id)
+{
+    if (not productos.existe_producto(prod_id))
+    {
+        cout << "error: no existe el producto" << endl;
+    }
+    else if (not ciudades.existe_ciudad(ciudad_id))
+    {
+        cout << "error: no existe la ciudad" << endl;
+    }
+    else {
+        cout << ciudades.consultar_cantidad_disponible(ciudad_id, prod_id) << " " << 
+                ciudades.consultar_cantidad_requerida(ciudad_id, prod_id) << endl;
     }
 }

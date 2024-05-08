@@ -71,3 +71,8 @@ void Ciudad::escribir_atributos_totales() const
 {
     inventario.escribir_atributos_totales();
 }
+
+void Ciudad::escribir_inventario() const
+{
+    inventario.escribir_inventario();
+}

@@ -119,6 +119,8 @@ public:
     */
 
     void escribir_atributos_totales() const;
+
+    void escribir_inventario() const;
 };
 
 #endif

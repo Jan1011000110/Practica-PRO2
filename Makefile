@@ -28,27 +28,26 @@
 # 	rm *.o
 # 	rm *.exe
 
-CC=g++
-CFLAGS=-c -Wall
-LDFLAGS=
+p2++ := g++ -D_JUDGE_ -D_GLIBCXX_DEBUG -O2 -Wall -Wextra -Werror -Wno-sign-compare -fno-extended-identifiers -std=c++11
 
 # Source files
 SOURCES=program.cc Cuenca.cc Cjt_ciudades.cc Barco.cc Cjt_productos.cc Ciudad.cc Inventario.cc Producto.cc
 # Object files
 OBJECTS=$(SOURCES:.cc=.o)
 # Executable name
-EXECUTABLE=program
-
-all: $(SOURCES) $(EXECUTABLE)
+EXECUTABLE=program.exe
 
 $(EXECUTABLE): $(OBJECTS)
-	$(CC) $(LDFLAGS) $(OBJECTS) -o $@
+	$(p2++) $(OBJECTS) -o $(EXECUTABLE)
 
 .cc.o:
-	$(CC) $(CFLAGS) $< -o $@
+	$(p2++) -c $< -o $@
 
 run: $(EXECUTABLE)
-	./$(EXECUTABLE) < sample/sample.inp
+	./$(EXECUTABLE) < sample.inp
+
+tar:
+	tar -cvf practica.tar $(SOURCES) *.hh Makefile
 
 clean:
 	rm -f $(OBJECTS) $(EXECUTABLE)

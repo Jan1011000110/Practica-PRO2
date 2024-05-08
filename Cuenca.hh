@@ -38,11 +38,11 @@ public:
 
     void modificar_barco();
 
-    void poner_producto(string &ciudad_id, int prod_id, int cantidad_disponible, int cantidad_requerida);
+    void poner_producto(const string &ciudad_id, int prod_id, int cantidad_disponible, int cantidad_requerida);
 
-    void modificar_producto(string &ciudad_id, int prod_id, int cantidad_disponible, int cantidad_requerida);
+    void modificar_producto(const string &ciudad_id, int prod_id, int cantidad_disponible, int cantidad_requerida);
 
-    void quitar_producto(string &ciudad_id, int prod_id);
+    void quitar_producto(const string &ciudad_id, int prod_id);
 
     // Consultoras
 
@@ -52,7 +52,7 @@ public:
 
     void leer_productos();
 
-    void leer_inventario(string &ciudad_id);
+    void leer_inventario(const string &ciudad_id);
 
     void leer_inventarios();
 
@@ -66,7 +66,9 @@ public:
 
     void escribir_producto(int prod_id) const;
 
-    void escribir_ciudad(string &ciudad_id);
+    void escribir_ciudad(const string &ciudad_id);
+
+    void consultar_producto_ciudad(const string &ciudad_id, int prod_id);
 };
 
 #endif

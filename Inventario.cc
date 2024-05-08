@@ -57,3 +57,13 @@ void Inventario::escribir_atributos_totales() const
 {
     cout << peso_total << " " << volumen_total << endl;
 }
+
+void Inventario::escribir_inventario() const
+{
+    for (auto it = cantidad_productos.begin(); it != cantidad_productos.end(); ++it)
+    {
+        cout << it->first << " ";
+        cout << it->second.disponible << " ";
+        cout << it->second.requerido << endl;
+    }
+}
