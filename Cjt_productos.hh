@@ -72,7 +72,7 @@ public:
      *      \post Se han agregado n productos nuevos al vector productos y se ha actualizado el numero de productos totales.
     */
 
-    void leer_productos();
+    void leer_productos(int n);
 };
 
 #endif

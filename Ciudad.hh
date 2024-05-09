@@ -38,6 +38,8 @@ public:
     Ciudad();
 
     // Modificadoras
+    
+    void comerciar(Ciudad &ciudad2, const Cjt_productos &productos);
 
     void poner_producto(int prod_id, int cantidad_disponible, int cantidad_requerida, const Producto &prod);
 
@@ -87,14 +89,14 @@ public:
      *      \post Devuelve la cantidad disponible del producto con identificador id.
     */
 
-    int consultar_cantidad_disponible(int id);
+    int consultar_cantidad_disponible(int id) const;
 
     /** @brief Devuelve la cantidad requerida del producto con identificador id.
      *      \pre <em>El inventario contiene el producto con identificador id.</em>
      *      \post Devuelve la cantidad requerida del producto con identificador id.
     */
 
-    int consultar_cantidad_requerida(int id);
+    int consultar_cantidad_requerida(int id) const;
 
     // Lectura
 
@@ -115,7 +117,7 @@ public:
      *      del inventario en el canal standard de salida.
     */
 
-    void consultar_producto(int id);
+    void consultar_producto(int id) const;
 
     /** @brief Imprime el peso y volumen total del parametro implicito.
      *      \pre <em>Cierto.</em>

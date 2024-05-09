@@ -5,7 +5,7 @@
 #ifndef INVENTARIO_HH
 #define INVENTARIO_HH
 
-#include "Producto.hh"
+#include "Cjt_productos.hh"
 
 #ifndef NO_DIAGRAM
 #include <map>
@@ -47,6 +47,10 @@ public:
     Inventario();
 
     // Modificadoras
+
+    void borrar_inventario();
+
+    void comerciar(Inventario &inventario2, const Cjt_productos &productos);
 
     /** @brief Modifica la cantidad disponible del producto con identificador id.
      *      \pre <em>El inventario contiene el producto con identificador id.</em>
@@ -94,14 +98,14 @@ public:
      *      \post Devuelve la cantidad disponible del producto con identificador id.
     */
 
-    int consultar_cantidad_disponible(int id);
+    int consultar_cantidad_disponible(int id) const;
 
     /** @brief Devuelve la cantidad requerida del producto con identificador id.
      *      \pre <em>El inventario contiene el producto con identificador id.</em>
      *      \post Devuelve la cantidad requerida del producto con identificador id.
     */
 
-    int consultar_cantidad_requerida(int id);
+    int consultar_cantidad_requerida(int id) const;
 
     // Escritura
 
@@ -111,7 +115,7 @@ public:
      *      del inventario en el canal standard de salida.
     */
 
-    void consultar_producto(int id);
+    void consultar_producto(int id) const;
 
     /** @brief Imprime el peso y volumen total del parametro implicito.
      *      \pre <em>Cierto.</em>

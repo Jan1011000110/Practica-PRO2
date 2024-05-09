@@ -12,6 +12,8 @@
 
 #ifndef NO_DIAGRAM
 #include <iostream>
+#include <set>
+#include <string>
 #endif
 
 using namespace std;
@@ -20,8 +22,11 @@ using namespace std;
 
 int main() 
 {
+    set<string> comandos = {"leer_rio", "lr", "leer_inventario", "li", "leer_inventarios", "ls", "modificar_barco", "mb", "escribir_barco", "eb", "consultar_num", "cn", "agregar_productos", "ap", "escribir_producto", "ep", "escribir_ciudad", "ec", "poner_prod", "pp", "modificar_prod", "mp", "quitar_prod", "qp", "consultar_prod", "cp", "comerciar", "co", "redistribuir", "re", "hacer_viaje", "hv"};
     Cuenca c;
-    c.leer_productos();
+    int n;
+    cin >> n;
+    c.leer_productos(n);
     c.leer_rio();
     c.modificar_barco();
 
@@ -29,7 +34,10 @@ int main()
     cin >> cm;
     while (cm != "fin")
     {
-        cout << "#" << cm;
+        if (comandos.find(cm) != comandos.end()) {
+            cout << "#" << cm;
+        }
+
         if (cm == "leer_rio" or cm == "lr") {
             cout << endl;
             c.leer_rio();
@@ -57,8 +65,10 @@ int main()
             c.numero_productos();
         }
         else if (cm == "agregar_productos" or cm == "ap") {
-            cout << endl;
-            c.leer_productos();
+            int n;
+            cin >> n;
+            cout << ' ' << n << endl;
+            c.leer_productos(n);
         }
         else if (cm == "escribir_producto" or cm == "ep") {
             int prod_id;
@@ -76,14 +86,14 @@ int main()
             string ciudad_id;
             int prod_id, cantidad_disponible, cantidad_requerida;
             cin >> ciudad_id >> prod_id >> cantidad_disponible >> cantidad_requerida;
-            cout << ' ' << ciudad_id << ' ' << prod_id << ' '  << cantidad_disponible << ' ' << cantidad_requerida << endl;
+            cout << ' ' << ciudad_id << ' ' << prod_id << endl;
             c.poner_producto(ciudad_id, prod_id, cantidad_disponible, cantidad_requerida);
         }
         else if (cm == "modificar_prod" or cm == "mp") {
             string ciudad_id;
             int prod_id, cantidad_disponible, cantidad_requerida;
             cin >> ciudad_id >> prod_id >> cantidad_disponible >> cantidad_requerida;
-            cout << ' ' << ciudad_id << ' ' << prod_id << ' ' << cantidad_disponible << ' ' << cantidad_requerida << endl;
+            cout << ' ' << ciudad_id << ' ' << prod_id << endl;
             c.modificar_producto(ciudad_id, prod_id, cantidad_disponible, cantidad_requerida);
         }
         else if (cm == "quitar_prod" or cm == "qp") {
@@ -101,14 +111,18 @@ int main()
             c.consultar_producto_ciudad(ciudad_id, prod_id);
         }
         else if (cm == "comerciar" or cm == "co") {
-            cout << endl;
+            string ciudad_id1, ciudad_id2;
+            cin >> ciudad_id1 >> ciudad_id2;
+            cout << ' ' << ciudad_id1 << ' ' << ciudad_id2 << endl;
+            c.comerciar(ciudad_id1, ciudad_id2);
         }
         else if (cm == "redistribuir" or cm == "re") {
             cout << endl;
             c.redistribuir();
         }
-        else if (cm == "haver_viaje" or cm == "hv") {
+        else if (cm == "hacer_viaje" or cm == "hv") {
             cout << endl;
+            c.hacer_viaje();
         }
     
         cin >> cm;

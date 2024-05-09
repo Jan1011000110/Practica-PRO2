@@ -14,6 +14,7 @@
  *      @brief Representa la cuenca fluvial.
 */
 
+
 class Cuenca
 {
 private:
@@ -34,7 +35,13 @@ public:
 
     // Modificadoras
 
+    void hacer_viaje();
+
     void redistribuir();
+
+    void redistribuir(const BinTree<string> &raiz);
+
+    void comerciar(const string &ciudad_id1, const string &ciudad_id2);
 
     void modificar_barco();
 
@@ -50,7 +57,7 @@ public:
 
     // Lectura
 
-    void leer_productos();
+    void leer_productos(int n);
 
     void leer_inventario(const string &ciudad_id);
 

@@ -34,6 +34,8 @@ public:
 
     // Modificadoras
 
+    void comerciar(const string &ciudad_id1, const string &ciudad_id2, const Cjt_productos &productos);
+
     void poner_ciudad(const string &ciudad_id);
 
     void poner_producto(const string &ciudad_id, int prod_id, int cantidad_disponible, int cantidad_requerida, const Producto &prod);
@@ -77,28 +79,28 @@ public:
      *      \post Devuelve el inventario de la ciudad con identificador ciudad_id.
      */
 
-    Inventario consultar_inventario(const string &ciudad_id);
+    Inventario consultar_inventario(const string &ciudad_id) const;
 
     /** @brief Comprueba si la ciudad con identificador ciudad_id contiene un producto tipo prod_id.
      *      \pre <em>La ciudad con identificador ciudad_id existe.</em>
      *      \post Devuelve cierto si la ciudad con identificador ciudad_id contiene un producto tipo prod_id, falso en caso contrario.
     */
 
-    bool contiene_producto(const string &ciudad_id, int prod_id);
+    bool contiene_producto(const string &ciudad_id, int prod_id) const;
 
     /** @brief Devuelve la cantidad disponible del producto tipo prod_id de la ciudad con identificador ciudad_id.
      *      \pre <em>La ciudad con identificador ciudad_id existe y contiene el producto tipo prod_id.</em>
      *      \post Devuelve la cantidad disponible del producto tipo prod_id de la ciuadd con identificador ciudad_id.
     */
 
-    int consultar_cantidad_disponible(const string &ciudad_id, int prod_id);
+    int consultar_cantidad_disponible(const string &ciudad_id, int prod_id) const;
 
     /** @brief Devuelve la cantidad requerida del producto tipo prod_id de la ciudad con identificador ciudad_id.
      *      \pre <em>La ciudad con identificador ciudad_id existe y contiene el producto tipo prod_id.</em>
      *      \post Devuelve la cantidad requerida del producto tipo prod_id de la ciuadd con identificador ciudad_id.
     */
 
-    int consultar_cantidad_requerida(const string &ciudad_id, int prod_id);
+    int consultar_cantidad_requerida(const string &ciudad_id, int prod_id) const;
 
     // Lectura
 
@@ -119,7 +121,7 @@ public:
      *      de la ciudad con identificador ciudad_id en el canal standard de salida.
     */
 
-    void consultar_producto(const string &ciudad_id, int prod_id);
+    void consultar_producto(const string &ciudad_id, int prod_id) const;
 
     /** @brief Imprime el peso y volumen total del producto tipo prod_id de la ciudad con identificador ciudad_id.
      *      \pre <em>La ciudad con identificador ciudad_id existe.</em>

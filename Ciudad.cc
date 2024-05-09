@@ -6,6 +6,11 @@ Ciudad::Ciudad()
     volumen_total = 0;
 }
 
+void Ciudad::comerciar(Ciudad &ciudad2, const Cjt_productos &productos) 
+{
+    inventario.comerciar(ciudad2.inventario, productos);
+}
+
 void Ciudad::poner_producto(int prod_id, int cantidad_disponible, int cantidad_requerida, const Producto &prod)
 {
     inventario.poner_producto(prod_id, cantidad_disponible, cantidad_requerida, prod);
@@ -36,18 +41,19 @@ bool Ciudad::contiene_producto(int id) const
     return inventario.contiene_producto(id);
 }
 
-int Ciudad::consultar_cantidad_disponible(int id)
+int Ciudad::consultar_cantidad_disponible(int id) const
 {
     return inventario.consultar_cantidad_disponible(id);
 }
 
-int Ciudad::consultar_cantidad_requerida(int id)
+int Ciudad::consultar_cantidad_requerida(int id) const
 {   
     return inventario.consultar_cantidad_requerida(id);
 }
 
 void Ciudad::leer_inventario(const Cjt_productos &productos) 
 {
+    inventario.borrar_inventario(); 
     int n;
     cin >> n;
     for (int i = 0; i < n; ++i) {
@@ -62,7 +68,7 @@ void Ciudad::leer_inventario(const Cjt_productos &productos)
     }
 }
 
-void Ciudad::consultar_producto(int id)
+void Ciudad::consultar_producto(int id) const
 {
     inventario.consultar_producto(id);
 }

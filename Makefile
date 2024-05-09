@@ -46,8 +46,9 @@ $(EXECUTABLE): $(OBJECTS)
 run: $(EXECUTABLE)
 	./$(EXECUTABLE) < sample.inp
 
-tar:
+practica.tar:
 	tar -cvf practica.tar $(SOURCES) *.hh Makefile
 
 clean:
 	rm -f $(OBJECTS) $(EXECUTABLE)
+	rm -f practica.tar
