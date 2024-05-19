@@ -6,7 +6,7 @@
 #ifndef CJT_CIUDADES_HH
 #define CJT_CIUDADES_HH
 
-#include "Ciudad.hh"
+#include "Inventario.hh"
 
 #ifndef NO_DIAGRAM
 #include <string>
@@ -20,7 +20,7 @@ class Cjt_ciudades
 {
 private:
     /** @brief Map que almacena todas las ciudades.*/
-    map<string, Ciudad> ciudades;
+    map<string, Inventario> ciudades;
 public:
     // Constructoras
 
@@ -46,7 +46,7 @@ public:
      *      con la cantidad indicada y se ha modificado el peso y el volumen total del inventario.
     */
 
-    void modificar_cantidad_disponible(const string &ciudad_id, int prod_id, int cantidad_disponible, const Producto &prod);
+    void modificar_cantidad_poseido(const string &ciudad_id, int prod_id, int cantidad_disponible, const Producto &prod);
 
     /** @brief Modifica la cantidad requerida del producto tipo prod_id de la ciudad con identificador ciudad_id.
      *      \pre <em>La ciudad con identificador ciudad_id existe y contiene el producto tipo prod_id.</em>
@@ -93,7 +93,7 @@ public:
      *      \post Devuelve la cantidad disponible del producto tipo prod_id de la ciuadd con identificador ciudad_id.
     */
 
-    int consultar_cantidad_disponible(const string &ciudad_id, int prod_id) const;
+    int consultar_cantidad_poseido(const string &ciudad_id, int prod_id) const;
 
     /** @brief Devuelve la cantidad requerida del producto tipo prod_id de la ciudad con identificador ciudad_id.
      *      \pre <em>La ciudad con identificador ciudad_id existe y contiene el producto tipo prod_id.</em>

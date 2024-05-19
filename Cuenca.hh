@@ -20,7 +20,6 @@ class Cuenca
 private:
     Cjt_productos productos;
     Cjt_ciudades ciudades;
-    Barco barco;
     BinTree<string> estructura;
 public:
     // Constructoras
@@ -35,7 +34,9 @@ public:
 
     // Modificadoras
 
-    void hacer_viaje();
+    void calcular_viaje(const BinTree<string> &raiz, Barco &barco, vector<string> &ruta);
+
+    void hacer_viaje(Barco &barco);
 
     void redistribuir();
 
@@ -43,7 +44,7 @@ public:
 
     void comerciar(const string &ciudad_id1, const string &ciudad_id2);
 
-    void modificar_barco();
+    void modificar_barco(Barco &barco);
 
     void poner_producto(const string &ciudad_id, int prod_id, int cantidad_disponible, int cantidad_requerida);
 
@@ -68,8 +69,6 @@ public:
     BinTree<string> construir_estructura();
 
     // Escritura
-
-    void escribir_barco() const;
 
     void escribir_producto(int prod_id) const;
 

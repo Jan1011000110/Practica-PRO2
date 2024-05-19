@@ -2,9 +2,108 @@
 
 Cuenca::Cuenca() {}
 
-void Cuenca::hacer_viaje()
+void Cuenca::calcular_viaje(const BinTree<string> &raiz, Barco &barco, vector<string> &ruta)
 {
-    barco.hacer_viaje(estructura, ciudades, productos);
+    if (raiz.empty()) return;
+
+    string ciudad_id = raiz.value();
+    bool agregar = false;
+    if (ciudades.contiene_producto(ciudad_id, barco.id_compra))
+    {
+        int cantidad_comprar = 
+            max(0, 
+                min(
+                    barco.num_compra, 
+                    ciudades.consultar_cantidad_poseido(ciudad_id, barco.id_compra) - 
+                    ciudades.consultar_cantidad_requerida(ciudad_id, barco.id_compra)
+                )
+            );
+        barco.num_compra -= cantidad_comprar;
+        if (cantidad_comprar > 0)
+            agregar = true;
+    }
+    if (ciudades.contiene_producto(ciudad_id, barco.id_venta))
+    {
+        int cantidad_vender = 
+            max(0, 
+                min(
+                    barco.num_venta, 
+                    ciudades.consultar_cantidad_requerida(ciudad_id, barco.id_venta) - 
+                    ciudades.consultar_cantidad_poseido(ciudad_id, barco.id_venta)
+                )
+            );
+        barco.num_venta -= cantidad_vender;
+        if (cantidad_vender > 0)
+            agregar = true;
+    }
+
+    Barco left_barco = barco;
+    vector<string> left_ruta;
+    Barco right_barco = barco;
+    vector<string> right_ruta;
+    calcular_viaje(raiz.left(), left_barco, left_ruta);
+    calcular_viaje(raiz.right(), right_barco, right_ruta);
+
+    if (left_barco.restante() < right_barco.restante() or (left_barco.restante() == right_barco.restante() and left_ruta.size() <= right_ruta.size()))
+    {
+        barco = left_barco;
+        ruta = left_ruta;
+    }
+    else 
+    {
+        barco = right_barco;
+        ruta = right_ruta;
+    }
+
+    if (not ruta.empty() or agregar) 
+    {
+        ruta.push_back(ciudad_id);
+    }
+}
+
+void Cuenca::hacer_viaje(Barco &barco) 
+{
+    Barco copia = barco;
+    vector<string> ruta;
+    calcular_viaje(estructura, copia, ruta);
+
+    if (barco.restante() != copia.restante()) 
+    {
+        copia = barco;
+        for (int i = ruta.size() - 1; i >= 0; --i) 
+        {
+            string ciudad_id = ruta[i];
+            if (ciudades.contiene_producto(ciudad_id, copia.id_compra))
+            {
+                int cantidad_comprar = 
+                    max(0, 
+                        min(
+                            copia.num_compra, 
+                            ciudades.consultar_cantidad_poseido(ciudad_id, copia.id_compra) - 
+                            ciudades.consultar_cantidad_requerida(ciudad_id, copia.id_compra)
+                        )
+                    );
+                copia.num_compra -= cantidad_comprar;
+                ciudades.modificar_cantidad_poseido(ciudad_id, copia.id_compra, -cantidad_comprar, productos.consultar_producto(copia.id_compra));
+            }
+            if (ciudades.contiene_producto(ciudad_id, copia.id_venta))
+            {
+                int cantidad_vender = 
+                    max(0, 
+                        min(
+                            copia.num_venta, 
+                            ciudades.consultar_cantidad_requerida(ciudad_id, copia.id_venta) - 
+                            ciudades.consultar_cantidad_poseido(ciudad_id, copia.id_venta)
+                        )
+                    );
+                copia.num_venta -= cantidad_vender;
+                ciudades.modificar_cantidad_poseido(ciudad_id, copia.id_venta, cantidad_vender, productos.consultar_producto(copia.id_venta));
+            }
+
+        }
+        barco.agregar_viaje(ruta[0]);
+    }
+    cout << barco.restante() - copia.restante() << endl;
 }
 
 void Cuenca::redistribuir()
@@ -15,16 +114,16 @@ void Cuenca::redistribuir()
 void Cuenca::redistribuir(const BinTree<string> &raiz)
 {
     if (raiz.empty()) return;
-    if (not raiz.right().empty()) 
-    {
-        comerciar(raiz.value(), raiz.right().value());
-    }
     if (not raiz.left().empty()) 
     {
         comerciar(raiz.value(), raiz.left().value());
+        redistribuir(raiz.left());
     }
-    redistribuir(raiz.right());
-    redistribuir(raiz.left());
+    if (not raiz.right().empty()) 
+    {
+        comerciar(raiz.value(), raiz.right().value());
+        redistribuir(raiz.right());
+    }
 }
 
 void Cuenca::comerciar(const string &ciudad_id1, const string &ciudad_id2)
@@ -33,28 +132,32 @@ void Cuenca::comerciar(const string &ciudad_id1, const string &ciudad_id2)
     {
         cout << "error: no existe la ciudad" << endl;
     }
+    else if (ciudad_id1 == ciudad_id2)
+    {
+        cout << "error: ciudad repetida" << endl;
+    }
     else 
     {
         ciudades.comerciar(ciudad_id1, ciudad_id2, productos);
     }
 }
 
-void Cuenca::modificar_barco()
+void Cuenca::modificar_barco(Barco &barco)
 {
-    int prod_id_comprar, unidades_comprar, prod_id_vender, unidades_vender;
-    cin >> prod_id_comprar >> unidades_comprar >> prod_id_vender >> unidades_vender;
+    int id_compra, num_compra, id_venta, num_venta;
+    cin >> id_compra >> num_compra >> id_venta >> num_venta;
 
-    if (not productos.existe_producto(prod_id_comprar) or not productos.existe_producto(prod_id_vender))
+    if (not productos.existe_producto(id_compra) or not productos.existe_producto(id_venta))
     {
         cout << "error: no existe el producto" << endl;
     }
-    else if (prod_id_comprar == prod_id_vender) 
+    else if (id_compra == id_venta) 
     {
         cout << "error: no se puede comprar y vender el mismo producto" << endl;
     }
     else 
     {
-        barco.modificar_barco(prod_id_comprar, unidades_comprar, prod_id_vender, unidades_vender);
+        barco.modificar_barco(id_compra, num_compra, id_venta, num_venta);
     }
 }
 
@@ -93,10 +196,10 @@ void Cuenca::modificar_producto(const string &ciudad_id, int prod_id, int cantid
         cout << "error: la ciudad no tiene el producto" << endl;
     }
     else { 
-        ciudades.modificar_cantidad_disponible(
+        ciudades.modificar_cantidad_poseido(
             ciudad_id, 
             prod_id, 
-            cantidad_disponible - ciudades.consultar_cantidad_disponible(ciudad_id, prod_id), 
+            cantidad_disponible - ciudades.consultar_cantidad_poseido(ciudad_id, prod_id), 
             productos.consultar_producto(prod_id)
         );
         ciudades.modificar_cantidad_requerida(
@@ -174,8 +277,6 @@ void Cuenca::leer_rio()
 {
     ciudades = Cjt_ciudades(); // is it slow?
     estructura = construir_estructura();
-    barco.borrar_viajes();
-    // FALTA RESETEJAR VIATGES BARCO
 }
 
 BinTree<string> Cuenca::construir_estructura() 
@@ -190,11 +291,6 @@ BinTree<string> Cuenca::construir_estructura()
     BinTree<string> left = construir_estructura();
     BinTree<string> right = construir_estructura();
     return BinTree<string>(ciudad_id, left, right);
-}
-
-void Cuenca::escribir_barco() const
-{
-    barco.escribir_barco();
 }
 
 void Cuenca::escribir_producto(int prod_id) const
@@ -238,7 +334,7 @@ void Cuenca::consultar_producto_ciudad(const string &ciudad_id, int prod_id)
         cout << "error: la ciudad no tiene el producto" << endl;
     }
     else {
-        cout << ciudades.consultar_cantidad_disponible(ciudad_id, prod_id) << " " << 
+        cout << ciudades.consultar_cantidad_poseido(ciudad_id, prod_id) << " " << 
                 ciudades.consultar_cantidad_requerida(ciudad_id, prod_id) << endl;
     }
 }

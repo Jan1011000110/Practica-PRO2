@@ -18,12 +18,12 @@ int Producto::consultar_volumen() const
     return volumen;
 }
 
-void Producto::escribir() const 
+void Producto::escribir_producto() const 
 {
     cout << peso << " " << volumen << endl;
 }
 
-void Producto::leer()
+void Producto::leer_producto()
 {
     cin >> peso;
     cin >> volumen;

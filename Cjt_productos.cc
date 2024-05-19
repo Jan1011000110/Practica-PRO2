@@ -24,14 +24,14 @@ Producto Cjt_productos::consultar_producto(int id) const
 void Cjt_productos::escribir_producto(int id) const 
 {
     cout << id << ' ';
-    productos[id].escribir();
+    productos[id].escribir_producto();
 }
 
 void Cjt_productos::leer_productos(int n)
 {
     for (int i = 0; i < n; ++i) {
         Producto p;
-        p.leer();
+        p.leer_producto();
         productos.push_back(p);
         numero_de_productos += 1;
     }

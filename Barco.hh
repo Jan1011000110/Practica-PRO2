@@ -5,8 +5,6 @@
 #ifndef BARCO_HH
 #define BARCO_HH
 
-#include "Cjt_productos.hh"
-#include "Cjt_ciudades.hh"
 #include "BinTree.hh"
 
 #ifndef NO_DIAGRAM
@@ -18,13 +16,6 @@
 
 using namespace std;
 
-// struct Nodo
-// {
-//     string ciudad_id;
-//     int id;
-//     int numero_hijos;
-// };
-
 
 /** @class Barco
  *      @brief Representa el barco de comercio de la cuenca fluvial.
@@ -33,12 +24,13 @@ using namespace std;
 class Barco 
 {
 private:
-    int prod_id_comprar;
-    int unidades_comprar;
-    int prod_id_vender;
-    int unidades_vender;
-    vector<string> viajes;
+    static vector<string> viajes;
 public:
+    int id_compra;
+    int num_compra;
+    int id_venta;
+    int num_venta;
+
     // Constructoras
 
     /** @brief Creadora por defecto.
@@ -51,13 +43,15 @@ public:
 
     // Modificadoras
 
-    void calcular_viaje(const BinTree<string> &raiz, const Cjt_ciudades &ciudades, map<string, vector<int>> &dp) const;
-    
-    void hacer_viaje(const BinTree<string> &raiz, Cjt_ciudades &ciudades,  Cjt_productos &productos);
+    void modificar_barco(int id_compra, int num_compra, int id_venta, int num_venta);
 
-    void modificar_barco(int prod_id_comprar, int unidades_comprar, int prod_id_vender, int unidades_vender);
+    void agregar_viaje(const string &ciudad_id);
 
     void borrar_viajes();
+
+    // Consultoras
+
+    int restante() const;
 
     // Escritura
 

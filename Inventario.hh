@@ -12,12 +12,12 @@
 #endif
 
 /** @struct Cantidad
- *      @brief Struct que almacena la cantidad disponible y requerida de un producto   
+ *      @brief Struct que almacena la cantidad poseido y requerida de un producto   
 */
 
 struct Cantidad
 {
-    int disponible;
+    int poseido;
     int requerido;
 };
 
@@ -29,7 +29,7 @@ struct Cantidad
 class Inventario 
 {
 private:
-    /** @brief Map que almacena la cantidad disponible y requerido de cada producto que posee*/
+    /** @brief Map que almacena la cantidad poseido y requerido de cada producto que posee*/
     map<int, Cantidad> cantidad_productos;
     /** @brief Peso total de todos los productoss del inventario*/
     int peso_total;
@@ -52,15 +52,15 @@ public:
 
     void comerciar(Inventario &inventario2, const Cjt_productos &productos);
 
-    /** @brief Modifica la cantidad disponible del producto con identificador id.
+    /** @brief Modifica la cantidad poseido del producto con identificador id.
      *      \pre <em>El inventario contiene el producto con identificador id.</em>
-     *      \post Se ha modificado las cantidad disponible del producto con identificador id del inventario
+     *      \post Se ha modificado las cantidad poseido del producto con identificador id del inventario
      *      con la cantidad indicada y se ha modificado el peso y el volumen total del inventario.
     */
 
-    void modificar_cantidad_disponible(int id, int cantidad_disponible, const Producto &prod);
+    void modificar_cantidad_poseido(int id, int cantidad_poseido, const Producto &prod);
 
-    /** @brief Modifica la cantidad disponible del producto con identificador id.
+    /** @brief Modifica la cantidad poseido del producto con identificador id.
      *      \pre <em>El inventario contiene el producto con identificador id.</em>
      *      \post Se ha modificado las cantidad requerida del producto con identificador id del inventario 
      *      con la cantidad indicada.
@@ -68,13 +68,13 @@ public:
 
     void modificar_cantidad_requerida(int id, int cantidad_requerida);
 
-    /** @brief Modifica la cantidad disponible y requerida del producto con identificador id.
+    /** @brief Modifica la cantidad poseido y requerida del producto con identificador id.
      *      \pre <em>El inventario contiene el producto con identificador id.</em>
-     *      \post Se ha modificado las cantidad requerida y disponible del producto con identificador id del inventario 
+     *      \post Se ha modificado las cantidad requerida y poseido del producto con identificador id del inventario 
      *      con la cantidad indicada y se ha modificado el peso y el volumen total del inventario.
     */
 
-    void poner_producto(int id, int cantidad_disponible, int cantidad_requerida, const Producto &prod);
+    void poner_producto(int id, int cantidad_poseido, int cantidad_requerida, const Producto &prod);
 
     /** @brief Quita el producto prod con identificador id del inventario.
      *      \pre <em>El inventario contiene el producto con identificador id.</em>
@@ -93,12 +93,12 @@ public:
 
     bool contiene_producto(int id) const;
 
-    /** @brief Devuelve la cantidad disponible del producto con identificador id.
+    /** @brief Devuelve la cantidad poseido del producto con identificador id.
      *      \pre <em>El inventario contiene el producto con identificador id.</em>
-     *      \post Devuelve la cantidad disponible del producto con identificador id.
+     *      \post Devuelve la cantidad poseido del producto con identificador id.
     */
 
-    int consultar_cantidad_disponible(int id) const;
+    int consultar_cantidad_poseido(int id) const;
 
     /** @brief Devuelve la cantidad requerida del producto con identificador id.
      *      \pre <em>El inventario contiene el producto con identificador id.</em>
@@ -107,11 +107,15 @@ public:
 
     int consultar_cantidad_requerida(int id) const;
 
+    // Lectura
+
+    void leer_inventario(const Cjt_productos &productos);
+
     // Escritura
 
-    /** @brief Imprime la cantidad disponible y requerida del producto con identificador id
+    /** @brief Imprime la cantidad poseido y requerida del producto con identificador id
      *      \pre <em>El inventario contiene el producto con identificador id.</em>
-     *      \post Se ha escrito la cantidad disponible y requerida del producto con identificador id
+     *      \post Se ha escrito la cantidad poseido y requerida del producto con identificador id
      *      del inventario en el canal standard de salida.
     */
 

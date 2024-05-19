@@ -1,0 +1,24 @@
+2
+1 1
+1 1
+a1
+a2
+#
+#
+a3
+#
+#
+1 2
+2 1
+leer_inventario a1
+1
+2 0 1
+leer_inventario a2
+1
+2 0 1
+leer_inventario a3
+1
+1 0 1
+hacer_viaje
+escribir_barco
+fin

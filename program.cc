@@ -22,25 +22,31 @@ using namespace std;
 
 int main() 
 {
-    set<string> comandos = {"leer_rio", "lr", "leer_inventario", "li", "leer_inventarios", "ls", "modificar_barco", "mb", "escribir_barco", "eb", "consultar_num", "cn", "agregar_productos", "ap", "escribir_producto", "ep", "escribir_ciudad", "ec", "poner_prod", "pp", "modificar_prod", "mp", "quitar_prod", "qp", "consultar_prod", "cp", "comerciar", "co", "redistribuir", "re", "hacer_viaje", "hv"};
     Cuenca c;
+    Barco b;
     int n;
     cin >> n;
     c.leer_productos(n);
     c.leer_rio();
-    c.modificar_barco();
+    c.modificar_barco(b);
 
     string cm;
-    cin >> cm;
-    while (cm != "fin")
+    while (cin >> cm)
     {
-        if (comandos.find(cm) != comandos.end()) {
-            cout << "#" << cm;
+        if (cm == "fin") {
+            break;
         }
+        if (cm == "//") {
+            string igs;
+            getline(cin, igs);
+            continue;
+        }
+        cout << "#" << cm; 
 
         if (cm == "leer_rio" or cm == "lr") {
             cout << endl;
             c.leer_rio();
+            b.borrar_viajes();
         }
         else if (cm == "leer_inventario" or cm == "li") {
             string ciudad_id;
@@ -54,11 +60,11 @@ int main()
         }
         else if (cm == "modificar_barco" or cm == "mb") {
             cout << endl;
-            c.modificar_barco();
+            c.modificar_barco(b);
         }
         else if (cm == "escribir_barco" or cm == "eb") {
             cout << endl;
-            c.escribir_barco();
+            b.escribir_barco();
         }
         else if (cm == "consultar_num" or cm == "cn") {
             cout << endl;
@@ -122,10 +128,8 @@ int main()
         }
         else if (cm == "hacer_viaje" or cm == "hv") {
             cout << endl;
-            c.hacer_viaje();
+            c.hacer_viaje(b);
         }
-    
-        cin >> cm;
     }
 
 }

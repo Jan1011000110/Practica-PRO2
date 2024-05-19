@@ -63,7 +63,7 @@ public:
      *      \pre <em>Cierto.</em>
      *      \post Se han escrito los atributos del parámetro implicito en el canal standard de salida.
     */
-    void escribir() const;
+    void escribir_producto() const;
 
     // Lectura
 
@@ -72,7 +72,7 @@ public:
      *      \post El paramentro implicito ahora tiene los atributos con los valores leidos.
     */      
 
-    void leer();
+    void leer_producto();
 
 };
 

@@ -4,12 +4,12 @@ Cjt_ciudades::Cjt_ciudades() {}
 
 void Cjt_ciudades::comerciar(const string &ciudad_id1, const string &ciudad_id2, const Cjt_productos &productos)
 {
-    ciudades.at(ciudad_id1).comerciar(ciudades[ciudad_id2], productos);
+    ciudades.at(ciudad_id1).comerciar(ciudades.at(ciudad_id2), productos);
 }
 
 void Cjt_ciudades::poner_ciudad(const string &ciudad_id) 
 {
-    ciudades[ciudad_id] = Ciudad();
+    ciudades[ciudad_id] = Inventario();
 }
 
 void Cjt_ciudades::poner_producto(const string &ciudad_id, int prod_id, int cantidad_disponible, int cantidad_requerida, const Producto &prod)
@@ -17,9 +17,9 @@ void Cjt_ciudades::poner_producto(const string &ciudad_id, int prod_id, int cant
     ciudades.at(ciudad_id).poner_producto(prod_id, cantidad_disponible, cantidad_requerida, prod);
 }
 
-void Cjt_ciudades::modificar_cantidad_disponible(const string &ciudad_id, int prod_id, int cantidad_disponible, const Producto &prod) 
+void Cjt_ciudades::modificar_cantidad_poseido(const string &ciudad_id, int prod_id, int cantidad_disponible, const Producto &prod) 
 {
-    ciudades.at(ciudad_id).modificar_cantidad_disponible(prod_id, cantidad_disponible, prod);
+    ciudades.at(ciudad_id).modificar_cantidad_poseido(prod_id, cantidad_disponible, prod);
 }
 
 void Cjt_ciudades::modificar_cantidad_requerida(const string &ciudad_id, int prod_id, int cantidad_requerida) 
@@ -39,7 +39,7 @@ bool Cjt_ciudades::existe_ciudad(const string &ciudad_id) const
 
 Inventario Cjt_ciudades::consultar_inventario(const string &ciudad_id) const
 {
-    return ciudades.at(ciudad_id).consultar_inventario();
+    return ciudades.at(ciudad_id);
 }
 
 bool Cjt_ciudades::contiene_producto(const string &ciudad_id, int prod_id) const
@@ -47,9 +47,9 @@ bool Cjt_ciudades::contiene_producto(const string &ciudad_id, int prod_id) const
     return ciudades.at(ciudad_id).contiene_producto(prod_id);
 }
 
-int Cjt_ciudades::consultar_cantidad_disponible(const string &ciudad_id, int prod_id) const
+int Cjt_ciudades::consultar_cantidad_poseido(const string &ciudad_id, int prod_id) const
 {
-    return ciudades.at(ciudad_id).consultar_cantidad_disponible(prod_id);
+    return ciudades.at(ciudad_id).consultar_cantidad_poseido(prod_id);
 }
 
 int Cjt_ciudades::consultar_cantidad_requerida(const string &ciudad_id, int prod_id) const
