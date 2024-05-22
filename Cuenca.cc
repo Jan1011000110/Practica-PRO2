@@ -41,6 +41,7 @@ void Cuenca::calcular_viaje(const BinTree<string> &raiz, Barco &barco, vector<st
     vector<string> left_ruta;
     Barco right_barco = barco;
     vector<string> right_ruta;
+    
     calcular_viaje(raiz.left(), left_barco, left_ruta);
     calcular_viaje(raiz.right(), right_barco, right_ruta);
 
@@ -275,8 +276,8 @@ void Cuenca::leer_inventarios()
 
 void Cuenca::leer_rio() 
 {
-    ciudades = Cjt_ciudades(); // is it slow?
-    estructura = construir_estructura();
+    ciudades = Cjt_ciudades(); 
+    estructura = construir_estructura(); 
 }
 
 BinTree<string> Cuenca::construir_estructura() 
@@ -313,7 +314,6 @@ void Cuenca::escribir_ciudad(const string &ciudad_id)
     }
     else 
     {
-        // FALTA ESCIURE INVENTARI
         ciudades.escribir_inventario(ciudad_id);
         ciudades.escribir_atributos_totales(ciudad_id);
     }

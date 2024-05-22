@@ -67,8 +67,8 @@ public:
 
     // Lectura
 
-    /** @brief Operación de lectura.
-     *      \pre <em>Està disponible en el canal estandard de entrada dos enteros, los atributos del parametro implicito.</em>
+    /** @brief Operación de lectura del producto.
+     *      \pre <em>Està disponible en el canal estandard de entrada dos naturales, los atributos del parametro implicito.</em>
      *      \post El paramentro implicito ahora tiene los atributos con los valores leidos.
     */      
 

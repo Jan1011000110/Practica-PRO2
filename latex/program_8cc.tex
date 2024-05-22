@@ -1,0 +1,153 @@
+\hypertarget{program_8cc}{}\doxysection{Referencia del Archivo program.\+cc}
+\label{program_8cc}\index{program.cc@{program.cc}}
+
+
+Programa principal para la práctica de PRO2.  
+
+
+{\ttfamily \#include \char`\"{}Cuenca.\+hh\char`\"{}}\newline
+Dependencia gráfica adjunta para program.\+cc\+:
+% FIG 0
+\doxysubsection*{Funciones}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{program_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\begin{DoxyCompactList}\small\item\em Programa principal para la práctica de PRO2\+: {\itshape Comercio fluvial}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Programa principal para la práctica de PRO2. 
+
+Como bien da a entender el enunciado, se supone que los datos leídos siempre son correctos, de modo que no se incluyen comprobaciones al respecto. 
+
+\doxysubsection{Documentación de las funciones}
+\mbox{\Hypertarget{program_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{program_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{program.cc@{program.cc}!main@{main}}
+\index{main@{main}!program.cc@{program.cc}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Programa principal para la práctica de PRO2\+: {\itshape Comercio fluvial}. 
+
+
+
+Definición en la línea 23 del archivo program.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{24 \{}
+\DoxyCodeLine{25     \mbox{\hyperlink{classCuenca}{Cuenca}} c;}
+\DoxyCodeLine{26     \mbox{\hyperlink{classBarco}{Barco}} b;}
+\DoxyCodeLine{27     \textcolor{keywordtype}{int} n;}
+\DoxyCodeLine{28     cin >> n;}
+\DoxyCodeLine{29     c.\mbox{\hyperlink{classCuenca_afd65f95da65e39aec64e4508b9eacc0b}{leer\_productos}}(n);}
+\DoxyCodeLine{30     c.\mbox{\hyperlink{classCuenca_a529e35e876f731b016dbca367cb064d2}{leer\_rio}}();}
+\DoxyCodeLine{31     c.\mbox{\hyperlink{classCuenca_a05536a225b9bfc7290184c8202985871}{modificar\_barco}}(b);}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33     \textcolor{keywordtype}{string} cm;}
+\DoxyCodeLine{34     \textcolor{keywordflow}{while} (cin >> cm)}
+\DoxyCodeLine{35     \{}
+\DoxyCodeLine{36         \textcolor{keywordflow}{if} (cm == \textcolor{stringliteral}{"{}fin"{}}) \{}
+\DoxyCodeLine{37             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{38         \}}
+\DoxyCodeLine{39         \textcolor{keywordflow}{if} (cm == \textcolor{stringliteral}{"{}//"{}}) \{}
+\DoxyCodeLine{40             \textcolor{keywordtype}{string} igs;}
+\DoxyCodeLine{41             getline(cin, igs);}
+\DoxyCodeLine{42             \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{43         \}}
+\DoxyCodeLine{44         cout << \textcolor{stringliteral}{"{}\#"{}} << cm; }
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46         \textcolor{keywordflow}{if} (cm == \textcolor{stringliteral}{"{}leer\_rio"{}} or cm == \textcolor{stringliteral}{"{}lr"{}}) \{}
+\DoxyCodeLine{47             cout << endl;}
+\DoxyCodeLine{48             c.\mbox{\hyperlink{classCuenca_a529e35e876f731b016dbca367cb064d2}{leer\_rio}}();}
+\DoxyCodeLine{49             b.\mbox{\hyperlink{classBarco_a0c10121667902699dfe5eb9fc98ea666}{borrar\_viajes}}();}
+\DoxyCodeLine{50         \}}
+\DoxyCodeLine{51         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (cm == \textcolor{stringliteral}{"{}leer\_inventario"{}} or cm == \textcolor{stringliteral}{"{}li"{}}) \{}
+\DoxyCodeLine{52             \textcolor{keywordtype}{string} ciudad\_id;}
+\DoxyCodeLine{53             cin >> ciudad\_id;}
+\DoxyCodeLine{54             cout << \textcolor{charliteral}{' '} << ciudad\_id << endl;}
+\DoxyCodeLine{55             c.\mbox{\hyperlink{classCuenca_a1a2c3d8b5c2721c4c1d264933e61f055}{leer\_inventario}}(ciudad\_id);}
+\DoxyCodeLine{56         \}}
+\DoxyCodeLine{57         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (cm == \textcolor{stringliteral}{"{}leer\_inventarios"{}} or cm == \textcolor{stringliteral}{"{}ls"{}}) \{}
+\DoxyCodeLine{58             cout << endl;}
+\DoxyCodeLine{59             c.\mbox{\hyperlink{classCuenca_a1ef343481e4d5994c5e4393693a5895b}{leer\_inventarios}}();}
+\DoxyCodeLine{60         \}}
+\DoxyCodeLine{61         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (cm == \textcolor{stringliteral}{"{}modificar\_barco"{}} or cm == \textcolor{stringliteral}{"{}mb"{}}) \{}
+\DoxyCodeLine{62             cout << endl;}
+\DoxyCodeLine{63             c.\mbox{\hyperlink{classCuenca_a05536a225b9bfc7290184c8202985871}{modificar\_barco}}(b);}
+\DoxyCodeLine{64         \}}
+\DoxyCodeLine{65         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (cm == \textcolor{stringliteral}{"{}escribir\_barco"{}} or cm == \textcolor{stringliteral}{"{}eb"{}}) \{}
+\DoxyCodeLine{66             cout << endl;}
+\DoxyCodeLine{67             b.\mbox{\hyperlink{classBarco_a3f1c26f2f0565e375924dae85b2e89a0}{escribir\_barco}}();}
+\DoxyCodeLine{68         \}}
+\DoxyCodeLine{69         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (cm == \textcolor{stringliteral}{"{}consultar\_num"{}} or cm == \textcolor{stringliteral}{"{}cn"{}}) \{}
+\DoxyCodeLine{70             cout << endl;}
+\DoxyCodeLine{71             c.\mbox{\hyperlink{classCuenca_aea95fd8fb86b0cbb69f6001df5dcf9ac}{numero\_productos}}();}
+\DoxyCodeLine{72         \}}
+\DoxyCodeLine{73         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (cm == \textcolor{stringliteral}{"{}agregar\_productos"{}} or cm == \textcolor{stringliteral}{"{}ap"{}}) \{}
+\DoxyCodeLine{74             \textcolor{keywordtype}{int} n;}
+\DoxyCodeLine{75             cin >> n;}
+\DoxyCodeLine{76             cout << \textcolor{charliteral}{' '} << n << endl;}
+\DoxyCodeLine{77             c.\mbox{\hyperlink{classCuenca_afd65f95da65e39aec64e4508b9eacc0b}{leer\_productos}}(n);}
+\DoxyCodeLine{78         \}}
+\DoxyCodeLine{79         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (cm == \textcolor{stringliteral}{"{}escribir\_producto"{}} or cm == \textcolor{stringliteral}{"{}ep"{}}) \{}
+\DoxyCodeLine{80             \textcolor{keywordtype}{int} prod\_id;}
+\DoxyCodeLine{81             cin >> prod\_id;}
+\DoxyCodeLine{82             cout << \textcolor{charliteral}{' '} << prod\_id << endl;}
+\DoxyCodeLine{83             c.\mbox{\hyperlink{classCuenca_ae134ae0e7e68fedf2f6a9e33663eca70}{escribir\_producto}}(prod\_id);}
+\DoxyCodeLine{84         \}}
+\DoxyCodeLine{85         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (cm == \textcolor{stringliteral}{"{}escribir\_ciudad"{}} or cm == \textcolor{stringliteral}{"{}ec"{}}) \{}
+\DoxyCodeLine{86             \textcolor{keywordtype}{string} ciudad\_id;}
+\DoxyCodeLine{87             cin >> ciudad\_id;}
+\DoxyCodeLine{88             cout << \textcolor{charliteral}{' '} << ciudad\_id << endl;}
+\DoxyCodeLine{89             c.\mbox{\hyperlink{classCuenca_a4b086a60a63c1799974a04dc4f397bbe}{escribir\_ciudad}}(ciudad\_id);}
+\DoxyCodeLine{90         \}}
+\DoxyCodeLine{91         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (cm == \textcolor{stringliteral}{"{}poner\_prod"{}} or cm == \textcolor{stringliteral}{"{}pp"{}}) \{}
+\DoxyCodeLine{92             \textcolor{keywordtype}{string} ciudad\_id;}
+\DoxyCodeLine{93             \textcolor{keywordtype}{int} prod\_id, cantidad\_disponible, cantidad\_requerida;}
+\DoxyCodeLine{94             cin >> ciudad\_id >> prod\_id >> cantidad\_disponible >> cantidad\_requerida;}
+\DoxyCodeLine{95             cout << \textcolor{charliteral}{' '} << ciudad\_id << \textcolor{charliteral}{' '} << prod\_id << endl;}
+\DoxyCodeLine{96             c.\mbox{\hyperlink{classCuenca_a255b863bef1c20afb87e485d42c46896}{poner\_producto}}(ciudad\_id, prod\_id, cantidad\_disponible, cantidad\_requerida);}
+\DoxyCodeLine{97         \}}
+\DoxyCodeLine{98         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (cm == \textcolor{stringliteral}{"{}modificar\_prod"{}} or cm == \textcolor{stringliteral}{"{}mp"{}}) \{}
+\DoxyCodeLine{99             \textcolor{keywordtype}{string} ciudad\_id;}
+\DoxyCodeLine{100             \textcolor{keywordtype}{int} prod\_id, cantidad\_disponible, cantidad\_requerida;}
+\DoxyCodeLine{101             cin >> ciudad\_id >> prod\_id >> cantidad\_disponible >> cantidad\_requerida;}
+\DoxyCodeLine{102             cout << \textcolor{charliteral}{' '} << ciudad\_id << \textcolor{charliteral}{' '} << prod\_id << endl;}
+\DoxyCodeLine{103             c.\mbox{\hyperlink{classCuenca_a1f5bbbd5dc0fff8176b70ffc0de9d233}{modificar\_producto}}(ciudad\_id, prod\_id, cantidad\_disponible, cantidad\_requerida);}
+\DoxyCodeLine{104         \}}
+\DoxyCodeLine{105         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (cm == \textcolor{stringliteral}{"{}quitar\_prod"{}} or cm == \textcolor{stringliteral}{"{}qp"{}}) \{}
+\DoxyCodeLine{106             \textcolor{keywordtype}{string} ciudad\_id;}
+\DoxyCodeLine{107             \textcolor{keywordtype}{int} prod\_id;}
+\DoxyCodeLine{108             cin >> ciudad\_id >> prod\_id;}
+\DoxyCodeLine{109             cout << \textcolor{charliteral}{' '} << ciudad\_id << \textcolor{charliteral}{' '} << prod\_id << endl;}
+\DoxyCodeLine{110             c.\mbox{\hyperlink{classCuenca_aa7dbb8bd9399fc9322cd8913a8ce1d5b}{quitar\_producto}}(ciudad\_id, prod\_id);}
+\DoxyCodeLine{111         \}}
+\DoxyCodeLine{112         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (cm == \textcolor{stringliteral}{"{}consultar\_prod"{}} or cm == \textcolor{stringliteral}{"{}cp"{}}) \{}
+\DoxyCodeLine{113             \textcolor{keywordtype}{string} ciudad\_id;}
+\DoxyCodeLine{114             \textcolor{keywordtype}{int} prod\_id;}
+\DoxyCodeLine{115             cin >> ciudad\_id >> prod\_id;}
+\DoxyCodeLine{116             cout << \textcolor{charliteral}{' '} << ciudad\_id << \textcolor{charliteral}{' '} << prod\_id << endl;}
+\DoxyCodeLine{117             c.\mbox{\hyperlink{classCuenca_afd0e89adecf56b6ecdf230baa1e9bc4b}{consultar\_producto\_ciudad}}(ciudad\_id, prod\_id);}
+\DoxyCodeLine{118         \}}
+\DoxyCodeLine{119         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (cm == \textcolor{stringliteral}{"{}comerciar"{}} or cm == \textcolor{stringliteral}{"{}co"{}}) \{}
+\DoxyCodeLine{120             \textcolor{keywordtype}{string} ciudad\_id1, ciudad\_id2;}
+\DoxyCodeLine{121             cin >> ciudad\_id1 >> ciudad\_id2;}
+\DoxyCodeLine{122             cout << \textcolor{charliteral}{' '} << ciudad\_id1 << \textcolor{charliteral}{' '} << ciudad\_id2 << endl;}
+\DoxyCodeLine{123             c.\mbox{\hyperlink{classCuenca_acce42ec6f63c1770ca00af1298a6dfbc}{comerciar}}(ciudad\_id1, ciudad\_id2);}
+\DoxyCodeLine{124         \}}
+\DoxyCodeLine{125         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (cm == \textcolor{stringliteral}{"{}redistribuir"{}} or cm == \textcolor{stringliteral}{"{}re"{}}) \{}
+\DoxyCodeLine{126             cout << endl;}
+\DoxyCodeLine{127             c.\mbox{\hyperlink{classCuenca_a51870d649b499f3b73d4ea1532e2b526}{redistribuir}}();}
+\DoxyCodeLine{128         \}}
+\DoxyCodeLine{129         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (cm == \textcolor{stringliteral}{"{}hacer\_viaje"{}} or cm == \textcolor{stringliteral}{"{}hv"{}}) \{}
+\DoxyCodeLine{130             cout << endl;}
+\DoxyCodeLine{131             c.\mbox{\hyperlink{classCuenca_a50322cf958ca7c16f47c0fa3b7a22ace}{hacer\_viaje}}(b);}
+\DoxyCodeLine{132         \}}
+\DoxyCodeLine{133     \}}
+\DoxyCodeLine{134 }
+\DoxyCodeLine{135 \}}
+
+\end{DoxyCode}

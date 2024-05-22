@@ -1,0 +1,163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Practica Primavera 2024: Comercio Fluvial: Fichero Fuente Inventario.hh</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Practica Primavera 2024: Comercio Fluvial
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Inventario.hh</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="Inventario_8hh.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifndef INVENTARIO_HH</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define INVENTARIO_HH</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Cjt__productos_8hh.html">Cjt_productos.hh</a>&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#ifndef NO_DIAGRAM</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;map&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="structCantidad.html">   18</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structCantidad.html">Cantidad</a></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;{</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="structCantidad.html#a2635b7d9f7562c749f0da6f0e5be4a00">   20</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structCantidad.html#a2635b7d9f7562c749f0da6f0e5be4a00">poseido</a>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="structCantidad.html#a35fad64d0a8c89ca1ea2d9db6b12e1e5">   21</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structCantidad.html#a35fad64d0a8c89ca1ea2d9db6b12e1e5">requerido</a>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;};</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="classInventario.html">   29</a></span>&#160;<span class="keyword">class </span><a class="code" href="classInventario.html">Inventario</a> </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;{</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="classInventario.html#aef44815322a2d023dd5b857c30461282">   33</a></span>&#160;    map&lt;int, Cantidad&gt; <a class="code" href="classInventario.html#aef44815322a2d023dd5b857c30461282">cantidad_productos</a>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="classInventario.html#aba17fb21d17d1908f75fc27c6292bfe0">   35</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classInventario.html#aba17fb21d17d1908f75fc27c6292bfe0">peso_total</a>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="classInventario.html#ae5e99f33e8a74635f6e0446562d85e58">   37</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classInventario.html#ae5e99f33e8a74635f6e0446562d85e58">volumen_total</a>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="comment">// Constructoras</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <a class="code" href="classInventario.html#ab7ca21da6822bc59fa236f7238e20fd3">Inventario</a>();</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="comment">// Modificadoras</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classInventario.html#ad315d15ebbf2d5e233c776ce39aeaaea">borrar_inventario</a>();</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classInventario.html#a2fe5c8bf348eb58066f3c43fd7e15a1b">comerciar</a>(<a class="code" href="classInventario.html">Inventario</a> &amp;inventario2, <span class="keyword">const</span> <a class="code" href="classCjt__productos.html">Cjt_productos</a> &amp;productos);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classInventario.html#a8fd2d2277242f00ccbaad52d99771f2d">modificar_cantidad_poseido</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>, <span class="keywordtype">int</span> cantidad_poseido, <span class="keyword">const</span> <a class="code" href="classProducto.html">Producto</a> &amp;prod);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classInventario.html#a4022a32c14eb69a1a9521d99cb64618e">modificar_cantidad_requerida</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>, <span class="keywordtype">int</span> cantidad_requerida);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classInventario.html#a1af1309fc48861f8b9a608e2cb3c63d0">poner_producto</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>, <span class="keywordtype">int</span> cantidad_poseido, <span class="keywordtype">int</span> cantidad_requerida, <span class="keyword">const</span> <a class="code" href="classProducto.html">Producto</a> &amp;prod);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classInventario.html#a1778706cec5564bcaa70f224945f5e94">quitar_producto</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>, <span class="keyword">const</span> <a class="code" href="classProducto.html">Producto</a> &amp;prod);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="comment">// Consultoras</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classInventario.html#abb38481a98452a88f5e1b60443511a28">contiene_producto</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classInventario.html#ac6c2b629c7b2cff98f582d5271576118">consultar_cantidad_poseido</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classInventario.html#aec3ff86ee51a3998f6395fc9e8b98481">consultar_cantidad_requerida</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="comment">// Lectura</span></div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classInventario.html#a1efe04122176cb9043bbf33eab81cd91">leer_inventario</a>(<span class="keyword">const</span> <a class="code" href="classCjt__productos.html">Cjt_productos</a> &amp;productos);</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="comment">// Escritura</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classInventario.html#a267ea5a01a51e42a97c030637f925323">consultar_producto</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classInventario.html#a8cbe864ffe64e5c2781f5e9522df2777">escribir_atributos_totales</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160; </div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classInventario.html#a443c1bea51231135e50136ccdaa0ab15">escribir_inventario</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;};</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aCjt__productos_8hh_html"><div class="ttname"><a href="Cjt__productos_8hh.html">Cjt_productos.hh</a></div><div class="ttdoc">Especificación de la clase Cjt_productos.</div></div>
+<div class="ttc" id="aclassCjt__productos_html"><div class="ttname"><a href="classCjt__productos.html">Cjt_productos</a></div><div class="ttdoc">Facilita la gestion de operaciones de un conjunto de productos.</div><div class="ttdef"><b>Definition:</b> <a href="Cjt__productos_8hh_source.html#l00018">Cjt_productos.hh:19</a></div></div>
+<div class="ttc" id="aclassInventario_html"><div class="ttname"><a href="classInventario.html">Inventario</a></div><div class="ttdoc">Facilita la gestion de inventario.</div><div class="ttdef"><b>Definition:</b> <a href="Inventario_8hh_source.html#l00029">Inventario.hh:30</a></div></div>
+<div class="ttc" id="aclassInventario_html_a1778706cec5564bcaa70f224945f5e94"><div class="ttname"><a href="classInventario.html#a1778706cec5564bcaa70f224945f5e94">Inventario::quitar_producto</a></div><div class="ttdeci">void quitar_producto(int id, const Producto &amp;prod)</div><div class="ttdoc">Quita el producto prod con identificador id del inventario.</div><div class="ttdef"><b>Definition:</b> <a href="Inventario_8cc_source.html#l00068">Inventario.cc:68</a></div></div>
+<div class="ttc" id="aclassInventario_html_a1af1309fc48861f8b9a608e2cb3c63d0"><div class="ttname"><a href="classInventario.html#a1af1309fc48861f8b9a608e2cb3c63d0">Inventario::poner_producto</a></div><div class="ttdeci">void poner_producto(int id, int cantidad_poseido, int cantidad_requerida, const Producto &amp;prod)</div><div class="ttdoc">Modifica la cantidad poseido y requerida del producto con identificador id.</div><div class="ttdef"><b>Definition:</b> <a href="Inventario_8cc_source.html#l00060">Inventario.cc:60</a></div></div>
+<div class="ttc" id="aclassInventario_html_a1efe04122176cb9043bbf33eab81cd91"><div class="ttname"><a href="classInventario.html#a1efe04122176cb9043bbf33eab81cd91">Inventario::leer_inventario</a></div><div class="ttdeci">void leer_inventario(const Cjt_productos &amp;productos)</div><div class="ttdef"><b>Definition:</b> <a href="Inventario_8cc_source.html#l00089">Inventario.cc:89</a></div></div>
+<div class="ttc" id="aclassInventario_html_a267ea5a01a51e42a97c030637f925323"><div class="ttname"><a href="classInventario.html#a267ea5a01a51e42a97c030637f925323">Inventario::consultar_producto</a></div><div class="ttdeci">void consultar_producto(int id) const</div><div class="ttdoc">Imprime la cantidad poseido y requerida del producto con identificador id.</div><div class="ttdef"><b>Definition:</b> <a href="Inventario_8cc_source.html#l00109">Inventario.cc:109</a></div></div>
+<div class="ttc" id="aclassInventario_html_a2fe5c8bf348eb58066f3c43fd7e15a1b"><div class="ttname"><a href="classInventario.html#a2fe5c8bf348eb58066f3c43fd7e15a1b">Inventario::comerciar</a></div><div class="ttdeci">void comerciar(Inventario &amp;inventario2, const Cjt_productos &amp;productos)</div><div class="ttdef"><b>Definition:</b> <a href="Inventario_8cc_source.html#l00016">Inventario.cc:16</a></div></div>
+<div class="ttc" id="aclassInventario_html_a4022a32c14eb69a1a9521d99cb64618e"><div class="ttname"><a href="classInventario.html#a4022a32c14eb69a1a9521d99cb64618e">Inventario::modificar_cantidad_requerida</a></div><div class="ttdeci">void modificar_cantidad_requerida(int id, int cantidad_requerida)</div><div class="ttdoc">Modifica la cantidad poseido del producto con identificador id.</div><div class="ttdef"><b>Definition:</b> <a href="Inventario_8cc_source.html#l00055">Inventario.cc:55</a></div></div>
+<div class="ttc" id="aclassInventario_html_a443c1bea51231135e50136ccdaa0ab15"><div class="ttname"><a href="classInventario.html#a443c1bea51231135e50136ccdaa0ab15">Inventario::escribir_inventario</a></div><div class="ttdeci">void escribir_inventario() const</div><div class="ttdef"><b>Definition:</b> <a href="Inventario_8cc_source.html#l00120">Inventario.cc:120</a></div></div>
+<div class="ttc" id="aclassInventario_html_a8cbe864ffe64e5c2781f5e9522df2777"><div class="ttname"><a href="classInventario.html#a8cbe864ffe64e5c2781f5e9522df2777">Inventario::escribir_atributos_totales</a></div><div class="ttdeci">void escribir_atributos_totales() const</div><div class="ttdoc">Imprime el peso y volumen total del parametro implicito.</div><div class="ttdef"><b>Definition:</b> <a href="Inventario_8cc_source.html#l00115">Inventario.cc:115</a></div></div>
+<div class="ttc" id="aclassInventario_html_a8fd2d2277242f00ccbaad52d99771f2d"><div class="ttname"><a href="classInventario.html#a8fd2d2277242f00ccbaad52d99771f2d">Inventario::modificar_cantidad_poseido</a></div><div class="ttdeci">void modificar_cantidad_poseido(int id, int cantidad_poseido, const Producto &amp;prod)</div><div class="ttdoc">Modifica la cantidad poseido del producto con identificador id.</div><div class="ttdef"><b>Definition:</b> <a href="Inventario_8cc_source.html#l00048">Inventario.cc:48</a></div></div>
+<div class="ttc" id="aclassInventario_html_ab7ca21da6822bc59fa236f7238e20fd3"><div class="ttname"><a href="classInventario.html#ab7ca21da6822bc59fa236f7238e20fd3">Inventario::Inventario</a></div><div class="ttdeci">Inventario()</div><div class="ttdoc">Creadora por defecto. Se ejecuta automáticamente al declarar un inventario.</div><div class="ttdef"><b>Definition:</b> <a href="Inventario_8cc_source.html#l00003">Inventario.cc:3</a></div></div>
+<div class="ttc" id="aclassInventario_html_aba17fb21d17d1908f75fc27c6292bfe0"><div class="ttname"><a href="classInventario.html#aba17fb21d17d1908f75fc27c6292bfe0">Inventario::peso_total</a></div><div class="ttdeci">int peso_total</div><div class="ttdoc">Peso total de todos los productoss del inventario.</div><div class="ttdef"><b>Definition:</b> <a href="Inventario_8hh_source.html#l00035">Inventario.hh:35</a></div></div>
+<div class="ttc" id="aclassInventario_html_abb38481a98452a88f5e1b60443511a28"><div class="ttname"><a href="classInventario.html#abb38481a98452a88f5e1b60443511a28">Inventario::contiene_producto</a></div><div class="ttdeci">bool contiene_producto(int id) const</div><div class="ttdoc">Comprueba si el inventario contiene un producto con identificador id.</div><div class="ttdef"><b>Definition:</b> <a href="Inventario_8cc_source.html#l00074">Inventario.cc:74</a></div></div>
+<div class="ttc" id="aclassInventario_html_ac6c2b629c7b2cff98f582d5271576118"><div class="ttname"><a href="classInventario.html#ac6c2b629c7b2cff98f582d5271576118">Inventario::consultar_cantidad_poseido</a></div><div class="ttdeci">int consultar_cantidad_poseido(int id) const</div><div class="ttdoc">Devuelve la cantidad poseido del producto con identificador id.</div><div class="ttdef"><b>Definition:</b> <a href="Inventario_8cc_source.html#l00079">Inventario.cc:79</a></div></div>
+<div class="ttc" id="aclassInventario_html_ad315d15ebbf2d5e233c776ce39aeaaea"><div class="ttname"><a href="classInventario.html#ad315d15ebbf2d5e233c776ce39aeaaea">Inventario::borrar_inventario</a></div><div class="ttdeci">void borrar_inventario()</div><div class="ttdef"><b>Definition:</b> <a href="Inventario_8cc_source.html#l00009">Inventario.cc:9</a></div></div>
+<div class="ttc" id="aclassInventario_html_ae5e99f33e8a74635f6e0446562d85e58"><div class="ttname"><a href="classInventario.html#ae5e99f33e8a74635f6e0446562d85e58">Inventario::volumen_total</a></div><div class="ttdeci">int volumen_total</div><div class="ttdoc">Volumen total de todos los productos del inventario.</div><div class="ttdef"><b>Definition:</b> <a href="Inventario_8hh_source.html#l00037">Inventario.hh:37</a></div></div>
+<div class="ttc" id="aclassInventario_html_aec3ff86ee51a3998f6395fc9e8b98481"><div class="ttname"><a href="classInventario.html#aec3ff86ee51a3998f6395fc9e8b98481">Inventario::consultar_cantidad_requerida</a></div><div class="ttdeci">int consultar_cantidad_requerida(int id) const</div><div class="ttdoc">Devuelve la cantidad requerida del producto con identificador id.</div><div class="ttdef"><b>Definition:</b> <a href="Inventario_8cc_source.html#l00084">Inventario.cc:84</a></div></div>
+<div class="ttc" id="aclassInventario_html_aef44815322a2d023dd5b857c30461282"><div class="ttname"><a href="classInventario.html#aef44815322a2d023dd5b857c30461282">Inventario::cantidad_productos</a></div><div class="ttdeci">map&lt; int, Cantidad &gt; cantidad_productos</div><div class="ttdoc">Map que almacena la cantidad poseido y requerido de cada producto que posee.</div><div class="ttdef"><b>Definition:</b> <a href="Inventario_8hh_source.html#l00033">Inventario.hh:33</a></div></div>
+<div class="ttc" id="aclassProducto_html"><div class="ttname"><a href="classProducto.html">Producto</a></div><div class="ttdef"><b>Definition:</b> <a href="Producto_8hh_source.html#l00019">Producto.hh:20</a></div></div>
+<div class="ttc" id="astructCantidad_html"><div class="ttname"><a href="structCantidad.html">Cantidad</a></div><div class="ttdoc">Struct que almacena la cantidad poseido y requerida de un producto</div><div class="ttdef"><b>Definition:</b> <a href="Inventario_8hh_source.html#l00018">Inventario.hh:19</a></div></div>
+<div class="ttc" id="astructCantidad_html_a2635b7d9f7562c749f0da6f0e5be4a00"><div class="ttname"><a href="structCantidad.html#a2635b7d9f7562c749f0da6f0e5be4a00">Cantidad::poseido</a></div><div class="ttdeci">int poseido</div><div class="ttdef"><b>Definition:</b> <a href="Inventario_8hh_source.html#l00020">Inventario.hh:20</a></div></div>
+<div class="ttc" id="astructCantidad_html_a35fad64d0a8c89ca1ea2d9db6b12e1e5"><div class="ttname"><a href="structCantidad.html#a35fad64d0a8c89ca1ea2d9db6b12e1e5">Cantidad::requerido</a></div><div class="ttdeci">int requerido</div><div class="ttdef"><b>Definition:</b> <a href="Inventario_8hh_source.html#l00021">Inventario.hh:21</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

@@ -1,0 +1,690 @@
+\hypertarget{classCuenca}{}\doxysection{Referencia de la Clase Cuenca}
+\label{classCuenca}\index{Cuenca@{Cuenca}}
+
+
+Representa la cuenca fluvial.  
+
+
+
+
+{\ttfamily \#include $<$Cuenca.\+hh$>$}
+
+\doxysubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCuenca_adef9dac47f2c1d8120a55b54b497efda}{Cuenca}} ()
+\begin{DoxyCompactList}\small\item\em Creadora por defecto. Se ejecuta automaticamente al declarar una cuenca. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCuenca_ab08023cdd20bbefe3ad6506502b4576c}{calcular\+\_\+viaje}} (const Bin\+Tree$<$ string $>$ \&raiz, \mbox{\hyperlink{classBarco}{Barco}} \&barco, vector$<$ string $>$ \&ruta)
+\item 
+void \mbox{\hyperlink{classCuenca_a50322cf958ca7c16f47c0fa3b7a22ace}{hacer\+\_\+viaje}} (\mbox{\hyperlink{classBarco}{Barco}} \&barco)
+\item 
+void \mbox{\hyperlink{classCuenca_a51870d649b499f3b73d4ea1532e2b526}{redistribuir}} ()
+\item 
+void \mbox{\hyperlink{classCuenca_a774f43ab42455eed569b5000731625e6}{redistribuir}} (const Bin\+Tree$<$ string $>$ \&raiz)
+\item 
+void \mbox{\hyperlink{classCuenca_acce42ec6f63c1770ca00af1298a6dfbc}{comerciar}} (const string \&ciudad\+\_\+id1, const string \&ciudad\+\_\+id2)
+\item 
+void \mbox{\hyperlink{classCuenca_a05536a225b9bfc7290184c8202985871}{modificar\+\_\+barco}} (\mbox{\hyperlink{classBarco}{Barco}} \&barco)
+\item 
+void \mbox{\hyperlink{classCuenca_a255b863bef1c20afb87e485d42c46896}{poner\+\_\+producto}} (const string \&ciudad\+\_\+id, int prod\+\_\+id, int cantidad\+\_\+disponible, int cantidad\+\_\+requerida)
+\item 
+void \mbox{\hyperlink{classCuenca_a1f5bbbd5dc0fff8176b70ffc0de9d233}{modificar\+\_\+producto}} (const string \&ciudad\+\_\+id, int prod\+\_\+id, int cantidad\+\_\+disponible, int cantidad\+\_\+requerida)
+\item 
+void \mbox{\hyperlink{classCuenca_aa7dbb8bd9399fc9322cd8913a8ce1d5b}{quitar\+\_\+producto}} (const string \&ciudad\+\_\+id, int prod\+\_\+id)
+\item 
+void \mbox{\hyperlink{classCuenca_aea95fd8fb86b0cbb69f6001df5dcf9ac}{numero\+\_\+productos}} () const
+\item 
+void \mbox{\hyperlink{classCuenca_afd65f95da65e39aec64e4508b9eacc0b}{leer\+\_\+productos}} (int n)
+\item 
+void \mbox{\hyperlink{classCuenca_a1a2c3d8b5c2721c4c1d264933e61f055}{leer\+\_\+inventario}} (const string \&ciudad\+\_\+id)
+\item 
+void \mbox{\hyperlink{classCuenca_a1ef343481e4d5994c5e4393693a5895b}{leer\+\_\+inventarios}} ()
+\item 
+void \mbox{\hyperlink{classCuenca_a529e35e876f731b016dbca367cb064d2}{leer\+\_\+rio}} ()
+\item 
+Bin\+Tree$<$ string $>$ \mbox{\hyperlink{classCuenca_a54368a39d24f75b4171ae23b9d3771a4}{construir\+\_\+estructura}} ()
+\item 
+void \mbox{\hyperlink{classCuenca_ae134ae0e7e68fedf2f6a9e33663eca70}{escribir\+\_\+producto}} (int prod\+\_\+id) const
+\item 
+void \mbox{\hyperlink{classCuenca_a4b086a60a63c1799974a04dc4f397bbe}{escribir\+\_\+ciudad}} (const string \&ciudad\+\_\+id)
+\item 
+void \mbox{\hyperlink{classCuenca_afd0e89adecf56b6ecdf230baa1e9bc4b}{consultar\+\_\+producto\+\_\+ciudad}} (const string \&ciudad\+\_\+id, int prod\+\_\+id)
+\end{DoxyCompactItemize}
+\doxysubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCjt__productos}{Cjt\+\_\+productos}} \mbox{\hyperlink{classCuenca_a710f881238488289a10dd94e28105bae}{productos}}
+\item 
+\mbox{\hyperlink{classCjt__ciudades}{Cjt\+\_\+ciudades}} \mbox{\hyperlink{classCuenca_afadcf7affebe5218e4d3eb88595f23dd}{ciudades}}
+\item 
+Bin\+Tree$<$ string $>$ \mbox{\hyperlink{classCuenca_a35b9f4d3289e093756ff6997c8a1c9f1}{estructura}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Representa la cuenca fluvial. 
+
+Definición en la línea 18 del archivo Cuenca.\+hh.
+
+
+
+\doxysubsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{classCuenca_adef9dac47f2c1d8120a55b54b497efda}\label{classCuenca_adef9dac47f2c1d8120a55b54b497efda}} 
+\index{Cuenca@{Cuenca}!Cuenca@{Cuenca}}
+\index{Cuenca@{Cuenca}!Cuenca@{Cuenca}}
+\doxysubsubsection{\texorpdfstring{Cuenca()}{Cuenca()}}
+{\footnotesize\ttfamily Cuenca\+::\+Cuenca (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creadora por defecto. Se ejecuta automaticamente al declarar una cuenca. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape Cierto.} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es una cuenca la cual todos sus atributos estan sin inicializar. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 3 del archivo Cuenca.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{3 \{\}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{classCuenca_ab08023cdd20bbefe3ad6506502b4576c}\label{classCuenca_ab08023cdd20bbefe3ad6506502b4576c}} 
+\index{Cuenca@{Cuenca}!calcular\_viaje@{calcular\_viaje}}
+\index{calcular\_viaje@{calcular\_viaje}!Cuenca@{Cuenca}}
+\doxysubsubsection{\texorpdfstring{calcular\_viaje()}{calcular\_viaje()}}
+{\footnotesize\ttfamily void Cuenca\+::calcular\+\_\+viaje (\begin{DoxyParamCaption}\item[{const Bin\+Tree$<$ string $>$ \&}]{raiz,  }\item[{\mbox{\hyperlink{classBarco}{Barco}} \&}]{barco,  }\item[{vector$<$ string $>$ \&}]{ruta }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea 5 del archivo Cuenca.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{6 \{}
+\DoxyCodeLine{7     \textcolor{keywordflow}{if} (raiz.empty()) \textcolor{keywordflow}{return};}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9     \textcolor{keywordtype}{string} ciudad\_id = raiz.value();}
+\DoxyCodeLine{10     \textcolor{keywordtype}{bool} agregar = \textcolor{keyword}{false};}
+\DoxyCodeLine{11     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classCuenca_afadcf7affebe5218e4d3eb88595f23dd}{ciudades}}.\mbox{\hyperlink{classCjt__ciudades_a393a6c4ab2f1d264858fa082dc092431}{contiene\_producto}}(ciudad\_id, barco.\mbox{\hyperlink{classBarco_a18ee6e2799fba957af616a42d54d005b}{id\_compra}}))}
+\DoxyCodeLine{12     \{}
+\DoxyCodeLine{13         \textcolor{keywordtype}{int} cantidad\_comprar = }
+\DoxyCodeLine{14             max(0, }
+\DoxyCodeLine{15                 min(}
+\DoxyCodeLine{16                     barco.\mbox{\hyperlink{classBarco_a7b8a9917814f1f80564f9cf95bfe465d}{num\_compra}}, }
+\DoxyCodeLine{17                     \mbox{\hyperlink{classCuenca_afadcf7affebe5218e4d3eb88595f23dd}{ciudades}}.\mbox{\hyperlink{classCjt__ciudades_a04c993c0e0fce38fa6773751e97c2787}{consultar\_cantidad\_poseido}}(ciudad\_id, barco.\mbox{\hyperlink{classBarco_a18ee6e2799fba957af616a42d54d005b}{id\_compra}}) -\/ }
+\DoxyCodeLine{18                     \mbox{\hyperlink{classCuenca_afadcf7affebe5218e4d3eb88595f23dd}{ciudades}}.\mbox{\hyperlink{classCjt__ciudades_a525b7fde22b32463ab3a5a3ee1384eb8}{consultar\_cantidad\_requerida}}(ciudad\_id, barco.\mbox{\hyperlink{classBarco_a18ee6e2799fba957af616a42d54d005b}{id\_compra}})}
+\DoxyCodeLine{19                 )}
+\DoxyCodeLine{20             );}
+\DoxyCodeLine{21         barco.\mbox{\hyperlink{classBarco_a7b8a9917814f1f80564f9cf95bfe465d}{num\_compra}} -\/= cantidad\_comprar;}
+\DoxyCodeLine{22         \textcolor{keywordflow}{if} (cantidad\_comprar > 0)}
+\DoxyCodeLine{23             agregar = \textcolor{keyword}{true};}
+\DoxyCodeLine{24     \}}
+\DoxyCodeLine{25     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classCuenca_afadcf7affebe5218e4d3eb88595f23dd}{ciudades}}.\mbox{\hyperlink{classCjt__ciudades_a393a6c4ab2f1d264858fa082dc092431}{contiene\_producto}}(ciudad\_id, barco.\mbox{\hyperlink{classBarco_a7dd3fe7762f9362219acc1fde2845504}{id\_venta}}))}
+\DoxyCodeLine{26     \{}
+\DoxyCodeLine{27         \textcolor{keywordtype}{int} cantidad\_vender = }
+\DoxyCodeLine{28             max(0, }
+\DoxyCodeLine{29                 min(}
+\DoxyCodeLine{30                     barco.\mbox{\hyperlink{classBarco_a06142671610200b49d0a399cc6b0e2d7}{num\_venta}}, }
+\DoxyCodeLine{31                     \mbox{\hyperlink{classCuenca_afadcf7affebe5218e4d3eb88595f23dd}{ciudades}}.\mbox{\hyperlink{classCjt__ciudades_a525b7fde22b32463ab3a5a3ee1384eb8}{consultar\_cantidad\_requerida}}(ciudad\_id, barco.\mbox{\hyperlink{classBarco_a7dd3fe7762f9362219acc1fde2845504}{id\_venta}}) -\/ }
+\DoxyCodeLine{32                     \mbox{\hyperlink{classCuenca_afadcf7affebe5218e4d3eb88595f23dd}{ciudades}}.\mbox{\hyperlink{classCjt__ciudades_a04c993c0e0fce38fa6773751e97c2787}{consultar\_cantidad\_poseido}}(ciudad\_id, barco.\mbox{\hyperlink{classBarco_a7dd3fe7762f9362219acc1fde2845504}{id\_venta}})}
+\DoxyCodeLine{33                 )}
+\DoxyCodeLine{34             );}
+\DoxyCodeLine{35         barco.\mbox{\hyperlink{classBarco_a06142671610200b49d0a399cc6b0e2d7}{num\_venta}} -\/= cantidad\_vender;}
+\DoxyCodeLine{36         \textcolor{keywordflow}{if} (cantidad\_vender > 0)}
+\DoxyCodeLine{37             agregar = \textcolor{keyword}{true};}
+\DoxyCodeLine{38     \}}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40     \mbox{\hyperlink{classBarco}{Barco}} left\_barco = barco;}
+\DoxyCodeLine{41     vector<string> left\_ruta;}
+\DoxyCodeLine{42     \mbox{\hyperlink{classBarco}{Barco}} right\_barco = barco;}
+\DoxyCodeLine{43     vector<string> right\_ruta;}
+\DoxyCodeLine{44     }
+\DoxyCodeLine{45     \mbox{\hyperlink{classCuenca_ab08023cdd20bbefe3ad6506502b4576c}{calcular\_viaje}}(raiz.left(), left\_barco, left\_ruta);}
+\DoxyCodeLine{46     \mbox{\hyperlink{classCuenca_ab08023cdd20bbefe3ad6506502b4576c}{calcular\_viaje}}(raiz.right(), right\_barco, right\_ruta);}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48     \textcolor{keywordflow}{if} (left\_barco.\mbox{\hyperlink{classBarco_aca280ae3722e21830a0cdd63f3245675}{restante}}() < right\_barco.\mbox{\hyperlink{classBarco_aca280ae3722e21830a0cdd63f3245675}{restante}}() or (left\_barco.\mbox{\hyperlink{classBarco_aca280ae3722e21830a0cdd63f3245675}{restante}}() == right\_barco.\mbox{\hyperlink{classBarco_aca280ae3722e21830a0cdd63f3245675}{restante}}() and left\_ruta.size() <= right\_ruta.size()))}
+\DoxyCodeLine{49     \{}
+\DoxyCodeLine{50         barco = left\_barco;}
+\DoxyCodeLine{51         ruta = left\_ruta;}
+\DoxyCodeLine{52     \}}
+\DoxyCodeLine{53     \textcolor{keywordflow}{else} }
+\DoxyCodeLine{54     \{}
+\DoxyCodeLine{55         barco = right\_barco;}
+\DoxyCodeLine{56         ruta = right\_ruta;}
+\DoxyCodeLine{57     \}}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{59     \textcolor{keywordflow}{if} (not ruta.empty() or agregar) }
+\DoxyCodeLine{60     \{}
+\DoxyCodeLine{61         ruta.push\_back(ciudad\_id);}
+\DoxyCodeLine{62     \}}
+\DoxyCodeLine{63 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classCuenca_acce42ec6f63c1770ca00af1298a6dfbc}\label{classCuenca_acce42ec6f63c1770ca00af1298a6dfbc}} 
+\index{Cuenca@{Cuenca}!comerciar@{comerciar}}
+\index{comerciar@{comerciar}!Cuenca@{Cuenca}}
+\doxysubsubsection{\texorpdfstring{comerciar()}{comerciar()}}
+{\footnotesize\ttfamily void Cuenca\+::comerciar (\begin{DoxyParamCaption}\item[{const string \&}]{ciudad\+\_\+id1,  }\item[{const string \&}]{ciudad\+\_\+id2 }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea 130 del archivo Cuenca.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{131 \{}
+\DoxyCodeLine{132     \textcolor{keywordflow}{if} (not \mbox{\hyperlink{classCuenca_afadcf7affebe5218e4d3eb88595f23dd}{ciudades}}.\mbox{\hyperlink{classCjt__ciudades_aeb587ce30d0f8805ddf468ef0202ee95}{existe\_ciudad}}(ciudad\_id1) or not \mbox{\hyperlink{classCuenca_afadcf7affebe5218e4d3eb88595f23dd}{ciudades}}.\mbox{\hyperlink{classCjt__ciudades_aeb587ce30d0f8805ddf468ef0202ee95}{existe\_ciudad}}(ciudad\_id2))}
+\DoxyCodeLine{133     \{}
+\DoxyCodeLine{134         cout << \textcolor{stringliteral}{"{}error: no existe la ciudad"{}} << endl;}
+\DoxyCodeLine{135     \}}
+\DoxyCodeLine{136     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (ciudad\_id1 == ciudad\_id2)}
+\DoxyCodeLine{137     \{}
+\DoxyCodeLine{138         cout << \textcolor{stringliteral}{"{}error: ciudad repetida"{}} << endl;}
+\DoxyCodeLine{139     \}}
+\DoxyCodeLine{140     \textcolor{keywordflow}{else} }
+\DoxyCodeLine{141     \{}
+\DoxyCodeLine{142         \mbox{\hyperlink{classCuenca_afadcf7affebe5218e4d3eb88595f23dd}{ciudades}}.\mbox{\hyperlink{classCjt__ciudades_a19889e6fb0441db3f1ff2ebf331b9182}{comerciar}}(ciudad\_id1, ciudad\_id2, \mbox{\hyperlink{classCuenca_a710f881238488289a10dd94e28105bae}{productos}});}
+\DoxyCodeLine{143     \}}
+\DoxyCodeLine{144 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classCuenca_a54368a39d24f75b4171ae23b9d3771a4}\label{classCuenca_a54368a39d24f75b4171ae23b9d3771a4}} 
+\index{Cuenca@{Cuenca}!construir\_estructura@{construir\_estructura}}
+\index{construir\_estructura@{construir\_estructura}!Cuenca@{Cuenca}}
+\doxysubsubsection{\texorpdfstring{construir\_estructura()}{construir\_estructura()}}
+{\footnotesize\ttfamily Bin\+Tree$<$ string $>$ Cuenca\+::construir\+\_\+estructura (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea 283 del archivo Cuenca.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{284 \{}
+\DoxyCodeLine{285     \textcolor{keywordtype}{string} ciudad\_id;}
+\DoxyCodeLine{286     cin >> ciudad\_id;}
+\DoxyCodeLine{287     \textcolor{keywordflow}{if} (ciudad\_id == \textcolor{stringliteral}{"{}\#"{}}) }
+\DoxyCodeLine{288     \{}
+\DoxyCodeLine{289         \textcolor{keywordflow}{return} BinTree<string>();}
+\DoxyCodeLine{290     \}}
+\DoxyCodeLine{291     \mbox{\hyperlink{classCuenca_afadcf7affebe5218e4d3eb88595f23dd}{ciudades}}.\mbox{\hyperlink{classCjt__ciudades_aab3086f12c08b8ed2c914288a35ab505}{poner\_ciudad}}(ciudad\_id);}
+\DoxyCodeLine{292     BinTree<string> left = \mbox{\hyperlink{classCuenca_a54368a39d24f75b4171ae23b9d3771a4}{construir\_estructura}}();}
+\DoxyCodeLine{293     BinTree<string> right = \mbox{\hyperlink{classCuenca_a54368a39d24f75b4171ae23b9d3771a4}{construir\_estructura}}();}
+\DoxyCodeLine{294     \textcolor{keywordflow}{return} BinTree<string>(ciudad\_id, left, right);}
+\DoxyCodeLine{295 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classCuenca_afd0e89adecf56b6ecdf230baa1e9bc4b}\label{classCuenca_afd0e89adecf56b6ecdf230baa1e9bc4b}} 
+\index{Cuenca@{Cuenca}!consultar\_producto\_ciudad@{consultar\_producto\_ciudad}}
+\index{consultar\_producto\_ciudad@{consultar\_producto\_ciudad}!Cuenca@{Cuenca}}
+\doxysubsubsection{\texorpdfstring{consultar\_producto\_ciudad()}{consultar\_producto\_ciudad()}}
+{\footnotesize\ttfamily void Cuenca\+::consultar\+\_\+producto\+\_\+ciudad (\begin{DoxyParamCaption}\item[{const string \&}]{ciudad\+\_\+id,  }\item[{int}]{prod\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea 322 del archivo Cuenca.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{323 \{}
+\DoxyCodeLine{324     \textcolor{keywordflow}{if} (not \mbox{\hyperlink{classCuenca_a710f881238488289a10dd94e28105bae}{productos}}.\mbox{\hyperlink{classCjt__productos_adb7ebdac20a01f44e84b445fcff0c233}{existe\_producto}}(prod\_id))}
+\DoxyCodeLine{325     \{}
+\DoxyCodeLine{326         cout << \textcolor{stringliteral}{"{}error: no existe el producto"{}} << endl;}
+\DoxyCodeLine{327     \}}
+\DoxyCodeLine{328     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (not \mbox{\hyperlink{classCuenca_afadcf7affebe5218e4d3eb88595f23dd}{ciudades}}.\mbox{\hyperlink{classCjt__ciudades_aeb587ce30d0f8805ddf468ef0202ee95}{existe\_ciudad}}(ciudad\_id))}
+\DoxyCodeLine{329     \{}
+\DoxyCodeLine{330         cout << \textcolor{stringliteral}{"{}error: no existe la ciudad"{}} << endl;}
+\DoxyCodeLine{331     \}}
+\DoxyCodeLine{332     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (not \mbox{\hyperlink{classCuenca_afadcf7affebe5218e4d3eb88595f23dd}{ciudades}}.\mbox{\hyperlink{classCjt__ciudades_a393a6c4ab2f1d264858fa082dc092431}{contiene\_producto}}(ciudad\_id, prod\_id))}
+\DoxyCodeLine{333     \{}
+\DoxyCodeLine{334         cout << \textcolor{stringliteral}{"{}error: la ciudad no tiene el producto"{}} << endl;}
+\DoxyCodeLine{335     \}}
+\DoxyCodeLine{336     \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{337         cout << \mbox{\hyperlink{classCuenca_afadcf7affebe5218e4d3eb88595f23dd}{ciudades}}.\mbox{\hyperlink{classCjt__ciudades_a04c993c0e0fce38fa6773751e97c2787}{consultar\_cantidad\_poseido}}(ciudad\_id, prod\_id) << \textcolor{stringliteral}{"{} "{}} << }
+\DoxyCodeLine{338                 \mbox{\hyperlink{classCuenca_afadcf7affebe5218e4d3eb88595f23dd}{ciudades}}.\mbox{\hyperlink{classCjt__ciudades_a525b7fde22b32463ab3a5a3ee1384eb8}{consultar\_cantidad\_requerida}}(ciudad\_id, prod\_id) << endl;}
+\DoxyCodeLine{339     \}}
+\DoxyCodeLine{340 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classCuenca_a4b086a60a63c1799974a04dc4f397bbe}\label{classCuenca_a4b086a60a63c1799974a04dc4f397bbe}} 
+\index{Cuenca@{Cuenca}!escribir\_ciudad@{escribir\_ciudad}}
+\index{escribir\_ciudad@{escribir\_ciudad}!Cuenca@{Cuenca}}
+\doxysubsubsection{\texorpdfstring{escribir\_ciudad()}{escribir\_ciudad()}}
+{\footnotesize\ttfamily void Cuenca\+::escribir\+\_\+ciudad (\begin{DoxyParamCaption}\item[{const string \&}]{ciudad\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea 309 del archivo Cuenca.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{310 \{}
+\DoxyCodeLine{311     \textcolor{keywordflow}{if} (not \mbox{\hyperlink{classCuenca_afadcf7affebe5218e4d3eb88595f23dd}{ciudades}}.\mbox{\hyperlink{classCjt__ciudades_aeb587ce30d0f8805ddf468ef0202ee95}{existe\_ciudad}}(ciudad\_id))}
+\DoxyCodeLine{312     \{}
+\DoxyCodeLine{313         cout << \textcolor{stringliteral}{"{}error: no existe la ciudad"{}} << endl;}
+\DoxyCodeLine{314     \}}
+\DoxyCodeLine{315     \textcolor{keywordflow}{else} }
+\DoxyCodeLine{316     \{}
+\DoxyCodeLine{317         \mbox{\hyperlink{classCuenca_afadcf7affebe5218e4d3eb88595f23dd}{ciudades}}.\mbox{\hyperlink{classCjt__ciudades_ae7e30eab6b9697e8809f900d1b9d9620}{escribir\_inventario}}(ciudad\_id);}
+\DoxyCodeLine{318         \mbox{\hyperlink{classCuenca_afadcf7affebe5218e4d3eb88595f23dd}{ciudades}}.\mbox{\hyperlink{classCjt__ciudades_a00bbc4146eef32fcfdd4a163215ce387}{escribir\_atributos\_totales}}(ciudad\_id);}
+\DoxyCodeLine{319     \}}
+\DoxyCodeLine{320 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classCuenca_ae134ae0e7e68fedf2f6a9e33663eca70}\label{classCuenca_ae134ae0e7e68fedf2f6a9e33663eca70}} 
+\index{Cuenca@{Cuenca}!escribir\_producto@{escribir\_producto}}
+\index{escribir\_producto@{escribir\_producto}!Cuenca@{Cuenca}}
+\doxysubsubsection{\texorpdfstring{escribir\_producto()}{escribir\_producto()}}
+{\footnotesize\ttfamily void Cuenca\+::escribir\+\_\+producto (\begin{DoxyParamCaption}\item[{int}]{prod\+\_\+id }\end{DoxyParamCaption}) const}
+
+
+
+Definición en la línea 297 del archivo Cuenca.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{298 \{}
+\DoxyCodeLine{299     \textcolor{keywordflow}{if} (not \mbox{\hyperlink{classCuenca_a710f881238488289a10dd94e28105bae}{productos}}.\mbox{\hyperlink{classCjt__productos_adb7ebdac20a01f44e84b445fcff0c233}{existe\_producto}}(prod\_id)) }
+\DoxyCodeLine{300     \{}
+\DoxyCodeLine{301         cout << \textcolor{stringliteral}{"{}error: no existe el producto"{}} << endl;}
+\DoxyCodeLine{302     \}}
+\DoxyCodeLine{303     \textcolor{keywordflow}{else} }
+\DoxyCodeLine{304     \{}
+\DoxyCodeLine{305         \mbox{\hyperlink{classCuenca_a710f881238488289a10dd94e28105bae}{productos}}.\mbox{\hyperlink{classCjt__productos_a36187ce11495932bca6567edc42daf52}{escribir\_producto}}(prod\_id);}
+\DoxyCodeLine{306     \}}
+\DoxyCodeLine{307 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classCuenca_a50322cf958ca7c16f47c0fa3b7a22ace}\label{classCuenca_a50322cf958ca7c16f47c0fa3b7a22ace}} 
+\index{Cuenca@{Cuenca}!hacer\_viaje@{hacer\_viaje}}
+\index{hacer\_viaje@{hacer\_viaje}!Cuenca@{Cuenca}}
+\doxysubsubsection{\texorpdfstring{hacer\_viaje()}{hacer\_viaje()}}
+{\footnotesize\ttfamily void Cuenca\+::hacer\+\_\+viaje (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBarco}{Barco}} \&}]{barco }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea 65 del archivo Cuenca.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{66 \{}
+\DoxyCodeLine{67     \mbox{\hyperlink{classBarco}{Barco}} copia = barco;}
+\DoxyCodeLine{68     vector<string> ruta;}
+\DoxyCodeLine{69     \mbox{\hyperlink{classCuenca_ab08023cdd20bbefe3ad6506502b4576c}{calcular\_viaje}}(\mbox{\hyperlink{classCuenca_a35b9f4d3289e093756ff6997c8a1c9f1}{estructura}}, copia, ruta);}
+\DoxyCodeLine{70 }
+\DoxyCodeLine{71     \textcolor{keywordflow}{if} (barco.\mbox{\hyperlink{classBarco_aca280ae3722e21830a0cdd63f3245675}{restante}}() != copia.\mbox{\hyperlink{classBarco_aca280ae3722e21830a0cdd63f3245675}{restante}}()) }
+\DoxyCodeLine{72     \{}
+\DoxyCodeLine{73         copia = barco;}
+\DoxyCodeLine{74         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = ruta.size() -\/ 1; i >= 0; -\/-\/i) }
+\DoxyCodeLine{75         \{}
+\DoxyCodeLine{76             \textcolor{keywordtype}{string} ciudad\_id = ruta[i];}
+\DoxyCodeLine{77             \textcolor{keywordflow}{if} (\mbox{\hyperlink{classCuenca_afadcf7affebe5218e4d3eb88595f23dd}{ciudades}}.\mbox{\hyperlink{classCjt__ciudades_a393a6c4ab2f1d264858fa082dc092431}{contiene\_producto}}(ciudad\_id, copia.\mbox{\hyperlink{classBarco_a18ee6e2799fba957af616a42d54d005b}{id\_compra}}))}
+\DoxyCodeLine{78             \{}
+\DoxyCodeLine{79                 \textcolor{keywordtype}{int} cantidad\_comprar = }
+\DoxyCodeLine{80                     max(0, }
+\DoxyCodeLine{81                         min(}
+\DoxyCodeLine{82                             copia.\mbox{\hyperlink{classBarco_a7b8a9917814f1f80564f9cf95bfe465d}{num\_compra}}, }
+\DoxyCodeLine{83                             \mbox{\hyperlink{classCuenca_afadcf7affebe5218e4d3eb88595f23dd}{ciudades}}.\mbox{\hyperlink{classCjt__ciudades_a04c993c0e0fce38fa6773751e97c2787}{consultar\_cantidad\_poseido}}(ciudad\_id, copia.\mbox{\hyperlink{classBarco_a18ee6e2799fba957af616a42d54d005b}{id\_compra}}) -\/ }
+\DoxyCodeLine{84                             \mbox{\hyperlink{classCuenca_afadcf7affebe5218e4d3eb88595f23dd}{ciudades}}.\mbox{\hyperlink{classCjt__ciudades_a525b7fde22b32463ab3a5a3ee1384eb8}{consultar\_cantidad\_requerida}}(ciudad\_id, copia.\mbox{\hyperlink{classBarco_a18ee6e2799fba957af616a42d54d005b}{id\_compra}})}
+\DoxyCodeLine{85                         )}
+\DoxyCodeLine{86                     );}
+\DoxyCodeLine{87                 copia.\mbox{\hyperlink{classBarco_a7b8a9917814f1f80564f9cf95bfe465d}{num\_compra}} -\/= cantidad\_comprar;}
+\DoxyCodeLine{88                 \mbox{\hyperlink{classCuenca_afadcf7affebe5218e4d3eb88595f23dd}{ciudades}}.\mbox{\hyperlink{classCjt__ciudades_a8296e0df0409b38056c2458bb06a80f4}{modificar\_cantidad\_poseido}}(ciudad\_id, copia.\mbox{\hyperlink{classBarco_a18ee6e2799fba957af616a42d54d005b}{id\_compra}}, -\/cantidad\_comprar, \mbox{\hyperlink{classCuenca_a710f881238488289a10dd94e28105bae}{productos}}.\mbox{\hyperlink{classCjt__productos_a7365dfd4b738d4da0834cd2a75e9b8c5}{consultar\_producto}}(copia.\mbox{\hyperlink{classBarco_a18ee6e2799fba957af616a42d54d005b}{id\_compra}}));}
+\DoxyCodeLine{89             \}}
+\DoxyCodeLine{90             \textcolor{keywordflow}{if} (\mbox{\hyperlink{classCuenca_afadcf7affebe5218e4d3eb88595f23dd}{ciudades}}.\mbox{\hyperlink{classCjt__ciudades_a393a6c4ab2f1d264858fa082dc092431}{contiene\_producto}}(ciudad\_id, copia.\mbox{\hyperlink{classBarco_a7dd3fe7762f9362219acc1fde2845504}{id\_venta}}))}
+\DoxyCodeLine{91             \{}
+\DoxyCodeLine{92                 \textcolor{keywordtype}{int} cantidad\_vender = }
+\DoxyCodeLine{93                     max(0, }
+\DoxyCodeLine{94                         min(}
+\DoxyCodeLine{95                             copia.\mbox{\hyperlink{classBarco_a06142671610200b49d0a399cc6b0e2d7}{num\_venta}}, }
+\DoxyCodeLine{96                             \mbox{\hyperlink{classCuenca_afadcf7affebe5218e4d3eb88595f23dd}{ciudades}}.\mbox{\hyperlink{classCjt__ciudades_a525b7fde22b32463ab3a5a3ee1384eb8}{consultar\_cantidad\_requerida}}(ciudad\_id, copia.\mbox{\hyperlink{classBarco_a7dd3fe7762f9362219acc1fde2845504}{id\_venta}}) -\/ }
+\DoxyCodeLine{97                             \mbox{\hyperlink{classCuenca_afadcf7affebe5218e4d3eb88595f23dd}{ciudades}}.\mbox{\hyperlink{classCjt__ciudades_a04c993c0e0fce38fa6773751e97c2787}{consultar\_cantidad\_poseido}}(ciudad\_id, copia.\mbox{\hyperlink{classBarco_a7dd3fe7762f9362219acc1fde2845504}{id\_venta}})}
+\DoxyCodeLine{98                         )}
+\DoxyCodeLine{99                     );}
+\DoxyCodeLine{100                 copia.\mbox{\hyperlink{classBarco_a06142671610200b49d0a399cc6b0e2d7}{num\_venta}} -\/= cantidad\_vender;}
+\DoxyCodeLine{101                 \mbox{\hyperlink{classCuenca_afadcf7affebe5218e4d3eb88595f23dd}{ciudades}}.\mbox{\hyperlink{classCjt__ciudades_a8296e0df0409b38056c2458bb06a80f4}{modificar\_cantidad\_poseido}}(ciudad\_id, copia.\mbox{\hyperlink{classBarco_a7dd3fe7762f9362219acc1fde2845504}{id\_venta}}, cantidad\_vender, \mbox{\hyperlink{classCuenca_a710f881238488289a10dd94e28105bae}{productos}}.\mbox{\hyperlink{classCjt__productos_a7365dfd4b738d4da0834cd2a75e9b8c5}{consultar\_producto}}(copia.\mbox{\hyperlink{classBarco_a7dd3fe7762f9362219acc1fde2845504}{id\_venta}}));}
+\DoxyCodeLine{102             \}}
+\DoxyCodeLine{103 }
+\DoxyCodeLine{104         \}}
+\DoxyCodeLine{105         barco.\mbox{\hyperlink{classBarco_a5dfabaa5594d73744183c4b21b543f3d}{agregar\_viaje}}(ruta[0]);}
+\DoxyCodeLine{106     \}}
+\DoxyCodeLine{107     cout << barco.\mbox{\hyperlink{classBarco_aca280ae3722e21830a0cdd63f3245675}{restante}}() -\/ copia.\mbox{\hyperlink{classBarco_aca280ae3722e21830a0cdd63f3245675}{restante}}() << endl;}
+\DoxyCodeLine{108 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classCuenca_a1a2c3d8b5c2721c4c1d264933e61f055}\label{classCuenca_a1a2c3d8b5c2721c4c1d264933e61f055}} 
+\index{Cuenca@{Cuenca}!leer\_inventario@{leer\_inventario}}
+\index{leer\_inventario@{leer\_inventario}!Cuenca@{Cuenca}}
+\doxysubsubsection{\texorpdfstring{leer\_inventario()}{leer\_inventario()}}
+{\footnotesize\ttfamily void Cuenca\+::leer\+\_\+inventario (\begin{DoxyParamCaption}\item[{const string \&}]{ciudad\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea 247 del archivo Cuenca.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{248 \{}
+\DoxyCodeLine{249     \textcolor{keywordflow}{if} (not \mbox{\hyperlink{classCuenca_afadcf7affebe5218e4d3eb88595f23dd}{ciudades}}.\mbox{\hyperlink{classCjt__ciudades_aeb587ce30d0f8805ddf468ef0202ee95}{existe\_ciudad}}(ciudad\_id)) }
+\DoxyCodeLine{250     \{}
+\DoxyCodeLine{251         cout << \textcolor{stringliteral}{"{}error: no existe la ciudad"{}} << endl;}
+\DoxyCodeLine{252         \textcolor{keywordtype}{int} n;}
+\DoxyCodeLine{253         cin >> n;}
+\DoxyCodeLine{254         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < n; ++i) }
+\DoxyCodeLine{255         \{}
+\DoxyCodeLine{256             \textcolor{keywordtype}{int} foo1, foo2, foo3;}
+\DoxyCodeLine{257             cin >> foo1 >> foo2 >> foo3;}
+\DoxyCodeLine{258         \}}
+\DoxyCodeLine{259     \}}
+\DoxyCodeLine{260     \textcolor{keywordflow}{else} }
+\DoxyCodeLine{261     \{}
+\DoxyCodeLine{262         \mbox{\hyperlink{classCuenca_afadcf7affebe5218e4d3eb88595f23dd}{ciudades}}.\mbox{\hyperlink{classCjt__ciudades_a3bc68e88f757fff221787aed62d6f124}{leer\_inventario}}(ciudad\_id, \mbox{\hyperlink{classCuenca_a710f881238488289a10dd94e28105bae}{productos}});}
+\DoxyCodeLine{263     \}}
+\DoxyCodeLine{264 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classCuenca_a1ef343481e4d5994c5e4393693a5895b}\label{classCuenca_a1ef343481e4d5994c5e4393693a5895b}} 
+\index{Cuenca@{Cuenca}!leer\_inventarios@{leer\_inventarios}}
+\index{leer\_inventarios@{leer\_inventarios}!Cuenca@{Cuenca}}
+\doxysubsubsection{\texorpdfstring{leer\_inventarios()}{leer\_inventarios()}}
+{\footnotesize\ttfamily void Cuenca\+::leer\+\_\+inventarios (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea 266 del archivo Cuenca.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{267 \{}
+\DoxyCodeLine{268     \textcolor{keywordtype}{string} ciudad\_id;}
+\DoxyCodeLine{269     cin >> ciudad\_id;}
+\DoxyCodeLine{270     \textcolor{keywordflow}{while} (ciudad\_id != \textcolor{stringliteral}{"{}\#"{}})}
+\DoxyCodeLine{271     \{}
+\DoxyCodeLine{272         \mbox{\hyperlink{classCuenca_a1a2c3d8b5c2721c4c1d264933e61f055}{leer\_inventario}}(ciudad\_id);}
+\DoxyCodeLine{273         cin >> ciudad\_id;}
+\DoxyCodeLine{274     \}}
+\DoxyCodeLine{275 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classCuenca_afd65f95da65e39aec64e4508b9eacc0b}\label{classCuenca_afd65f95da65e39aec64e4508b9eacc0b}} 
+\index{Cuenca@{Cuenca}!leer\_productos@{leer\_productos}}
+\index{leer\_productos@{leer\_productos}!Cuenca@{Cuenca}}
+\doxysubsubsection{\texorpdfstring{leer\_productos()}{leer\_productos()}}
+{\footnotesize\ttfamily void Cuenca\+::leer\+\_\+productos (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea 241 del archivo Cuenca.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{242 \{}
+\DoxyCodeLine{243     \mbox{\hyperlink{classCuenca_a710f881238488289a10dd94e28105bae}{productos}}.\mbox{\hyperlink{classCjt__productos_a789883a0ec2b88a0d091a7503f16f87e}{leer\_productos}}(n);}
+\DoxyCodeLine{244 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classCuenca_a529e35e876f731b016dbca367cb064d2}\label{classCuenca_a529e35e876f731b016dbca367cb064d2}} 
+\index{Cuenca@{Cuenca}!leer\_rio@{leer\_rio}}
+\index{leer\_rio@{leer\_rio}!Cuenca@{Cuenca}}
+\doxysubsubsection{\texorpdfstring{leer\_rio()}{leer\_rio()}}
+{\footnotesize\ttfamily void Cuenca\+::leer\+\_\+rio (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea 277 del archivo Cuenca.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{278 \{}
+\DoxyCodeLine{279     \mbox{\hyperlink{classCuenca_afadcf7affebe5218e4d3eb88595f23dd}{ciudades}} = \mbox{\hyperlink{classCjt__ciudades}{Cjt\_ciudades}}(); }
+\DoxyCodeLine{280     \mbox{\hyperlink{classCuenca_a35b9f4d3289e093756ff6997c8a1c9f1}{estructura}} = \mbox{\hyperlink{classCuenca_a54368a39d24f75b4171ae23b9d3771a4}{construir\_estructura}}(); }
+\DoxyCodeLine{281 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classCuenca_a05536a225b9bfc7290184c8202985871}\label{classCuenca_a05536a225b9bfc7290184c8202985871}} 
+\index{Cuenca@{Cuenca}!modificar\_barco@{modificar\_barco}}
+\index{modificar\_barco@{modificar\_barco}!Cuenca@{Cuenca}}
+\doxysubsubsection{\texorpdfstring{modificar\_barco()}{modificar\_barco()}}
+{\footnotesize\ttfamily void Cuenca\+::modificar\+\_\+barco (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBarco}{Barco}} \&}]{barco }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea 146 del archivo Cuenca.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{147 \{}
+\DoxyCodeLine{148     \textcolor{keywordtype}{int} id\_compra, num\_compra, id\_venta, num\_venta;}
+\DoxyCodeLine{149     cin >> id\_compra >> num\_compra >> id\_venta >> num\_venta;}
+\DoxyCodeLine{150 }
+\DoxyCodeLine{151     \textcolor{keywordflow}{if} (not \mbox{\hyperlink{classCuenca_a710f881238488289a10dd94e28105bae}{productos}}.\mbox{\hyperlink{classCjt__productos_adb7ebdac20a01f44e84b445fcff0c233}{existe\_producto}}(id\_compra) or not \mbox{\hyperlink{classCuenca_a710f881238488289a10dd94e28105bae}{productos}}.\mbox{\hyperlink{classCjt__productos_adb7ebdac20a01f44e84b445fcff0c233}{existe\_producto}}(id\_venta))}
+\DoxyCodeLine{152     \{}
+\DoxyCodeLine{153         cout << \textcolor{stringliteral}{"{}error: no existe el producto"{}} << endl;}
+\DoxyCodeLine{154     \}}
+\DoxyCodeLine{155     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (id\_compra == id\_venta) }
+\DoxyCodeLine{156     \{}
+\DoxyCodeLine{157         cout << \textcolor{stringliteral}{"{}error: no se puede comprar y vender el mismo producto"{}} << endl;}
+\DoxyCodeLine{158     \}}
+\DoxyCodeLine{159     \textcolor{keywordflow}{else} }
+\DoxyCodeLine{160     \{}
+\DoxyCodeLine{161         barco.\mbox{\hyperlink{classBarco_a367058928ea7f359cbc1854eff4442b1}{modificar\_barco}}(id\_compra, num\_compra, id\_venta, num\_venta);}
+\DoxyCodeLine{162     \}}
+\DoxyCodeLine{163 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classCuenca_a1f5bbbd5dc0fff8176b70ffc0de9d233}\label{classCuenca_a1f5bbbd5dc0fff8176b70ffc0de9d233}} 
+\index{Cuenca@{Cuenca}!modificar\_producto@{modificar\_producto}}
+\index{modificar\_producto@{modificar\_producto}!Cuenca@{Cuenca}}
+\doxysubsubsection{\texorpdfstring{modificar\_producto()}{modificar\_producto()}}
+{\footnotesize\ttfamily void Cuenca\+::modificar\+\_\+producto (\begin{DoxyParamCaption}\item[{const string \&}]{ciudad\+\_\+id,  }\item[{int}]{prod\+\_\+id,  }\item[{int}]{cantidad\+\_\+disponible,  }\item[{int}]{cantidad\+\_\+requerida }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea 185 del archivo Cuenca.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{186 \{}
+\DoxyCodeLine{187     \textcolor{keywordflow}{if} (not \mbox{\hyperlink{classCuenca_a710f881238488289a10dd94e28105bae}{productos}}.\mbox{\hyperlink{classCjt__productos_adb7ebdac20a01f44e84b445fcff0c233}{existe\_producto}}(prod\_id))}
+\DoxyCodeLine{188     \{}
+\DoxyCodeLine{189         cout << \textcolor{stringliteral}{"{}error: no existe el producto"{}} << endl;}
+\DoxyCodeLine{190     \}}
+\DoxyCodeLine{191     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (not \mbox{\hyperlink{classCuenca_afadcf7affebe5218e4d3eb88595f23dd}{ciudades}}.\mbox{\hyperlink{classCjt__ciudades_aeb587ce30d0f8805ddf468ef0202ee95}{existe\_ciudad}}(ciudad\_id))}
+\DoxyCodeLine{192     \{}
+\DoxyCodeLine{193         cout << \textcolor{stringliteral}{"{}error: no existe la ciudad"{}} << endl;}
+\DoxyCodeLine{194     \}}
+\DoxyCodeLine{195     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (not \mbox{\hyperlink{classCuenca_afadcf7affebe5218e4d3eb88595f23dd}{ciudades}}.\mbox{\hyperlink{classCjt__ciudades_a393a6c4ab2f1d264858fa082dc092431}{contiene\_producto}}(ciudad\_id, prod\_id))}
+\DoxyCodeLine{196     \{}
+\DoxyCodeLine{197         cout << \textcolor{stringliteral}{"{}error: la ciudad no tiene el producto"{}} << endl;}
+\DoxyCodeLine{198     \}}
+\DoxyCodeLine{199     \textcolor{keywordflow}{else} \{ }
+\DoxyCodeLine{200         \mbox{\hyperlink{classCuenca_afadcf7affebe5218e4d3eb88595f23dd}{ciudades}}.\mbox{\hyperlink{classCjt__ciudades_a8296e0df0409b38056c2458bb06a80f4}{modificar\_cantidad\_poseido}}(}
+\DoxyCodeLine{201             ciudad\_id, }
+\DoxyCodeLine{202             prod\_id, }
+\DoxyCodeLine{203             cantidad\_disponible -\/ \mbox{\hyperlink{classCuenca_afadcf7affebe5218e4d3eb88595f23dd}{ciudades}}.\mbox{\hyperlink{classCjt__ciudades_a04c993c0e0fce38fa6773751e97c2787}{consultar\_cantidad\_poseido}}(ciudad\_id, prod\_id), }
+\DoxyCodeLine{204             \mbox{\hyperlink{classCuenca_a710f881238488289a10dd94e28105bae}{productos}}.\mbox{\hyperlink{classCjt__productos_a7365dfd4b738d4da0834cd2a75e9b8c5}{consultar\_producto}}(prod\_id)}
+\DoxyCodeLine{205         );}
+\DoxyCodeLine{206         \mbox{\hyperlink{classCuenca_afadcf7affebe5218e4d3eb88595f23dd}{ciudades}}.\mbox{\hyperlink{classCjt__ciudades_a542ea6716d8110a44c48de88d1da630f}{modificar\_cantidad\_requerida}}(}
+\DoxyCodeLine{207             ciudad\_id, }
+\DoxyCodeLine{208             prod\_id, }
+\DoxyCodeLine{209             cantidad\_requerida -\/ \mbox{\hyperlink{classCuenca_afadcf7affebe5218e4d3eb88595f23dd}{ciudades}}.\mbox{\hyperlink{classCjt__ciudades_a525b7fde22b32463ab3a5a3ee1384eb8}{consultar\_cantidad\_requerida}}(ciudad\_id, prod\_id)}
+\DoxyCodeLine{210         );}
+\DoxyCodeLine{211         \mbox{\hyperlink{classCuenca_afadcf7affebe5218e4d3eb88595f23dd}{ciudades}}.\mbox{\hyperlink{classCjt__ciudades_a00bbc4146eef32fcfdd4a163215ce387}{escribir\_atributos\_totales}}(ciudad\_id);}
+\DoxyCodeLine{212     \}}
+\DoxyCodeLine{213 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classCuenca_aea95fd8fb86b0cbb69f6001df5dcf9ac}\label{classCuenca_aea95fd8fb86b0cbb69f6001df5dcf9ac}} 
+\index{Cuenca@{Cuenca}!numero\_productos@{numero\_productos}}
+\index{numero\_productos@{numero\_productos}!Cuenca@{Cuenca}}
+\doxysubsubsection{\texorpdfstring{numero\_productos()}{numero\_productos()}}
+{\footnotesize\ttfamily void Cuenca\+::numero\+\_\+productos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definición en la línea 236 del archivo Cuenca.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{237 \{}
+\DoxyCodeLine{238     cout << \mbox{\hyperlink{classCuenca_a710f881238488289a10dd94e28105bae}{productos}}.\mbox{\hyperlink{classCjt__productos_ad13bf11505fd21a5a5825ca38c7d5a5f}{numero\_productos}}() << endl;}
+\DoxyCodeLine{239 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classCuenca_a255b863bef1c20afb87e485d42c46896}\label{classCuenca_a255b863bef1c20afb87e485d42c46896}} 
+\index{Cuenca@{Cuenca}!poner\_producto@{poner\_producto}}
+\index{poner\_producto@{poner\_producto}!Cuenca@{Cuenca}}
+\doxysubsubsection{\texorpdfstring{poner\_producto()}{poner\_producto()}}
+{\footnotesize\ttfamily void Cuenca\+::poner\+\_\+producto (\begin{DoxyParamCaption}\item[{const string \&}]{ciudad\+\_\+id,  }\item[{int}]{prod\+\_\+id,  }\item[{int}]{cantidad\+\_\+disponible,  }\item[{int}]{cantidad\+\_\+requerida }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea 165 del archivo Cuenca.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{166 \{}
+\DoxyCodeLine{167     \textcolor{keywordflow}{if} (not \mbox{\hyperlink{classCuenca_a710f881238488289a10dd94e28105bae}{productos}}.\mbox{\hyperlink{classCjt__productos_adb7ebdac20a01f44e84b445fcff0c233}{existe\_producto}}(prod\_id))}
+\DoxyCodeLine{168     \{}
+\DoxyCodeLine{169         cout << \textcolor{stringliteral}{"{}error: no existe el producto"{}} << endl;}
+\DoxyCodeLine{170     \}}
+\DoxyCodeLine{171     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (not \mbox{\hyperlink{classCuenca_afadcf7affebe5218e4d3eb88595f23dd}{ciudades}}.\mbox{\hyperlink{classCjt__ciudades_aeb587ce30d0f8805ddf468ef0202ee95}{existe\_ciudad}}(ciudad\_id))}
+\DoxyCodeLine{172     \{}
+\DoxyCodeLine{173         cout << \textcolor{stringliteral}{"{}error: no existe la ciudad"{}} << endl;}
+\DoxyCodeLine{174     \}}
+\DoxyCodeLine{175     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\mbox{\hyperlink{classCuenca_afadcf7affebe5218e4d3eb88595f23dd}{ciudades}}.\mbox{\hyperlink{classCjt__ciudades_a393a6c4ab2f1d264858fa082dc092431}{contiene\_producto}}(ciudad\_id, prod\_id))}
+\DoxyCodeLine{176     \{}
+\DoxyCodeLine{177         cout << \textcolor{stringliteral}{"{}error: la ciudad ya tiene el producto"{}} << endl;}
+\DoxyCodeLine{178     \}}
+\DoxyCodeLine{179     \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{180         \mbox{\hyperlink{classCuenca_afadcf7affebe5218e4d3eb88595f23dd}{ciudades}}.\mbox{\hyperlink{classCjt__ciudades_ab0d43cd40d3654f0902fda3b7bf3a395}{poner\_producto}}(ciudad\_id, prod\_id, cantidad\_disponible, cantidad\_requerida, \mbox{\hyperlink{classCuenca_a710f881238488289a10dd94e28105bae}{productos}}.\mbox{\hyperlink{classCjt__productos_a7365dfd4b738d4da0834cd2a75e9b8c5}{consultar\_producto}}(prod\_id));}
+\DoxyCodeLine{181         \mbox{\hyperlink{classCuenca_afadcf7affebe5218e4d3eb88595f23dd}{ciudades}}.\mbox{\hyperlink{classCjt__ciudades_a00bbc4146eef32fcfdd4a163215ce387}{escribir\_atributos\_totales}}(ciudad\_id);}
+\DoxyCodeLine{182     \}}
+\DoxyCodeLine{183 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classCuenca_aa7dbb8bd9399fc9322cd8913a8ce1d5b}\label{classCuenca_aa7dbb8bd9399fc9322cd8913a8ce1d5b}} 
+\index{Cuenca@{Cuenca}!quitar\_producto@{quitar\_producto}}
+\index{quitar\_producto@{quitar\_producto}!Cuenca@{Cuenca}}
+\doxysubsubsection{\texorpdfstring{quitar\_producto()}{quitar\_producto()}}
+{\footnotesize\ttfamily void Cuenca\+::quitar\+\_\+producto (\begin{DoxyParamCaption}\item[{const string \&}]{ciudad\+\_\+id,  }\item[{int}]{prod\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea 215 del archivo Cuenca.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{216 \{}
+\DoxyCodeLine{217     \textcolor{keywordflow}{if} (not \mbox{\hyperlink{classCuenca_a710f881238488289a10dd94e28105bae}{productos}}.\mbox{\hyperlink{classCjt__productos_adb7ebdac20a01f44e84b445fcff0c233}{existe\_producto}}(prod\_id))}
+\DoxyCodeLine{218     \{}
+\DoxyCodeLine{219         cout << \textcolor{stringliteral}{"{}error: no existe el producto"{}} << endl;}
+\DoxyCodeLine{220     \}}
+\DoxyCodeLine{221     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (not \mbox{\hyperlink{classCuenca_afadcf7affebe5218e4d3eb88595f23dd}{ciudades}}.\mbox{\hyperlink{classCjt__ciudades_aeb587ce30d0f8805ddf468ef0202ee95}{existe\_ciudad}}(ciudad\_id))}
+\DoxyCodeLine{222     \{}
+\DoxyCodeLine{223         cout << \textcolor{stringliteral}{"{}error: no existe la ciudad"{}} << endl;}
+\DoxyCodeLine{224     \}}
+\DoxyCodeLine{225     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (not \mbox{\hyperlink{classCuenca_afadcf7affebe5218e4d3eb88595f23dd}{ciudades}}.\mbox{\hyperlink{classCjt__ciudades_a393a6c4ab2f1d264858fa082dc092431}{contiene\_producto}}(ciudad\_id, prod\_id))}
+\DoxyCodeLine{226     \{}
+\DoxyCodeLine{227         cout << \textcolor{stringliteral}{"{}error: la ciudad no tiene el producto"{}} << endl;}
+\DoxyCodeLine{228     \}}
+\DoxyCodeLine{229     \textcolor{keywordflow}{else} }
+\DoxyCodeLine{230     \{}
+\DoxyCodeLine{231         \mbox{\hyperlink{classCuenca_afadcf7affebe5218e4d3eb88595f23dd}{ciudades}}.\mbox{\hyperlink{classCjt__ciudades_a7d9c1c7e8682ac3d92f7c7efdae8d412}{quitar\_producto}}(ciudad\_id, prod\_id, \mbox{\hyperlink{classCuenca_a710f881238488289a10dd94e28105bae}{productos}}.\mbox{\hyperlink{classCjt__productos_a7365dfd4b738d4da0834cd2a75e9b8c5}{consultar\_producto}}(prod\_id));}
+\DoxyCodeLine{232         \mbox{\hyperlink{classCuenca_afadcf7affebe5218e4d3eb88595f23dd}{ciudades}}.\mbox{\hyperlink{classCjt__ciudades_a00bbc4146eef32fcfdd4a163215ce387}{escribir\_atributos\_totales}}(ciudad\_id);}
+\DoxyCodeLine{233     \}}
+\DoxyCodeLine{234 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classCuenca_a51870d649b499f3b73d4ea1532e2b526}\label{classCuenca_a51870d649b499f3b73d4ea1532e2b526}} 
+\index{Cuenca@{Cuenca}!redistribuir@{redistribuir}}
+\index{redistribuir@{redistribuir}!Cuenca@{Cuenca}}
+\doxysubsubsection{\texorpdfstring{redistribuir()}{redistribuir()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Cuenca\+::redistribuir (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea 110 del archivo Cuenca.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{111 \{}
+\DoxyCodeLine{112     \mbox{\hyperlink{classCuenca_a51870d649b499f3b73d4ea1532e2b526}{redistribuir}}(\mbox{\hyperlink{classCuenca_a35b9f4d3289e093756ff6997c8a1c9f1}{estructura}});}
+\DoxyCodeLine{113 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classCuenca_a774f43ab42455eed569b5000731625e6}\label{classCuenca_a774f43ab42455eed569b5000731625e6}} 
+\index{Cuenca@{Cuenca}!redistribuir@{redistribuir}}
+\index{redistribuir@{redistribuir}!Cuenca@{Cuenca}}
+\doxysubsubsection{\texorpdfstring{redistribuir()}{redistribuir()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Cuenca\+::redistribuir (\begin{DoxyParamCaption}\item[{const Bin\+Tree$<$ string $>$ \&}]{raiz }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea 115 del archivo Cuenca.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{116 \{}
+\DoxyCodeLine{117     \textcolor{keywordflow}{if} (raiz.empty()) \textcolor{keywordflow}{return};}
+\DoxyCodeLine{118     \textcolor{keywordflow}{if} (not raiz.left().empty()) }
+\DoxyCodeLine{119     \{}
+\DoxyCodeLine{120         \mbox{\hyperlink{classCuenca_acce42ec6f63c1770ca00af1298a6dfbc}{comerciar}}(raiz.value(), raiz.left().value());}
+\DoxyCodeLine{121         \mbox{\hyperlink{classCuenca_a51870d649b499f3b73d4ea1532e2b526}{redistribuir}}(raiz.left());}
+\DoxyCodeLine{122     \}}
+\DoxyCodeLine{123     \textcolor{keywordflow}{if} (not raiz.right().empty()) }
+\DoxyCodeLine{124     \{}
+\DoxyCodeLine{125         \mbox{\hyperlink{classCuenca_acce42ec6f63c1770ca00af1298a6dfbc}{comerciar}}(raiz.value(), raiz.right().value());}
+\DoxyCodeLine{126         \mbox{\hyperlink{classCuenca_a51870d649b499f3b73d4ea1532e2b526}{redistribuir}}(raiz.right());}
+\DoxyCodeLine{127     \}}
+\DoxyCodeLine{128 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de los datos miembro}
+\mbox{\Hypertarget{classCuenca_afadcf7affebe5218e4d3eb88595f23dd}\label{classCuenca_afadcf7affebe5218e4d3eb88595f23dd}} 
+\index{Cuenca@{Cuenca}!ciudades@{ciudades}}
+\index{ciudades@{ciudades}!Cuenca@{Cuenca}}
+\doxysubsubsection{\texorpdfstring{ciudades}{ciudades}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classCjt__ciudades}{Cjt\+\_\+ciudades}} Cuenca\+::ciudades\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea 22 del archivo Cuenca.\+hh.
+
+\mbox{\Hypertarget{classCuenca_a35b9f4d3289e093756ff6997c8a1c9f1}\label{classCuenca_a35b9f4d3289e093756ff6997c8a1c9f1}} 
+\index{Cuenca@{Cuenca}!estructura@{estructura}}
+\index{estructura@{estructura}!Cuenca@{Cuenca}}
+\doxysubsubsection{\texorpdfstring{estructura}{estructura}}
+{\footnotesize\ttfamily Bin\+Tree$<$string$>$ Cuenca\+::estructura\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea 23 del archivo Cuenca.\+hh.
+
+\mbox{\Hypertarget{classCuenca_a710f881238488289a10dd94e28105bae}\label{classCuenca_a710f881238488289a10dd94e28105bae}} 
+\index{Cuenca@{Cuenca}!productos@{productos}}
+\index{productos@{productos}!Cuenca@{Cuenca}}
+\doxysubsubsection{\texorpdfstring{productos}{productos}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classCjt__productos}{Cjt\+\_\+productos}} Cuenca\+::productos\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definición en la línea 21 del archivo Cuenca.\+hh.
+
+
+
+La documentación para esta clase fue generada a partir de los siguientes ficheros\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{Cuenca_8hh}{Cuenca.\+hh}}\item 
+\mbox{\hyperlink{Cuenca_8cc}{Cuenca.\+cc}}\end{DoxyCompactItemize}

@@ -1,0 +1,236 @@
+\hypertarget{classBarco}{}\doxysection{Referencia de la Clase Barco}
+\label{classBarco}\index{Barco@{Barco}}
+
+
+Representa el barco de comercio de la cuenca fluvial.  
+
+
+
+
+{\ttfamily \#include $<$Barco.\+hh$>$}
+
+\doxysubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBarco_aea54a1f00318af549e695999ccf08e38}{Barco}} ()
+\begin{DoxyCompactList}\small\item\em Creadora por defecto. Se ejecuta automaticamente al declarar un barco. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBarco_a367058928ea7f359cbc1854eff4442b1}{modificar\+\_\+barco}} (int \mbox{\hyperlink{classBarco_a18ee6e2799fba957af616a42d54d005b}{id\+\_\+compra}}, int \mbox{\hyperlink{classBarco_a7b8a9917814f1f80564f9cf95bfe465d}{num\+\_\+compra}}, int \mbox{\hyperlink{classBarco_a7dd3fe7762f9362219acc1fde2845504}{id\+\_\+venta}}, int \mbox{\hyperlink{classBarco_a06142671610200b49d0a399cc6b0e2d7}{num\+\_\+venta}})
+\item 
+void \mbox{\hyperlink{classBarco_a5dfabaa5594d73744183c4b21b543f3d}{agregar\+\_\+viaje}} (const string \&ciudad\+\_\+id)
+\item 
+void \mbox{\hyperlink{classBarco_a0c10121667902699dfe5eb9fc98ea666}{borrar\+\_\+viajes}} ()
+\item 
+int \mbox{\hyperlink{classBarco_aca280ae3722e21830a0cdd63f3245675}{restante}} () const
+\item 
+void \mbox{\hyperlink{classBarco_a3f1c26f2f0565e375924dae85b2e89a0}{escribir\+\_\+barco}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Atributos públicos}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classBarco_a18ee6e2799fba957af616a42d54d005b}{id\+\_\+compra}}
+\item 
+int \mbox{\hyperlink{classBarco_a7b8a9917814f1f80564f9cf95bfe465d}{num\+\_\+compra}}
+\item 
+int \mbox{\hyperlink{classBarco_a7dd3fe7762f9362219acc1fde2845504}{id\+\_\+venta}}
+\item 
+int \mbox{\hyperlink{classBarco_a06142671610200b49d0a399cc6b0e2d7}{num\+\_\+venta}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Atributos privados estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static vector$<$ string $>$ \mbox{\hyperlink{classBarco_a7f83cc30b7977cf63364b4e814933ed9}{viajes}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Representa el barco de comercio de la cuenca fluvial. 
+
+Definición en la línea 24 del archivo Barco.\+hh.
+
+
+
+\doxysubsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{classBarco_aea54a1f00318af549e695999ccf08e38}\label{classBarco_aea54a1f00318af549e695999ccf08e38}} 
+\index{Barco@{Barco}!Barco@{Barco}}
+\index{Barco@{Barco}!Barco@{Barco}}
+\doxysubsubsection{\texorpdfstring{Barco()}{Barco()}}
+{\footnotesize\ttfamily Barco\+::\+Barco (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creadora por defecto. Se ejecuta automaticamente al declarar un barco. 
+
+\begin{DoxyPrecond}{Precondición}
+{\itshape Cierto.} 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+El resultado es un barco el cual todos sus atributos estan sin inicializar. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 5 del archivo Barco.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{6 \{}
+\DoxyCodeLine{7     \mbox{\hyperlink{classBarco_a18ee6e2799fba957af616a42d54d005b}{id\_compra}} = 0;}
+\DoxyCodeLine{8     \mbox{\hyperlink{classBarco_a7b8a9917814f1f80564f9cf95bfe465d}{num\_compra}} = 0;}
+\DoxyCodeLine{9     \mbox{\hyperlink{classBarco_a7dd3fe7762f9362219acc1fde2845504}{id\_venta}} = 0;}
+\DoxyCodeLine{10     \mbox{\hyperlink{classBarco_a06142671610200b49d0a399cc6b0e2d7}{num\_venta}} = 0;}
+\DoxyCodeLine{11 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{classBarco_a5dfabaa5594d73744183c4b21b543f3d}\label{classBarco_a5dfabaa5594d73744183c4b21b543f3d}} 
+\index{Barco@{Barco}!agregar\_viaje@{agregar\_viaje}}
+\index{agregar\_viaje@{agregar\_viaje}!Barco@{Barco}}
+\doxysubsubsection{\texorpdfstring{agregar\_viaje()}{agregar\_viaje()}}
+{\footnotesize\ttfamily void Barco\+::agregar\+\_\+viaje (\begin{DoxyParamCaption}\item[{const string \&}]{ciudad\+\_\+id }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea 22 del archivo Barco.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{23 \{}
+\DoxyCodeLine{24     \mbox{\hyperlink{classBarco_a7f83cc30b7977cf63364b4e814933ed9}{viajes}}.push\_back(ciudad\_id);}
+\DoxyCodeLine{25 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBarco_a0c10121667902699dfe5eb9fc98ea666}\label{classBarco_a0c10121667902699dfe5eb9fc98ea666}} 
+\index{Barco@{Barco}!borrar\_viajes@{borrar\_viajes}}
+\index{borrar\_viajes@{borrar\_viajes}!Barco@{Barco}}
+\doxysubsubsection{\texorpdfstring{borrar\_viajes()}{borrar\_viajes()}}
+{\footnotesize\ttfamily void Barco\+::borrar\+\_\+viajes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea 27 del archivo Barco.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{28 \{}
+\DoxyCodeLine{29     \mbox{\hyperlink{classBarco_a7f83cc30b7977cf63364b4e814933ed9}{viajes}}.clear();}
+\DoxyCodeLine{30 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBarco_a3f1c26f2f0565e375924dae85b2e89a0}\label{classBarco_a3f1c26f2f0565e375924dae85b2e89a0}} 
+\index{Barco@{Barco}!escribir\_barco@{escribir\_barco}}
+\index{escribir\_barco@{escribir\_barco}!Barco@{Barco}}
+\doxysubsubsection{\texorpdfstring{escribir\_barco()}{escribir\_barco()}}
+{\footnotesize\ttfamily void Barco\+::escribir\+\_\+barco (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definición en la línea 37 del archivo Barco.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{38 \{}
+\DoxyCodeLine{39     cout << \mbox{\hyperlink{classBarco_a18ee6e2799fba957af616a42d54d005b}{id\_compra}} << \textcolor{stringliteral}{"{} "{}} << \mbox{\hyperlink{classBarco_a7b8a9917814f1f80564f9cf95bfe465d}{num\_compra}} << \textcolor{stringliteral}{"{} "{}} << \mbox{\hyperlink{classBarco_a7dd3fe7762f9362219acc1fde2845504}{id\_venta}} << \textcolor{stringliteral}{"{} "{}} << \mbox{\hyperlink{classBarco_a06142671610200b49d0a399cc6b0e2d7}{num\_venta}} << endl;}
+\DoxyCodeLine{40     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{string} ciudad : \mbox{\hyperlink{classBarco_a7f83cc30b7977cf63364b4e814933ed9}{viajes}})}
+\DoxyCodeLine{41     \{}
+\DoxyCodeLine{42         cout << ciudad << endl;}
+\DoxyCodeLine{43     \}}
+\DoxyCodeLine{44 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBarco_a367058928ea7f359cbc1854eff4442b1}\label{classBarco_a367058928ea7f359cbc1854eff4442b1}} 
+\index{Barco@{Barco}!modificar\_barco@{modificar\_barco}}
+\index{modificar\_barco@{modificar\_barco}!Barco@{Barco}}
+\doxysubsubsection{\texorpdfstring{modificar\_barco()}{modificar\_barco()}}
+{\footnotesize\ttfamily void Barco\+::modificar\+\_\+barco (\begin{DoxyParamCaption}\item[{int}]{id\+\_\+compra,  }\item[{int}]{num\+\_\+compra,  }\item[{int}]{id\+\_\+venta,  }\item[{int}]{num\+\_\+venta }\end{DoxyParamCaption})}
+
+
+
+Definición en la línea 14 del archivo Barco.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{15 \{}
+\DoxyCodeLine{16     this-\/>\mbox{\hyperlink{classBarco_a18ee6e2799fba957af616a42d54d005b}{id\_compra}} = \mbox{\hyperlink{classBarco_a18ee6e2799fba957af616a42d54d005b}{id\_compra}};}
+\DoxyCodeLine{17     this-\/>\mbox{\hyperlink{classBarco_a7b8a9917814f1f80564f9cf95bfe465d}{num\_compra}} = \mbox{\hyperlink{classBarco_a7b8a9917814f1f80564f9cf95bfe465d}{num\_compra}};}
+\DoxyCodeLine{18     this-\/>\mbox{\hyperlink{classBarco_a7dd3fe7762f9362219acc1fde2845504}{id\_venta}} = \mbox{\hyperlink{classBarco_a7dd3fe7762f9362219acc1fde2845504}{id\_venta}};}
+\DoxyCodeLine{19     this-\/>\mbox{\hyperlink{classBarco_a06142671610200b49d0a399cc6b0e2d7}{num\_venta}} = \mbox{\hyperlink{classBarco_a06142671610200b49d0a399cc6b0e2d7}{num\_venta}};}
+\DoxyCodeLine{20 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBarco_aca280ae3722e21830a0cdd63f3245675}\label{classBarco_aca280ae3722e21830a0cdd63f3245675}} 
+\index{Barco@{Barco}!restante@{restante}}
+\index{restante@{restante}!Barco@{Barco}}
+\doxysubsubsection{\texorpdfstring{restante()}{restante()}}
+{\footnotesize\ttfamily int Barco\+::restante (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Definición en la línea 32 del archivo Barco.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{33 \{}
+\DoxyCodeLine{34     \textcolor{keywordflow}{return} \mbox{\hyperlink{classBarco_a7b8a9917814f1f80564f9cf95bfe465d}{num\_compra}} + \mbox{\hyperlink{classBarco_a06142671610200b49d0a399cc6b0e2d7}{num\_venta}};}
+\DoxyCodeLine{35 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentación de los datos miembro}
+\mbox{\Hypertarget{classBarco_a18ee6e2799fba957af616a42d54d005b}\label{classBarco_a18ee6e2799fba957af616a42d54d005b}} 
+\index{Barco@{Barco}!id\_compra@{id\_compra}}
+\index{id\_compra@{id\_compra}!Barco@{Barco}}
+\doxysubsubsection{\texorpdfstring{id\_compra}{id\_compra}}
+{\footnotesize\ttfamily int Barco\+::id\+\_\+compra}
+
+
+
+Definición en la línea 29 del archivo Barco.\+hh.
+
+\mbox{\Hypertarget{classBarco_a7dd3fe7762f9362219acc1fde2845504}\label{classBarco_a7dd3fe7762f9362219acc1fde2845504}} 
+\index{Barco@{Barco}!id\_venta@{id\_venta}}
+\index{id\_venta@{id\_venta}!Barco@{Barco}}
+\doxysubsubsection{\texorpdfstring{id\_venta}{id\_venta}}
+{\footnotesize\ttfamily int Barco\+::id\+\_\+venta}
+
+
+
+Definición en la línea 31 del archivo Barco.\+hh.
+
+\mbox{\Hypertarget{classBarco_a7b8a9917814f1f80564f9cf95bfe465d}\label{classBarco_a7b8a9917814f1f80564f9cf95bfe465d}} 
+\index{Barco@{Barco}!num\_compra@{num\_compra}}
+\index{num\_compra@{num\_compra}!Barco@{Barco}}
+\doxysubsubsection{\texorpdfstring{num\_compra}{num\_compra}}
+{\footnotesize\ttfamily int Barco\+::num\+\_\+compra}
+
+
+
+Definición en la línea 30 del archivo Barco.\+hh.
+
+\mbox{\Hypertarget{classBarco_a06142671610200b49d0a399cc6b0e2d7}\label{classBarco_a06142671610200b49d0a399cc6b0e2d7}} 
+\index{Barco@{Barco}!num\_venta@{num\_venta}}
+\index{num\_venta@{num\_venta}!Barco@{Barco}}
+\doxysubsubsection{\texorpdfstring{num\_venta}{num\_venta}}
+{\footnotesize\ttfamily int Barco\+::num\+\_\+venta}
+
+
+
+Definición en la línea 32 del archivo Barco.\+hh.
+
+\mbox{\Hypertarget{classBarco_a7f83cc30b7977cf63364b4e814933ed9}\label{classBarco_a7f83cc30b7977cf63364b4e814933ed9}} 
+\index{Barco@{Barco}!viajes@{viajes}}
+\index{viajes@{viajes}!Barco@{Barco}}
+\doxysubsubsection{\texorpdfstring{viajes}{viajes}}
+{\footnotesize\ttfamily vector$<$ string $>$ Barco\+::viajes\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definición en la línea 27 del archivo Barco.\+hh.
+
+
+
+La documentación para esta clase fue generada a partir de los siguientes ficheros\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{Barco_8hh}{Barco.\+hh}}\item 
+\mbox{\hyperlink{Barco_8cc}{Barco.\+cc}}\end{DoxyCompactItemize}

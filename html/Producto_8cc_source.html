@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Practica Primavera 2024: Comercio Fluvial: Fichero Fuente Producto.cc</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Practica Primavera 2024: Comercio Fluvial
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Producto.cc</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="Producto_8cc.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Producto_8hh.html">Producto.hh</a>&quot;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno"><a class="line" href="classProducto.html#abdf37557185a4660251488b2db47fc7d">    3</a></span>&#160;<a class="code" href="classProducto.html#abdf37557185a4660251488b2db47fc7d">Producto::Producto</a>() {};</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="classProducto.html#abf87cc63a1e018d20104cdb04d515dd2">    5</a></span>&#160;<a class="code" href="classProducto.html#abdf37557185a4660251488b2db47fc7d">Producto::Producto</a>(<span class="keywordtype">int</span> peso, <span class="keywordtype">int</span> volumen) </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;{</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    this-&gt;peso = <a class="code" href="classProducto.html#a5432f079d648035abccdf978b5ab6c74">peso</a>;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    this-&gt;volumen = <a class="code" href="classProducto.html#a6d13a8d1a5dbe354f421e14e88a08273">volumen</a>;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;}</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="classProducto.html#a90e4cd5cab49d54c688b6ae4bec890e4">   11</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="classProducto.html#a90e4cd5cab49d54c688b6ae4bec890e4">Producto::consultar_peso</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classProducto.html#a5432f079d648035abccdf978b5ab6c74">peso</a>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;}</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="classProducto.html#ac51d2327dd5d4ff66029c7a985eab3f7">   16</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="classProducto.html#ac51d2327dd5d4ff66029c7a985eab3f7">Producto::consultar_volumen</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classProducto.html#a6d13a8d1a5dbe354f421e14e88a08273">volumen</a>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;}</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="classProducto.html#af3546b67d16efa3ddc66caf069f0c3ec">   21</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classProducto.html#af3546b67d16efa3ddc66caf069f0c3ec">Producto::escribir_producto</a>()<span class="keyword"> const </span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    cout &lt;&lt; <a class="code" href="classProducto.html#a5432f079d648035abccdf978b5ab6c74">peso</a> &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; <a class="code" href="classProducto.html#a6d13a8d1a5dbe354f421e14e88a08273">volumen</a> &lt;&lt; endl;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;}</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classProducto.html#ab6fe512a8aabc2ffb9be35646206e705">   26</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="classProducto.html#ab6fe512a8aabc2ffb9be35646206e705">Producto::leer_producto</a>()</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    cin &gt;&gt; <a class="code" href="classProducto.html#a5432f079d648035abccdf978b5ab6c74">peso</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    cin &gt;&gt; <a class="code" href="classProducto.html#a6d13a8d1a5dbe354f421e14e88a08273">volumen</a>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;}</div>
+<div class="ttc" id="aProducto_8hh_html"><div class="ttname"><a href="Producto_8hh.html">Producto.hh</a></div><div class="ttdoc">Especificación de la clase Producto.</div></div>
+<div class="ttc" id="aclassProducto_html_a5432f079d648035abccdf978b5ab6c74"><div class="ttname"><a href="classProducto.html#a5432f079d648035abccdf978b5ab6c74">Producto::peso</a></div><div class="ttdeci">int peso</div><div class="ttdoc">Peso del producto.</div><div class="ttdef"><b>Definition:</b> <a href="Producto_8hh_source.html#l00023">Producto.hh:23</a></div></div>
+<div class="ttc" id="aclassProducto_html_a6d13a8d1a5dbe354f421e14e88a08273"><div class="ttname"><a href="classProducto.html#a6d13a8d1a5dbe354f421e14e88a08273">Producto::volumen</a></div><div class="ttdeci">int volumen</div><div class="ttdoc">Volumen del producto.</div><div class="ttdef"><b>Definition:</b> <a href="Producto_8hh_source.html#l00025">Producto.hh:25</a></div></div>
+<div class="ttc" id="aclassProducto_html_a90e4cd5cab49d54c688b6ae4bec890e4"><div class="ttname"><a href="classProducto.html#a90e4cd5cab49d54c688b6ae4bec890e4">Producto::consultar_peso</a></div><div class="ttdeci">int consultar_peso() const</div><div class="ttdoc">Devuelve el peso del parametro implicito.</div><div class="ttdef"><b>Definition:</b> <a href="Producto_8cc_source.html#l00011">Producto.cc:11</a></div></div>
+<div class="ttc" id="aclassProducto_html_ab6fe512a8aabc2ffb9be35646206e705"><div class="ttname"><a href="classProducto.html#ab6fe512a8aabc2ffb9be35646206e705">Producto::leer_producto</a></div><div class="ttdeci">void leer_producto()</div><div class="ttdoc">Operación de lectura.</div><div class="ttdef"><b>Definition:</b> <a href="Producto_8cc_source.html#l00026">Producto.cc:26</a></div></div>
+<div class="ttc" id="aclassProducto_html_abdf37557185a4660251488b2db47fc7d"><div class="ttname"><a href="classProducto.html#abdf37557185a4660251488b2db47fc7d">Producto::Producto</a></div><div class="ttdeci">Producto()</div><div class="ttdoc">Creadora por defecto. Se ejecuta automáticamente al declarar un producto.</div><div class="ttdef"><b>Definition:</b> <a href="Producto_8cc_source.html#l00003">Producto.cc:3</a></div></div>
+<div class="ttc" id="aclassProducto_html_ac51d2327dd5d4ff66029c7a985eab3f7"><div class="ttname"><a href="classProducto.html#ac51d2327dd5d4ff66029c7a985eab3f7">Producto::consultar_volumen</a></div><div class="ttdeci">int consultar_volumen() const</div><div class="ttdoc">Devuelve el volumen del parametro implicito.</div><div class="ttdef"><b>Definition:</b> <a href="Producto_8cc_source.html#l00016">Producto.cc:16</a></div></div>
+<div class="ttc" id="aclassProducto_html_af3546b67d16efa3ddc66caf069f0c3ec"><div class="ttname"><a href="classProducto.html#af3546b67d16efa3ddc66caf069f0c3ec">Producto::escribir_producto</a></div><div class="ttdeci">void escribir_producto() const</div><div class="ttdoc">Operación de escritura.</div><div class="ttdef"><b>Definition:</b> <a href="Producto_8cc_source.html#l00021">Producto.cc:21</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>
