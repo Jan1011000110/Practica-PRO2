@@ -17,13 +17,13 @@ Facilita la gestion de operaciones de un conjunto de productos.
 int \mbox{\hyperlink{classCjt__productos_ad13bf11505fd21a5a5825ca38c7d5a5f}{numero\+\_\+productos}} () const
 \begin{DoxyCompactList}\small\item\em Devuelve el numero total de productos. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classCjt__productos_adb7ebdac20a01f44e84b445fcff0c233}{existe\+\_\+producto}} (int id) const
-\begin{DoxyCompactList}\small\item\em Comprueba si existe un producto con identificador id. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Comprueba si existe un producto con identificador {\itshape id}. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classProducto}{Producto}} \mbox{\hyperlink{classCjt__productos_a7365dfd4b738d4da0834cd2a75e9b8c5}{consultar\+\_\+producto}} (int id) const
-\begin{DoxyCompactList}\small\item\em Devuelve el producto con identificador id. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classCjt__productos_a36187ce11495932bca6567edc42daf52}{escribir\+\_\+producto}} (int id) const
-\begin{DoxyCompactList}\small\item\em Escribe el producto con identificador id. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Devuelve el producto con identificador {\itshape id}. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classCjt__productos_a789883a0ec2b88a0d091a7503f16f87e}{leer\+\_\+productos}} (int n)
-\begin{DoxyCompactList}\small\item\em Lee un conjunto de productos nuevos. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Lee un conjunto de productos nuevos. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCjt__productos_a36187ce11495932bca6567edc42daf52}{escribir\+\_\+producto}} (int id) const
+\begin{DoxyCompactList}\small\item\em Escribe el producto con identificador {\itshape id}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Atributos privados}
 \begin{DoxyCompactItemize}
 \item 
@@ -52,7 +52,7 @@ Definición en la línea 18 del archivo Cjt\+\_\+productos.\+hh.
 Creadora por defecto. Se ejecuta automáticamente al declarar un conjunto de productos. 
 
 \begin{DoxyPrecond}{Precondición}
-{\itshape Cierto.} 
+Cierto. 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondición}
 El resultado es un conjunto de productos el cual todos sus atributos no estan inicializados. 
@@ -80,13 +80,13 @@ Definición en la línea 3 del archivo Cjt\+\_\+productos.\+cc.
 
 
 
-Devuelve el producto con identificador id. 
+Devuelve el producto con identificador {\itshape id}. 
 
 \begin{DoxyPrecond}{Precondición}
-{\itshape Existe un producto con identificador id.} 
+Existe un producto con identificador {\itshape id}. 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondición}
-Devuelve el producto con identificador id. 
+Devuelve el producto con identificador {\itshape id}. 
 \end{DoxyPostcond}
 
 
@@ -107,13 +107,13 @@ Definición en la línea 19 del archivo Cjt\+\_\+productos.\+cc.
 
 
 
-Escribe el producto con identificador id. 
+Escribe el producto con identificador {\itshape id}. 
 
 \begin{DoxyPrecond}{Precondición}
-{\itshape Existe un producto con identificador id.} 
+Existe un producto con identificador {\itshape id}. 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondición}
-Se ha escrito el producto con identificador id en el canal standard de salida. 
+Se han escrito los atributos del producto con identificador {\itshape id} en el canal standard de salida. 
 \end{DoxyPostcond}
 
 
@@ -135,13 +135,13 @@ Definición en la línea 24 del archivo Cjt\+\_\+productos.\+cc.
 
 
 
-Comprueba si existe un producto con identificador id. 
+Comprueba si existe un producto con identificador {\itshape id}. 
 
 \begin{DoxyPrecond}{Precondición}
-{\itshape Cierto.} 
+Cierto. 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondición}
-Devuelve cierto si existe un producto con identificador id, falso en caso contrario 
+Devuelve cierto si existe un producto con identificador {\itshape id}, falso en caso contrario. 
 \end{DoxyPostcond}
 
 
@@ -165,10 +165,10 @@ Definición en la línea 14 del archivo Cjt\+\_\+productos.\+cc.
 Lee un conjunto de productos nuevos. 
 
 \begin{DoxyPrecond}{Precondición}
-{\itshape Está disponible en el canal de entrada un entero n positivo y a continuación los parametros de n productos nuevos.} 
+{\itshape Está disponible en el canal de entrada un entero {\itshape n} positivo y a continuación {\itshape n} lineas con los atributos de cada producto.} 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondición}
-Se han agregado n productos nuevos al vector productos y se ha actualizado el numero de productos totales. 
+Se han agregado {\itshape n} productos nuevos al vector productos y se ha actualizado el numero de productos totales. 
 \end{DoxyPostcond}
 
 
@@ -197,10 +197,10 @@ Definición en la línea 30 del archivo Cjt\+\_\+productos.\+cc.
 Devuelve el numero total de productos. 
 
 \begin{DoxyPrecond}{Precondición}
-{\itshape Cierto.} 
+Cierto. 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondición}
-Devuelve el numero total de productos 
+Devuelve el numero total de productos. 
 \end{DoxyPostcond}
 
 

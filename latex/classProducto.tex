@@ -2,6 +2,11 @@
 \label{classProducto}\index{Producto@{Producto}}
 
 
+Representa un producto.  
+
+
+
+
 {\ttfamily \#include $<$Producto.\+hh$>$}
 
 \doxysubsection*{Métodos públicos}
@@ -18,7 +23,7 @@ int \mbox{\hyperlink{classProducto_ac51d2327dd5d4ff66029c7a985eab3f7}{consultar\
 void \mbox{\hyperlink{classProducto_af3546b67d16efa3ddc66caf069f0c3ec}{escribir\+\_\+producto}} () const
 \begin{DoxyCompactList}\small\item\em Operación de escritura. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classProducto_ab6fe512a8aabc2ffb9be35646206e705}{leer\+\_\+producto}} ()
-\begin{DoxyCompactList}\small\item\em Operación de lectura. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Operación de lectura del producto. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Atributos privados}
 \begin{DoxyCompactItemize}
 \item 
@@ -29,7 +34,7 @@ int \mbox{\hyperlink{classProducto_a6d13a8d1a5dbe354f421e14e88a08273}{volumen}}
 
 
 \doxysubsection{Descripción detallada}
-
+Representa un producto. 
 
 Definición en la línea 19 del archivo Producto.\+hh.
 
@@ -47,7 +52,7 @@ Definición en la línea 19 del archivo Producto.\+hh.
 Creadora por defecto. Se ejecuta automáticamente al declarar un producto. 
 
 \begin{DoxyPrecond}{Precondición}
-{\itshape Cierto.} 
+Cierto. 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondición}
 El resultado es un producto el cual todos sus atributos no estan inicializados. 
@@ -72,7 +77,7 @@ Definición en la línea 3 del archivo Producto.\+cc.
 Creadora con valores concretos. 
 
 \begin{DoxyPrecond}{Precondición}
-{\itshape Cierto.} 
+Cierto. 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondición}
 El resultado es un producto con peso = peso y volumen = volumen. 
@@ -103,7 +108,7 @@ Definición en la línea 5 del archivo Producto.\+cc.
 Devuelve el peso del parametro implicito. 
 
 \begin{DoxyPrecond}{Precondición}
-{\itshape Cierto.} 
+Cierto. 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondición}
 Devuelve el peso del parametro implicito. 
@@ -130,7 +135,7 @@ Definición en la línea 11 del archivo Producto.\+cc.
 Devuelve el volumen del parametro implicito. 
 
 \begin{DoxyPrecond}{Precondición}
-{\itshape Cierto.} 
+Cierto. 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondición}
 Devuelve el volumen del parametro implicito. 
@@ -157,7 +162,7 @@ Definición en la línea 16 del archivo Producto.\+cc.
 Operación de escritura. 
 
 \begin{DoxyPrecond}{Precondición}
-{\itshape Cierto.} 
+Cierto. 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondición}
 Se han escrito los atributos del parámetro implicito en el canal standard de salida. 
@@ -181,10 +186,10 @@ Definición en la línea 21 del archivo Producto.\+cc.
 
 
 
-Operación de lectura. 
+Operación de lectura del producto. 
 
 \begin{DoxyPrecond}{Precondición}
-{\itshape Està disponible en el canal estandard de entrada dos enteros, los atributos del parametro implicito.} 
+Està disponible en el canal estandard de entrada dos naturales, los atributos del parametro implicito. 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondición}
 El paramentro implicito ahora tiene los atributos con los valores leidos. 

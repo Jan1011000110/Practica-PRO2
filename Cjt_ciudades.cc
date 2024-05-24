@@ -12,14 +12,14 @@ void Cjt_ciudades::poner_ciudad(const string &ciudad_id)
     ciudades[ciudad_id] = Inventario();
 }
 
-void Cjt_ciudades::poner_producto(const string &ciudad_id, int prod_id, int cantidad_disponible, int cantidad_requerida, const Producto &prod)
+void Cjt_ciudades::poner_producto(const string &ciudad_id, int prod_id, int cantidad_poseida, int cantidad_requerida, const Producto &prod)
 {
-    ciudades.at(ciudad_id).poner_producto(prod_id, cantidad_disponible, cantidad_requerida, prod);
+    ciudades.at(ciudad_id).poner_producto(prod_id, cantidad_poseida, cantidad_requerida, prod);
 }
 
-void Cjt_ciudades::modificar_cantidad_poseido(const string &ciudad_id, int prod_id, int cantidad_disponible, const Producto &prod) 
+void Cjt_ciudades::modificar_cantidad_poseida(const string &ciudad_id, int prod_id, int cantidad_poseida, const Producto &prod) 
 {
-    ciudades.at(ciudad_id).modificar_cantidad_poseido(prod_id, cantidad_disponible, prod);
+    ciudades.at(ciudad_id).modificar_cantidad_poseida(prod_id, cantidad_poseida, prod);
 }
 
 void Cjt_ciudades::modificar_cantidad_requerida(const string &ciudad_id, int prod_id, int cantidad_requerida) 
@@ -47,9 +47,9 @@ bool Cjt_ciudades::contiene_producto(const string &ciudad_id, int prod_id) const
     return ciudades.at(ciudad_id).contiene_producto(prod_id);
 }
 
-int Cjt_ciudades::consultar_cantidad_poseido(const string &ciudad_id, int prod_id) const
+int Cjt_ciudades::consultar_cantidad_poseida(const string &ciudad_id, int prod_id) const
 {
-    return ciudades.at(ciudad_id).consultar_cantidad_poseido(prod_id);
+    return ciudades.at(ciudad_id).consultar_cantidad_poseida(prod_id);
 }
 
 int Cjt_ciudades::consultar_cantidad_requerida(const string &ciudad_id, int prod_id) const

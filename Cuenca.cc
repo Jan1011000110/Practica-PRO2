@@ -14,7 +14,7 @@ void Cuenca::calcular_viaje(const BinTree<string> &raiz, Barco &barco, vector<st
             max(0, 
                 min(
                     barco.num_compra, 
-                    ciudades.consultar_cantidad_poseido(ciudad_id, barco.id_compra) - 
+                    ciudades.consultar_cantidad_poseida(ciudad_id, barco.id_compra) - 
                     ciudades.consultar_cantidad_requerida(ciudad_id, barco.id_compra)
                 )
             );
@@ -29,7 +29,7 @@ void Cuenca::calcular_viaje(const BinTree<string> &raiz, Barco &barco, vector<st
                 min(
                     barco.num_venta, 
                     ciudades.consultar_cantidad_requerida(ciudad_id, barco.id_venta) - 
-                    ciudades.consultar_cantidad_poseido(ciudad_id, barco.id_venta)
+                    ciudades.consultar_cantidad_poseida(ciudad_id, barco.id_venta)
                 )
             );
         barco.num_venta -= cantidad_vender;
@@ -80,12 +80,12 @@ void Cuenca::hacer_viaje(Barco &barco)
                     max(0, 
                         min(
                             copia.num_compra, 
-                            ciudades.consultar_cantidad_poseido(ciudad_id, copia.id_compra) - 
+                            ciudades.consultar_cantidad_poseida(ciudad_id, copia.id_compra) - 
                             ciudades.consultar_cantidad_requerida(ciudad_id, copia.id_compra)
                         )
                     );
                 copia.num_compra -= cantidad_comprar;
-                ciudades.modificar_cantidad_poseido(ciudad_id, copia.id_compra, -cantidad_comprar, productos.consultar_producto(copia.id_compra));
+                ciudades.modificar_cantidad_poseida(ciudad_id, copia.id_compra, -cantidad_comprar, productos.consultar_producto(copia.id_compra));
             }
             if (ciudades.contiene_producto(ciudad_id, copia.id_venta))
             {
@@ -94,11 +94,11 @@ void Cuenca::hacer_viaje(Barco &barco)
                         min(
                             copia.num_venta, 
                             ciudades.consultar_cantidad_requerida(ciudad_id, copia.id_venta) - 
-                            ciudades.consultar_cantidad_poseido(ciudad_id, copia.id_venta)
+                            ciudades.consultar_cantidad_poseida(ciudad_id, copia.id_venta)
                         )
                     );
                 copia.num_venta -= cantidad_vender;
-                ciudades.modificar_cantidad_poseido(ciudad_id, copia.id_venta, cantidad_vender, productos.consultar_producto(copia.id_venta));
+                ciudades.modificar_cantidad_poseida(ciudad_id, copia.id_venta, cantidad_vender, productos.consultar_producto(copia.id_venta));
             }
 
         }
@@ -197,10 +197,10 @@ void Cuenca::modificar_producto(const string &ciudad_id, int prod_id, int cantid
         cout << "error: la ciudad no tiene el producto" << endl;
     }
     else { 
-        ciudades.modificar_cantidad_poseido(
+        ciudades.modificar_cantidad_poseida(
             ciudad_id, 
             prod_id, 
-            cantidad_disponible - ciudades.consultar_cantidad_poseido(ciudad_id, prod_id), 
+            cantidad_disponible - ciudades.consultar_cantidad_poseida(ciudad_id, prod_id), 
             productos.consultar_producto(prod_id)
         );
         ciudades.modificar_cantidad_requerida(
@@ -334,7 +334,7 @@ void Cuenca::consultar_producto_ciudad(const string &ciudad_id, int prod_id)
         cout << "error: la ciudad no tiene el producto" << endl;
     }
     else {
-        cout << ciudades.consultar_cantidad_poseido(ciudad_id, prod_id) << " " << 
+        cout << ciudades.consultar_cantidad_poseida(ciudad_id, prod_id) << " " << 
                 ciudades.consultar_cantidad_requerida(ciudad_id, prod_id) << endl;
     }
 }
