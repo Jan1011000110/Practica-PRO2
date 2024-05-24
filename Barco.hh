@@ -24,12 +24,12 @@ using namespace std;
 class Barco 
 {
 private:
-    static vector<string> viajes;
-public:
     int id_compra;
     int num_compra;
     int id_venta;
     int num_venta;
+    vector<string> viajes;
+public:
 
     // Constructoras
 
@@ -41,16 +41,16 @@ public:
 
     Barco();
 
+
+
     // Modificadoras
-
     void modificar_barco(int id_compra, int num_compra, int id_venta, int num_venta);
-
     void agregar_viaje(const string &ciudad_id);
-
     void borrar_viajes();
 
     // Consultoras
 
+    void consultar_barco(int &id_compra, int &num_compra, int &id_venta, int &num_venta) const;
     int restante() const;
 
     // Escritura

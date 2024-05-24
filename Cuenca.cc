@@ -7,37 +7,43 @@ void Cuenca::calcular_viaje(const BinTree<string> &raiz, Barco &barco, vector<st
     if (raiz.empty()) return;
 
     string ciudad_id = raiz.value();
+
+    int id_compra, num_compra, id_venta, num_venta;
+    barco.consultar_barco(id_compra, num_compra, id_venta, num_venta);
+
     bool agregar = false;
-    if (ciudades.contiene_producto(ciudad_id, barco.id_compra))
+    if (ciudades.contiene_producto(ciudad_id, id_compra))
     {
         int cantidad_comprar = 
             max(0, 
                 min(
-                    barco.num_compra, 
-                    ciudades.consultar_cantidad_poseida(ciudad_id, barco.id_compra) - 
-                    ciudades.consultar_cantidad_requerida(ciudad_id, barco.id_compra)
+                    num_compra,
+                    ciudades.consultar_cantidad_poseida(ciudad_id, id_compra) - 
+                    ciudades.consultar_cantidad_requerida(ciudad_id, id_compra)
                 )
             );
-        barco.num_compra -= cantidad_comprar;
+        num_compra -= cantidad_comprar;
         if (cantidad_comprar > 0)
             agregar = true;
     }
-    if (ciudades.contiene_producto(ciudad_id, barco.id_venta))
+    if (ciudades.contiene_producto(ciudad_id, id_venta))
     {
         int cantidad_vender = 
             max(0, 
                 min(
-                    barco.num_venta, 
-                    ciudades.consultar_cantidad_requerida(ciudad_id, barco.id_venta) - 
-                    ciudades.consultar_cantidad_poseida(ciudad_id, barco.id_venta)
+                    num_venta,
+                    ciudades.consultar_cantidad_requerida(ciudad_id, id_venta) - 
+                    ciudades.consultar_cantidad_poseida(ciudad_id, id_venta)
                 )
             );
-        barco.num_venta -= cantidad_vender;
+        num_venta -= cantidad_vender;
         if (cantidad_vender > 0)
             agregar = true;
     }
+    
+    barco.modificar_barco(id_compra, num_compra, id_venta, num_venta);
 
-    Barco left_barco = barco;
+    Barco left_barco  = barco;
     vector<string> left_ruta;
     Barco right_barco = barco;
     vector<string> right_ruta;
@@ -48,12 +54,12 @@ void Cuenca::calcular_viaje(const BinTree<string> &raiz, Barco &barco, vector<st
     if (left_barco.restante() < right_barco.restante() or (left_barco.restante() == right_barco.restante() and left_ruta.size() <= right_ruta.size()))
     {
         barco = left_barco;
-        ruta = left_ruta;
+        ruta.swap(left_ruta);
     }
     else 
     {
         barco = right_barco;
-        ruta = right_ruta;
+        ruta.swap(right_ruta);
     }
 
     if (not ruta.empty() or agregar) 
@@ -64,43 +70,49 @@ void Cuenca::calcular_viaje(const BinTree<string> &raiz, Barco &barco, vector<st
 
 void Cuenca::hacer_viaje(Barco &barco) 
 {
-    Barco copia = barco;
+    Barco copia;
+    int id_compra, num_compra, id_venta, num_venta;
+    barco.consultar_barco(id_compra, num_compra, id_venta, num_venta);
+    copia.modificar_barco(id_compra, num_compra, id_venta, num_venta);
+
     vector<string> ruta;
     calcular_viaje(estructura, copia, ruta);
 
     if (barco.restante() != copia.restante()) 
     {
-        copia = barco;
+        int id_compra, num_compra, id_venta, num_venta;
+        barco.consultar_barco(id_compra, num_compra, id_venta, num_venta);
+        copia.modificar_barco(id_compra, num_compra, id_venta, num_venta);
         for (int i = ruta.size() - 1; i >= 0; --i) 
         {
             string ciudad_id = ruta[i];
-            if (ciudades.contiene_producto(ciudad_id, copia.id_compra))
+            if (ciudades.contiene_producto(ciudad_id, id_compra))
             {
                 int cantidad_comprar = 
                     max(0, 
                         min(
-                            copia.num_compra, 
-                            ciudades.consultar_cantidad_poseida(ciudad_id, copia.id_compra) - 
-                            ciudades.consultar_cantidad_requerida(ciudad_id, copia.id_compra)
+                            num_compra, 
+                            ciudades.consultar_cantidad_poseida(ciudad_id, id_compra) - 
+                            ciudades.consultar_cantidad_requerida(ciudad_id, id_compra)
                         )
                     );
-                copia.num_compra -= cantidad_comprar;
-                ciudades.modificar_cantidad_poseida(ciudad_id, copia.id_compra, -cantidad_comprar, productos.consultar_producto(copia.id_compra));
+                num_compra -= cantidad_comprar;
+                ciudades.modificar_cantidad_poseida(ciudad_id, id_compra, -cantidad_comprar, productos.consultar_producto(id_compra));
             }
-            if (ciudades.contiene_producto(ciudad_id, copia.id_venta))
+            if (ciudades.contiene_producto(ciudad_id, id_venta))
             {
                 int cantidad_vender = 
                     max(0, 
                         min(
-                            copia.num_venta, 
-                            ciudades.consultar_cantidad_requerida(ciudad_id, copia.id_venta) - 
-                            ciudades.consultar_cantidad_poseida(ciudad_id, copia.id_venta)
+                            num_venta,
+                            ciudades.consultar_cantidad_requerida(ciudad_id, id_venta) - 
+                            ciudades.consultar_cantidad_poseida(ciudad_id, id_venta)
                         )
                     );
-                copia.num_venta -= cantidad_vender;
-                ciudades.modificar_cantidad_poseida(ciudad_id, copia.id_venta, cantidad_vender, productos.consultar_producto(copia.id_venta));
+                num_venta -= cantidad_vender;
+                ciudades.modificar_cantidad_poseida(ciudad_id, id_venta, cantidad_vender, productos.consultar_producto(id_venta));
             }
-
+            copia.modificar_barco(id_compra, num_compra, id_venta, num_venta);
         }
         barco.agregar_viaje(ruta[0]);
     }
