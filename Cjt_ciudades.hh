@@ -19,14 +19,14 @@
 class Cjt_ciudades
 {
 private:
-    /** @brief Map que almacena todas las ciudades.*/
+    /** @brief Map que almacena todas las ciudades. */
     map<string, Inventario> ciudades;
 public:
     // Constructoras
 
     /** @brief Creadora por defecto.
      *      Se ejecuta automáticamente al declarar un conjunto de ciudades.
-     *      \pre <em>Cierto.</em>
+     *      \pre Cierto.
      *      \post El resultado es un conjunto de ciudades el cual todos sus atributos no estan inicializados.
     */
     Cjt_ciudades();

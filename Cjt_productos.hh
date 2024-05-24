@@ -1,4 +1,4 @@
-/** @file Cjt_productos.hh.  
+/** @file Cjt_productos.hh
  *      @brief Especificación de la clase Cjt_productos.
 */
 
@@ -11,16 +11,16 @@
 
 #include "Producto.hh"
 
-/** @class Cjt_productos.
+/** @class Cjt_productos
  *      @brief Facilita la gestion de operaciones de un conjunto de productos.
 */
 
 class Cjt_productos 
 {
 private:
-    /** @brief Vector que almacena los productos.*/
+    /** @brief Vector que almacena los productos. */
     vector<Producto> productos;   
-    /** @brief Numero de productos totales.*/
+    /** @brief Numero de productos totales. */
     int numero_de_productos;
 public:
     // Constructoras
@@ -28,7 +28,7 @@ public:
     /** @brief Creadora por defecto.
      *      Se ejecuta automáticamente al declarar un conjunto de productos.
      *      \pre Cierto.
-     *      \post El resultado es un conjunto de productos el cual todos sus atributos no estan inicializados.
+     *      \post El resultado es un conjunto de productos vacio.
     */
     Cjt_productos();
 

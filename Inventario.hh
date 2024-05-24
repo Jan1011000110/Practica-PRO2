@@ -11,7 +11,7 @@
 #include <map>
 #endif
 
-/** @struct Cantidad.
+/** @struct Cantidad
  *      @brief Struct que almacena la cantidad poseida y requerida de los productos que posee.
 */
 
@@ -22,18 +22,18 @@ struct Cantidad
 };
 
 
-/** @class Inventario.
+/** @class Inventario
  *      @brief Facilita la gestion de inventario.
 */
 
 class Inventario 
 {
 private:
-    /** @brief Map que almacena la cantidad poseida y requerida de cada producto que posee.*/
+    /** @brief Map que almacena la cantidad poseida y requerida de cada producto que posee. */
     map<int, Cantidad> inv;
-    /** @brief Peso total de todos los productoss del inventario.*/
+    /** @brief Peso total de todos los productoss del inventario. */
     int peso_total;
-    /** @brief Volumen total de todos los productos del inventario.*/
+    /** @brief Volumen total de todos los productos del inventario. */
     int volumen_total;
 public:
     // Constructoras

@@ -3,7 +3,6 @@
 Cjt_productos::Cjt_productos() 
 {
     numero_de_productos = 0;
-    productos = {Producto()}; // fill with empty producto to get 1-indexing
 }
 
 int Cjt_productos::numero_productos() const
@@ -18,13 +17,13 @@ bool Cjt_productos::existe_producto(int id) const
 
 Producto Cjt_productos::consultar_producto(int id) const
 {
-    return productos[id];
+    return productos.at(id - 1);
 }
 
 void Cjt_productos::escribir_producto(int id) const 
 {
     cout << id << ' ';
-    productos[id].escribir_producto();
+    productos.at(id - 1).escribir_producto();
 }
 
 void Cjt_productos::leer_productos(int n)

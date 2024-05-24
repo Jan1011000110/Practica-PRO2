@@ -35,16 +35,19 @@ public:
 
     /** @brief Creadora por defecto.
      *      Se ejecuta automaticamente al declarar un barco.
-     *      \pre <em>Cierto.</em>
+     *      \pre Cierto.
      *      \post El resultado es un barco el cual todos sus atributos estan sin inicializar.
-     */     
-
+    */     
     Barco();
 
-
-
     // Modificadoras
+
+    /** @brief Modificar los atributos del barco.
+     *     \pre Cierto.
+     *     \post Los atributos del barco quedan modificados con los valores de los parametros.
+     */
     void modificar_barco(int id_compra, int num_compra, int id_venta, int num_venta);
+
     void agregar_viaje(const string &ciudad_id);
     void borrar_viajes();
 

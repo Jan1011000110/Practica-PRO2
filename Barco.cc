@@ -1,12 +1,6 @@
 #include "Barco.hh"
 
-Barco::Barco() 
-{
-    id_compra = 0;
-    num_compra = 0;
-    id_venta = 0;
-    num_venta = 0;
-}
+Barco::Barco() {}
 
 void Barco::modificar_barco(int id_compra, int num_compra, int id_venta, int num_venta)
 {
@@ -15,7 +9,6 @@ void Barco::modificar_barco(int id_compra, int num_compra, int id_venta, int num
     this->id_venta = id_venta;
     this->num_venta = num_venta;
 }
-
 
 void Barco::agregar_viaje(const string &ciudad_id) 
 {
