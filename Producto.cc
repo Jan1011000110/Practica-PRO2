@@ -1,3 +1,7 @@
+/** @file Producto.cc 
+ *  @brief Código de la clase Producto.
+ */
+
 #include "Producto.hh"
 
 Producto::Producto() {};

@@ -25,36 +25,15 @@ program.o: program.cc Cuenca.hh
 	g++ -c program.cc $(OPCIONS)
 
 run: program.exe
-	./program.exe < sample.inp
+	./program.exe < sample/sample.inp
+
+html.zip:
+	zip -r html.zip html
 
 practica.tar:
-	tar -cvf practica.tar *.cc *.hh Makefile
+	tar -cvf practica.tar *.cc *.hh *.zip *.pdf Makefile
 
 clean:
 	rm *.o
 	rm -f practica.tar
-
-# p2++ := g++ -D_JUDGE_ -D_GLIBCXX_DEBUG -O2 -Wall -Wextra -Werror -Wno-sign-compare -fno-extended-identifiers -std=c++11
-
-# # Source files
-# SOURCES=program.cc Cuenca.cc Cjt_ciudades.cc Barco.cc Cjt_productos.cc Inventario.cc Producto.cc
-# # Object files
-# OBJECTS=$(SOURCES:.cc=.o)
-# # Executable name
-# EXECUTABLE=program.exe
-
-# $(EXECUTABLE): $(OBJECTS)
-# 	$(p2++) $(OBJECTS) -o $(EXECUTABLE)
-
-# .cc.o:
-# 	$(p2++) -c $< -o $@
-
-# run: $(EXECUTABLE)
-# 	./$(EXECUTABLE) < sample.inp
-
-# practica.tar:
-# 	tar -cvf practica.tar $(SOURCES) *.hh Makefile
-
-# clean:
-# 	rm -f $(OBJECTS) $(EXECUTABLE)
-# 	rm -f practica.tar
+	rm -f html.zip

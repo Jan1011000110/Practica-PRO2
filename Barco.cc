@@ -1,3 +1,7 @@
+/** @file Barco.cc 
+ *  @brief Código de la clase Barco.
+ */
+
 #include "Barco.hh"
 
 Barco::Barco() {}

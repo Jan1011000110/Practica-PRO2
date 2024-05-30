@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -45,6 +49,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('classCuenca.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,7 +80,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Métodos públicos</a> &#124;
@@ -70,66 +90,97 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Representa la cuenca fluvial.  
+<p>Representa la información y las operaciones de la cuenca fluvial.  
  <a href="classCuenca.html#details">Más...</a></p>
 
 <p><code>#include &lt;<a class="el" href="Cuenca_8hh_source.html">Cuenca.hh</a>&gt;</code></p>
+<div class="dynheader">
+Diagrama de colaboración para Cuenca:</div>
+<div class="dyncontent">
+<div class="center"><img src="classCuenca__coll__graph.png" border="0" usemap="#aCuenca_coll__map" alt="Collaboration graph"/></div>
+<map name="aCuenca_coll__map" id="aCuenca_coll__map">
+<area shape="rect" title="Representa la información y las operaciones de la cuenca fluvial." alt="" coords="91,95,161,121"/>
+<area shape="rect" href="classCjt__productos.html" title="Representa un conjunto de productos de la cuenca fluvial." alt="" coords="5,5,116,32"/>
+<area shape="rect" href="classCjt__ciudades.html" title="Representa el conjunto de ciudades de la cuenca fluvial." alt="" coords="140,5,245,32"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">significado de colores y flechas</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Métodos públicos</h2></td></tr>
 <tr class="memitem:adef9dac47f2c1d8120a55b54b497efda"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCuenca.html#adef9dac47f2c1d8120a55b54b497efda">Cuenca</a> ()</td></tr>
 <tr class="memdesc:adef9dac47f2c1d8120a55b54b497efda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creadora por defecto. Se ejecuta automaticamente al declarar una cuenca.  <a href="classCuenca.html#adef9dac47f2c1d8120a55b54b497efda">Más...</a><br /></td></tr>
 <tr class="separator:adef9dac47f2c1d8120a55b54b497efda"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab08023cdd20bbefe3ad6506502b4576c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCuenca.html#ab08023cdd20bbefe3ad6506502b4576c">calcular_viaje</a> (const BinTree&lt; string &gt; &amp;raiz, <a class="el" href="classBarco.html">Barco</a> &amp;barco, vector&lt; string &gt; &amp;ruta)</td></tr>
-<tr class="separator:ab08023cdd20bbefe3ad6506502b4576c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af717eab3a33f6029febfa3a975d150ef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCuenca.html#af717eab3a33f6029febfa3a975d150ef">calcular_viaje</a> (const BinTree&lt; string &gt; &amp;raiz, <a class="el" href="classBarco.html">Barco</a> &amp;barco, vector&lt; string &gt; &amp;ruta) const</td></tr>
+<tr class="memdesc:af717eab3a33f6029febfa3a975d150ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operación que guarda en un vector la mejor ruta de un viaje.  <a href="classCuenca.html#af717eab3a33f6029febfa3a975d150ef">Más...</a><br /></td></tr>
+<tr class="separator:af717eab3a33f6029febfa3a975d150ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a50322cf958ca7c16f47c0fa3b7a22ace"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCuenca.html#a50322cf958ca7c16f47c0fa3b7a22ace">hacer_viaje</a> (<a class="el" href="classBarco.html">Barco</a> &amp;barco)</td></tr>
+<tr class="memdesc:a50322cf958ca7c16f47c0fa3b7a22ace"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operación que realiza un viaje de comercio con el barco.  <a href="classCuenca.html#a50322cf958ca7c16f47c0fa3b7a22ace">Más...</a><br /></td></tr>
 <tr class="separator:a50322cf958ca7c16f47c0fa3b7a22ace"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a51870d649b499f3b73d4ea1532e2b526"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCuenca.html#a51870d649b499f3b73d4ea1532e2b526">redistribuir</a> ()</td></tr>
+<tr class="memdesc:a51870d649b499f3b73d4ea1532e2b526"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operación de redistribución de productos entre ciudades.  <a href="classCuenca.html#a51870d649b499f3b73d4ea1532e2b526">Más...</a><br /></td></tr>
 <tr class="separator:a51870d649b499f3b73d4ea1532e2b526"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a774f43ab42455eed569b5000731625e6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCuenca.html#a774f43ab42455eed569b5000731625e6">redistribuir</a> (const BinTree&lt; string &gt; &amp;raiz)</td></tr>
+<tr class="memdesc:a774f43ab42455eed569b5000731625e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operación de redistribución de productos entre ciudades.  <a href="classCuenca.html#a774f43ab42455eed569b5000731625e6">Más...</a><br /></td></tr>
 <tr class="separator:a774f43ab42455eed569b5000731625e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acce42ec6f63c1770ca00af1298a6dfbc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCuenca.html#acce42ec6f63c1770ca00af1298a6dfbc">comerciar</a> (const string &amp;ciudad_id1, const string &amp;ciudad_id2)</td></tr>
+<tr class="memdesc:acce42ec6f63c1770ca00af1298a6dfbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operación de comercio entre dos ciudades.  <a href="classCuenca.html#acce42ec6f63c1770ca00af1298a6dfbc">Más...</a><br /></td></tr>
 <tr class="separator:acce42ec6f63c1770ca00af1298a6dfbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a05536a225b9bfc7290184c8202985871"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCuenca.html#a05536a225b9bfc7290184c8202985871">modificar_barco</a> (<a class="el" href="classBarco.html">Barco</a> &amp;barco)</td></tr>
-<tr class="separator:a05536a225b9bfc7290184c8202985871"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd5f7b695b2d41bc037a74372536a5a7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCuenca.html#afd5f7b695b2d41bc037a74372536a5a7">modificar_barco</a> (int id_compra, int num_compra, int id_venta, int num_venta, <a class="el" href="classBarco.html">Barco</a> &amp;barco)</td></tr>
+<tr class="memdesc:afd5f7b695b2d41bc037a74372536a5a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modificadora de los atributos del barco.  <a href="classCuenca.html#afd5f7b695b2d41bc037a74372536a5a7">Más...</a><br /></td></tr>
+<tr class="separator:afd5f7b695b2d41bc037a74372536a5a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a255b863bef1c20afb87e485d42c46896"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCuenca.html#a255b863bef1c20afb87e485d42c46896">poner_producto</a> (const string &amp;ciudad_id, int prod_id, int cantidad_disponible, int cantidad_requerida)</td></tr>
+<tr class="memdesc:a255b863bef1c20afb87e485d42c46896"><td class="mdescLeft">&#160;</td><td class="mdescRight">Añade un producto a una ciudad.  <a href="classCuenca.html#a255b863bef1c20afb87e485d42c46896">Más...</a><br /></td></tr>
 <tr class="separator:a255b863bef1c20afb87e485d42c46896"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1f5bbbd5dc0fff8176b70ffc0de9d233"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCuenca.html#a1f5bbbd5dc0fff8176b70ffc0de9d233">modificar_producto</a> (const string &amp;ciudad_id, int prod_id, int cantidad_disponible, int cantidad_requerida)</td></tr>
+<tr class="memdesc:a1f5bbbd5dc0fff8176b70ffc0de9d233"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modificadora de la cantidad poseida de un producto en una ciudad..  <a href="classCuenca.html#a1f5bbbd5dc0fff8176b70ffc0de9d233">Más...</a><br /></td></tr>
 <tr class="separator:a1f5bbbd5dc0fff8176b70ffc0de9d233"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa7dbb8bd9399fc9322cd8913a8ce1d5b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCuenca.html#aa7dbb8bd9399fc9322cd8913a8ce1d5b">quitar_producto</a> (const string &amp;ciudad_id, int prod_id)</td></tr>
+<tr class="memdesc:aa7dbb8bd9399fc9322cd8913a8ce1d5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Quita un producto del inventario de una ciudad.  <a href="classCuenca.html#aa7dbb8bd9399fc9322cd8913a8ce1d5b">Más...</a><br /></td></tr>
 <tr class="separator:aa7dbb8bd9399fc9322cd8913a8ce1d5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aea95fd8fb86b0cbb69f6001df5dcf9ac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCuenca.html#aea95fd8fb86b0cbb69f6001df5dcf9ac">numero_productos</a> () const</td></tr>
+<tr class="memdesc:aea95fd8fb86b0cbb69f6001df5dcf9ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Consultora del numero total de productos.  <a href="classCuenca.html#aea95fd8fb86b0cbb69f6001df5dcf9ac">Más...</a><br /></td></tr>
 <tr class="separator:aea95fd8fb86b0cbb69f6001df5dcf9ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afd65f95da65e39aec64e4508b9eacc0b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCuenca.html#afd65f95da65e39aec64e4508b9eacc0b">leer_productos</a> (int n)</td></tr>
+<tr class="memdesc:afd65f95da65e39aec64e4508b9eacc0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operacion de lectura de un conjuto de productos.  <a href="classCuenca.html#afd65f95da65e39aec64e4508b9eacc0b">Más...</a><br /></td></tr>
 <tr class="separator:afd65f95da65e39aec64e4508b9eacc0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1a2c3d8b5c2721c4c1d264933e61f055"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCuenca.html#a1a2c3d8b5c2721c4c1d264933e61f055">leer_inventario</a> (const string &amp;ciudad_id)</td></tr>
+<tr class="memdesc:a1a2c3d8b5c2721c4c1d264933e61f055"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operación de lectura del inventario de una ciudad.  <a href="classCuenca.html#a1a2c3d8b5c2721c4c1d264933e61f055">Más...</a><br /></td></tr>
 <tr class="separator:a1a2c3d8b5c2721c4c1d264933e61f055"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1ef343481e4d5994c5e4393693a5895b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCuenca.html#a1ef343481e4d5994c5e4393693a5895b">leer_inventarios</a> ()</td></tr>
+<tr class="memdesc:a1ef343481e4d5994c5e4393693a5895b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operación de lectura de varios inventarios.  <a href="classCuenca.html#a1ef343481e4d5994c5e4393693a5895b">Más...</a><br /></td></tr>
 <tr class="separator:a1ef343481e4d5994c5e4393693a5895b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a529e35e876f731b016dbca367cb064d2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCuenca.html#a529e35e876f731b016dbca367cb064d2">leer_rio</a> ()</td></tr>
+<tr class="memdesc:a529e35e876f731b016dbca367cb064d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operación de lectura de la cuenca.  <a href="classCuenca.html#a529e35e876f731b016dbca367cb064d2">Más...</a><br /></td></tr>
 <tr class="separator:a529e35e876f731b016dbca367cb064d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a54368a39d24f75b4171ae23b9d3771a4"><td class="memItemLeft" align="right" valign="top">BinTree&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCuenca.html#a54368a39d24f75b4171ae23b9d3771a4">construir_estructura</a> ()</td></tr>
+<tr class="memdesc:a54368a39d24f75b4171ae23b9d3771a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operación de lectura de la estructura de la cuenca.  <a href="classCuenca.html#a54368a39d24f75b4171ae23b9d3771a4">Más...</a><br /></td></tr>
 <tr class="separator:a54368a39d24f75b4171ae23b9d3771a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae134ae0e7e68fedf2f6a9e33663eca70"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCuenca.html#ae134ae0e7e68fedf2f6a9e33663eca70">escribir_producto</a> (int prod_id) const</td></tr>
+<tr class="memdesc:ae134ae0e7e68fedf2f6a9e33663eca70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operación de escritura de un producto.  <a href="classCuenca.html#ae134ae0e7e68fedf2f6a9e33663eca70">Más...</a><br /></td></tr>
 <tr class="separator:ae134ae0e7e68fedf2f6a9e33663eca70"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4b086a60a63c1799974a04dc4f397bbe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCuenca.html#a4b086a60a63c1799974a04dc4f397bbe">escribir_ciudad</a> (const string &amp;ciudad_id)</td></tr>
-<tr class="separator:a4b086a60a63c1799974a04dc4f397bbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afd0e89adecf56b6ecdf230baa1e9bc4b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCuenca.html#afd0e89adecf56b6ecdf230baa1e9bc4b">consultar_producto_ciudad</a> (const string &amp;ciudad_id, int prod_id)</td></tr>
-<tr class="separator:afd0e89adecf56b6ecdf230baa1e9bc4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafac7485e941805dbb71e72893e9372a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCuenca.html#aafac7485e941805dbb71e72893e9372a">escribir_ciudad</a> (const string &amp;ciudad_id) const</td></tr>
+<tr class="memdesc:aafac7485e941805dbb71e72893e9372a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operación de escritura de una ciudad.  <a href="classCuenca.html#aafac7485e941805dbb71e72893e9372a">Más...</a><br /></td></tr>
+<tr class="separator:aafac7485e941805dbb71e72893e9372a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefd1dfe30d0059417549e3b2837a81d7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCuenca.html#aefd1dfe30d0059417549e3b2837a81d7">consultar_producto_ciudad</a> (const string &amp;ciudad_id, int prod_id) const</td></tr>
+<tr class="memdesc:aefd1dfe30d0059417549e3b2837a81d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operación de escritura de un producto en una ciudad.  <a href="classCuenca.html#aefd1dfe30d0059417549e3b2837a81d7">Más...</a><br /></td></tr>
+<tr class="separator:aefd1dfe30d0059417549e3b2837a81d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Atributos privados</h2></td></tr>
 <tr class="memitem:a710f881238488289a10dd94e28105bae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classCjt__productos.html">Cjt_productos</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCuenca.html#a710f881238488289a10dd94e28105bae">productos</a></td></tr>
+<tr class="memdesc:a710f881238488289a10dd94e28105bae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Conjunto de productos de la cuenca.  <a href="classCuenca.html#a710f881238488289a10dd94e28105bae">Más...</a><br /></td></tr>
 <tr class="separator:a710f881238488289a10dd94e28105bae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afadcf7affebe5218e4d3eb88595f23dd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classCjt__ciudades.html">Cjt_ciudades</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCuenca.html#afadcf7affebe5218e4d3eb88595f23dd">ciudades</a></td></tr>
+<tr class="memdesc:afadcf7affebe5218e4d3eb88595f23dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Conjunto de ciudades de la cuenca.  <a href="classCuenca.html#afadcf7affebe5218e4d3eb88595f23dd">Más...</a><br /></td></tr>
 <tr class="separator:afadcf7affebe5218e4d3eb88595f23dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a35b9f4d3289e093756ff6997c8a1c9f1"><td class="memItemLeft" align="right" valign="top">BinTree&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCuenca.html#a35b9f4d3289e093756ff6997c8a1c9f1">estructura</a></td></tr>
+<tr class="memdesc:a35b9f4d3289e093756ff6997c8a1c9f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Arbol binario con la estructura de la cuenca.  <a href="classCuenca.html#a35b9f4d3289e093756ff6997c8a1c9f1">Más...</a><br /></td></tr>
 <tr class="separator:a35b9f4d3289e093756ff6997c8a1c9f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
-<div class="textblock"><p>Representa la cuenca fluvial. </p>
+<div class="textblock"><p>Representa la información y las operaciones de la cuenca fluvial. </p>
 
-<p class="definition">Definición en la línea <a class="el" href="Cuenca_8hh_source.html#l00018">18</a> del archivo <a class="el" href="Cuenca_8hh_source.html">Cuenca.hh</a>.</p>
+<p class="definition">Definición en la línea <a class="el" href="Cuenca_8hh_source.html#l00019">19</a> del archivo <a class="el" href="Cuenca_8hh_source.html">Cuenca.hh</a>.</p>
 </div><h2 class="groupheader">Documentación del constructor y destructor</h2>
 <a id="adef9dac47f2c1d8120a55b54b497efda"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adef9dac47f2c1d8120a55b54b497efda">&#9670;&nbsp;</a></span>Cuenca()</h2>
@@ -147,17 +198,17 @@ Atributos privados</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Creadora por defecto. Se ejecuta automaticamente al declarar una cuenca. </p>
-<dl class="section pre"><dt>Precondición</dt><dd><em>Cierto.</em> </dd></dl>
+<dl class="section pre"><dt>Precondición</dt><dd>Cierto. </dd></dl>
 <dl class="section post"><dt>Postcondición</dt><dd>El resultado es una cuenca la cual todos sus atributos estan sin inicializar. </dd></dl>
 
-<p class="definition">Definición en la línea <a class="el" href="Cuenca_8cc_source.html#l00003">3</a> del archivo <a class="el" href="Cuenca_8cc_source.html">Cuenca.cc</a>.</p>
-<div class="fragment"><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;{}</div>
+<p class="definition">Definición en la línea <a class="el" href="Cuenca_8cc_source.html#l00007">7</a> del archivo <a class="el" href="Cuenca_8cc_source.html">Cuenca.cc</a>.</p>
+<div class="fragment"><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{}</div>
 </div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Documentación de las funciones miembro</h2>
-<a id="ab08023cdd20bbefe3ad6506502b4576c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab08023cdd20bbefe3ad6506502b4576c">&#9670;&nbsp;</a></span>calcular_viaje()</h2>
+<a id="af717eab3a33f6029febfa3a975d150ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af717eab3a33f6029febfa3a975d150ef">&#9670;&nbsp;</a></span>calcular_viaje()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -183,81 +234,103 @@ Atributos privados</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td></td>
+          <td></td><td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="Cuenca_8cc_source.html#l00005">5</a> del archivo <a class="el" href="Cuenca_8cc_source.html">Cuenca.cc</a>.</p>
-<div class="fragment"><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;{</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <span class="keywordflow">if</span> (raiz.empty()) <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keywordtype">string</span> ciudad_id = raiz.value();</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keywordtype">bool</span> agregar = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="classCuenca.html#afadcf7affebe5218e4d3eb88595f23dd">ciudades</a>.<a class="code" href="classCjt__ciudades.html#a393a6c4ab2f1d264858fa082dc092431">contiene_producto</a>(ciudad_id, barco.<a class="code" href="classBarco.html#a18ee6e2799fba957af616a42d54d005b">id_compra</a>))</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    {</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        <span class="keywordtype">int</span> cantidad_comprar = </div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;            max(0, </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;                min(</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;                    barco.<a class="code" href="classBarco.html#a7b8a9917814f1f80564f9cf95bfe465d">num_compra</a>, </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;                    <a class="code" href="classCuenca.html#afadcf7affebe5218e4d3eb88595f23dd">ciudades</a>.<a class="code" href="classCjt__ciudades.html#a051625bafd93c934caca6acc937b9c7d">consultar_cantidad_poseida</a>(ciudad_id, barco.<a class="code" href="classBarco.html#a18ee6e2799fba957af616a42d54d005b">id_compra</a>) - </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;                    <a class="code" href="classCuenca.html#afadcf7affebe5218e4d3eb88595f23dd">ciudades</a>.<a class="code" href="classCjt__ciudades.html#a525b7fde22b32463ab3a5a3ee1384eb8">consultar_cantidad_requerida</a>(ciudad_id, barco.<a class="code" href="classBarco.html#a18ee6e2799fba957af616a42d54d005b">id_compra</a>)</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;                )</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            );</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        barco.<a class="code" href="classBarco.html#a7b8a9917814f1f80564f9cf95bfe465d">num_compra</a> -= cantidad_comprar;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="keywordflow">if</span> (cantidad_comprar &gt; 0)</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            agregar = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    }</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="classCuenca.html#afadcf7affebe5218e4d3eb88595f23dd">ciudades</a>.<a class="code" href="classCjt__ciudades.html#a393a6c4ab2f1d264858fa082dc092431">contiene_producto</a>(ciudad_id, barco.<a class="code" href="classBarco.html#a7dd3fe7762f9362219acc1fde2845504">id_venta</a>))</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    {</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keywordtype">int</span> cantidad_vender = </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            max(0, </div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                min(</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                    barco.<a class="code" href="classBarco.html#a06142671610200b49d0a399cc6b0e2d7">num_venta</a>, </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                    <a class="code" href="classCuenca.html#afadcf7affebe5218e4d3eb88595f23dd">ciudades</a>.<a class="code" href="classCjt__ciudades.html#a525b7fde22b32463ab3a5a3ee1384eb8">consultar_cantidad_requerida</a>(ciudad_id, barco.<a class="code" href="classBarco.html#a7dd3fe7762f9362219acc1fde2845504">id_venta</a>) - </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                    <a class="code" href="classCuenca.html#afadcf7affebe5218e4d3eb88595f23dd">ciudades</a>.<a class="code" href="classCjt__ciudades.html#a051625bafd93c934caca6acc937b9c7d">consultar_cantidad_poseida</a>(ciudad_id, barco.<a class="code" href="classBarco.html#a7dd3fe7762f9362219acc1fde2845504">id_venta</a>)</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                )</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            );</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        barco.<a class="code" href="classBarco.html#a06142671610200b49d0a399cc6b0e2d7">num_venta</a> -= cantidad_vender;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keywordflow">if</span> (cantidad_vender &gt; 0)</div>
+<p>Operación que guarda en un vector la mejor ruta de un viaje. </p>
+<dl class="section pre"><dt>Precondición</dt><dd>Cierto. </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>El resultado es un vector que almacena los nombres de las ciudades por las que pasa el barco en un viaje, la ruta se escoje primero en función de la cantidad de productos que se pueden comerciar y en caso de empate se escoje la ruta que pase por menos ciudades y en caso de empate la ruta que viene río arriba a mano derecha. </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="Cuenca_8cc_source.html#l00009">9</a> del archivo <a class="el" href="Cuenca_8cc_source.html">Cuenca.cc</a>.</p>
+<div class="fragment"><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;{</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keywordflow">if</span> (raiz.empty()) <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="comment">// Ciudad actual</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordtype">string</span> ciudad_id = raiz.value();</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="comment">// Cojo los datos del barco</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordtype">int</span> id_compra, num_compra, id_venta, num_venta;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    barco.<a class="code" href="classBarco.html#a1d8beae9db574feab5e6b4e8d07c5bf2">consultar_barco</a>(id_compra, num_compra, id_venta, num_venta);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">bool</span> agregar = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="comment">// Intento comprar y vender productos en la ciudad actual</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="classCuenca.html#afadcf7affebe5218e4d3eb88595f23dd">ciudades</a>.<a class="code" href="classCjt__ciudades.html#a393a6c4ab2f1d264858fa082dc092431">contiene_producto</a>(ciudad_id, id_compra))</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="comment">// Calculo la cantidad maxima que puedo comprar</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keywordtype">int</span> cantidad_comprar = </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            max(0, </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                min(</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                    num_compra,</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                    <a class="code" href="classCuenca.html#afadcf7affebe5218e4d3eb88595f23dd">ciudades</a>.<a class="code" href="classCjt__ciudades.html#a051625bafd93c934caca6acc937b9c7d">consultar_cantidad_poseida</a>(ciudad_id, id_compra) - </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                    <a class="code" href="classCuenca.html#afadcf7affebe5218e4d3eb88595f23dd">ciudades</a>.<a class="code" href="classCjt__ciudades.html#a525b7fde22b32463ab3a5a3ee1384eb8">consultar_cantidad_requerida</a>(ciudad_id, id_compra)</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                )</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            );</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="comment">// Actualizo el numero de productos que me quedan por comprar</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        num_compra -= cantidad_comprar;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="comment">// Miro si he comerciado en esta ciudad</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keywordflow">if</span> (cantidad_comprar &gt; 0)</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            agregar = <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    }</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="classBarco.html">Barco</a> left_barco = barco;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    vector&lt;string&gt; left_ruta;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="classBarco.html">Barco</a> right_barco = barco;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    vector&lt;string&gt; right_ruta;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <a class="code" href="classCuenca.html#ab08023cdd20bbefe3ad6506502b4576c">calcular_viaje</a>(raiz.left(), left_barco, left_ruta);</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <a class="code" href="classCuenca.html#ab08023cdd20bbefe3ad6506502b4576c">calcular_viaje</a>(raiz.right(), right_barco, right_ruta);</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordflow">if</span> (left_barco.<a class="code" href="classBarco.html#aca280ae3722e21830a0cdd63f3245675">restante</a>() &lt; right_barco.<a class="code" href="classBarco.html#aca280ae3722e21830a0cdd63f3245675">restante</a>() or (left_barco.<a class="code" href="classBarco.html#aca280ae3722e21830a0cdd63f3245675">restante</a>() == right_barco.<a class="code" href="classBarco.html#aca280ae3722e21830a0cdd63f3245675">restante</a>() and left_ruta.size() &lt;= right_ruta.size()))</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    {</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        barco = left_barco;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        ruta = left_ruta;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    }</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordflow">else</span> </div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    {</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        barco = right_barco;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        ruta = right_ruta;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    }</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordflow">if</span> (not ruta.empty() or agregar) </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    {</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        ruta.push_back(ciudad_id);</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    }</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;}</div>
-<div class="ttc" id="aclassBarco_html"><div class="ttname"><a href="classBarco.html">Barco</a></div><div class="ttdoc">Representa el barco de comercio de la cuenca fluvial.</div><div class="ttdef"><b>Definition:</b> <a href="Barco_8hh_source.html#l00024">Barco.hh:25</a></div></div>
-<div class="ttc" id="aclassBarco_html_a06142671610200b49d0a399cc6b0e2d7"><div class="ttname"><a href="classBarco.html#a06142671610200b49d0a399cc6b0e2d7">Barco::num_venta</a></div><div class="ttdeci">int num_venta</div><div class="ttdef"><b>Definition:</b> <a href="Barco_8hh_source.html#l00032">Barco.hh:32</a></div></div>
-<div class="ttc" id="aclassBarco_html_a18ee6e2799fba957af616a42d54d005b"><div class="ttname"><a href="classBarco.html#a18ee6e2799fba957af616a42d54d005b">Barco::id_compra</a></div><div class="ttdeci">int id_compra</div><div class="ttdef"><b>Definition:</b> <a href="Barco_8hh_source.html#l00029">Barco.hh:29</a></div></div>
-<div class="ttc" id="aclassBarco_html_a7b8a9917814f1f80564f9cf95bfe465d"><div class="ttname"><a href="classBarco.html#a7b8a9917814f1f80564f9cf95bfe465d">Barco::num_compra</a></div><div class="ttdeci">int num_compra</div><div class="ttdef"><b>Definition:</b> <a href="Barco_8hh_source.html#l00030">Barco.hh:30</a></div></div>
-<div class="ttc" id="aclassBarco_html_a7dd3fe7762f9362219acc1fde2845504"><div class="ttname"><a href="classBarco.html#a7dd3fe7762f9362219acc1fde2845504">Barco::id_venta</a></div><div class="ttdeci">int id_venta</div><div class="ttdef"><b>Definition:</b> <a href="Barco_8hh_source.html#l00031">Barco.hh:31</a></div></div>
-<div class="ttc" id="aclassBarco_html_aca280ae3722e21830a0cdd63f3245675"><div class="ttname"><a href="classBarco.html#aca280ae3722e21830a0cdd63f3245675">Barco::restante</a></div><div class="ttdeci">int restante() const</div><div class="ttdef"><b>Definition:</b> <a href="Barco_8cc_source.html#l00032">Barco.cc:32</a></div></div>
-<div class="ttc" id="aclassCjt__ciudades_html_a051625bafd93c934caca6acc937b9c7d"><div class="ttname"><a href="classCjt__ciudades.html#a051625bafd93c934caca6acc937b9c7d">Cjt_ciudades::consultar_cantidad_poseida</a></div><div class="ttdeci">int consultar_cantidad_poseida(const string &amp;ciudad_id, int prod_id) const</div><div class="ttdoc">Devuelve la cantidad poseida de un producto en el inventario de una ciudad.</div><div class="ttdef"><b>Definition:</b> <a href="Cjt__ciudades_8cc_source.html#l00050">Cjt_ciudades.cc:50</a></div></div>
-<div class="ttc" id="aclassCjt__ciudades_html_a393a6c4ab2f1d264858fa082dc092431"><div class="ttname"><a href="classCjt__ciudades.html#a393a6c4ab2f1d264858fa082dc092431">Cjt_ciudades::contiene_producto</a></div><div class="ttdeci">bool contiene_producto(const string &amp;ciudad_id, int prod_id) const</div><div class="ttdoc">Comprueba si una ciudad tiene un producto.</div><div class="ttdef"><b>Definition:</b> <a href="Cjt__ciudades_8cc_source.html#l00045">Cjt_ciudades.cc:45</a></div></div>
-<div class="ttc" id="aclassCjt__ciudades_html_a525b7fde22b32463ab3a5a3ee1384eb8"><div class="ttname"><a href="classCjt__ciudades.html#a525b7fde22b32463ab3a5a3ee1384eb8">Cjt_ciudades::consultar_cantidad_requerida</a></div><div class="ttdeci">int consultar_cantidad_requerida(const string &amp;ciudad_id, int prod_id) const</div><div class="ttdoc">Devuelve la cantidad requerida de un producto en el inventario de una ciudad.</div><div class="ttdef"><b>Definition:</b> <a href="Cjt__ciudades_8cc_source.html#l00055">Cjt_ciudades.cc:55</a></div></div>
-<div class="ttc" id="aclassCuenca_html_ab08023cdd20bbefe3ad6506502b4576c"><div class="ttname"><a href="classCuenca.html#ab08023cdd20bbefe3ad6506502b4576c">Cuenca::calcular_viaje</a></div><div class="ttdeci">void calcular_viaje(const BinTree&lt; string &gt; &amp;raiz, Barco &amp;barco, vector&lt; string &gt; &amp;ruta)</div><div class="ttdef"><b>Definition:</b> <a href="Cuenca_8cc_source.html#l00005">Cuenca.cc:5</a></div></div>
-<div class="ttc" id="aclassCuenca_html_afadcf7affebe5218e4d3eb88595f23dd"><div class="ttname"><a href="classCuenca.html#afadcf7affebe5218e4d3eb88595f23dd">Cuenca::ciudades</a></div><div class="ttdeci">Cjt_ciudades ciudades</div><div class="ttdef"><b>Definition:</b> <a href="Cuenca_8hh_source.html#l00022">Cuenca.hh:22</a></div></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="classCuenca.html#afadcf7affebe5218e4d3eb88595f23dd">ciudades</a>.<a class="code" href="classCjt__ciudades.html#a393a6c4ab2f1d264858fa082dc092431">contiene_producto</a>(ciudad_id, id_venta))</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="comment">// Calculo la cantidad maxima que puedo vender</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keywordtype">int</span> cantidad_vender = </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            max(0, </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                min(</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                    num_venta,</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                    <a class="code" href="classCuenca.html#afadcf7affebe5218e4d3eb88595f23dd">ciudades</a>.<a class="code" href="classCjt__ciudades.html#a525b7fde22b32463ab3a5a3ee1384eb8">consultar_cantidad_requerida</a>(ciudad_id, id_venta) - </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                    <a class="code" href="classCuenca.html#afadcf7affebe5218e4d3eb88595f23dd">ciudades</a>.<a class="code" href="classCjt__ciudades.html#a051625bafd93c934caca6acc937b9c7d">consultar_cantidad_poseida</a>(ciudad_id, id_venta)</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                )</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            );</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="comment">// Actualizo el numero de productos que me quedan por vender</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        num_venta -= cantidad_vender;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="comment">// Miro si he comerciado en esta ciudad</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordflow">if</span> (cantidad_vender &gt; 0)</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            agregar = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    }</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="comment">// Modifico el barco con los nuevos valores una vez he comerciado</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    barco.<a class="code" href="classBarco.html#a367058928ea7f359cbc1854eff4442b1">modificar_barco</a>(id_compra, num_compra, id_venta, num_venta);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <a class="code" href="classBarco.html">Barco</a> left_barco  = barco;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    vector&lt;string&gt; left_ruta;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <a class="code" href="classBarco.html">Barco</a> right_barco = barco;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    vector&lt;string&gt; right_ruta;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="comment">// Recursivamente calculo el viaje de la izquierda y de la derecha</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <a class="code" href="classCuenca.html#af717eab3a33f6029febfa3a975d150ef">calcular_viaje</a>(raiz.left(), left_barco, left_ruta);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <a class="code" href="classCuenca.html#af717eab3a33f6029febfa3a975d150ef">calcular_viaje</a>(raiz.right(), right_barco, right_ruta);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="comment">// Miro que ruta es mejor</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordflow">if</span> (left_barco.<a class="code" href="classBarco.html#aca280ae3722e21830a0cdd63f3245675">restante</a>() &lt; right_barco.<a class="code" href="classBarco.html#aca280ae3722e21830a0cdd63f3245675">restante</a>() or (left_barco.<a class="code" href="classBarco.html#aca280ae3722e21830a0cdd63f3245675">restante</a>() == right_barco.<a class="code" href="classBarco.html#aca280ae3722e21830a0cdd63f3245675">restante</a>() </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    and left_ruta.size() &lt;= right_ruta.size()))</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    {</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        barco = left_barco;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        ruta.swap(left_ruta);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    }</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordflow">else</span> </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    {</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        barco = right_barco;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        ruta.swap(right_ruta);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    }</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="comment">// Si he comerciado en esta ciudad o no es la ultima en la que he comerciado entonces la agrego a la ruta</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordflow">if</span> (not ruta.empty() or agregar) </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    {</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        ruta.push_back(ciudad_id);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    }</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;}</div>
+<div class="ttc" id="aclassBarco_html"><div class="ttname"><a href="classBarco.html">Barco</a></div><div class="ttdoc">Representa el barco de comercio de la cuenca fluvial.</div><div class="ttdef"><b>Definition:</b> <a href="Barco_8hh_source.html#l00026">Barco.hh:27</a></div></div>
+<div class="ttc" id="aclassBarco_html_a1d8beae9db574feab5e6b4e8d07c5bf2"><div class="ttname"><a href="classBarco.html#a1d8beae9db574feab5e6b4e8d07c5bf2">Barco::consultar_barco</a></div><div class="ttdeci">void consultar_barco(int &amp;id_compra, int &amp;num_compra, int &amp;id_venta, int &amp;num_venta) const</div><div class="ttdoc">Consulta los atributos del barco.</div><div class="ttdef"><b>Definition:</b> <a href="Barco_8cc_source.html#l00027">Barco.cc:27</a></div></div>
+<div class="ttc" id="aclassBarco_html_a367058928ea7f359cbc1854eff4442b1"><div class="ttname"><a href="classBarco.html#a367058928ea7f359cbc1854eff4442b1">Barco::modificar_barco</a></div><div class="ttdeci">void modificar_barco(int id_compra, int num_compra, int id_venta, int num_venta)</div><div class="ttdoc">Modificadora de los atributos del barco.</div><div class="ttdef"><b>Definition:</b> <a href="Barco_8cc_source.html#l00009">Barco.cc:9</a></div></div>
+<div class="ttc" id="aclassBarco_html_aca280ae3722e21830a0cdd63f3245675"><div class="ttname"><a href="classBarco.html#aca280ae3722e21830a0cdd63f3245675">Barco::restante</a></div><div class="ttdeci">int restante() const</div><div class="ttdoc">Consulta la suma del numero de productos que quiere comprar y vender el parametro implicito.</div><div class="ttdef"><b>Definition:</b> <a href="Barco_8cc_source.html#l00035">Barco.cc:35</a></div></div>
+<div class="ttc" id="aclassCjt__ciudades_html_a051625bafd93c934caca6acc937b9c7d"><div class="ttname"><a href="classCjt__ciudades.html#a051625bafd93c934caca6acc937b9c7d">Cjt_ciudades::consultar_cantidad_poseida</a></div><div class="ttdeci">int consultar_cantidad_poseida(const string &amp;ciudad_id, int prod_id) const</div><div class="ttdoc">Consulta la cantidad poseida de un producto en el inventario de una ciudad.</div><div class="ttdef"><b>Definition:</b> <a href="Cjt__ciudades_8cc_source.html#l00054">Cjt_ciudades.cc:54</a></div></div>
+<div class="ttc" id="aclassCjt__ciudades_html_a393a6c4ab2f1d264858fa082dc092431"><div class="ttname"><a href="classCjt__ciudades.html#a393a6c4ab2f1d264858fa082dc092431">Cjt_ciudades::contiene_producto</a></div><div class="ttdeci">bool contiene_producto(const string &amp;ciudad_id, int prod_id) const</div><div class="ttdoc">Consulta si una ciudad tiene un producto.</div><div class="ttdef"><b>Definition:</b> <a href="Cjt__ciudades_8cc_source.html#l00049">Cjt_ciudades.cc:49</a></div></div>
+<div class="ttc" id="aclassCjt__ciudades_html_a525b7fde22b32463ab3a5a3ee1384eb8"><div class="ttname"><a href="classCjt__ciudades.html#a525b7fde22b32463ab3a5a3ee1384eb8">Cjt_ciudades::consultar_cantidad_requerida</a></div><div class="ttdeci">int consultar_cantidad_requerida(const string &amp;ciudad_id, int prod_id) const</div><div class="ttdoc">Consulta la cantidad requerida de un producto en el inventario de una ciudad.</div><div class="ttdef"><b>Definition:</b> <a href="Cjt__ciudades_8cc_source.html#l00059">Cjt_ciudades.cc:59</a></div></div>
+<div class="ttc" id="aclassCuenca_html_af717eab3a33f6029febfa3a975d150ef"><div class="ttname"><a href="classCuenca.html#af717eab3a33f6029febfa3a975d150ef">Cuenca::calcular_viaje</a></div><div class="ttdeci">void calcular_viaje(const BinTree&lt; string &gt; &amp;raiz, Barco &amp;barco, vector&lt; string &gt; &amp;ruta) const</div><div class="ttdoc">Operación que guarda en un vector la mejor ruta de un viaje.</div><div class="ttdef"><b>Definition:</b> <a href="Cuenca_8cc_source.html#l00009">Cuenca.cc:9</a></div></div>
+<div class="ttc" id="aclassCuenca_html_afadcf7affebe5218e4d3eb88595f23dd"><div class="ttname"><a href="classCuenca.html#afadcf7affebe5218e4d3eb88595f23dd">Cuenca::ciudades</a></div><div class="ttdeci">Cjt_ciudades ciudades</div><div class="ttdoc">Conjunto de ciudades de la cuenca.</div><div class="ttdef"><b>Definition:</b> <a href="Cuenca_8hh_source.html#l00025">Cuenca.hh:25</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -287,24 +360,28 @@ Atributos privados</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="Cuenca_8cc_source.html#l00130">130</a> del archivo <a class="el" href="Cuenca_8cc_source.html">Cuenca.cc</a>.</p>
-<div class="fragment"><div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;{</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="keywordflow">if</span> (not <a class="code" href="classCuenca.html#afadcf7affebe5218e4d3eb88595f23dd">ciudades</a>.<a class="code" href="classCjt__ciudades.html#aeb587ce30d0f8805ddf468ef0202ee95">existe_ciudad</a>(ciudad_id1) or not <a class="code" href="classCuenca.html#afadcf7affebe5218e4d3eb88595f23dd">ciudades</a>.<a class="code" href="classCjt__ciudades.html#aeb587ce30d0f8805ddf468ef0202ee95">existe_ciudad</a>(ciudad_id2))</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    {</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;error: no existe la ciudad&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    }</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (ciudad_id1 == ciudad_id2)</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    {</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;error: ciudad repetida&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    }</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    <span class="keywordflow">else</span> </div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    {</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;        <a class="code" href="classCuenca.html#afadcf7affebe5218e4d3eb88595f23dd">ciudades</a>.<a class="code" href="classCjt__ciudades.html#a19889e6fb0441db3f1ff2ebf331b9182">comerciar</a>(ciudad_id1, ciudad_id2, <a class="code" href="classCuenca.html#a710f881238488289a10dd94e28105bae">productos</a>);</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    }</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;}</div>
-<div class="ttc" id="aclassCjt__ciudades_html_a19889e6fb0441db3f1ff2ebf331b9182"><div class="ttname"><a href="classCjt__ciudades.html#a19889e6fb0441db3f1ff2ebf331b9182">Cjt_ciudades::comerciar</a></div><div class="ttdeci">void comerciar(const string &amp;ciudad_id1, const string &amp;ciudad_id2, const Cjt_productos &amp;productos)</div><div class="ttdoc">Realiza un comercio entre dos ciudades.</div><div class="ttdef"><b>Definition:</b> <a href="Cjt__ciudades_8cc_source.html#l00005">Cjt_ciudades.cc:5</a></div></div>
-<div class="ttc" id="aclassCjt__ciudades_html_aeb587ce30d0f8805ddf468ef0202ee95"><div class="ttname"><a href="classCjt__ciudades.html#aeb587ce30d0f8805ddf468ef0202ee95">Cjt_ciudades::existe_ciudad</a></div><div class="ttdeci">bool existe_ciudad(const string &amp;ciudad_id) const</div><div class="ttdoc">Devuelve si una ciudad existe.</div><div class="ttdef"><b>Definition:</b> <a href="Cjt__ciudades_8cc_source.html#l00035">Cjt_ciudades.cc:35</a></div></div>
-<div class="ttc" id="aclassCuenca_html_a710f881238488289a10dd94e28105bae"><div class="ttname"><a href="classCuenca.html#a710f881238488289a10dd94e28105bae">Cuenca::productos</a></div><div class="ttdeci">Cjt_productos productos</div><div class="ttdef"><b>Definition:</b> <a href="Cuenca_8hh_source.html#l00021">Cuenca.hh:21</a></div></div>
+<p>Operación de comercio entre dos ciudades. </p>
+<dl class="section pre"><dt>Precondición</dt><dd>Cierto. </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>Si algun identificador <em>ciudad_id1</em> o <em>ciudad_id2</em> no es valido o son el mismo se ha escrito un mensaje de error por el canal estándard de salida, en caso contrario una ciudad le ha dado a la otra todos los productos que le sobren hasta alcanzar si es posible los que la otra necesite, y viceversa. </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="Cuenca_8cc_source.html#l00175">175</a> del archivo <a class="el" href="Cuenca_8cc_source.html">Cuenca.cc</a>.</p>
+<div class="fragment"><div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;{</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <span class="keywordflow">if</span> (not <a class="code" href="classCuenca.html#afadcf7affebe5218e4d3eb88595f23dd">ciudades</a>.<a class="code" href="classCjt__ciudades.html#aeb587ce30d0f8805ddf468ef0202ee95">existe_ciudad</a>(ciudad_id1) or not <a class="code" href="classCuenca.html#afadcf7affebe5218e4d3eb88595f23dd">ciudades</a>.<a class="code" href="classCjt__ciudades.html#aeb587ce30d0f8805ddf468ef0202ee95">existe_ciudad</a>(ciudad_id2))</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    {</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;error: no existe la ciudad&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    }</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (ciudad_id1 == ciudad_id2)</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    {</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;error: ciudad repetida&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    }</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    <span class="keywordflow">else</span> </div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    {</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        <a class="code" href="classCuenca.html#afadcf7affebe5218e4d3eb88595f23dd">ciudades</a>.<a class="code" href="classCjt__ciudades.html#a19889e6fb0441db3f1ff2ebf331b9182">comerciar</a>(ciudad_id1, ciudad_id2, <a class="code" href="classCuenca.html#a710f881238488289a10dd94e28105bae">productos</a>);</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    }</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;}</div>
+<div class="ttc" id="aclassCjt__ciudades_html_a19889e6fb0441db3f1ff2ebf331b9182"><div class="ttname"><a href="classCjt__ciudades.html#a19889e6fb0441db3f1ff2ebf331b9182">Cjt_ciudades::comerciar</a></div><div class="ttdeci">void comerciar(const string &amp;ciudad_id1, const string &amp;ciudad_id2, const Cjt_productos &amp;productos)</div><div class="ttdoc">Operación de comercio entre dos ciudades.</div><div class="ttdef"><b>Definition:</b> <a href="Cjt__ciudades_8cc_source.html#l00009">Cjt_ciudades.cc:9</a></div></div>
+<div class="ttc" id="aclassCjt__ciudades_html_aeb587ce30d0f8805ddf468ef0202ee95"><div class="ttname"><a href="classCjt__ciudades.html#aeb587ce30d0f8805ddf468ef0202ee95">Cjt_ciudades::existe_ciudad</a></div><div class="ttdeci">bool existe_ciudad(const string &amp;ciudad_id) const</div><div class="ttdoc">Consulta si una ciudad existe.</div><div class="ttdef"><b>Definition:</b> <a href="Cjt__ciudades_8cc_source.html#l00039">Cjt_ciudades.cc:39</a></div></div>
+<div class="ttc" id="aclassCuenca_html_a710f881238488289a10dd94e28105bae"><div class="ttname"><a href="classCuenca.html#a710f881238488289a10dd94e28105bae">Cuenca::productos</a></div><div class="ttdeci">Cjt_productos productos</div><div class="ttdoc">Conjunto de productos de la cuenca.</div><div class="ttdef"><b>Definition:</b> <a href="Cuenca_8hh_source.html#l00023">Cuenca.hh:23</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -323,26 +400,30 @@ Atributos privados</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="Cuenca_8cc_source.html#l00283">283</a> del archivo <a class="el" href="Cuenca_8cc_source.html">Cuenca.cc</a>.</p>
-<div class="fragment"><div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;{</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    <span class="keywordtype">string</span> ciudad_id;</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    cin &gt;&gt; ciudad_id;</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;    <span class="keywordflow">if</span> (ciudad_id == <span class="stringliteral">&quot;#&quot;</span>) </div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    {</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;        <span class="keywordflow">return</span> BinTree&lt;string&gt;();</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    }</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    <a class="code" href="classCuenca.html#afadcf7affebe5218e4d3eb88595f23dd">ciudades</a>.<a class="code" href="classCjt__ciudades.html#aab3086f12c08b8ed2c914288a35ab505">poner_ciudad</a>(ciudad_id);</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;    BinTree&lt;string&gt; left = <a class="code" href="classCuenca.html#a54368a39d24f75b4171ae23b9d3771a4">construir_estructura</a>();</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;    BinTree&lt;string&gt; right = <a class="code" href="classCuenca.html#a54368a39d24f75b4171ae23b9d3771a4">construir_estructura</a>();</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;    <span class="keywordflow">return</span> BinTree&lt;string&gt;(ciudad_id, left, right);</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;}</div>
-<div class="ttc" id="aclassCjt__ciudades_html_aab3086f12c08b8ed2c914288a35ab505"><div class="ttname"><a href="classCjt__ciudades.html#aab3086f12c08b8ed2c914288a35ab505">Cjt_ciudades::poner_ciudad</a></div><div class="ttdeci">void poner_ciudad(const string &amp;ciudad_id)</div><div class="ttdoc">Añade una ciudad al conjunto de ciudades.</div><div class="ttdef"><b>Definition:</b> <a href="Cjt__ciudades_8cc_source.html#l00010">Cjt_ciudades.cc:10</a></div></div>
-<div class="ttc" id="aclassCuenca_html_a54368a39d24f75b4171ae23b9d3771a4"><div class="ttname"><a href="classCuenca.html#a54368a39d24f75b4171ae23b9d3771a4">Cuenca::construir_estructura</a></div><div class="ttdeci">BinTree&lt; string &gt; construir_estructura()</div><div class="ttdef"><b>Definition:</b> <a href="Cuenca_8cc_source.html#l00283">Cuenca.cc:283</a></div></div>
+<p>Operación de lectura de la estructura de la cuenca. </p>
+<dl class="section pre"><dt>Precondición</dt><dd>Se encuentra en el canal estándard de entrada la estructura de la cuenca. </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>Se ha leido la estructura de la cuenca. </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="Cuenca_8cc_source.html#l00325">325</a> del archivo <a class="el" href="Cuenca_8cc_source.html">Cuenca.cc</a>.</p>
+<div class="fragment"><div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;{</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;    <span class="keywordtype">string</span> ciudad_id;</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;    cin &gt;&gt; ciudad_id;</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;    <span class="keywordflow">if</span> (ciudad_id == <span class="stringliteral">&quot;#&quot;</span>) </div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;    {</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;        <span class="keywordflow">return</span> BinTree&lt;string&gt;();</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;    }</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;    <a class="code" href="classCuenca.html#afadcf7affebe5218e4d3eb88595f23dd">ciudades</a>.<a class="code" href="classCjt__ciudades.html#aab3086f12c08b8ed2c914288a35ab505">poner_ciudad</a>(ciudad_id);</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;    BinTree&lt;string&gt; left = <a class="code" href="classCuenca.html#a54368a39d24f75b4171ae23b9d3771a4">construir_estructura</a>();</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;    BinTree&lt;string&gt; right = <a class="code" href="classCuenca.html#a54368a39d24f75b4171ae23b9d3771a4">construir_estructura</a>();</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;    <span class="keywordflow">return</span> BinTree&lt;string&gt;(ciudad_id, left, right);</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;}</div>
+<div class="ttc" id="aclassCjt__ciudades_html_aab3086f12c08b8ed2c914288a35ab505"><div class="ttname"><a href="classCjt__ciudades.html#aab3086f12c08b8ed2c914288a35ab505">Cjt_ciudades::poner_ciudad</a></div><div class="ttdeci">void poner_ciudad(const string &amp;ciudad_id)</div><div class="ttdoc">Añade una ciudad al conjunto de ciudades.</div><div class="ttdef"><b>Definition:</b> <a href="Cjt__ciudades_8cc_source.html#l00014">Cjt_ciudades.cc:14</a></div></div>
+<div class="ttc" id="aclassCuenca_html_a54368a39d24f75b4171ae23b9d3771a4"><div class="ttname"><a href="classCuenca.html#a54368a39d24f75b4171ae23b9d3771a4">Cuenca::construir_estructura</a></div><div class="ttdeci">BinTree&lt; string &gt; construir_estructura()</div><div class="ttdoc">Operación de lectura de la estructura de la cuenca.</div><div class="ttdef"><b>Definition:</b> <a href="Cuenca_8cc_source.html#l00325">Cuenca.cc:325</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="afd0e89adecf56b6ecdf230baa1e9bc4b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afd0e89adecf56b6ecdf230baa1e9bc4b">&#9670;&nbsp;</a></span>consultar_producto_ciudad()</h2>
+<a id="aefd1dfe30d0059417549e3b2837a81d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aefd1dfe30d0059417549e3b2837a81d7">&#9670;&nbsp;</a></span>consultar_producto_ciudad()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -362,36 +443,40 @@ Atributos privados</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td></td>
+          <td></td><td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="Cuenca_8cc_source.html#l00322">322</a> del archivo <a class="el" href="Cuenca_8cc_source.html">Cuenca.cc</a>.</p>
-<div class="fragment"><div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;{</div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;    <span class="keywordflow">if</span> (not <a class="code" href="classCuenca.html#a710f881238488289a10dd94e28105bae">productos</a>.<a class="code" href="classCjt__productos.html#adb7ebdac20a01f44e84b445fcff0c233">existe_producto</a>(prod_id))</div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;    {</div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;error: no existe el producto&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;    }</div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (not <a class="code" href="classCuenca.html#afadcf7affebe5218e4d3eb88595f23dd">ciudades</a>.<a class="code" href="classCjt__ciudades.html#aeb587ce30d0f8805ddf468ef0202ee95">existe_ciudad</a>(ciudad_id))</div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;    {</div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;error: no existe la ciudad&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;    }</div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (not <a class="code" href="classCuenca.html#afadcf7affebe5218e4d3eb88595f23dd">ciudades</a>.<a class="code" href="classCjt__ciudades.html#a393a6c4ab2f1d264858fa082dc092431">contiene_producto</a>(ciudad_id, prod_id))</div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;    {</div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;error: la ciudad no tiene el producto&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;    }</div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;    <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;        cout &lt;&lt; <a class="code" href="classCuenca.html#afadcf7affebe5218e4d3eb88595f23dd">ciudades</a>.<a class="code" href="classCjt__ciudades.html#a051625bafd93c934caca6acc937b9c7d">consultar_cantidad_poseida</a>(ciudad_id, prod_id) &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; </div>
-<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;                <a class="code" href="classCuenca.html#afadcf7affebe5218e4d3eb88595f23dd">ciudades</a>.<a class="code" href="classCjt__ciudades.html#a525b7fde22b32463ab3a5a3ee1384eb8">consultar_cantidad_requerida</a>(ciudad_id, prod_id) &lt;&lt; endl;</div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;    }</div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;}</div>
-<div class="ttc" id="aclassCjt__productos_html_adb7ebdac20a01f44e84b445fcff0c233"><div class="ttname"><a href="classCjt__productos.html#adb7ebdac20a01f44e84b445fcff0c233">Cjt_productos::existe_producto</a></div><div class="ttdeci">bool existe_producto(int id) const</div><div class="ttdoc">Comprueba si existe un producto con identificador id.</div><div class="ttdef"><b>Definition:</b> <a href="Cjt__productos_8cc_source.html#l00014">Cjt_productos.cc:14</a></div></div>
+<p>Operación de escritura de un producto en una ciudad. </p>
+<dl class="section pre"><dt>Precondición</dt><dd>Cierto. </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>Si algun identificador <em>ciudad_id</em> o <em>prod_id</em> no es valido o la ciudad <em>ciudad_id</em> no contiene el producto <em>prod_id</em> se ha escrito un mensaje de error por el canal estándard de salida, en caso contrario se ha escrito la cantidad disponible y requerida del producto <em>prod_id</em> en la ciudad <em>ciudad_id</em>. </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="Cuenca_8cc_source.html#l00364">364</a> del archivo <a class="el" href="Cuenca_8cc_source.html">Cuenca.cc</a>.</p>
+<div class="fragment"><div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;{</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;    <span class="keywordflow">if</span> (not <a class="code" href="classCuenca.html#a710f881238488289a10dd94e28105bae">productos</a>.<a class="code" href="classCjt__productos.html#adb7ebdac20a01f44e84b445fcff0c233">existe_producto</a>(prod_id))</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;    {</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;error: no existe el producto&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;    }</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (not <a class="code" href="classCuenca.html#afadcf7affebe5218e4d3eb88595f23dd">ciudades</a>.<a class="code" href="classCjt__ciudades.html#aeb587ce30d0f8805ddf468ef0202ee95">existe_ciudad</a>(ciudad_id))</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;    {</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;error: no existe la ciudad&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;    }</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (not <a class="code" href="classCuenca.html#afadcf7affebe5218e4d3eb88595f23dd">ciudades</a>.<a class="code" href="classCjt__ciudades.html#a393a6c4ab2f1d264858fa082dc092431">contiene_producto</a>(ciudad_id, prod_id))</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;    {</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;error: la ciudad no tiene el producto&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;    }</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;    <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;        cout &lt;&lt; <a class="code" href="classCuenca.html#afadcf7affebe5218e4d3eb88595f23dd">ciudades</a>.<a class="code" href="classCjt__ciudades.html#a051625bafd93c934caca6acc937b9c7d">consultar_cantidad_poseida</a>(ciudad_id, prod_id) &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; </div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;                <a class="code" href="classCuenca.html#afadcf7affebe5218e4d3eb88595f23dd">ciudades</a>.<a class="code" href="classCjt__ciudades.html#a525b7fde22b32463ab3a5a3ee1384eb8">consultar_cantidad_requerida</a>(ciudad_id, prod_id) &lt;&lt; endl;</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;    }</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;}</div>
+<div class="ttc" id="aclassCjt__productos_html_adb7ebdac20a01f44e84b445fcff0c233"><div class="ttname"><a href="classCjt__productos.html#adb7ebdac20a01f44e84b445fcff0c233">Cjt_productos::existe_producto</a></div><div class="ttdeci">bool existe_producto(int id) const</div><div class="ttdoc">Consultora de la existencia de un producto.</div><div class="ttdef"><b>Definition:</b> <a href="Cjt__productos_8cc_source.html#l00017">Cjt_productos.cc:17</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="a4b086a60a63c1799974a04dc4f397bbe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4b086a60a63c1799974a04dc4f397bbe">&#9670;&nbsp;</a></span>escribir_ciudad()</h2>
+<a id="aafac7485e941805dbb71e72893e9372a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aafac7485e941805dbb71e72893e9372a">&#9670;&nbsp;</a></span>escribir_ciudad()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -401,25 +486,29 @@ Atributos privados</h2></td></tr>
           <td>(</td>
           <td class="paramtype">const string &amp;&#160;</td>
           <td class="paramname"><em>ciudad_id</em></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="Cuenca_8cc_source.html#l00309">309</a> del archivo <a class="el" href="Cuenca_8cc_source.html">Cuenca.cc</a>.</p>
-<div class="fragment"><div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;{</div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;    <span class="keywordflow">if</span> (not <a class="code" href="classCuenca.html#afadcf7affebe5218e4d3eb88595f23dd">ciudades</a>.<a class="code" href="classCjt__ciudades.html#aeb587ce30d0f8805ddf468ef0202ee95">existe_ciudad</a>(ciudad_id))</div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;    {</div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;error: no existe la ciudad&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;    }</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;    <span class="keywordflow">else</span> </div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;    {</div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;        <a class="code" href="classCuenca.html#afadcf7affebe5218e4d3eb88595f23dd">ciudades</a>.<a class="code" href="classCjt__ciudades.html#ae7e30eab6b9697e8809f900d1b9d9620">escribir_inventario</a>(ciudad_id);</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;        <a class="code" href="classCuenca.html#afadcf7affebe5218e4d3eb88595f23dd">ciudades</a>.<a class="code" href="classCjt__ciudades.html#a00bbc4146eef32fcfdd4a163215ce387">escribir_atributos_totales</a>(ciudad_id);</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    }</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;}</div>
-<div class="ttc" id="aclassCjt__ciudades_html_a00bbc4146eef32fcfdd4a163215ce387"><div class="ttname"><a href="classCjt__ciudades.html#a00bbc4146eef32fcfdd4a163215ce387">Cjt_ciudades::escribir_atributos_totales</a></div><div class="ttdeci">void escribir_atributos_totales(const string &amp;ciudad_id) const</div><div class="ttdoc">Imprime el peso y volumen total de un producto del inventario de una ciudad.</div><div class="ttdef"><b>Definition:</b> <a href="Cjt__ciudades_8cc_source.html#l00070">Cjt_ciudades.cc:70</a></div></div>
-<div class="ttc" id="aclassCjt__ciudades_html_ae7e30eab6b9697e8809f900d1b9d9620"><div class="ttname"><a href="classCjt__ciudades.html#ae7e30eab6b9697e8809f900d1b9d9620">Cjt_ciudades::escribir_inventario</a></div><div class="ttdeci">void escribir_inventario(const string &amp;ciudad_id) const</div><div class="ttdoc">Imprime el inventario de una ciudad.</div><div class="ttdef"><b>Definition:</b> <a href="Cjt__ciudades_8cc_source.html#l00075">Cjt_ciudades.cc:75</a></div></div>
+<p>Operación de escritura de una ciudad. </p>
+<dl class="section pre"><dt>Precondición</dt><dd>Cierto. </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>Si el identificador <em>ciudad_id</em> no es valido se ha escrito un mensaje de error por el canal estándard de salida, en caso contrario se ha escrito el inventario y el peso y volumen total de la ciudad con identificador <em>ciudad_id</em>. </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="Cuenca_8cc_source.html#l00351">351</a> del archivo <a class="el" href="Cuenca_8cc_source.html">Cuenca.cc</a>.</p>
+<div class="fragment"><div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;{</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;    <span class="keywordflow">if</span> (not <a class="code" href="classCuenca.html#afadcf7affebe5218e4d3eb88595f23dd">ciudades</a>.<a class="code" href="classCjt__ciudades.html#aeb587ce30d0f8805ddf468ef0202ee95">existe_ciudad</a>(ciudad_id))</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;    {</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;error: no existe la ciudad&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;    }</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;    <span class="keywordflow">else</span> </div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;    {</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;        <a class="code" href="classCuenca.html#afadcf7affebe5218e4d3eb88595f23dd">ciudades</a>.<a class="code" href="classCjt__ciudades.html#ae7e30eab6b9697e8809f900d1b9d9620">escribir_inventario</a>(ciudad_id);</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;        <a class="code" href="classCuenca.html#afadcf7affebe5218e4d3eb88595f23dd">ciudades</a>.<a class="code" href="classCjt__ciudades.html#a00bbc4146eef32fcfdd4a163215ce387">escribir_atributos_totales</a>(ciudad_id);</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;    }</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;}</div>
+<div class="ttc" id="aclassCjt__ciudades_html_a00bbc4146eef32fcfdd4a163215ce387"><div class="ttname"><a href="classCjt__ciudades.html#a00bbc4146eef32fcfdd4a163215ce387">Cjt_ciudades::escribir_atributos_totales</a></div><div class="ttdeci">void escribir_atributos_totales(const string &amp;ciudad_id) const</div><div class="ttdoc">Operación de escritura del peso y volumen total de un inventario.</div><div class="ttdef"><b>Definition:</b> <a href="Cjt__ciudades_8cc_source.html#l00074">Cjt_ciudades.cc:74</a></div></div>
+<div class="ttc" id="aclassCjt__ciudades_html_ae7e30eab6b9697e8809f900d1b9d9620"><div class="ttname"><a href="classCjt__ciudades.html#ae7e30eab6b9697e8809f900d1b9d9620">Cjt_ciudades::escribir_inventario</a></div><div class="ttdeci">void escribir_inventario(const string &amp;ciudad_id) const</div><div class="ttdoc">Operación de escritura de un inventario.</div><div class="ttdef"><b>Definition:</b> <a href="Cjt__ciudades_8cc_source.html#l00079">Cjt_ciudades.cc:79</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -439,18 +528,22 @@ Atributos privados</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="Cuenca_8cc_source.html#l00297">297</a> del archivo <a class="el" href="Cuenca_8cc_source.html">Cuenca.cc</a>.</p>
-<div class="fragment"><div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;{</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;    <span class="keywordflow">if</span> (not <a class="code" href="classCuenca.html#a710f881238488289a10dd94e28105bae">productos</a>.<a class="code" href="classCjt__productos.html#adb7ebdac20a01f44e84b445fcff0c233">existe_producto</a>(prod_id)) </div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    {</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;error: no existe el producto&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    }</div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    <span class="keywordflow">else</span> </div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    {</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;        <a class="code" href="classCuenca.html#a710f881238488289a10dd94e28105bae">productos</a>.<a class="code" href="classCjt__productos.html#a36187ce11495932bca6567edc42daf52">escribir_producto</a>(prod_id);</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    }</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;}</div>
-<div class="ttc" id="aclassCjt__productos_html_a36187ce11495932bca6567edc42daf52"><div class="ttname"><a href="classCjt__productos.html#a36187ce11495932bca6567edc42daf52">Cjt_productos::escribir_producto</a></div><div class="ttdeci">void escribir_producto(int id) const</div><div class="ttdoc">Escribe el producto con identificador id.</div><div class="ttdef"><b>Definition:</b> <a href="Cjt__productos_8cc_source.html#l00024">Cjt_productos.cc:24</a></div></div>
+<p>Operación de escritura de un producto. </p>
+<dl class="section pre"><dt>Precondición</dt><dd>Cierto. </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>Si el identificador <em>prod_id</em> no es valido se ha escrito un mensaje de error por el canal estándard de salida, en caso contrario se ha escrito los atributos del producto con identificador <em>prod_id</em> en el canal estándard de salida. </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="Cuenca_8cc_source.html#l00339">339</a> del archivo <a class="el" href="Cuenca_8cc_source.html">Cuenca.cc</a>.</p>
+<div class="fragment"><div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;{</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;    <span class="keywordflow">if</span> (not <a class="code" href="classCuenca.html#a710f881238488289a10dd94e28105bae">productos</a>.<a class="code" href="classCjt__productos.html#adb7ebdac20a01f44e84b445fcff0c233">existe_producto</a>(prod_id)) </div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;    {</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;error: no existe el producto&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;    }</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;    <span class="keywordflow">else</span> </div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;    {</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;        <a class="code" href="classCuenca.html#a710f881238488289a10dd94e28105bae">productos</a>.<a class="code" href="classCjt__productos.html#a36187ce11495932bca6567edc42daf52">escribir_producto</a>(prod_id);</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;    }</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;}</div>
+<div class="ttc" id="aclassCjt__productos_html_a36187ce11495932bca6567edc42daf52"><div class="ttname"><a href="classCjt__productos.html#a36187ce11495932bca6567edc42daf52">Cjt_productos::escribir_producto</a></div><div class="ttdeci">void escribir_producto(int id) const</div><div class="ttdoc">Operacion de escritura de un producto.</div><div class="ttdef"><b>Definition:</b> <a href="Cjt__productos_8cc_source.html#l00027">Cjt_productos.cc:27</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -470,54 +563,79 @@ Atributos privados</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="Cuenca_8cc_source.html#l00065">65</a> del archivo <a class="el" href="Cuenca_8cc_source.html">Cuenca.cc</a>.</p>
-<div class="fragment"><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;{</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <a class="code" href="classBarco.html">Barco</a> copia = barco;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    vector&lt;string&gt; ruta;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <a class="code" href="classCuenca.html#ab08023cdd20bbefe3ad6506502b4576c">calcular_viaje</a>(<a class="code" href="classCuenca.html#a35b9f4d3289e093756ff6997c8a1c9f1">estructura</a>, copia, ruta);</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordflow">if</span> (barco.<a class="code" href="classBarco.html#aca280ae3722e21830a0cdd63f3245675">restante</a>() != copia.<a class="code" href="classBarco.html#aca280ae3722e21830a0cdd63f3245675">restante</a>()) </div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    {</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        copia = barco;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = ruta.size() - 1; i &gt;= 0; --i) </div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        {</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            <span class="keywordtype">string</span> ciudad_id = ruta[i];</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="classCuenca.html#afadcf7affebe5218e4d3eb88595f23dd">ciudades</a>.<a class="code" href="classCjt__ciudades.html#a393a6c4ab2f1d264858fa082dc092431">contiene_producto</a>(ciudad_id, copia.<a class="code" href="classBarco.html#a18ee6e2799fba957af616a42d54d005b">id_compra</a>))</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            {</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                <span class="keywordtype">int</span> cantidad_comprar = </div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                    max(0, </div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                        min(</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                            copia.<a class="code" href="classBarco.html#a7b8a9917814f1f80564f9cf95bfe465d">num_compra</a>, </div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                            <a class="code" href="classCuenca.html#afadcf7affebe5218e4d3eb88595f23dd">ciudades</a>.<a class="code" href="classCjt__ciudades.html#a051625bafd93c934caca6acc937b9c7d">consultar_cantidad_poseida</a>(ciudad_id, copia.<a class="code" href="classBarco.html#a18ee6e2799fba957af616a42d54d005b">id_compra</a>) - </div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                            <a class="code" href="classCuenca.html#afadcf7affebe5218e4d3eb88595f23dd">ciudades</a>.<a class="code" href="classCjt__ciudades.html#a525b7fde22b32463ab3a5a3ee1384eb8">consultar_cantidad_requerida</a>(ciudad_id, copia.<a class="code" href="classBarco.html#a18ee6e2799fba957af616a42d54d005b">id_compra</a>)</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                        )</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                    );</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                copia.<a class="code" href="classBarco.html#a7b8a9917814f1f80564f9cf95bfe465d">num_compra</a> -= cantidad_comprar;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                <a class="code" href="classCuenca.html#afadcf7affebe5218e4d3eb88595f23dd">ciudades</a>.<a class="code" href="classCjt__ciudades.html#ae6890381a27485565e0dc40b6f9d8b2b">modificar_cantidad_poseida</a>(ciudad_id, copia.<a class="code" href="classBarco.html#a18ee6e2799fba957af616a42d54d005b">id_compra</a>, -cantidad_comprar, <a class="code" href="classCuenca.html#a710f881238488289a10dd94e28105bae">productos</a>.<a class="code" href="classCjt__productos.html#a7365dfd4b738d4da0834cd2a75e9b8c5">consultar_producto</a>(copia.<a class="code" href="classBarco.html#a18ee6e2799fba957af616a42d54d005b">id_compra</a>));</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            }</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="classCuenca.html#afadcf7affebe5218e4d3eb88595f23dd">ciudades</a>.<a class="code" href="classCjt__ciudades.html#a393a6c4ab2f1d264858fa082dc092431">contiene_producto</a>(ciudad_id, copia.<a class="code" href="classBarco.html#a7dd3fe7762f9362219acc1fde2845504">id_venta</a>))</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            {</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                <span class="keywordtype">int</span> cantidad_vender = </div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                    max(0, </div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                        min(</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                            copia.<a class="code" href="classBarco.html#a06142671610200b49d0a399cc6b0e2d7">num_venta</a>, </div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                            <a class="code" href="classCuenca.html#afadcf7affebe5218e4d3eb88595f23dd">ciudades</a>.<a class="code" href="classCjt__ciudades.html#a525b7fde22b32463ab3a5a3ee1384eb8">consultar_cantidad_requerida</a>(ciudad_id, copia.<a class="code" href="classBarco.html#a7dd3fe7762f9362219acc1fde2845504">id_venta</a>) - </div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                            <a class="code" href="classCuenca.html#afadcf7affebe5218e4d3eb88595f23dd">ciudades</a>.<a class="code" href="classCjt__ciudades.html#a051625bafd93c934caca6acc937b9c7d">consultar_cantidad_poseida</a>(ciudad_id, copia.<a class="code" href="classBarco.html#a7dd3fe7762f9362219acc1fde2845504">id_venta</a>)</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                        )</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                    );</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                copia.<a class="code" href="classBarco.html#a06142671610200b49d0a399cc6b0e2d7">num_venta</a> -= cantidad_vender;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                <a class="code" href="classCuenca.html#afadcf7affebe5218e4d3eb88595f23dd">ciudades</a>.<a class="code" href="classCjt__ciudades.html#ae6890381a27485565e0dc40b6f9d8b2b">modificar_cantidad_poseida</a>(ciudad_id, copia.<a class="code" href="classBarco.html#a7dd3fe7762f9362219acc1fde2845504">id_venta</a>, cantidad_vender, <a class="code" href="classCuenca.html#a710f881238488289a10dd94e28105bae">productos</a>.<a class="code" href="classCjt__productos.html#a7365dfd4b738d4da0834cd2a75e9b8c5">consultar_producto</a>(copia.<a class="code" href="classBarco.html#a7dd3fe7762f9362219acc1fde2845504">id_venta</a>));</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            }</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        }</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        barco.<a class="code" href="classBarco.html#a5dfabaa5594d73744183c4b21b543f3d">agregar_viaje</a>(ruta[0]);</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    }</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    cout &lt;&lt; barco.<a class="code" href="classBarco.html#aca280ae3722e21830a0cdd63f3245675">restante</a>() - copia.<a class="code" href="classBarco.html#aca280ae3722e21830a0cdd63f3245675">restante</a>() &lt;&lt; endl;</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;}</div>
-<div class="ttc" id="aclassBarco_html_a5dfabaa5594d73744183c4b21b543f3d"><div class="ttname"><a href="classBarco.html#a5dfabaa5594d73744183c4b21b543f3d">Barco::agregar_viaje</a></div><div class="ttdeci">void agregar_viaje(const string &amp;ciudad_id)</div><div class="ttdef"><b>Definition:</b> <a href="Barco_8cc_source.html#l00022">Barco.cc:22</a></div></div>
-<div class="ttc" id="aclassCjt__ciudades_html_ae6890381a27485565e0dc40b6f9d8b2b"><div class="ttname"><a href="classCjt__ciudades.html#ae6890381a27485565e0dc40b6f9d8b2b">Cjt_ciudades::modificar_cantidad_poseida</a></div><div class="ttdeci">void modificar_cantidad_poseida(const string &amp;ciudad_id, int prod_id, int cantidad_disponible, const Producto &amp;prod)</div><div class="ttdoc">Modifica la cantidad poseida de un producto en una ciudad.</div><div class="ttdef"><b>Definition:</b> <a href="Cjt__ciudades_8cc_source.html#l00020">Cjt_ciudades.cc:20</a></div></div>
-<div class="ttc" id="aclassCjt__productos_html_a7365dfd4b738d4da0834cd2a75e9b8c5"><div class="ttname"><a href="classCjt__productos.html#a7365dfd4b738d4da0834cd2a75e9b8c5">Cjt_productos::consultar_producto</a></div><div class="ttdeci">Producto consultar_producto(int id) const</div><div class="ttdoc">Devuelve el producto con identificador id.</div><div class="ttdef"><b>Definition:</b> <a href="Cjt__productos_8cc_source.html#l00019">Cjt_productos.cc:19</a></div></div>
-<div class="ttc" id="aclassCuenca_html_a35b9f4d3289e093756ff6997c8a1c9f1"><div class="ttname"><a href="classCuenca.html#a35b9f4d3289e093756ff6997c8a1c9f1">Cuenca::estructura</a></div><div class="ttdeci">BinTree&lt; string &gt; estructura</div><div class="ttdef"><b>Definition:</b> <a href="Cuenca_8hh_source.html#l00023">Cuenca.hh:23</a></div></div>
+<p>Operación que realiza un viaje de comercio con el barco. </p>
+<dl class="section pre"><dt>Precondición</dt><dd>Cierto. </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>El barco ha comerciado con las ciudades que pasan por la ruta optima del viaje, se ha agregado al vector de viajes de barco el identificador de la última ciudad en la que se ha comerciado y se ha escrito por el canal estándard de salida el numero de productos que ha comprado y vendido el barco en la ruta optima. </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="Cuenca_8cc_source.html#l00089">89</a> del archivo <a class="el" href="Cuenca_8cc_source.html">Cuenca.cc</a>.</p>
+<div class="fragment"><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;{</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="comment">// Copio los valores de barco a una copia</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <a class="code" href="classBarco.html">Barco</a> copia;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordtype">int</span> id_compra, num_compra, id_venta, num_venta;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    barco.<a class="code" href="classBarco.html#a1d8beae9db574feab5e6b4e8d07c5bf2">consultar_barco</a>(id_compra, num_compra, id_venta, num_venta);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    copia.<a class="code" href="classBarco.html#a367058928ea7f359cbc1854eff4442b1">modificar_barco</a>(id_compra, num_compra, id_venta, num_venta);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="comment">// Cojo la ruta optima de comercio en el viaje</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    vector&lt;string&gt; ruta;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <a class="code" href="classCuenca.html#af717eab3a33f6029febfa3a975d150ef">calcular_viaje</a>(<a class="code" href="classCuenca.html#a35b9f4d3289e093756ff6997c8a1c9f1">estructura</a>, copia, ruta);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="comment">// Si he comerciado en almenos alguna ciudad</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordflow">if</span> (barco.<a class="code" href="classBarco.html#aca280ae3722e21830a0cdd63f3245675">restante</a>() != copia.<a class="code" href="classBarco.html#aca280ae3722e21830a0cdd63f3245675">restante</a>()) </div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    {   </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <span class="comment">// De nuevo copio los valores de barco</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <span class="keywordtype">int</span> id_compra, num_compra, id_venta, num_venta;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        barco.<a class="code" href="classBarco.html#a1d8beae9db574feab5e6b4e8d07c5bf2">consultar_barco</a>(id_compra, num_compra, id_venta, num_venta);</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        copia.<a class="code" href="classBarco.html#a367058928ea7f359cbc1854eff4442b1">modificar_barco</a>(id_compra, num_compra, id_venta, num_venta);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <span class="comment">// Itero por todas las ciudades de la ruta</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = ruta.size() - 1; i &gt;= 0; --i) </div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        {</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            <span class="keywordtype">string</span> ciudad_id = ruta[i];</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;            <span class="comment">// Comercio en la ciudad</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="classCuenca.html#afadcf7affebe5218e4d3eb88595f23dd">ciudades</a>.<a class="code" href="classCjt__ciudades.html#a393a6c4ab2f1d264858fa082dc092431">contiene_producto</a>(ciudad_id, id_compra))</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            {</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;                <span class="comment">// Calculo la cantidad maxima que puedo comprar</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;                <span class="keywordtype">int</span> cantidad_comprar = </div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;                    max(0, </div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;                        min(</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;                            num_compra, </div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;                            <a class="code" href="classCuenca.html#afadcf7affebe5218e4d3eb88595f23dd">ciudades</a>.<a class="code" href="classCjt__ciudades.html#a051625bafd93c934caca6acc937b9c7d">consultar_cantidad_poseida</a>(ciudad_id, id_compra) - </div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;                            <a class="code" href="classCuenca.html#afadcf7affebe5218e4d3eb88595f23dd">ciudades</a>.<a class="code" href="classCjt__ciudades.html#a525b7fde22b32463ab3a5a3ee1384eb8">consultar_cantidad_requerida</a>(ciudad_id, id_compra)</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;                        )</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;                    );</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;                <span class="comment">// Actualizo el numero de productos que me quedan por comprar</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;                num_compra -= cantidad_comprar;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;                <span class="comment">// Comercio de verdad con la ciudad</span></div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;                <a class="code" href="classCuenca.html#afadcf7affebe5218e4d3eb88595f23dd">ciudades</a>.<a class="code" href="classCjt__ciudades.html#ae6890381a27485565e0dc40b6f9d8b2b">modificar_cantidad_poseida</a>(ciudad_id, id_compra, -cantidad_comprar, <a class="code" href="classCuenca.html#a710f881238488289a10dd94e28105bae">productos</a>.<a class="code" href="classCjt__productos.html#a7365dfd4b738d4da0834cd2a75e9b8c5">consultar_producto</a>(id_compra));</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;            }</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="classCuenca.html#afadcf7affebe5218e4d3eb88595f23dd">ciudades</a>.<a class="code" href="classCjt__ciudades.html#a393a6c4ab2f1d264858fa082dc092431">contiene_producto</a>(ciudad_id, id_venta))</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;            {</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;                <span class="comment">// Calculo la cantidad maxima que puedo vender</span></div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;                <span class="keywordtype">int</span> cantidad_vender = </div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;                    max(0, </div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;                        min(</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;                            num_venta,</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;                            <a class="code" href="classCuenca.html#afadcf7affebe5218e4d3eb88595f23dd">ciudades</a>.<a class="code" href="classCjt__ciudades.html#a525b7fde22b32463ab3a5a3ee1384eb8">consultar_cantidad_requerida</a>(ciudad_id, id_venta) - </div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;                            <a class="code" href="classCuenca.html#afadcf7affebe5218e4d3eb88595f23dd">ciudades</a>.<a class="code" href="classCjt__ciudades.html#a051625bafd93c934caca6acc937b9c7d">consultar_cantidad_poseida</a>(ciudad_id, id_venta)</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;                        )</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;                    );</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;                <span class="comment">// Actualizo el numero de productos que me quedan por vender</span></div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;                num_venta -= cantidad_vender;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;                <span class="comment">// Comercio de verdad con la ciudad</span></div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;                <a class="code" href="classCuenca.html#afadcf7affebe5218e4d3eb88595f23dd">ciudades</a>.<a class="code" href="classCjt__ciudades.html#ae6890381a27485565e0dc40b6f9d8b2b">modificar_cantidad_poseida</a>(ciudad_id, id_venta, cantidad_vender, <a class="code" href="classCuenca.html#a710f881238488289a10dd94e28105bae">productos</a>.<a class="code" href="classCjt__productos.html#a7365dfd4b738d4da0834cd2a75e9b8c5">consultar_producto</a>(id_venta));</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;            }</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;            copia.<a class="code" href="classBarco.html#a367058928ea7f359cbc1854eff4442b1">modificar_barco</a>(id_compra, num_compra, id_venta, num_venta);</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        }</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        <span class="comment">// Agrego la ultima ciudad en la que he comerciado al vector de viajes</span></div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        barco.<a class="code" href="classBarco.html#a5dfabaa5594d73744183c4b21b543f3d">agregar_viaje</a>(ruta[0]);</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    }</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <span class="comment">// Escribo el numero de productos que he comprado y vendido en todo el viaje</span></div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    cout &lt;&lt; barco.<a class="code" href="classBarco.html#aca280ae3722e21830a0cdd63f3245675">restante</a>() - copia.<a class="code" href="classBarco.html#aca280ae3722e21830a0cdd63f3245675">restante</a>() &lt;&lt; endl;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;}</div>
+<div class="ttc" id="aclassBarco_html_a5dfabaa5594d73744183c4b21b543f3d"><div class="ttname"><a href="classBarco.html#a5dfabaa5594d73744183c4b21b543f3d">Barco::agregar_viaje</a></div><div class="ttdeci">void agregar_viaje(const string &amp;ciudad_id)</div><div class="ttdoc">Agrega un identificador de una ciudad al vector del parametro implicito.</div><div class="ttdef"><b>Definition:</b> <a href="Barco_8cc_source.html#l00017">Barco.cc:17</a></div></div>
+<div class="ttc" id="aclassCjt__ciudades_html_ae6890381a27485565e0dc40b6f9d8b2b"><div class="ttname"><a href="classCjt__ciudades.html#ae6890381a27485565e0dc40b6f9d8b2b">Cjt_ciudades::modificar_cantidad_poseida</a></div><div class="ttdeci">void modificar_cantidad_poseida(const string &amp;ciudad_id, int prod_id, int cantidad_disponible, const Producto &amp;prod)</div><div class="ttdoc">Modificadora de la cantidad poseida de un producto en una ciudad.</div><div class="ttdef"><b>Definition:</b> <a href="Cjt__ciudades_8cc_source.html#l00024">Cjt_ciudades.cc:24</a></div></div>
+<div class="ttc" id="aclassCjt__productos_html_a7365dfd4b738d4da0834cd2a75e9b8c5"><div class="ttname"><a href="classCjt__productos.html#a7365dfd4b738d4da0834cd2a75e9b8c5">Cjt_productos::consultar_producto</a></div><div class="ttdeci">Producto consultar_producto(int id) const</div><div class="ttdoc">Consultora de un producto.</div><div class="ttdef"><b>Definition:</b> <a href="Cjt__productos_8cc_source.html#l00022">Cjt_productos.cc:22</a></div></div>
+<div class="ttc" id="aclassCuenca_html_a35b9f4d3289e093756ff6997c8a1c9f1"><div class="ttname"><a href="classCuenca.html#a35b9f4d3289e093756ff6997c8a1c9f1">Cuenca::estructura</a></div><div class="ttdeci">BinTree&lt; string &gt; estructura</div><div class="ttdoc">Arbol binario con la estructura de la cuenca.</div><div class="ttdef"><b>Definition:</b> <a href="Cuenca_8hh_source.html#l00027">Cuenca.hh:27</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -537,25 +655,29 @@ Atributos privados</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="Cuenca_8cc_source.html#l00247">247</a> del archivo <a class="el" href="Cuenca_8cc_source.html">Cuenca.cc</a>.</p>
-<div class="fragment"><div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;{</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    <span class="keywordflow">if</span> (not <a class="code" href="classCuenca.html#afadcf7affebe5218e4d3eb88595f23dd">ciudades</a>.<a class="code" href="classCjt__ciudades.html#aeb587ce30d0f8805ddf468ef0202ee95">existe_ciudad</a>(ciudad_id)) </div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    {</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;error: no existe la ciudad&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;        <span class="keywordtype">int</span> n;</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;        cin &gt;&gt; n;</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; n; ++i) </div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;        {</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;            <span class="keywordtype">int</span> foo1, foo2, foo3;</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;            cin &gt;&gt; foo1 &gt;&gt; foo2 &gt;&gt; foo3;</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;        }</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    }</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    <span class="keywordflow">else</span> </div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    {</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;        <a class="code" href="classCuenca.html#afadcf7affebe5218e4d3eb88595f23dd">ciudades</a>.<a class="code" href="classCjt__ciudades.html#a3bc68e88f757fff221787aed62d6f124">leer_inventario</a>(ciudad_id, <a class="code" href="classCuenca.html#a710f881238488289a10dd94e28105bae">productos</a>);</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    }</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;}</div>
-<div class="ttc" id="aclassCjt__ciudades_html_a3bc68e88f757fff221787aed62d6f124"><div class="ttname"><a href="classCjt__ciudades.html#a3bc68e88f757fff221787aed62d6f124">Cjt_ciudades::leer_inventario</a></div><div class="ttdeci">void leer_inventario(const string &amp;ciudad_id, const Cjt_productos &amp;productos)</div><div class="ttdoc">Lee el inventario de una ciudad.</div><div class="ttdef"><b>Definition:</b> <a href="Cjt__ciudades_8cc_source.html#l00060">Cjt_ciudades.cc:60</a></div></div>
+<p>Operación de lectura del inventario de una ciudad. </p>
+<dl class="section pre"><dt>Precondición</dt><dd>Se encuentra en el canal estandard de entrada un natural <em>N</em> y a continuacion <em>N/em&gt; lineas con el identificador valido de un producto, un entero no negativo con la cantidad poseida y un entero positivo con la cantidad requerida. </em></dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd><em> Si el identificador <em>ciudad_id</em> no es valido se ha escrito un mensaje de error por el canal estándard de salida y se ha leido los datos de un inventario que no usamos, en caso contrario se ha leido el inventario de la ciudad con identificador <em>ciudad_id</em>. </em></dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="Cuenca_8cc_source.html#l00289">289</a> del archivo <a class="el" href="Cuenca_8cc_source.html">Cuenca.cc</a>.</p>
+<div class="fragment"><div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;{</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    <span class="keywordflow">if</span> (not <a class="code" href="classCuenca.html#afadcf7affebe5218e4d3eb88595f23dd">ciudades</a>.<a class="code" href="classCjt__ciudades.html#aeb587ce30d0f8805ddf468ef0202ee95">existe_ciudad</a>(ciudad_id)) </div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;    {</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;error: no existe la ciudad&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;        <span class="keywordtype">int</span> n;</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;        cin &gt;&gt; n;</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; n; ++i) </div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;        {</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;            <span class="keywordtype">int</span> foo1, foo2, foo3;</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;            cin &gt;&gt; foo1 &gt;&gt; foo2 &gt;&gt; foo3;</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;        }</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    }</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    <span class="keywordflow">else</span> </div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    {</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;        <a class="code" href="classCuenca.html#afadcf7affebe5218e4d3eb88595f23dd">ciudades</a>.<a class="code" href="classCjt__ciudades.html#a3bc68e88f757fff221787aed62d6f124">leer_inventario</a>(ciudad_id, <a class="code" href="classCuenca.html#a710f881238488289a10dd94e28105bae">productos</a>);</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    }</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;}</div>
+<div class="ttc" id="aclassCjt__ciudades_html_a3bc68e88f757fff221787aed62d6f124"><div class="ttname"><a href="classCjt__ciudades.html#a3bc68e88f757fff221787aed62d6f124">Cjt_ciudades::leer_inventario</a></div><div class="ttdeci">void leer_inventario(const string &amp;ciudad_id, const Cjt_productos &amp;productos)</div><div class="ttdoc">Operación de lectura del inventario de una ciudad.</div><div class="ttdef"><b>Definition:</b> <a href="Cjt__ciudades_8cc_source.html#l00064">Cjt_ciudades.cc:64</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -574,17 +696,21 @@ Atributos privados</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="Cuenca_8cc_source.html#l00266">266</a> del archivo <a class="el" href="Cuenca_8cc_source.html">Cuenca.cc</a>.</p>
-<div class="fragment"><div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;{</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    <span class="keywordtype">string</span> ciudad_id;</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    cin &gt;&gt; ciudad_id;</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    <span class="keywordflow">while</span> (ciudad_id != <span class="stringliteral">&quot;#&quot;</span>)</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    {</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;        <a class="code" href="classCuenca.html#a1a2c3d8b5c2721c4c1d264933e61f055">leer_inventario</a>(ciudad_id);</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;        cin &gt;&gt; ciudad_id;</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    }</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;}</div>
-<div class="ttc" id="aclassCuenca_html_a1a2c3d8b5c2721c4c1d264933e61f055"><div class="ttname"><a href="classCuenca.html#a1a2c3d8b5c2721c4c1d264933e61f055">Cuenca::leer_inventario</a></div><div class="ttdeci">void leer_inventario(const string &amp;ciudad_id)</div><div class="ttdef"><b>Definition:</b> <a href="Cuenca_8cc_source.html#l00247">Cuenca.cc:247</a></div></div>
+<p>Operación de lectura de varios inventarios. </p>
+<dl class="section pre"><dt>Precondición</dt><dd>Se encuentra en el canal estandard de entrada un nombre positivo <em>N</em> y a continuacion los datos de <em>N</em> inventarios. </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>Se han leido los datos de <em>N</em> inventarios. </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="Cuenca_8cc_source.html#l00308">308</a> del archivo <a class="el" href="Cuenca_8cc_source.html">Cuenca.cc</a>.</p>
+<div class="fragment"><div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;{</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;    <span class="keywordtype">string</span> ciudad_id;</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;    cin &gt;&gt; ciudad_id;</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;    <span class="keywordflow">while</span> (ciudad_id != <span class="stringliteral">&quot;#&quot;</span>)</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;    {</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;        <a class="code" href="classCuenca.html#a1a2c3d8b5c2721c4c1d264933e61f055">leer_inventario</a>(ciudad_id);</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;        cin &gt;&gt; ciudad_id;</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;    }</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;}</div>
+<div class="ttc" id="aclassCuenca_html_a1a2c3d8b5c2721c4c1d264933e61f055"><div class="ttname"><a href="classCuenca.html#a1a2c3d8b5c2721c4c1d264933e61f055">Cuenca::leer_inventario</a></div><div class="ttdeci">void leer_inventario(const string &amp;ciudad_id)</div><div class="ttdoc">Operación de lectura del inventario de una ciudad.</div><div class="ttdef"><b>Definition:</b> <a href="Cuenca_8cc_source.html#l00289">Cuenca.cc:289</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -604,11 +730,15 @@ Atributos privados</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="Cuenca_8cc_source.html#l00241">241</a> del archivo <a class="el" href="Cuenca_8cc_source.html">Cuenca.cc</a>.</p>
-<div class="fragment"><div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;{</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    <a class="code" href="classCuenca.html#a710f881238488289a10dd94e28105bae">productos</a>.<a class="code" href="classCjt__productos.html#a789883a0ec2b88a0d091a7503f16f87e">leer_productos</a>(n);</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;}</div>
-<div class="ttc" id="aclassCjt__productos_html_a789883a0ec2b88a0d091a7503f16f87e"><div class="ttname"><a href="classCjt__productos.html#a789883a0ec2b88a0d091a7503f16f87e">Cjt_productos::leer_productos</a></div><div class="ttdeci">void leer_productos(int n)</div><div class="ttdoc">Lee un conjunto de productos nuevos.</div><div class="ttdef"><b>Definition:</b> <a href="Cjt__productos_8cc_source.html#l00030">Cjt_productos.cc:30</a></div></div>
+<p>Operacion de lectura de un conjuto de productos. </p>
+<dl class="section pre"><dt>Precondición</dt><dd>Está disponible en el canal de entrada un entero <em>N</em> positivo y a continuación <em>N</em> lineas con los atributos de cada producto. </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>Se han agregado <em>N</em> productos nuevos al conjunto de productos. </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="Cuenca_8cc_source.html#l00283">283</a> del archivo <a class="el" href="Cuenca_8cc_source.html">Cuenca.cc</a>.</p>
+<div class="fragment"><div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;{</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    <a class="code" href="classCuenca.html#a710f881238488289a10dd94e28105bae">productos</a>.<a class="code" href="classCjt__productos.html#a789883a0ec2b88a0d091a7503f16f87e">leer_productos</a>(n);</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;}</div>
+<div class="ttc" id="aclassCjt__productos_html_a789883a0ec2b88a0d091a7503f16f87e"><div class="ttname"><a href="classCjt__productos.html#a789883a0ec2b88a0d091a7503f16f87e">Cjt_productos::leer_productos</a></div><div class="ttdeci">void leer_productos(int n)</div><div class="ttdoc">Operacion de lectura de conjuto de productos.</div><div class="ttdef"><b>Definition:</b> <a href="Cjt__productos_8cc_source.html#l00040">Cjt_productos.cc:40</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -627,17 +757,21 @@ Atributos privados</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="Cuenca_8cc_source.html#l00277">277</a> del archivo <a class="el" href="Cuenca_8cc_source.html">Cuenca.cc</a>.</p>
-<div class="fragment"><div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;{</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    <a class="code" href="classCuenca.html#afadcf7affebe5218e4d3eb88595f23dd">ciudades</a> = <a class="code" href="classCjt__ciudades.html">Cjt_ciudades</a>(); </div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    <a class="code" href="classCuenca.html#a35b9f4d3289e093756ff6997c8a1c9f1">estructura</a> = <a class="code" href="classCuenca.html#a54368a39d24f75b4171ae23b9d3771a4">construir_estructura</a>(); </div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;}</div>
-<div class="ttc" id="aclassCjt__ciudades_html"><div class="ttname"><a href="classCjt__ciudades.html">Cjt_ciudades</a></div><div class="ttdoc">Representa el conjunto de ciudades de la cuenca fluvial, con un identificador unico para cada una.</div><div class="ttdef"><b>Definition:</b> <a href="Cjt__ciudades_8hh_source.html#l00019">Cjt_ciudades.hh:20</a></div></div>
+<p>Operación de lectura de la cuenca. </p>
+<dl class="section pre"><dt>Precondición</dt><dd>Se encuentra en el canal estándard de entrada la estructura de la cuenca. </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>Se han vaciado los ciudades de la cuenca y se ha leido la estructura de la cuenca. </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="Cuenca_8cc_source.html#l00319">319</a> del archivo <a class="el" href="Cuenca_8cc_source.html">Cuenca.cc</a>.</p>
+<div class="fragment"><div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;{</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;    <a class="code" href="classCuenca.html#afadcf7affebe5218e4d3eb88595f23dd">ciudades</a> = <a class="code" href="classCjt__ciudades.html">Cjt_ciudades</a>(); </div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;    <a class="code" href="classCuenca.html#a35b9f4d3289e093756ff6997c8a1c9f1">estructura</a> = <a class="code" href="classCuenca.html#a54368a39d24f75b4171ae23b9d3771a4">construir_estructura</a>(); </div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;}</div>
+<div class="ttc" id="aclassCjt__ciudades_html"><div class="ttname"><a href="classCjt__ciudades.html">Cjt_ciudades</a></div><div class="ttdoc">Representa el conjunto de ciudades de la cuenca fluvial.</div><div class="ttdef"><b>Definition:</b> <a href="Cjt__ciudades_8hh_source.html#l00022">Cjt_ciudades.hh:23</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="a05536a225b9bfc7290184c8202985871"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a05536a225b9bfc7290184c8202985871">&#9670;&nbsp;</a></span>modificar_barco()</h2>
+<a id="afd5f7b695b2d41bc037a74372536a5a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd5f7b695b2d41bc037a74372536a5a7">&#9670;&nbsp;</a></span>modificar_barco()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -645,32 +779,60 @@ Atributos privados</h2></td></tr>
         <tr>
           <td class="memname">void Cuenca::modificar_barco </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classBarco.html">Barco</a> &amp;&#160;</td>
-          <td class="paramname"><em>barco</em></td><td>)</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>id_compra</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>num_compra</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>id_venta</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>num_venta</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classBarco.html">Barco</a> &amp;&#160;</td>
+          <td class="paramname"><em>barco</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="Cuenca_8cc_source.html#l00146">146</a> del archivo <a class="el" href="Cuenca_8cc_source.html">Cuenca.cc</a>.</p>
-<div class="fragment"><div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;{</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <span class="keywordtype">int</span> id_compra, num_compra, id_venta, num_venta;</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    cin &gt;&gt; id_compra &gt;&gt; num_compra &gt;&gt; id_venta &gt;&gt; num_venta;</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160; </div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <span class="keywordflow">if</span> (not <a class="code" href="classCuenca.html#a710f881238488289a10dd94e28105bae">productos</a>.<a class="code" href="classCjt__productos.html#adb7ebdac20a01f44e84b445fcff0c233">existe_producto</a>(id_compra) or not <a class="code" href="classCuenca.html#a710f881238488289a10dd94e28105bae">productos</a>.<a class="code" href="classCjt__productos.html#adb7ebdac20a01f44e84b445fcff0c233">existe_producto</a>(id_venta))</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    {</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;error: no existe el producto&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    }</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (id_compra == id_venta) </div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    {</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;error: no se puede comprar y vender el mismo producto&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    }</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <span class="keywordflow">else</span> </div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    {</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        barco.<a class="code" href="classBarco.html#a367058928ea7f359cbc1854eff4442b1">modificar_barco</a>(id_compra, num_compra, id_venta, num_venta);</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    }</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;}</div>
-<div class="ttc" id="aclassBarco_html_a367058928ea7f359cbc1854eff4442b1"><div class="ttname"><a href="classBarco.html#a367058928ea7f359cbc1854eff4442b1">Barco::modificar_barco</a></div><div class="ttdeci">void modificar_barco(int id_compra, int num_compra, int id_venta, int num_venta)</div><div class="ttdef"><b>Definition:</b> <a href="Barco_8cc_source.html#l00014">Barco.cc:14</a></div></div>
+<p>Modificadora de los atributos del barco. </p>
+<dl class="section pre"><dt>Precondición</dt><dd>Cierto. </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>Si algun identificador <em>id_compra</em> o <em>id_venta</em> no es valido o son el mismo se ha escrito un mensaje de error por el canal estándard de salida, en caso contrario se ha modificado los atributos del barco con el valor de los parametros. </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="Cuenca_8cc_source.html#l00191">191</a> del archivo <a class="el" href="Cuenca_8cc_source.html">Cuenca.cc</a>.</p>
+<div class="fragment"><div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;{</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    <span class="keywordflow">if</span> (not <a class="code" href="classCuenca.html#a710f881238488289a10dd94e28105bae">productos</a>.<a class="code" href="classCjt__productos.html#adb7ebdac20a01f44e84b445fcff0c233">existe_producto</a>(id_compra) or not <a class="code" href="classCuenca.html#a710f881238488289a10dd94e28105bae">productos</a>.<a class="code" href="classCjt__productos.html#adb7ebdac20a01f44e84b445fcff0c233">existe_producto</a>(id_venta))</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    {</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;error: no existe el producto&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    }</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (id_compra == id_venta) </div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    {</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;error: no se puede comprar y vender el mismo producto&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    }</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    <span class="keywordflow">else</span> </div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    {</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;        barco.<a class="code" href="classBarco.html#a367058928ea7f359cbc1854eff4442b1">modificar_barco</a>(id_compra, num_compra, id_venta, num_venta);</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    }</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -712,36 +874,40 @@ Atributos privados</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="Cuenca_8cc_source.html#l00185">185</a> del archivo <a class="el" href="Cuenca_8cc_source.html">Cuenca.cc</a>.</p>
-<div class="fragment"><div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;{</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    <span class="keywordflow">if</span> (not <a class="code" href="classCuenca.html#a710f881238488289a10dd94e28105bae">productos</a>.<a class="code" href="classCjt__productos.html#adb7ebdac20a01f44e84b445fcff0c233">existe_producto</a>(prod_id))</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    {</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;error: no existe el producto&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    }</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (not <a class="code" href="classCuenca.html#afadcf7affebe5218e4d3eb88595f23dd">ciudades</a>.<a class="code" href="classCjt__ciudades.html#aeb587ce30d0f8805ddf468ef0202ee95">existe_ciudad</a>(ciudad_id))</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    {</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;error: no existe la ciudad&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    }</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (not <a class="code" href="classCuenca.html#afadcf7affebe5218e4d3eb88595f23dd">ciudades</a>.<a class="code" href="classCjt__ciudades.html#a393a6c4ab2f1d264858fa082dc092431">contiene_producto</a>(ciudad_id, prod_id))</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    {</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;error: la ciudad no tiene el producto&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    }</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    <span class="keywordflow">else</span> { </div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;        <a class="code" href="classCuenca.html#afadcf7affebe5218e4d3eb88595f23dd">ciudades</a>.<a class="code" href="classCjt__ciudades.html#ae6890381a27485565e0dc40b6f9d8b2b">modificar_cantidad_poseida</a>(</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;            ciudad_id, </div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;            prod_id, </div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;            cantidad_disponible - <a class="code" href="classCuenca.html#afadcf7affebe5218e4d3eb88595f23dd">ciudades</a>.<a class="code" href="classCjt__ciudades.html#a051625bafd93c934caca6acc937b9c7d">consultar_cantidad_poseida</a>(ciudad_id, prod_id), </div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;            <a class="code" href="classCuenca.html#a710f881238488289a10dd94e28105bae">productos</a>.<a class="code" href="classCjt__productos.html#a7365dfd4b738d4da0834cd2a75e9b8c5">consultar_producto</a>(prod_id)</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        );</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        <a class="code" href="classCuenca.html#afadcf7affebe5218e4d3eb88595f23dd">ciudades</a>.<a class="code" href="classCjt__ciudades.html#a542ea6716d8110a44c48de88d1da630f">modificar_cantidad_requerida</a>(</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;            ciudad_id, </div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;            prod_id, </div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;            cantidad_requerida - <a class="code" href="classCuenca.html#afadcf7affebe5218e4d3eb88595f23dd">ciudades</a>.<a class="code" href="classCjt__ciudades.html#a525b7fde22b32463ab3a5a3ee1384eb8">consultar_cantidad_requerida</a>(ciudad_id, prod_id)</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;        );</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;        <a class="code" href="classCuenca.html#afadcf7affebe5218e4d3eb88595f23dd">ciudades</a>.<a class="code" href="classCjt__ciudades.html#a00bbc4146eef32fcfdd4a163215ce387">escribir_atributos_totales</a>(ciudad_id);</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    }</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;}</div>
-<div class="ttc" id="aclassCjt__ciudades_html_a542ea6716d8110a44c48de88d1da630f"><div class="ttname"><a href="classCjt__ciudades.html#a542ea6716d8110a44c48de88d1da630f">Cjt_ciudades::modificar_cantidad_requerida</a></div><div class="ttdeci">void modificar_cantidad_requerida(const string &amp;ciudad_id, int prod_id, int cantidad_requerida)</div><div class="ttdoc">Modifica la cantidad requerida de un producto en una ciudad.</div><div class="ttdef"><b>Definition:</b> <a href="Cjt__ciudades_8cc_source.html#l00025">Cjt_ciudades.cc:25</a></div></div>
+<p>Modificadora de la cantidad poseida de un producto en una ciudad.. </p>
+<dl class="section pre"><dt>Precondición</dt><dd>Cierto. </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>Si algun identificador <em>ciudad_id</em> o <em>prod_id</em> no es valido o la ciudad <em>ciudad_id</em> no contiene el producto <em>prod_id</em> se ha escrito un mensaje de error por el canal estándard de salida, en caso contrario se ha modificado las cantidad poseida y requerida del producto con identificador <em>prod_id</em> de la ciudad con identificador <em>ciudad_id</em> con las cantidades indicadas. </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="Cuenca_8cc_source.html#l00227">227</a> del archivo <a class="el" href="Cuenca_8cc_source.html">Cuenca.cc</a>.</p>
+<div class="fragment"><div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;{</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    <span class="keywordflow">if</span> (not <a class="code" href="classCuenca.html#a710f881238488289a10dd94e28105bae">productos</a>.<a class="code" href="classCjt__productos.html#adb7ebdac20a01f44e84b445fcff0c233">existe_producto</a>(prod_id))</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    {</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;error: no existe el producto&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    }</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (not <a class="code" href="classCuenca.html#afadcf7affebe5218e4d3eb88595f23dd">ciudades</a>.<a class="code" href="classCjt__ciudades.html#aeb587ce30d0f8805ddf468ef0202ee95">existe_ciudad</a>(ciudad_id))</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    {</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;error: no existe la ciudad&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    }</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (not <a class="code" href="classCuenca.html#afadcf7affebe5218e4d3eb88595f23dd">ciudades</a>.<a class="code" href="classCjt__ciudades.html#a393a6c4ab2f1d264858fa082dc092431">contiene_producto</a>(ciudad_id, prod_id))</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    {</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;error: la ciudad no tiene el producto&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    }</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    <span class="keywordflow">else</span> { </div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;        <a class="code" href="classCuenca.html#afadcf7affebe5218e4d3eb88595f23dd">ciudades</a>.<a class="code" href="classCjt__ciudades.html#ae6890381a27485565e0dc40b6f9d8b2b">modificar_cantidad_poseida</a>(</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;            ciudad_id, </div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;            prod_id, </div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;            cantidad_disponible - <a class="code" href="classCuenca.html#afadcf7affebe5218e4d3eb88595f23dd">ciudades</a>.<a class="code" href="classCjt__ciudades.html#a051625bafd93c934caca6acc937b9c7d">consultar_cantidad_poseida</a>(ciudad_id, prod_id), </div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;            <a class="code" href="classCuenca.html#a710f881238488289a10dd94e28105bae">productos</a>.<a class="code" href="classCjt__productos.html#a7365dfd4b738d4da0834cd2a75e9b8c5">consultar_producto</a>(prod_id)</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;        );</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;        <a class="code" href="classCuenca.html#afadcf7affebe5218e4d3eb88595f23dd">ciudades</a>.<a class="code" href="classCjt__ciudades.html#a542ea6716d8110a44c48de88d1da630f">modificar_cantidad_requerida</a>(</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;            ciudad_id, </div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;            prod_id, </div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;            cantidad_requerida - <a class="code" href="classCuenca.html#afadcf7affebe5218e4d3eb88595f23dd">ciudades</a>.<a class="code" href="classCjt__ciudades.html#a525b7fde22b32463ab3a5a3ee1384eb8">consultar_cantidad_requerida</a>(ciudad_id, prod_id)</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;        );</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;        <a class="code" href="classCuenca.html#afadcf7affebe5218e4d3eb88595f23dd">ciudades</a>.<a class="code" href="classCjt__ciudades.html#a00bbc4146eef32fcfdd4a163215ce387">escribir_atributos_totales</a>(ciudad_id);</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    }</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;}</div>
+<div class="ttc" id="aclassCjt__ciudades_html_a542ea6716d8110a44c48de88d1da630f"><div class="ttname"><a href="classCjt__ciudades.html#a542ea6716d8110a44c48de88d1da630f">Cjt_ciudades::modificar_cantidad_requerida</a></div><div class="ttdeci">void modificar_cantidad_requerida(const string &amp;ciudad_id, int prod_id, int cantidad_requerida)</div><div class="ttdoc">Modificadora de la cantidad requerida de un producto en una ciudad.</div><div class="ttdef"><b>Definition:</b> <a href="Cjt__ciudades_8cc_source.html#l00029">Cjt_ciudades.cc:29</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -760,11 +926,15 @@ Atributos privados</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="Cuenca_8cc_source.html#l00236">236</a> del archivo <a class="el" href="Cuenca_8cc_source.html">Cuenca.cc</a>.</p>
-<div class="fragment"><div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;{</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    cout &lt;&lt; <a class="code" href="classCuenca.html#a710f881238488289a10dd94e28105bae">productos</a>.<a class="code" href="classCjt__productos.html#ad13bf11505fd21a5a5825ca38c7d5a5f">numero_productos</a>() &lt;&lt; endl;</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;}</div>
-<div class="ttc" id="aclassCjt__productos_html_ad13bf11505fd21a5a5825ca38c7d5a5f"><div class="ttname"><a href="classCjt__productos.html#ad13bf11505fd21a5a5825ca38c7d5a5f">Cjt_productos::numero_productos</a></div><div class="ttdeci">int numero_productos() const</div><div class="ttdoc">Devuelve el numero total de productos.</div><div class="ttdef"><b>Definition:</b> <a href="Cjt__productos_8cc_source.html#l00009">Cjt_productos.cc:9</a></div></div>
+<p>Consultora del numero total de productos. </p>
+<dl class="section pre"><dt>Precondición</dt><dd>Cierto. </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>Devuelve el numero total de productos. </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="Cuenca_8cc_source.html#l00278">278</a> del archivo <a class="el" href="Cuenca_8cc_source.html">Cuenca.cc</a>.</p>
+<div class="fragment"><div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;{</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    cout &lt;&lt; <a class="code" href="classCuenca.html#a710f881238488289a10dd94e28105bae">productos</a>.<a class="code" href="classCjt__productos.html#ad13bf11505fd21a5a5825ca38c7d5a5f">numero_productos</a>() &lt;&lt; endl;</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;}</div>
+<div class="ttc" id="aclassCjt__productos_html_ad13bf11505fd21a5a5825ca38c7d5a5f"><div class="ttname"><a href="classCjt__productos.html#ad13bf11505fd21a5a5825ca38c7d5a5f">Cjt_productos::numero_productos</a></div><div class="ttdeci">int numero_productos() const</div><div class="ttdoc">Consultora del numero total de productos.</div><div class="ttdef"><b>Definition:</b> <a href="Cjt__productos_8cc_source.html#l00012">Cjt_productos.cc:12</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -806,26 +976,30 @@ Atributos privados</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="Cuenca_8cc_source.html#l00165">165</a> del archivo <a class="el" href="Cuenca_8cc_source.html">Cuenca.cc</a>.</p>
-<div class="fragment"><div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;{</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    <span class="keywordflow">if</span> (not <a class="code" href="classCuenca.html#a710f881238488289a10dd94e28105bae">productos</a>.<a class="code" href="classCjt__productos.html#adb7ebdac20a01f44e84b445fcff0c233">existe_producto</a>(prod_id))</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    {</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;error: no existe el producto&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    }</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (not <a class="code" href="classCuenca.html#afadcf7affebe5218e4d3eb88595f23dd">ciudades</a>.<a class="code" href="classCjt__ciudades.html#aeb587ce30d0f8805ddf468ef0202ee95">existe_ciudad</a>(ciudad_id))</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    {</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;error: no existe la ciudad&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    }</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="classCuenca.html#afadcf7affebe5218e4d3eb88595f23dd">ciudades</a>.<a class="code" href="classCjt__ciudades.html#a393a6c4ab2f1d264858fa082dc092431">contiene_producto</a>(ciudad_id, prod_id))</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    {</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;error: la ciudad ya tiene el producto&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    }</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        <a class="code" href="classCuenca.html#afadcf7affebe5218e4d3eb88595f23dd">ciudades</a>.<a class="code" href="classCjt__ciudades.html#ab0d43cd40d3654f0902fda3b7bf3a395">poner_producto</a>(ciudad_id, prod_id, cantidad_disponible, cantidad_requerida, <a class="code" href="classCuenca.html#a710f881238488289a10dd94e28105bae">productos</a>.<a class="code" href="classCjt__productos.html#a7365dfd4b738d4da0834cd2a75e9b8c5">consultar_producto</a>(prod_id));</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;        <a class="code" href="classCuenca.html#afadcf7affebe5218e4d3eb88595f23dd">ciudades</a>.<a class="code" href="classCjt__ciudades.html#a00bbc4146eef32fcfdd4a163215ce387">escribir_atributos_totales</a>(ciudad_id);</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    }</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;}</div>
-<div class="ttc" id="aclassCjt__ciudades_html_ab0d43cd40d3654f0902fda3b7bf3a395"><div class="ttname"><a href="classCjt__ciudades.html#ab0d43cd40d3654f0902fda3b7bf3a395">Cjt_ciudades::poner_producto</a></div><div class="ttdeci">void poner_producto(const string &amp;ciudad_id, int prod_id, int cantidad_disponible, int cantidad_requerida, const Producto &amp;prod)</div><div class="ttdoc">Añade un producto a una ciudad.</div><div class="ttdef"><b>Definition:</b> <a href="Cjt__ciudades_8cc_source.html#l00015">Cjt_ciudades.cc:15</a></div></div>
+<p>Añade un producto a una ciudad. </p>
+<dl class="section pre"><dt>Precondición</dt><dd>Cierto. </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>Si algun identificador <em>ciudad_id</em> o <em>prod_id</em> no es valido o la ciudad <em>ciudad_id</em> no contiene el producto <em>prod_id</em> se ha escrito un mensaje de error por el canal estándard de salida, en caso contrario se ha añadido el producto con identificador <em>prod_id</em> a la ciudad con identificador <em>ciudad_id</em>. </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="Cuenca_8cc_source.html#l00207">207</a> del archivo <a class="el" href="Cuenca_8cc_source.html">Cuenca.cc</a>.</p>
+<div class="fragment"><div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;{</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    <span class="keywordflow">if</span> (not <a class="code" href="classCuenca.html#a710f881238488289a10dd94e28105bae">productos</a>.<a class="code" href="classCjt__productos.html#adb7ebdac20a01f44e84b445fcff0c233">existe_producto</a>(prod_id))</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    {</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;error: no existe el producto&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    }</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (not <a class="code" href="classCuenca.html#afadcf7affebe5218e4d3eb88595f23dd">ciudades</a>.<a class="code" href="classCjt__ciudades.html#aeb587ce30d0f8805ddf468ef0202ee95">existe_ciudad</a>(ciudad_id))</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    {</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;error: no existe la ciudad&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    }</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="classCuenca.html#afadcf7affebe5218e4d3eb88595f23dd">ciudades</a>.<a class="code" href="classCjt__ciudades.html#a393a6c4ab2f1d264858fa082dc092431">contiene_producto</a>(ciudad_id, prod_id))</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    {</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;error: la ciudad ya tiene el producto&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    }</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;        <a class="code" href="classCuenca.html#afadcf7affebe5218e4d3eb88595f23dd">ciudades</a>.<a class="code" href="classCjt__ciudades.html#ab0d43cd40d3654f0902fda3b7bf3a395">poner_producto</a>(ciudad_id, prod_id, cantidad_disponible, cantidad_requerida, <a class="code" href="classCuenca.html#a710f881238488289a10dd94e28105bae">productos</a>.<a class="code" href="classCjt__productos.html#a7365dfd4b738d4da0834cd2a75e9b8c5">consultar_producto</a>(prod_id));</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        <a class="code" href="classCuenca.html#afadcf7affebe5218e4d3eb88595f23dd">ciudades</a>.<a class="code" href="classCjt__ciudades.html#a00bbc4146eef32fcfdd4a163215ce387">escribir_atributos_totales</a>(ciudad_id);</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    }</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;}</div>
+<div class="ttc" id="aclassCjt__ciudades_html_ab0d43cd40d3654f0902fda3b7bf3a395"><div class="ttname"><a href="classCjt__ciudades.html#ab0d43cd40d3654f0902fda3b7bf3a395">Cjt_ciudades::poner_producto</a></div><div class="ttdeci">void poner_producto(const string &amp;ciudad_id, int prod_id, int cantidad_disponible, int cantidad_requerida, const Producto &amp;prod)</div><div class="ttdoc">Añade un producto a una ciudad.</div><div class="ttdef"><b>Definition:</b> <a href="Cjt__ciudades_8cc_source.html#l00019">Cjt_ciudades.cc:19</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -855,27 +1029,31 @@ Atributos privados</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="Cuenca_8cc_source.html#l00215">215</a> del archivo <a class="el" href="Cuenca_8cc_source.html">Cuenca.cc</a>.</p>
-<div class="fragment"><div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;{</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    <span class="keywordflow">if</span> (not <a class="code" href="classCuenca.html#a710f881238488289a10dd94e28105bae">productos</a>.<a class="code" href="classCjt__productos.html#adb7ebdac20a01f44e84b445fcff0c233">existe_producto</a>(prod_id))</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    {</div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;error: no existe el producto&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    }</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (not <a class="code" href="classCuenca.html#afadcf7affebe5218e4d3eb88595f23dd">ciudades</a>.<a class="code" href="classCjt__ciudades.html#aeb587ce30d0f8805ddf468ef0202ee95">existe_ciudad</a>(ciudad_id))</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    {</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;error: no existe la ciudad&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    }</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (not <a class="code" href="classCuenca.html#afadcf7affebe5218e4d3eb88595f23dd">ciudades</a>.<a class="code" href="classCjt__ciudades.html#a393a6c4ab2f1d264858fa082dc092431">contiene_producto</a>(ciudad_id, prod_id))</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    {</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;error: la ciudad no tiene el producto&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    }</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    <span class="keywordflow">else</span> </div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    {</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        <a class="code" href="classCuenca.html#afadcf7affebe5218e4d3eb88595f23dd">ciudades</a>.<a class="code" href="classCjt__ciudades.html#af8904fcb4a201b93306f3984b2ae2f3f">quitar_producto</a>(ciudad_id, prod_id, <a class="code" href="classCuenca.html#a710f881238488289a10dd94e28105bae">productos</a>.<a class="code" href="classCjt__productos.html#a7365dfd4b738d4da0834cd2a75e9b8c5">consultar_producto</a>(prod_id));</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        <a class="code" href="classCuenca.html#afadcf7affebe5218e4d3eb88595f23dd">ciudades</a>.<a class="code" href="classCjt__ciudades.html#a00bbc4146eef32fcfdd4a163215ce387">escribir_atributos_totales</a>(ciudad_id);</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    }</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;}</div>
-<div class="ttc" id="aclassCjt__ciudades_html_af8904fcb4a201b93306f3984b2ae2f3f"><div class="ttname"><a href="classCjt__ciudades.html#af8904fcb4a201b93306f3984b2ae2f3f">Cjt_ciudades::quitar_producto</a></div><div class="ttdeci">void quitar_producto(const string &amp;ciudad_id, int prod_id, const Producto &amp;prod)</div><div class="ttdoc">Quita un producto del inventario de una ciudad.</div><div class="ttdef"><b>Definition:</b> <a href="Cjt__ciudades_8cc_source.html#l00030">Cjt_ciudades.cc:30</a></div></div>
+<p>Quita un producto del inventario de una ciudad. </p>
+<dl class="section pre"><dt>Precondición</dt><dd>Cierto. </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>Si algun identificador <em>ciudad_id</em> o <em>prod_id</em> no es valido o la ciudad <em>ciudad_id</em> no contiene el producto <em>prod_id</em> se ha escrito un mensaje de error por el canal estándard de salida, en caso contrario se ha eliminado el producto con identificador <em>prod_id</em> de la ciudad con identificador <em>ciudad_id</em>. </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="Cuenca_8cc_source.html#l00257">257</a> del archivo <a class="el" href="Cuenca_8cc_source.html">Cuenca.cc</a>.</p>
+<div class="fragment"><div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;{</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    <span class="keywordflow">if</span> (not <a class="code" href="classCuenca.html#a710f881238488289a10dd94e28105bae">productos</a>.<a class="code" href="classCjt__productos.html#adb7ebdac20a01f44e84b445fcff0c233">existe_producto</a>(prod_id))</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    {</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;error: no existe el producto&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    }</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (not <a class="code" href="classCuenca.html#afadcf7affebe5218e4d3eb88595f23dd">ciudades</a>.<a class="code" href="classCjt__ciudades.html#aeb587ce30d0f8805ddf468ef0202ee95">existe_ciudad</a>(ciudad_id))</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    {</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;error: no existe la ciudad&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    }</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (not <a class="code" href="classCuenca.html#afadcf7affebe5218e4d3eb88595f23dd">ciudades</a>.<a class="code" href="classCjt__ciudades.html#a393a6c4ab2f1d264858fa082dc092431">contiene_producto</a>(ciudad_id, prod_id))</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    {</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;error: la ciudad no tiene el producto&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    }</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    <span class="keywordflow">else</span> </div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    {</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;        <a class="code" href="classCuenca.html#afadcf7affebe5218e4d3eb88595f23dd">ciudades</a>.<a class="code" href="classCjt__ciudades.html#af8904fcb4a201b93306f3984b2ae2f3f">quitar_producto</a>(ciudad_id, prod_id, <a class="code" href="classCuenca.html#a710f881238488289a10dd94e28105bae">productos</a>.<a class="code" href="classCjt__productos.html#a7365dfd4b738d4da0834cd2a75e9b8c5">consultar_producto</a>(prod_id));</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;        <a class="code" href="classCuenca.html#afadcf7affebe5218e4d3eb88595f23dd">ciudades</a>.<a class="code" href="classCjt__ciudades.html#a00bbc4146eef32fcfdd4a163215ce387">escribir_atributos_totales</a>(ciudad_id);</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    }</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;}</div>
+<div class="ttc" id="aclassCjt__ciudades_html_af8904fcb4a201b93306f3984b2ae2f3f"><div class="ttname"><a href="classCjt__ciudades.html#af8904fcb4a201b93306f3984b2ae2f3f">Cjt_ciudades::quitar_producto</a></div><div class="ttdeci">void quitar_producto(const string &amp;ciudad_id, int prod_id, const Producto &amp;prod)</div><div class="ttdoc">Quita un producto del inventario de una ciudad.</div><div class="ttdef"><b>Definition:</b> <a href="Cjt__ciudades_8cc_source.html#l00034">Cjt_ciudades.cc:34</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -894,11 +1072,15 @@ Atributos privados</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="Cuenca_8cc_source.html#l00110">110</a> del archivo <a class="el" href="Cuenca_8cc_source.html">Cuenca.cc</a>.</p>
-<div class="fragment"><div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;{</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <a class="code" href="classCuenca.html#a51870d649b499f3b73d4ea1532e2b526">redistribuir</a>(<a class="code" href="classCuenca.html#a35b9f4d3289e093756ff6997c8a1c9f1">estructura</a>);</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;}</div>
-<div class="ttc" id="aclassCuenca_html_a51870d649b499f3b73d4ea1532e2b526"><div class="ttname"><a href="classCuenca.html#a51870d649b499f3b73d4ea1532e2b526">Cuenca::redistribuir</a></div><div class="ttdeci">void redistribuir()</div><div class="ttdef"><b>Definition:</b> <a href="Cuenca_8cc_source.html#l00110">Cuenca.cc:110</a></div></div>
+<p>Operación de redistribución de productos entre ciudades. </p>
+<dl class="section pre"><dt>Precondición</dt><dd>Cierto. </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>Se han redistribuido los productos entre las ciudades de la cuenca. La ciudad de la desembocadura comercia con su ciudad río arriba a mano derecha y luego con la ciudad río arriba a mano izquierda, y así sucesivamente. </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="Cuenca_8cc_source.html#l00155">155</a> del archivo <a class="el" href="Cuenca_8cc_source.html">Cuenca.cc</a>.</p>
+<div class="fragment"><div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;{</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <a class="code" href="classCuenca.html#a51870d649b499f3b73d4ea1532e2b526">redistribuir</a>(<a class="code" href="classCuenca.html#a35b9f4d3289e093756ff6997c8a1c9f1">estructura</a>);</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;}</div>
+<div class="ttc" id="aclassCuenca_html_a51870d649b499f3b73d4ea1532e2b526"><div class="ttname"><a href="classCuenca.html#a51870d649b499f3b73d4ea1532e2b526">Cuenca::redistribuir</a></div><div class="ttdeci">void redistribuir()</div><div class="ttdoc">Operación de redistribución de productos entre ciudades.</div><div class="ttdef"><b>Definition:</b> <a href="Cuenca_8cc_source.html#l00155">Cuenca.cc:155</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -918,21 +1100,25 @@ Atributos privados</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="Cuenca_8cc_source.html#l00115">115</a> del archivo <a class="el" href="Cuenca_8cc_source.html">Cuenca.cc</a>.</p>
-<div class="fragment"><div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;{</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keywordflow">if</span> (raiz.empty()) <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keywordflow">if</span> (not raiz.left().empty()) </div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    {</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        <a class="code" href="classCuenca.html#acce42ec6f63c1770ca00af1298a6dfbc">comerciar</a>(raiz.value(), raiz.left().value());</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        <a class="code" href="classCuenca.html#a51870d649b499f3b73d4ea1532e2b526">redistribuir</a>(raiz.left());</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    }</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="keywordflow">if</span> (not raiz.right().empty()) </div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    {</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        <a class="code" href="classCuenca.html#acce42ec6f63c1770ca00af1298a6dfbc">comerciar</a>(raiz.value(), raiz.right().value());</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        <a class="code" href="classCuenca.html#a51870d649b499f3b73d4ea1532e2b526">redistribuir</a>(raiz.right());</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    }</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;}</div>
-<div class="ttc" id="aclassCuenca_html_acce42ec6f63c1770ca00af1298a6dfbc"><div class="ttname"><a href="classCuenca.html#acce42ec6f63c1770ca00af1298a6dfbc">Cuenca::comerciar</a></div><div class="ttdeci">void comerciar(const string &amp;ciudad_id1, const string &amp;ciudad_id2)</div><div class="ttdef"><b>Definition:</b> <a href="Cuenca_8cc_source.html#l00130">Cuenca.cc:130</a></div></div>
+<p>Operación de redistribución de productos entre ciudades. </p>
+<dl class="section pre"><dt>Precondición</dt><dd>Cierto. </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>Se han redistribuido los productos entre las ciudades de la cuenca. La ciudad de la desembocadura comercia con su ciudad río arriba a mano derecha y luego con la ciudad río arriba a mano izquierda, y así sucesivamente. </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="Cuenca_8cc_source.html#l00160">160</a> del archivo <a class="el" href="Cuenca_8cc_source.html">Cuenca.cc</a>.</p>
+<div class="fragment"><div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;{</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    <span class="keywordflow">if</span> (raiz.empty()) <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <span class="keywordflow">if</span> (not raiz.left().empty()) </div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    {</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        <a class="code" href="classCuenca.html#acce42ec6f63c1770ca00af1298a6dfbc">comerciar</a>(raiz.value(), raiz.left().value());</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        <a class="code" href="classCuenca.html#a51870d649b499f3b73d4ea1532e2b526">redistribuir</a>(raiz.left());</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    }</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    <span class="keywordflow">if</span> (not raiz.right().empty()) </div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    {</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        <a class="code" href="classCuenca.html#acce42ec6f63c1770ca00af1298a6dfbc">comerciar</a>(raiz.value(), raiz.right().value());</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        <a class="code" href="classCuenca.html#a51870d649b499f3b73d4ea1532e2b526">redistribuir</a>(raiz.right());</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    }</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;}</div>
+<div class="ttc" id="aclassCuenca_html_acce42ec6f63c1770ca00af1298a6dfbc"><div class="ttname"><a href="classCuenca.html#acce42ec6f63c1770ca00af1298a6dfbc">Cuenca::comerciar</a></div><div class="ttdeci">void comerciar(const string &amp;ciudad_id1, const string &amp;ciudad_id2)</div><div class="ttdoc">Operación de comercio entre dos ciudades.</div><div class="ttdef"><b>Definition:</b> <a href="Cuenca_8cc_source.html#l00175">Cuenca.cc:175</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -957,7 +1143,9 @@ Atributos privados</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="Cuenca_8hh_source.html#l00022">22</a> del archivo <a class="el" href="Cuenca_8hh_source.html">Cuenca.hh</a>.</p>
+<p>Conjunto de ciudades de la cuenca. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="Cuenca_8hh_source.html#l00025">25</a> del archivo <a class="el" href="Cuenca_8hh_source.html">Cuenca.hh</a>.</p>
 
 </div>
 </div>
@@ -981,7 +1169,9 @@ Atributos privados</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="Cuenca_8hh_source.html#l00023">23</a> del archivo <a class="el" href="Cuenca_8hh_source.html">Cuenca.hh</a>.</p>
+<p>Arbol binario con la estructura de la cuenca. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="Cuenca_8hh_source.html#l00027">27</a> del archivo <a class="el" href="Cuenca_8hh_source.html">Cuenca.hh</a>.</p>
 
 </div>
 </div>
@@ -1005,7 +1195,9 @@ Atributos privados</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="Cuenca_8hh_source.html#l00021">21</a> del archivo <a class="el" href="Cuenca_8hh_source.html">Cuenca.hh</a>.</p>
+<p>Conjunto de productos de la cuenca. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="Cuenca_8hh_source.html#l00023">23</a> del archivo <a class="el" href="Cuenca_8hh_source.html">Cuenca.hh</a>.</p>
 
 </div>
 </div>
@@ -1014,9 +1206,13 @@ Atributos privados</h2></td></tr>
 <li><a class="el" href="Cuenca_8cc_source.html">Cuenca.cc</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classCuenca.html">Cuenca</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
 </body>
 </html>

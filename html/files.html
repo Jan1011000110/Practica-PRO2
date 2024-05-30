@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,22 @@ $(function() {
 /* @license-end */</script>
 <div id="main-nav"></div>
 </div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('files.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -67,25 +87,29 @@ $(function() {
 <div class="contents">
 <div class="textblock">Lista de todos los archivos con descripciones breves:</div><div class="directory">
 <table class="directory">
-<tr id="row_0_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a href="Barco_8cc_source.html"><span class="icondoc"></span></a><a class="el" href="Barco_8cc.html" target="_self">Barco.cc</a></td><td class="desc"></td></tr>
+<tr id="row_0_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a href="Barco_8cc_source.html"><span class="icondoc"></span></a><a class="el" href="Barco_8cc.html" target="_self">Barco.cc</a></td><td class="desc">Código de la clase <a class="el" href="classBarco.html" title="Representa el barco de comercio de la cuenca fluvial.">Barco</a> </td></tr>
 <tr id="row_1_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a href="Barco_8hh_source.html"><span class="icondoc"></span></a><a class="el" href="Barco_8hh.html" target="_self">Barco.hh</a></td><td class="desc">Especificación de la clase Ciudad </td></tr>
-<tr id="row_2_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a href="Cjt__ciudades_8cc_source.html"><span class="icondoc"></span></a><a class="el" href="Cjt__ciudades_8cc.html" target="_self">Cjt_ciudades.cc</a></td><td class="desc"></td></tr>
-<tr id="row_3_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a href="Cjt__ciudades_8hh_source.html"><span class="icondoc"></span></a><a class="el" href="Cjt__ciudades_8hh.html" target="_self">Cjt_ciudades.hh</a></td><td class="desc">Especificacion de la clase <a class="el" href="classCjt__ciudades.html" title="Representa el conjunto de ciudades de la cuenca fluvial, con un identificador unico para cada una.">Cjt_ciudades</a> </td></tr>
-<tr id="row_4_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a href="Cjt__productos_8cc_source.html"><span class="icondoc"></span></a><a class="el" href="Cjt__productos_8cc.html" target="_self">Cjt_productos.cc</a></td><td class="desc"></td></tr>
-<tr id="row_5_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a href="Cjt__productos_8hh_source.html"><span class="icondoc"></span></a><a class="el" href="Cjt__productos_8hh.html" target="_self">Cjt_productos.hh</a></td><td class="desc">Especificación de la clase <a class="el" href="classCjt__productos.html" title="Facilita la gestion de operaciones de un conjunto de productos.">Cjt_productos</a> </td></tr>
-<tr id="row_6_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a href="Cuenca_8cc_source.html"><span class="icondoc"></span></a><a class="el" href="Cuenca_8cc.html" target="_self">Cuenca.cc</a></td><td class="desc"></td></tr>
-<tr id="row_7_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a href="Cuenca_8hh_source.html"><span class="icondoc"></span></a><a class="el" href="Cuenca_8hh.html" target="_self">Cuenca.hh</a></td><td class="desc">Especificación de la clase <a class="el" href="classCuenca.html" title="Representa la cuenca fluvial.">Cuenca</a> </td></tr>
-<tr id="row_8_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a href="Inventario_8cc_source.html"><span class="icondoc"></span></a><a class="el" href="Inventario_8cc.html" target="_self">Inventario.cc</a></td><td class="desc"></td></tr>
-<tr id="row_9_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a href="Inventario_8hh_source.html"><span class="icondoc"></span></a><a class="el" href="Inventario_8hh.html" target="_self">Inventario.hh</a></td><td class="desc">Especificación de la clase <a class="el" href="classInventario.html" title="Facilita la gestion de inventario.">Inventario</a> </td></tr>
-<tr id="row_10_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a href="Producto_8cc_source.html"><span class="icondoc"></span></a><a class="el" href="Producto_8cc.html" target="_self">Producto.cc</a></td><td class="desc"></td></tr>
-<tr id="row_11_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a href="Producto_8hh_source.html"><span class="icondoc"></span></a><a class="el" href="Producto_8hh.html" target="_self">Producto.hh</a></td><td class="desc">Especificación de la clase <a class="el" href="classProducto.html" title="Representa un producto.">Producto</a> </td></tr>
+<tr id="row_2_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a href="Cjt__ciudades_8cc_source.html"><span class="icondoc"></span></a><a class="el" href="Cjt__ciudades_8cc.html" target="_self">Cjt_ciudades.cc</a></td><td class="desc">Código de la clase <a class="el" href="classCjt__ciudades.html" title="Representa el conjunto de ciudades de la cuenca fluvial.">Cjt_ciudades</a> </td></tr>
+<tr id="row_3_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a href="Cjt__ciudades_8hh_source.html"><span class="icondoc"></span></a><a class="el" href="Cjt__ciudades_8hh.html" target="_self">Cjt_ciudades.hh</a></td><td class="desc">Especificacion de la clase <a class="el" href="classCjt__ciudades.html" title="Representa el conjunto de ciudades de la cuenca fluvial.">Cjt_ciudades</a>. <br  />
+ </td></tr>
+<tr id="row_4_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a href="Cjt__productos_8cc_source.html"><span class="icondoc"></span></a><a class="el" href="Cjt__productos_8cc.html" target="_self">Cjt_productos.cc</a></td><td class="desc">Código de la clase <a class="el" href="classCjt__productos.html" title="Representa un conjunto de productos de la cuenca fluvial.">Cjt_productos</a> </td></tr>
+<tr id="row_5_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a href="Cjt__productos_8hh_source.html"><span class="icondoc"></span></a><a class="el" href="Cjt__productos_8hh.html" target="_self">Cjt_productos.hh</a></td><td class="desc">Especificación de la clase <a class="el" href="classCjt__productos.html" title="Representa un conjunto de productos de la cuenca fluvial.">Cjt_productos</a> </td></tr>
+<tr id="row_6_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a href="Cuenca_8cc_source.html"><span class="icondoc"></span></a><a class="el" href="Cuenca_8cc.html" target="_self">Cuenca.cc</a></td><td class="desc">Código de la clase <a class="el" href="classCuenca.html" title="Representa la información y las operaciones de la cuenca fluvial.">Cuenca</a> </td></tr>
+<tr id="row_7_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a href="Cuenca_8hh_source.html"><span class="icondoc"></span></a><a class="el" href="Cuenca_8hh.html" target="_self">Cuenca.hh</a></td><td class="desc">Especificación de la clase <a class="el" href="classCuenca.html" title="Representa la información y las operaciones de la cuenca fluvial.">Cuenca</a> </td></tr>
+<tr id="row_8_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a href="Inventario_8cc_source.html"><span class="icondoc"></span></a><a class="el" href="Inventario_8cc.html" target="_self">Inventario.cc</a></td><td class="desc">Código de la clase <a class="el" href="classInventario.html" title="Representa el inventario de una ciudad.">Inventario</a> </td></tr>
+<tr id="row_9_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a href="Inventario_8hh_source.html"><span class="icondoc"></span></a><a class="el" href="Inventario_8hh.html" target="_self">Inventario.hh</a></td><td class="desc">Especificación de la clase <a class="el" href="classInventario.html" title="Representa el inventario de una ciudad.">Inventario</a> </td></tr>
+<tr id="row_10_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a href="Producto_8cc_source.html"><span class="icondoc"></span></a><a class="el" href="Producto_8cc.html" target="_self">Producto.cc</a></td><td class="desc">Código de la clase <a class="el" href="classProducto.html" title="Representa un producto de un conjunto de productos.">Producto</a> </td></tr>
+<tr id="row_11_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a href="Producto_8hh_source.html"><span class="icondoc"></span></a><a class="el" href="Producto_8hh.html" target="_self">Producto.hh</a></td><td class="desc">Especificación de la clase <a class="el" href="classProducto.html" title="Representa un producto de un conjunto de productos.">Producto</a> </td></tr>
 <tr id="row_12_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a href="program_8cc_source.html"><span class="icondoc"></span></a><a class="el" href="program_8cc.html" target="_self">program.cc</a></td><td class="desc">Programa principal para la práctica de PRO2 </td></tr>
 </table>
 </div><!-- directory -->
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
 </body>
 </html>

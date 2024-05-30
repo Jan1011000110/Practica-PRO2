@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -45,6 +49,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('classCjt__productos.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,7 +80,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">Cjt_productos Lista de los miembros</div>  </div>
@@ -72,14 +92,18 @@ $(function() {
   <tr><td class="entry"><a class="el" href="classCjt__productos.html#a7365dfd4b738d4da0834cd2a75e9b8c5">consultar_producto</a>(int id) const</td><td class="entry"><a class="el" href="classCjt__productos.html">Cjt_productos</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classCjt__productos.html#a36187ce11495932bca6567edc42daf52">escribir_producto</a>(int id) const</td><td class="entry"><a class="el" href="classCjt__productos.html">Cjt_productos</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="classCjt__productos.html#adb7ebdac20a01f44e84b445fcff0c233">existe_producto</a>(int id) const</td><td class="entry"><a class="el" href="classCjt__productos.html">Cjt_productos</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classCjt__productos.html#a789883a0ec2b88a0d091a7503f16f87e">leer_productos</a>(int n)</td><td class="entry"><a class="el" href="classCjt__productos.html">Cjt_productos</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classCjt__productos.html#ab306e06db49ed36bf7cb31c524810d76">numero_de_productos</a></td><td class="entry"><a class="el" href="classCjt__productos.html">Cjt_productos</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classCjt__productos.html#ad13bf11505fd21a5a5825ca38c7d5a5f">numero_productos</a>() const</td><td class="entry"><a class="el" href="classCjt__productos.html">Cjt_productos</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classCjt__productos.html#aa8b5bb2d5a8ffc5dc23441821a4a54ba">productos</a></td><td class="entry"><a class="el" href="classCjt__productos.html">Cjt_productos</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classCjt__productos.html#a5caf94e47e59fc718d3098e43e925195">leer_producto</a>()</td><td class="entry"><a class="el" href="classCjt__productos.html">Cjt_productos</a></td><td class="entry"><span class="mlabel">private</span><span class="mlabel">static</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classCjt__productos.html#a789883a0ec2b88a0d091a7503f16f87e">leer_productos</a>(int n)</td><td class="entry"><a class="el" href="classCjt__productos.html">Cjt_productos</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classCjt__productos.html#ab306e06db49ed36bf7cb31c524810d76">numero_de_productos</a></td><td class="entry"><a class="el" href="classCjt__productos.html">Cjt_productos</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classCjt__productos.html#ad13bf11505fd21a5a5825ca38c7d5a5f">numero_productos</a>() const</td><td class="entry"><a class="el" href="classCjt__productos.html">Cjt_productos</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classCjt__productos.html#aa8b5bb2d5a8ffc5dc23441821a4a54ba">productos</a></td><td class="entry"><a class="el" href="classCjt__productos.html">Cjt_productos</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
 </table></div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
 </body>
 </html>

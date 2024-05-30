@@ -1,3 +1,7 @@
+/** @file Cjt_ciudades.cc 
+ *  @brief Código de la clase Cjt_ciudades.
+ */
+
 #include "Cjt_ciudades.hh"
 
 Cjt_ciudades::Cjt_ciudades() {}

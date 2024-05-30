@@ -2,7 +2,7 @@
 \label{classCjt__productos}\index{Cjt\_productos@{Cjt\_productos}}
 
 
-Facilita la gestion de operaciones de un conjunto de productos.  
+Representa un conjunto de productos de la cuenca fluvial.  
 
 
 
@@ -15,15 +15,20 @@ Facilita la gestion de operaciones de un conjunto de productos.
 \mbox{\hyperlink{classCjt__productos_aa06fafc11ee04d28bd7d8491da5a045c}{Cjt\+\_\+productos}} ()
 \begin{DoxyCompactList}\small\item\em Creadora por defecto. Se ejecuta automáticamente al declarar un conjunto de productos. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{classCjt__productos_ad13bf11505fd21a5a5825ca38c7d5a5f}{numero\+\_\+productos}} () const
-\begin{DoxyCompactList}\small\item\em Devuelve el numero total de productos. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Consultora del numero total de productos. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classCjt__productos_adb7ebdac20a01f44e84b445fcff0c233}{existe\+\_\+producto}} (int id) const
-\begin{DoxyCompactList}\small\item\em Comprueba si existe un producto con identificador {\itshape id}. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Consultora de la existencia de un producto. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classProducto}{Producto}} \mbox{\hyperlink{classCjt__productos_a7365dfd4b738d4da0834cd2a75e9b8c5}{consultar\+\_\+producto}} (int id) const
-\begin{DoxyCompactList}\small\item\em Devuelve el producto con identificador {\itshape id}. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Consultora de un producto. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classCjt__productos_a789883a0ec2b88a0d091a7503f16f87e}{leer\+\_\+productos}} (int n)
-\begin{DoxyCompactList}\small\item\em Lee un conjunto de productos nuevos. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Operacion de lectura de conjuto de productos. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classCjt__productos_a36187ce11495932bca6567edc42daf52}{escribir\+\_\+producto}} (int id) const
-\begin{DoxyCompactList}\small\item\em Escribe el producto con identificador {\itshape id}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Operacion de escritura de un producto. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Métodos privados estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classProducto}{Producto}} \mbox{\hyperlink{classCjt__productos_a5caf94e47e59fc718d3098e43e925195}{leer\+\_\+producto}} ()
+\begin{DoxyCompactList}\small\item\em Operacion de lectura de un producto. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Atributos privados}
 \begin{DoxyCompactItemize}
 \item 
@@ -34,9 +39,9 @@ int \mbox{\hyperlink{classCjt__productos_ab306e06db49ed36bf7cb31c524810d76}{nume
 
 
 \doxysubsection{Descripción detallada}
-Facilita la gestion de operaciones de un conjunto de productos. 
+Representa un conjunto de productos de la cuenca fluvial. 
 
-Definición en la línea 18 del archivo Cjt\+\_\+productos.\+hh.
+Definición en la línea 22 del archivo Cjt\+\_\+productos.\+hh.
 
 
 
@@ -55,18 +60,17 @@ Creadora por defecto. Se ejecuta automáticamente al declarar un conjunto de pro
 Cierto. 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondición}
-El resultado es un conjunto de productos el cual todos sus atributos no estan inicializados. 
+El resultado es un conjunto de productos vacio. 
 \end{DoxyPostcond}
 
 
-Definición en la línea 3 del archivo Cjt\+\_\+productos.\+cc.
+Definición en la línea 7 del archivo Cjt\+\_\+productos.\+cc.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{4 \{}
-\DoxyCodeLine{5     \mbox{\hyperlink{classCjt__productos_ab306e06db49ed36bf7cb31c524810d76}{numero\_de\_productos}} = 0;}
-\DoxyCodeLine{6     \mbox{\hyperlink{classCjt__productos_aa8b5bb2d5a8ffc5dc23441821a4a54ba}{productos}} = \{\mbox{\hyperlink{classProducto}{Producto}}()\}; \textcolor{comment}{// fill with empty producto to get 1-\/indexing}}
-\DoxyCodeLine{7 \}}
+\DoxyCodeLine{8 \{}
+\DoxyCodeLine{9     \mbox{\hyperlink{classCjt__productos_ab306e06db49ed36bf7cb31c524810d76}{numero\_de\_productos}} = 0;}
+\DoxyCodeLine{10 \}}
 
 \end{DoxyCode}
 
@@ -80,23 +84,23 @@ Definición en la línea 3 del archivo Cjt\+\_\+productos.\+cc.
 
 
 
-Devuelve el producto con identificador {\itshape id}. 
+Consultora de un producto. 
 
 \begin{DoxyPrecond}{Precondición}
-Existe un producto con identificador {\itshape id}. 
+Existe un productao con identificador {\itshape id}. 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondición}
 Devuelve el producto con identificador {\itshape id}. 
 \end{DoxyPostcond}
 
 
-Definición en la línea 19 del archivo Cjt\+\_\+productos.\+cc.
+Definición en la línea 22 del archivo Cjt\+\_\+productos.\+cc.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{20 \{}
-\DoxyCodeLine{21     \textcolor{keywordflow}{return} \mbox{\hyperlink{classCjt__productos_aa8b5bb2d5a8ffc5dc23441821a4a54ba}{productos}}[id];}
-\DoxyCodeLine{22 \}}
+\DoxyCodeLine{23 \{}
+\DoxyCodeLine{24     \textcolor{keywordflow}{return} \mbox{\hyperlink{classCjt__productos_aa8b5bb2d5a8ffc5dc23441821a4a54ba}{productos}}.at(\textcolor{keywordtype}{id} -\/ 1);}
+\DoxyCodeLine{25 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classCjt__productos_a36187ce11495932bca6567edc42daf52}\label{classCjt__productos_a36187ce11495932bca6567edc42daf52}} 
@@ -107,7 +111,7 @@ Definición en la línea 19 del archivo Cjt\+\_\+productos.\+cc.
 
 
 
-Escribe el producto con identificador {\itshape id}. 
+Operacion de escritura de un producto. 
 
 \begin{DoxyPrecond}{Precondición}
 Existe un producto con identificador {\itshape id}. 
@@ -117,14 +121,14 @@ Se han escrito los atributos del producto con identificador {\itshape id} en el 
 \end{DoxyPostcond}
 
 
-Definición en la línea 24 del archivo Cjt\+\_\+productos.\+cc.
+Definición en la línea 27 del archivo Cjt\+\_\+productos.\+cc.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{25 \{}
-\DoxyCodeLine{26     cout << \textcolor{keywordtype}{id} << \textcolor{charliteral}{' '};}
-\DoxyCodeLine{27     \mbox{\hyperlink{classCjt__productos_aa8b5bb2d5a8ffc5dc23441821a4a54ba}{productos}}[id].escribir\_producto();}
-\DoxyCodeLine{28 \}}
+\DoxyCodeLine{28 \{}
+\DoxyCodeLine{29     cout << \textcolor{keywordtype}{id} << \textcolor{charliteral}{' '};}
+\DoxyCodeLine{30     \mbox{\hyperlink{classCjt__productos_aa8b5bb2d5a8ffc5dc23441821a4a54ba}{productos}}.at(\textcolor{keywordtype}{id} -\/ 1).escribir\_producto();}
+\DoxyCodeLine{31 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classCjt__productos_adb7ebdac20a01f44e84b445fcff0c233}\label{classCjt__productos_adb7ebdac20a01f44e84b445fcff0c233}} 
@@ -135,7 +139,7 @@ Definición en la línea 24 del archivo Cjt\+\_\+productos.\+cc.
 
 
 
-Comprueba si existe un producto con identificador {\itshape id}. 
+Consultora de la existencia de un producto. 
 
 \begin{DoxyPrecond}{Precondición}
 Cierto. 
@@ -145,13 +149,42 @@ Devuelve cierto si existe un producto con identificador {\itshape id}, falso en 
 \end{DoxyPostcond}
 
 
-Definición en la línea 14 del archivo Cjt\+\_\+productos.\+cc.
+Definición en la línea 17 del archivo Cjt\+\_\+productos.\+cc.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{15 \{}
-\DoxyCodeLine{16     \textcolor{keywordflow}{return} 1 <= \textcolor{keywordtype}{id} and \textcolor{keywordtype}{id} <= \mbox{\hyperlink{classCjt__productos_ad13bf11505fd21a5a5825ca38c7d5a5f}{numero\_productos}}(); }
-\DoxyCodeLine{17 \}}
+\DoxyCodeLine{18 \{}
+\DoxyCodeLine{19     \textcolor{keywordflow}{return} 1 <= \textcolor{keywordtype}{id} and \textcolor{keywordtype}{id} <= \mbox{\hyperlink{classCjt__productos_ad13bf11505fd21a5a5825ca38c7d5a5f}{numero\_productos}}(); }
+\DoxyCodeLine{20 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classCjt__productos_a5caf94e47e59fc718d3098e43e925195}\label{classCjt__productos_a5caf94e47e59fc718d3098e43e925195}} 
+\index{Cjt\_productos@{Cjt\_productos}!leer\_producto@{leer\_producto}}
+\index{leer\_producto@{leer\_producto}!Cjt\_productos@{Cjt\_productos}}
+\doxysubsubsection{\texorpdfstring{leer\_producto()}{leer\_producto()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classProducto}{Producto}} Cjt\+\_\+productos\+::leer\+\_\+producto (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Operacion de lectura de un producto. 
+
+\begin{DoxyPrecond}{Precondición}
+Está disponible en el canal de entrada los atributos de un producto. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Se ha leido y devuelto un producto nuevo. 
+\end{DoxyPostcond}
+
+
+Definición en la línea 33 del archivo Cjt\+\_\+productos.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{34 \{}
+\DoxyCodeLine{35     \mbox{\hyperlink{classProducto}{Producto}} p;}
+\DoxyCodeLine{36     p.\mbox{\hyperlink{classProducto_ab6fe512a8aabc2ffb9be35646206e705}{leer\_producto}}();}
+\DoxyCodeLine{37     \textcolor{keywordflow}{return} p;}
+\DoxyCodeLine{38 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classCjt__productos_a789883a0ec2b88a0d091a7503f16f87e}\label{classCjt__productos_a789883a0ec2b88a0d091a7503f16f87e}} 
@@ -162,28 +195,26 @@ Definición en la línea 14 del archivo Cjt\+\_\+productos.\+cc.
 
 
 
-Lee un conjunto de productos nuevos. 
+Operacion de lectura de conjuto de productos. 
 
 \begin{DoxyPrecond}{Precondición}
-{\itshape Está disponible en el canal de entrada un entero {\itshape n} positivo y a continuación {\itshape n} lineas con los atributos de cada producto.} 
+Está disponible en el canal de entrada un entero {\itshape N} positivo y a continuación {\itshape N} lineas con los atributos de cada producto. 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondición}
-Se han agregado {\itshape n} productos nuevos al vector productos y se ha actualizado el numero de productos totales. 
+Se han agregado {\itshape N} productos nuevos al vector productos y se ha actualizado el numero de productos totales. 
 \end{DoxyPostcond}
 
 
-Definición en la línea 30 del archivo Cjt\+\_\+productos.\+cc.
+Definición en la línea 40 del archivo Cjt\+\_\+productos.\+cc.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{31 \{}
-\DoxyCodeLine{32     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < n; ++i) \{}
-\DoxyCodeLine{33         \mbox{\hyperlink{classProducto}{Producto}} p;}
-\DoxyCodeLine{34         p.\mbox{\hyperlink{classProducto_ab6fe512a8aabc2ffb9be35646206e705}{leer\_producto}}();}
-\DoxyCodeLine{35         \mbox{\hyperlink{classCjt__productos_aa8b5bb2d5a8ffc5dc23441821a4a54ba}{productos}}.push\_back(p);}
-\DoxyCodeLine{36         \mbox{\hyperlink{classCjt__productos_ab306e06db49ed36bf7cb31c524810d76}{numero\_de\_productos}} += 1;}
-\DoxyCodeLine{37     \}}
-\DoxyCodeLine{38 \}}
+\DoxyCodeLine{41 \{}
+\DoxyCodeLine{42     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < n; ++i) \{}
+\DoxyCodeLine{43         \mbox{\hyperlink{classCjt__productos_aa8b5bb2d5a8ffc5dc23441821a4a54ba}{productos}}.push\_back(\mbox{\hyperlink{classCjt__productos_a5caf94e47e59fc718d3098e43e925195}{leer\_producto}}());}
+\DoxyCodeLine{44         \mbox{\hyperlink{classCjt__productos_ab306e06db49ed36bf7cb31c524810d76}{numero\_de\_productos}} += 1;}
+\DoxyCodeLine{45     \}}
+\DoxyCodeLine{46 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classCjt__productos_ad13bf11505fd21a5a5825ca38c7d5a5f}\label{classCjt__productos_ad13bf11505fd21a5a5825ca38c7d5a5f}} 
@@ -194,7 +225,7 @@ Definición en la línea 30 del archivo Cjt\+\_\+productos.\+cc.
 
 
 
-Devuelve el numero total de productos. 
+Consultora del numero total de productos. 
 
 \begin{DoxyPrecond}{Precondición}
 Cierto. 
@@ -204,13 +235,13 @@ Devuelve el numero total de productos.
 \end{DoxyPostcond}
 
 
-Definición en la línea 9 del archivo Cjt\+\_\+productos.\+cc.
+Definición en la línea 12 del archivo Cjt\+\_\+productos.\+cc.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{10 \{}
-\DoxyCodeLine{11     \textcolor{keywordflow}{return} \mbox{\hyperlink{classCjt__productos_ab306e06db49ed36bf7cb31c524810d76}{numero\_de\_productos}};}
-\DoxyCodeLine{12 \}}
+\DoxyCodeLine{13 \{}
+\DoxyCodeLine{14     \textcolor{keywordflow}{return} \mbox{\hyperlink{classCjt__productos_ab306e06db49ed36bf7cb31c524810d76}{numero\_de\_productos}};}
+\DoxyCodeLine{15 \}}
 
 \end{DoxyCode}
 
@@ -228,7 +259,7 @@ Numero de productos totales.
 
 
 
-Definición en la línea 24 del archivo Cjt\+\_\+productos.\+hh.
+Definición en la línea 28 del archivo Cjt\+\_\+productos.\+hh.
 
 \mbox{\Hypertarget{classCjt__productos_aa8b5bb2d5a8ffc5dc23441821a4a54ba}\label{classCjt__productos_aa8b5bb2d5a8ffc5dc23441821a4a54ba}} 
 \index{Cjt\_productos@{Cjt\_productos}!productos@{productos}}
@@ -242,7 +273,7 @@ Vector que almacena los productos.
 
 
 
-Definición en la línea 22 del archivo Cjt\+\_\+productos.\+hh.
+Definición en la línea 26 del archivo Cjt\+\_\+productos.\+hh.
 
 
 

@@ -2,7 +2,7 @@
 \label{classCjt__ciudades}\index{Cjt\_ciudades@{Cjt\_ciudades}}
 
 
-Representa el conjunto de ciudades de la cuenca fluvial, con un identificador unico para cada una.  
+Representa el conjunto de ciudades de la cuenca fluvial.  
 
 
 
@@ -15,35 +15,35 @@ Representa el conjunto de ciudades de la cuenca fluvial, con un identificador un
 \mbox{\hyperlink{classCjt__ciudades_ae338caeb0ca78e3ba66c543f114729a3}{Cjt\+\_\+ciudades}} ()
 \begin{DoxyCompactList}\small\item\em Creadora por defecto. Se ejecuta automáticamente al declarar un conjunto de ciudades. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classCjt__ciudades_a19889e6fb0441db3f1ff2ebf331b9182}{comerciar}} (const string \&ciudad\+\_\+id1, const string \&ciudad\+\_\+id2, const \mbox{\hyperlink{classCjt__productos}{Cjt\+\_\+productos}} \&productos)
-\begin{DoxyCompactList}\small\item\em Realiza un comercio entre dos ciudades. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Operación de comercio entre dos ciudades. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classCjt__ciudades_aab3086f12c08b8ed2c914288a35ab505}{poner\+\_\+ciudad}} (const string \&ciudad\+\_\+id)
 \begin{DoxyCompactList}\small\item\em Añade una ciudad al conjunto de ciudades. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classCjt__ciudades_ab0d43cd40d3654f0902fda3b7bf3a395}{poner\+\_\+producto}} (const string \&ciudad\+\_\+id, int prod\+\_\+id, int cantidad\+\_\+disponible, int cantidad\+\_\+requerida, const \mbox{\hyperlink{classProducto}{Producto}} \&prod)
 \begin{DoxyCompactList}\small\item\em Añade un producto a una ciudad. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classCjt__ciudades_ae6890381a27485565e0dc40b6f9d8b2b}{modificar\+\_\+cantidad\+\_\+poseida}} (const string \&ciudad\+\_\+id, int prod\+\_\+id, int cantidad\+\_\+disponible, const \mbox{\hyperlink{classProducto}{Producto}} \&prod)
-\begin{DoxyCompactList}\small\item\em Modifica la cantidad poseida de un producto en una ciudad. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Modificadora de la cantidad poseida de un producto en una ciudad. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classCjt__ciudades_a542ea6716d8110a44c48de88d1da630f}{modificar\+\_\+cantidad\+\_\+requerida}} (const string \&ciudad\+\_\+id, int prod\+\_\+id, int cantidad\+\_\+requerida)
-\begin{DoxyCompactList}\small\item\em Modifica la cantidad requerida de un producto en una ciudad. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Modificadora de la cantidad requerida de un producto en una ciudad. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classCjt__ciudades_af8904fcb4a201b93306f3984b2ae2f3f}{quitar\+\_\+producto}} (const string \&ciudad\+\_\+id, int prod\+\_\+id, const \mbox{\hyperlink{classProducto}{Producto}} \&prod)
 \begin{DoxyCompactList}\small\item\em Quita un producto del inventario de una ciudad. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classCjt__ciudades_aeb587ce30d0f8805ddf468ef0202ee95}{existe\+\_\+ciudad}} (const string \&ciudad\+\_\+id) const
-\begin{DoxyCompactList}\small\item\em Devuelve si una ciudad existe. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Consulta si una ciudad existe. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classInventario}{Inventario}} \mbox{\hyperlink{classCjt__ciudades_a09b1684e8f8c37bc94f91513c485aaf9}{consultar\+\_\+inventario}} (const string \&ciudad\+\_\+id) const
-\begin{DoxyCompactList}\small\item\em Devuelve el inventario de una ciudad. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Consulta el inventario de una ciudad. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classCjt__ciudades_a393a6c4ab2f1d264858fa082dc092431}{contiene\+\_\+producto}} (const string \&ciudad\+\_\+id, int prod\+\_\+id) const
-\begin{DoxyCompactList}\small\item\em Comprueba si una ciudad tiene un producto. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Consulta si una ciudad tiene un producto. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{classCjt__ciudades_a051625bafd93c934caca6acc937b9c7d}{consultar\+\_\+cantidad\+\_\+poseida}} (const string \&ciudad\+\_\+id, int prod\+\_\+id) const
-\begin{DoxyCompactList}\small\item\em Devuelve la cantidad poseida de un producto en el inventario de una ciudad. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Consulta la cantidad poseida de un producto en el inventario de una ciudad. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{classCjt__ciudades_a525b7fde22b32463ab3a5a3ee1384eb8}{consultar\+\_\+cantidad\+\_\+requerida}} (const string \&ciudad\+\_\+id, int prod\+\_\+id) const
-\begin{DoxyCompactList}\small\item\em Devuelve la cantidad requerida de un producto en el inventario de una ciudad. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Consulta la cantidad requerida de un producto en el inventario de una ciudad. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classCjt__ciudades_a3bc68e88f757fff221787aed62d6f124}{leer\+\_\+inventario}} (const string \&ciudad\+\_\+id, const \mbox{\hyperlink{classCjt__productos}{Cjt\+\_\+productos}} \&productos)
-\begin{DoxyCompactList}\small\item\em Lee el inventario de una ciudad. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Operación de lectura del inventario de una ciudad. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classCjt__ciudades_aebb648e0909d629fbe0fab8c5e11f60b}{consultar\+\_\+producto}} (const string \&ciudad\+\_\+id, int prod\+\_\+id) const
-\begin{DoxyCompactList}\small\item\em Imprime la cantidad poseida y requerida de un producto en el inventario de una ciudad. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Operación de escritura de la cantidad de un producto en una ciudad. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classCjt__ciudades_a00bbc4146eef32fcfdd4a163215ce387}{escribir\+\_\+atributos\+\_\+totales}} (const string \&ciudad\+\_\+id) const
-\begin{DoxyCompactList}\small\item\em Imprime el peso y volumen total de un producto del inventario de una ciudad. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Operación de escritura del peso y volumen total de un inventario. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classCjt__ciudades_ae7e30eab6b9697e8809f900d1b9d9620}{escribir\+\_\+inventario}} (const string \&ciudad\+\_\+id) const
-\begin{DoxyCompactList}\small\item\em Imprime el inventario de una ciudad. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Operación de escritura de un inventario. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Atributos privados}
 \begin{DoxyCompactItemize}
 \item 
@@ -52,9 +52,9 @@ map$<$ string, \mbox{\hyperlink{classInventario}{Inventario}} $>$ \mbox{\hyperli
 
 
 \doxysubsection{Descripción detallada}
-Representa el conjunto de ciudades de la cuenca fluvial, con un identificador unico para cada una. 
+Representa el conjunto de ciudades de la cuenca fluvial. 
 
-Definición en la línea 19 del archivo Cjt\+\_\+ciudades.\+hh.
+Definición en la línea 22 del archivo Cjt\+\_\+ciudades.\+hh.
 
 
 
@@ -70,18 +70,18 @@ Definición en la línea 19 del archivo Cjt\+\_\+ciudades.\+hh.
 Creadora por defecto. Se ejecuta automáticamente al declarar un conjunto de ciudades. 
 
 \begin{DoxyPrecond}{Precondición}
-{\itshape Cierto.} 
+Cierto. 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondición}
 El resultado es un conjunto de ciudades el cual todos sus atributos no estan inicializados. 
 \end{DoxyPostcond}
 
 
-Definición en la línea 3 del archivo Cjt\+\_\+ciudades.\+cc.
+Definición en la línea 7 del archivo Cjt\+\_\+ciudades.\+cc.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{3 \{\}}
+\DoxyCodeLine{7 \{\}}
 
 \end{DoxyCode}
 
@@ -95,23 +95,23 @@ Definición en la línea 3 del archivo Cjt\+\_\+ciudades.\+cc.
 
 
 
-Realiza un comercio entre dos ciudades. 
+Operación de comercio entre dos ciudades. 
 
 \begin{DoxyPrecond}{Precondición}
-Cierto. 
+Los identificadores de ciudad {\itshape ciudad\+\_\+id1}, {\itshape ciudad\+\_\+id2} son validos y diferentes. 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondición}
 La ciudad con identificador {\itshape ciudad\+\_\+id1} comercia con la ciudad con identificador {\itshape ciudad\+\_\+id2}. 
 \end{DoxyPostcond}
 
 
-Definición en la línea 5 del archivo Cjt\+\_\+ciudades.\+cc.
+Definición en la línea 9 del archivo Cjt\+\_\+ciudades.\+cc.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{6 \{}
-\DoxyCodeLine{7     \mbox{\hyperlink{classCjt__ciudades_a2ade4ab65c3151f4622e52c28734daf0}{ciudades}}.at(ciudad\_id1).comerciar(\mbox{\hyperlink{classCjt__ciudades_a2ade4ab65c3151f4622e52c28734daf0}{ciudades}}.at(ciudad\_id2), productos);}
-\DoxyCodeLine{8 \}}
+\DoxyCodeLine{10 \{}
+\DoxyCodeLine{11     \mbox{\hyperlink{classCjt__ciudades_a2ade4ab65c3151f4622e52c28734daf0}{ciudades}}.at(ciudad\_id1).comerciar(\mbox{\hyperlink{classCjt__ciudades_a2ade4ab65c3151f4622e52c28734daf0}{ciudades}}.at(ciudad\_id2), productos);}
+\DoxyCodeLine{12 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classCjt__ciudades_a051625bafd93c934caca6acc937b9c7d}\label{classCjt__ciudades_a051625bafd93c934caca6acc937b9c7d}} 
@@ -122,7 +122,7 @@ Definición en la línea 5 del archivo Cjt\+\_\+ciudades.\+cc.
 
 
 
-Devuelve la cantidad poseida de un producto en el inventario de una ciudad. 
+Consulta la cantidad poseida de un producto en el inventario de una ciudad. 
 
 \begin{DoxyPrecond}{Precondición}
 La ciudad con identificador {\itshape ciudad\+\_\+id} existe y contiene el producto con identificador {\itshape prod\+\_\+id}. 
@@ -132,13 +132,13 @@ Devuelve la cantidad poseida del producto con identificador {\itshape prod\+\_\+
 \end{DoxyPostcond}
 
 
-Definición en la línea 50 del archivo Cjt\+\_\+ciudades.\+cc.
+Definición en la línea 54 del archivo Cjt\+\_\+ciudades.\+cc.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{51 \{}
-\DoxyCodeLine{52     \textcolor{keywordflow}{return} \mbox{\hyperlink{classCjt__ciudades_a2ade4ab65c3151f4622e52c28734daf0}{ciudades}}.at(ciudad\_id).consultar\_cantidad\_poseida(prod\_id);}
-\DoxyCodeLine{53 \}}
+\DoxyCodeLine{55 \{}
+\DoxyCodeLine{56     \textcolor{keywordflow}{return} \mbox{\hyperlink{classCjt__ciudades_a2ade4ab65c3151f4622e52c28734daf0}{ciudades}}.at(ciudad\_id).consultar\_cantidad\_poseida(prod\_id);}
+\DoxyCodeLine{57 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classCjt__ciudades_a525b7fde22b32463ab3a5a3ee1384eb8}\label{classCjt__ciudades_a525b7fde22b32463ab3a5a3ee1384eb8}} 
@@ -149,7 +149,7 @@ Definición en la línea 50 del archivo Cjt\+\_\+ciudades.\+cc.
 
 
 
-Devuelve la cantidad requerida de un producto en el inventario de una ciudad. 
+Consulta la cantidad requerida de un producto en el inventario de una ciudad. 
 
 \begin{DoxyPrecond}{Precondición}
 La ciudad con identificador {\itshape ciudad\+\_\+id} existe y contiene el producto con identificador {\itshape prod\+\_\+id}. 
@@ -159,13 +159,13 @@ Devuelve la cantidad requerida del producto con identificador {\itshape prod\+\_
 \end{DoxyPostcond}
 
 
-Definición en la línea 55 del archivo Cjt\+\_\+ciudades.\+cc.
+Definición en la línea 59 del archivo Cjt\+\_\+ciudades.\+cc.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{56 \{   }
-\DoxyCodeLine{57     \textcolor{keywordflow}{return} \mbox{\hyperlink{classCjt__ciudades_a2ade4ab65c3151f4622e52c28734daf0}{ciudades}}.at(ciudad\_id).consultar\_cantidad\_requerida(prod\_id);}
-\DoxyCodeLine{58 \}}
+\DoxyCodeLine{60 \{   }
+\DoxyCodeLine{61     \textcolor{keywordflow}{return} \mbox{\hyperlink{classCjt__ciudades_a2ade4ab65c3151f4622e52c28734daf0}{ciudades}}.at(ciudad\_id).consultar\_cantidad\_requerida(prod\_id);}
+\DoxyCodeLine{62 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classCjt__ciudades_a09b1684e8f8c37bc94f91513c485aaf9}\label{classCjt__ciudades_a09b1684e8f8c37bc94f91513c485aaf9}} 
@@ -176,23 +176,23 @@ Definición en la línea 55 del archivo Cjt\+\_\+ciudades.\+cc.
 
 
 
-Devuelve el inventario de una ciudad. 
+Consulta el inventario de una ciudad. 
 
 \begin{DoxyPrecond}{Precondición}
-La ciudad con identificador ciudad\+\_\+id existe. 
+La ciudad con identificador {\itshape ciudad\+\_\+id} existe. 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondición}
 Devuelve el inventario de la ciudad con identificador {\itshape ciudad\+\_\+id}. 
 \end{DoxyPostcond}
 
 
-Definición en la línea 40 del archivo Cjt\+\_\+ciudades.\+cc.
+Definición en la línea 44 del archivo Cjt\+\_\+ciudades.\+cc.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{41 \{}
-\DoxyCodeLine{42     \textcolor{keywordflow}{return} \mbox{\hyperlink{classCjt__ciudades_a2ade4ab65c3151f4622e52c28734daf0}{ciudades}}.at(ciudad\_id);}
-\DoxyCodeLine{43 \}}
+\DoxyCodeLine{45 \{}
+\DoxyCodeLine{46     \textcolor{keywordflow}{return} \mbox{\hyperlink{classCjt__ciudades_a2ade4ab65c3151f4622e52c28734daf0}{ciudades}}.at(ciudad\_id);}
+\DoxyCodeLine{47 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classCjt__ciudades_aebb648e0909d629fbe0fab8c5e11f60b}\label{classCjt__ciudades_aebb648e0909d629fbe0fab8c5e11f60b}} 
@@ -203,7 +203,7 @@ Definición en la línea 40 del archivo Cjt\+\_\+ciudades.\+cc.
 
 
 
-Imprime la cantidad poseida y requerida de un producto en el inventario de una ciudad. 
+Operación de escritura de la cantidad de un producto en una ciudad. 
 
 \begin{DoxyPrecond}{Precondición}
 La ciudad con identificador {\itshape ciudad\+\_\+id} existe y contiene el producto con identificador {\itshape prod\+\_\+id}. 
@@ -213,13 +213,13 @@ Se ha escrito la cantidad poseida y requerida del producto con identificador {\i
 \end{DoxyPostcond}
 
 
-Definición en la línea 65 del archivo Cjt\+\_\+ciudades.\+cc.
+Definición en la línea 69 del archivo Cjt\+\_\+ciudades.\+cc.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{66 \{}
-\DoxyCodeLine{67     \mbox{\hyperlink{classCjt__ciudades_a2ade4ab65c3151f4622e52c28734daf0}{ciudades}}.at(ciudad\_id).consultar\_producto(prod\_id);}
-\DoxyCodeLine{68 \}}
+\DoxyCodeLine{70 \{}
+\DoxyCodeLine{71     \mbox{\hyperlink{classCjt__ciudades_a2ade4ab65c3151f4622e52c28734daf0}{ciudades}}.at(ciudad\_id).consultar\_producto(prod\_id);}
+\DoxyCodeLine{72 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classCjt__ciudades_a393a6c4ab2f1d264858fa082dc092431}\label{classCjt__ciudades_a393a6c4ab2f1d264858fa082dc092431}} 
@@ -230,7 +230,7 @@ Definición en la línea 65 del archivo Cjt\+\_\+ciudades.\+cc.
 
 
 
-Comprueba si una ciudad tiene un producto. 
+Consulta si una ciudad tiene un producto. 
 
 \begin{DoxyPrecond}{Precondición}
 La ciudad con identificador {\itshape ciudad\+\_\+id} existe. 
@@ -240,13 +240,13 @@ Devuelve cierto si la ciudad con identificador {\itshape ciudad\+\_\+id} contien
 \end{DoxyPostcond}
 
 
-Definición en la línea 45 del archivo Cjt\+\_\+ciudades.\+cc.
+Definición en la línea 49 del archivo Cjt\+\_\+ciudades.\+cc.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{46 \{}
-\DoxyCodeLine{47     \textcolor{keywordflow}{return} \mbox{\hyperlink{classCjt__ciudades_a2ade4ab65c3151f4622e52c28734daf0}{ciudades}}.at(ciudad\_id).contiene\_producto(prod\_id);}
-\DoxyCodeLine{48 \}}
+\DoxyCodeLine{50 \{}
+\DoxyCodeLine{51     \textcolor{keywordflow}{return} \mbox{\hyperlink{classCjt__ciudades_a2ade4ab65c3151f4622e52c28734daf0}{ciudades}}.at(ciudad\_id).contiene\_producto(prod\_id);}
+\DoxyCodeLine{52 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classCjt__ciudades_a00bbc4146eef32fcfdd4a163215ce387}\label{classCjt__ciudades_a00bbc4146eef32fcfdd4a163215ce387}} 
@@ -257,7 +257,7 @@ Definición en la línea 45 del archivo Cjt\+\_\+ciudades.\+cc.
 
 
 
-Imprime el peso y volumen total de un producto del inventario de una ciudad. 
+Operación de escritura del peso y volumen total de un inventario. 
 
 \begin{DoxyPrecond}{Precondición}
 La ciudad con identificador {\itshape ciudad\+\_\+id} existe. 
@@ -267,13 +267,13 @@ Se ha escrito el peso y volumen total del producto con identificador {\itshape p
 \end{DoxyPostcond}
 
 
-Definición en la línea 70 del archivo Cjt\+\_\+ciudades.\+cc.
+Definición en la línea 74 del archivo Cjt\+\_\+ciudades.\+cc.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{71 \{}
-\DoxyCodeLine{72     \mbox{\hyperlink{classCjt__ciudades_a2ade4ab65c3151f4622e52c28734daf0}{ciudades}}.at(ciudad\_id).escribir\_atributos\_totales();}
-\DoxyCodeLine{73 \}}
+\DoxyCodeLine{75 \{}
+\DoxyCodeLine{76     \mbox{\hyperlink{classCjt__ciudades_a2ade4ab65c3151f4622e52c28734daf0}{ciudades}}.at(ciudad\_id).escribir\_atributos\_totales();}
+\DoxyCodeLine{77 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classCjt__ciudades_ae7e30eab6b9697e8809f900d1b9d9620}\label{classCjt__ciudades_ae7e30eab6b9697e8809f900d1b9d9620}} 
@@ -284,7 +284,7 @@ Definición en la línea 70 del archivo Cjt\+\_\+ciudades.\+cc.
 
 
 
-Imprime el inventario de una ciudad. 
+Operación de escritura de un inventario. 
 
 \begin{DoxyPrecond}{Precondición}
 La ciudad con identificador {\itshape ciudad\+\_\+id} existe. 
@@ -294,13 +294,13 @@ Se ha escrito el inventario de la ciudad con identificador {\itshape ciudad\+\_\
 \end{DoxyPostcond}
 
 
-Definición en la línea 75 del archivo Cjt\+\_\+ciudades.\+cc.
+Definición en la línea 79 del archivo Cjt\+\_\+ciudades.\+cc.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{76 \{}
-\DoxyCodeLine{77     \mbox{\hyperlink{classCjt__ciudades_a2ade4ab65c3151f4622e52c28734daf0}{ciudades}}.at(ciudad\_id).escribir\_inventario();}
-\DoxyCodeLine{78 \}}
+\DoxyCodeLine{80 \{}
+\DoxyCodeLine{81     \mbox{\hyperlink{classCjt__ciudades_a2ade4ab65c3151f4622e52c28734daf0}{ciudades}}.at(ciudad\_id).escribir\_inventario();}
+\DoxyCodeLine{82 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classCjt__ciudades_aeb587ce30d0f8805ddf468ef0202ee95}\label{classCjt__ciudades_aeb587ce30d0f8805ddf468ef0202ee95}} 
@@ -311,7 +311,7 @@ Definición en la línea 75 del archivo Cjt\+\_\+ciudades.\+cc.
 
 
 
-Devuelve si una ciudad existe. 
+Consulta si una ciudad existe. 
 
 \begin{DoxyPrecond}{Precondición}
 Cierto. 
@@ -321,13 +321,13 @@ Devuelve cierto si la ciudad con identificador {\itshape ciudad\+\_\+id} existe,
 \end{DoxyPostcond}
 
 
-Definición en la línea 35 del archivo Cjt\+\_\+ciudades.\+cc.
+Definición en la línea 39 del archivo Cjt\+\_\+ciudades.\+cc.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{36 \{}
-\DoxyCodeLine{37     \textcolor{keywordflow}{return} \mbox{\hyperlink{classCjt__ciudades_a2ade4ab65c3151f4622e52c28734daf0}{ciudades}}.count(ciudad\_id);}
-\DoxyCodeLine{38 \}}
+\DoxyCodeLine{40 \{}
+\DoxyCodeLine{41     \textcolor{keywordflow}{return} \mbox{\hyperlink{classCjt__ciudades_a2ade4ab65c3151f4622e52c28734daf0}{ciudades}}.count(ciudad\_id);}
+\DoxyCodeLine{42 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classCjt__ciudades_a3bc68e88f757fff221787aed62d6f124}\label{classCjt__ciudades_a3bc68e88f757fff221787aed62d6f124}} 
@@ -338,23 +338,23 @@ Definición en la línea 35 del archivo Cjt\+\_\+ciudades.\+cc.
 
 
 
-Lee el inventario de una ciudad. 
+Operación de lectura del inventario de una ciudad. 
 
 \begin{DoxyPrecond}{Precondición}
-Está disponible en el canal de entrada un entero N positivo y a continuación N lineas, cada una de ellas con el identificador de un producto y cuantas unidades de ese producto posee y requiere la ciudad con identificador {\itshape ciudad\+\_\+id}. 
+El identificador {\itshape ciudad\+\_\+id} es valido y está disponible en el canal de entrada un entero N positivo y a continuación N lineas, cada una de ellas con el identificador de un producto y cuantas unidades de ese producto posee y requiere la ciudad con identificador {\itshape ciudad\+\_\+id}. 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondición}
 Se ha leido el inventario de la ciudad con identificador {\itshape ciudad\+\_\+id}. 
 \end{DoxyPostcond}
 
 
-Definición en la línea 60 del archivo Cjt\+\_\+ciudades.\+cc.
+Definición en la línea 64 del archivo Cjt\+\_\+ciudades.\+cc.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{61 \{}
-\DoxyCodeLine{62     \mbox{\hyperlink{classCjt__ciudades_a2ade4ab65c3151f4622e52c28734daf0}{ciudades}}.at(ciudad\_id).leer\_inventario(productos);}
-\DoxyCodeLine{63 \}}
+\DoxyCodeLine{65 \{}
+\DoxyCodeLine{66     \mbox{\hyperlink{classCjt__ciudades_a2ade4ab65c3151f4622e52c28734daf0}{ciudades}}.at(ciudad\_id).leer\_inventario(productos);}
+\DoxyCodeLine{67 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classCjt__ciudades_ae6890381a27485565e0dc40b6f9d8b2b}\label{classCjt__ciudades_ae6890381a27485565e0dc40b6f9d8b2b}} 
@@ -365,7 +365,7 @@ Definición en la línea 60 del archivo Cjt\+\_\+ciudades.\+cc.
 
 
 
-Modifica la cantidad poseida de un producto en una ciudad. 
+Modificadora de la cantidad poseida de un producto en una ciudad. 
 
 \begin{DoxyPrecond}{Precondición}
 La ciudad con identificador {\itshape ciudad\+\_\+id{\itshape  existe y contiene el producto con identificador {\itshape prod\+\_\+id}. }}
@@ -375,13 +375,13 @@ La ciudad con identificador {\itshape ciudad\+\_\+id{\itshape  existe y contiene
 \end{DoxyPostcond}
 
 
-Definición en la línea 20 del archivo Cjt\+\_\+ciudades.\+cc.
+Definición en la línea 24 del archivo Cjt\+\_\+ciudades.\+cc.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{21 \{}
-\DoxyCodeLine{22     \mbox{\hyperlink{classCjt__ciudades_a2ade4ab65c3151f4622e52c28734daf0}{ciudades}}.at(ciudad\_id).modificar\_cantidad\_poseida(prod\_id, cantidad\_poseida, prod);}
-\DoxyCodeLine{23 \}}
+\DoxyCodeLine{25 \{}
+\DoxyCodeLine{26     \mbox{\hyperlink{classCjt__ciudades_a2ade4ab65c3151f4622e52c28734daf0}{ciudades}}.at(ciudad\_id).modificar\_cantidad\_poseida(prod\_id, cantidad\_poseida, prod);}
+\DoxyCodeLine{27 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classCjt__ciudades_a542ea6716d8110a44c48de88d1da630f}\label{classCjt__ciudades_a542ea6716d8110a44c48de88d1da630f}} 
@@ -392,7 +392,7 @@ Definición en la línea 20 del archivo Cjt\+\_\+ciudades.\+cc.
 
 
 
-Modifica la cantidad requerida de un producto en una ciudad. 
+Modificadora de la cantidad requerida de un producto en una ciudad. 
 
 \begin{DoxyPrecond}{Precondición}
 La ciudad con identificador {\itshape ciudad\+\_\+id} existe y contiene el producto con identificador {\itshape prod\+\_\+id}. 
@@ -402,13 +402,13 @@ Se ha modificado la cantidad requerida del producto con identificador {\itshape 
 \end{DoxyPostcond}
 
 
-Definición en la línea 25 del archivo Cjt\+\_\+ciudades.\+cc.
+Definición en la línea 29 del archivo Cjt\+\_\+ciudades.\+cc.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{26 \{}
-\DoxyCodeLine{27     \mbox{\hyperlink{classCjt__ciudades_a2ade4ab65c3151f4622e52c28734daf0}{ciudades}}.at(ciudad\_id).modificar\_cantidad\_requerida(prod\_id, cantidad\_requerida);}
-\DoxyCodeLine{28 \}}
+\DoxyCodeLine{30 \{}
+\DoxyCodeLine{31     \mbox{\hyperlink{classCjt__ciudades_a2ade4ab65c3151f4622e52c28734daf0}{ciudades}}.at(ciudad\_id).modificar\_cantidad\_requerida(prod\_id, cantidad\_requerida);}
+\DoxyCodeLine{32 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classCjt__ciudades_aab3086f12c08b8ed2c914288a35ab505}\label{classCjt__ciudades_aab3086f12c08b8ed2c914288a35ab505}} 
@@ -429,13 +429,13 @@ Se ha añadido una ciudad con identificador {\itshape ciudad\+\_\+id}.
 \end{DoxyPostcond}
 
 
-Definición en la línea 10 del archivo Cjt\+\_\+ciudades.\+cc.
+Definición en la línea 14 del archivo Cjt\+\_\+ciudades.\+cc.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{11 \{}
-\DoxyCodeLine{12     \mbox{\hyperlink{classCjt__ciudades_a2ade4ab65c3151f4622e52c28734daf0}{ciudades}}[ciudad\_id] = \mbox{\hyperlink{classInventario}{Inventario}}();}
-\DoxyCodeLine{13 \}}
+\DoxyCodeLine{15 \{}
+\DoxyCodeLine{16     \mbox{\hyperlink{classCjt__ciudades_a2ade4ab65c3151f4622e52c28734daf0}{ciudades}}[ciudad\_id] = \mbox{\hyperlink{classInventario}{Inventario}}();}
+\DoxyCodeLine{17 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classCjt__ciudades_ab0d43cd40d3654f0902fda3b7bf3a395}\label{classCjt__ciudades_ab0d43cd40d3654f0902fda3b7bf3a395}} 
@@ -456,13 +456,13 @@ Se ha añadido el producto con identificador {\itshape prod\+\_\+id} a la ciudad
 \end{DoxyPostcond}
 
 
-Definición en la línea 15 del archivo Cjt\+\_\+ciudades.\+cc.
+Definición en la línea 19 del archivo Cjt\+\_\+ciudades.\+cc.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{16 \{}
-\DoxyCodeLine{17     \mbox{\hyperlink{classCjt__ciudades_a2ade4ab65c3151f4622e52c28734daf0}{ciudades}}.at(ciudad\_id).poner\_producto(prod\_id, cantidad\_poseida, cantidad\_requerida, prod);}
-\DoxyCodeLine{18 \}}
+\DoxyCodeLine{20 \{}
+\DoxyCodeLine{21     \mbox{\hyperlink{classCjt__ciudades_a2ade4ab65c3151f4622e52c28734daf0}{ciudades}}.at(ciudad\_id).poner\_producto(prod\_id, cantidad\_poseida, cantidad\_requerida, prod);}
+\DoxyCodeLine{22 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classCjt__ciudades_af8904fcb4a201b93306f3984b2ae2f3f}\label{classCjt__ciudades_af8904fcb4a201b93306f3984b2ae2f3f}} 
@@ -483,13 +483,13 @@ Se ha eliminado el producto con identificador {\itshape prod\+\_\+id} de la ciua
 \end{DoxyPostcond}
 
 
-Definición en la línea 30 del archivo Cjt\+\_\+ciudades.\+cc.
+Definición en la línea 34 del archivo Cjt\+\_\+ciudades.\+cc.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{31 \{}
-\DoxyCodeLine{32     \mbox{\hyperlink{classCjt__ciudades_a2ade4ab65c3151f4622e52c28734daf0}{ciudades}}.at(ciudad\_id).quitar\_producto(prod\_id, prod);}
-\DoxyCodeLine{33 \}}
+\DoxyCodeLine{35 \{}
+\DoxyCodeLine{36     \mbox{\hyperlink{classCjt__ciudades_a2ade4ab65c3151f4622e52c28734daf0}{ciudades}}.at(ciudad\_id).quitar\_producto(prod\_id, prod);}
+\DoxyCodeLine{37 \}}
 
 \end{DoxyCode}
 
@@ -507,7 +507,7 @@ Map que almacena todas las ciudades.
 
 
 
-Definición en la línea 23 del archivo Cjt\+\_\+ciudades.\+hh.
+Definición en la línea 26 del archivo Cjt\+\_\+ciudades.\+hh.
 
 
 

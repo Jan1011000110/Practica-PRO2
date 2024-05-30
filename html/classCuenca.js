@@ -1,0 +1,25 @@
+var classCuenca =
+[
+    [ "Cuenca", "classCuenca.html#adef9dac47f2c1d8120a55b54b497efda", null ],
+    [ "calcular_viaje", "classCuenca.html#af717eab3a33f6029febfa3a975d150ef", null ],
+    [ "comerciar", "classCuenca.html#acce42ec6f63c1770ca00af1298a6dfbc", null ],
+    [ "construir_estructura", "classCuenca.html#a54368a39d24f75b4171ae23b9d3771a4", null ],
+    [ "consultar_producto_ciudad", "classCuenca.html#aefd1dfe30d0059417549e3b2837a81d7", null ],
+    [ "escribir_ciudad", "classCuenca.html#aafac7485e941805dbb71e72893e9372a", null ],
+    [ "escribir_producto", "classCuenca.html#ae134ae0e7e68fedf2f6a9e33663eca70", null ],
+    [ "hacer_viaje", "classCuenca.html#a50322cf958ca7c16f47c0fa3b7a22ace", null ],
+    [ "leer_inventario", "classCuenca.html#a1a2c3d8b5c2721c4c1d264933e61f055", null ],
+    [ "leer_inventarios", "classCuenca.html#a1ef343481e4d5994c5e4393693a5895b", null ],
+    [ "leer_productos", "classCuenca.html#afd65f95da65e39aec64e4508b9eacc0b", null ],
+    [ "leer_rio", "classCuenca.html#a529e35e876f731b016dbca367cb064d2", null ],
+    [ "modificar_barco", "classCuenca.html#afd5f7b695b2d41bc037a74372536a5a7", null ],
+    [ "modificar_producto", "classCuenca.html#a1f5bbbd5dc0fff8176b70ffc0de9d233", null ],
+    [ "numero_productos", "classCuenca.html#aea95fd8fb86b0cbb69f6001df5dcf9ac", null ],
+    [ "poner_producto", "classCuenca.html#a255b863bef1c20afb87e485d42c46896", null ],
+    [ "quitar_producto", "classCuenca.html#aa7dbb8bd9399fc9322cd8913a8ce1d5b", null ],
+    [ "redistribuir", "classCuenca.html#a51870d649b499f3b73d4ea1532e2b526", null ],
+    [ "redistribuir", "classCuenca.html#a774f43ab42455eed569b5000731625e6", null ],
+    [ "ciudades", "classCuenca.html#afadcf7affebe5218e4d3eb88595f23dd", null ],
+    [ "estructura", "classCuenca.html#a35b9f4d3289e093756ff6997c8a1c9f1", null ],
+    [ "productos", "classCuenca.html#a710f881238488289a10dd94e28105bae", null ]
+];

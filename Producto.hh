@@ -1,5 +1,5 @@
 /** @file Producto.hh  
- *      @brief Especificación de la clase Producto.
+ *  @brief Especificación de la clase Producto.
 */
 
 #ifndef PRODUCTO_HH
@@ -11,10 +11,13 @@
 
 using namespace std;
 
-/** @class Producto.
- *      @brief Representa un producto.
-*/
+/*
+ * Clase Producto
+ */
 
+/** @class Producto.
+ *  @brief Representa un producto de un conjunto de productos.
+*/
 
 class Producto 
 {
@@ -33,7 +36,7 @@ public:
     */
     Producto();
 
-    /** @brief Creadora con valores concretos.
+    /** @brief Creadora con valores definidos.
      *      \pre Cierto.
      *      \post El resultado es un producto con peso = peso y volumen = volumen.
     */  
@@ -41,13 +44,13 @@ public:
 
     // Consultoras
 
-    /** @brief Devuelve el peso del parametro implicito.
+    /** @brief Consultora del peso del parametro implicito.
      *      \pre Cierto.
      *      \post Devuelve el peso del parametro implicito.
     */
     int consultar_peso() const;
 
-    /** @brief Devuelve el volumen del parametro implicito.
+    /** @brief Consultora del volumen del parametro implicito.
      *      \pre Cierto.
      *      \post Devuelve el volumen del parametro implicito.
     */
@@ -63,7 +66,7 @@ public:
 
     // Lectura
 
-    /** @brief Operación de lectura del producto.
+    /** @brief Operación de lectura.
      *      \pre Està disponible en el canal estandard de entrada dos naturales, los atributos del parametro implicito.
      *      \post El paramentro implicito ahora tiene los atributos con los valores leidos.
     */      

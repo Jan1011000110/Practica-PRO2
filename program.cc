@@ -1,18 +1,15 @@
-/** @mainpage Comercio fluvial.
- * 
-*/
+/** @mainpage Comercio fluvial. */
 
 /** @file program.cc
- 		@brief Programa principal para la práctica de PRO2.
-		
-		Como bien da a entender el enunciado, se supone que los datos leídos siempre son correctos, de modo que no se incluyen comprobaciones al respecto.
+ *	@brief Programa principal para la práctica de PRO2.
+ *
+ *	Como bien da a entender el enunciado, se supone que los datos leídos siempre son correctos, de modo que no se incluyen comprobaciones al respecto.
 */
 
 #include "Cuenca.hh"
 
 #ifndef NO_DIAGRAM
 #include <iostream>
-#include <set>
 #include <string>
 #endif
 
@@ -28,7 +25,9 @@ int main()
     cin >> n;
     c.leer_productos(n);
     c.leer_rio();
-    c.modificar_barco(b);
+    int id_compra, num_compra, id_venta, num_venta;
+    cin >> id_compra >> num_compra >> id_venta >> num_venta;
+    c.modificar_barco(id_compra, num_compra, id_venta, num_venta, b);
 
     string cm;
     while (cin >> cm)
@@ -59,8 +58,9 @@ int main()
             c.leer_inventarios();
         }
         else if (cm == "modificar_barco" or cm == "mb") {
+            cin >> id_compra >> num_compra >> id_venta >> num_venta;
             cout << endl;
-            c.modificar_barco(b);
+            c.modificar_barco(id_compra, num_compra, id_venta, num_venta, b);
         }
         else if (cm == "escribir_barco" or cm == "eb") {
             cout << endl;

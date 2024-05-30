@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -45,6 +49,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('classBarco.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,12 +80,10 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Métodos públicos</a> &#124;
-<a href="#pub-attribs">Atributos públicos</a> &#124;
-<a href="#pri-static-attribs">Atributos privados estáticos</a> &#124;
+<a href="#pri-attribs">Atributos privados</a> &#124;
 <a href="classBarco-members.html">Lista de todos los miembros</a>  </div>
   <div class="headertitle">
 <div class="title">Referencia de la Clase Barco</div>  </div>
@@ -82,36 +101,46 @@ Métodos públicos</h2></td></tr>
 <tr class="memdesc:aea54a1f00318af549e695999ccf08e38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creadora por defecto. Se ejecuta automaticamente al declarar un barco.  <a href="classBarco.html#aea54a1f00318af549e695999ccf08e38">Más...</a><br /></td></tr>
 <tr class="separator:aea54a1f00318af549e695999ccf08e38"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a367058928ea7f359cbc1854eff4442b1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBarco.html#a367058928ea7f359cbc1854eff4442b1">modificar_barco</a> (int <a class="el" href="classBarco.html#a18ee6e2799fba957af616a42d54d005b">id_compra</a>, int <a class="el" href="classBarco.html#a7b8a9917814f1f80564f9cf95bfe465d">num_compra</a>, int <a class="el" href="classBarco.html#a7dd3fe7762f9362219acc1fde2845504">id_venta</a>, int <a class="el" href="classBarco.html#a06142671610200b49d0a399cc6b0e2d7">num_venta</a>)</td></tr>
+<tr class="memdesc:a367058928ea7f359cbc1854eff4442b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modificadora de los atributos del barco.  <a href="classBarco.html#a367058928ea7f359cbc1854eff4442b1">Más...</a><br /></td></tr>
 <tr class="separator:a367058928ea7f359cbc1854eff4442b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5dfabaa5594d73744183c4b21b543f3d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBarco.html#a5dfabaa5594d73744183c4b21b543f3d">agregar_viaje</a> (const string &amp;ciudad_id)</td></tr>
+<tr class="memdesc:a5dfabaa5594d73744183c4b21b543f3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Agrega un identificador de una ciudad al vector del parametro implicito.  <a href="classBarco.html#a5dfabaa5594d73744183c4b21b543f3d">Más...</a><br /></td></tr>
 <tr class="separator:a5dfabaa5594d73744183c4b21b543f3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0c10121667902699dfe5eb9fc98ea666"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBarco.html#a0c10121667902699dfe5eb9fc98ea666">borrar_viajes</a> ()</td></tr>
+<tr class="memdesc:a0c10121667902699dfe5eb9fc98ea666"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vacia el vector del parametro implicito.  <a href="classBarco.html#a0c10121667902699dfe5eb9fc98ea666">Más...</a><br /></td></tr>
 <tr class="separator:a0c10121667902699dfe5eb9fc98ea666"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d8beae9db574feab5e6b4e8d07c5bf2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBarco.html#a1d8beae9db574feab5e6b4e8d07c5bf2">consultar_barco</a> (int &amp;<a class="el" href="classBarco.html#a18ee6e2799fba957af616a42d54d005b">id_compra</a>, int &amp;<a class="el" href="classBarco.html#a7b8a9917814f1f80564f9cf95bfe465d">num_compra</a>, int &amp;<a class="el" href="classBarco.html#a7dd3fe7762f9362219acc1fde2845504">id_venta</a>, int &amp;<a class="el" href="classBarco.html#a06142671610200b49d0a399cc6b0e2d7">num_venta</a>) const</td></tr>
+<tr class="memdesc:a1d8beae9db574feab5e6b4e8d07c5bf2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Consulta los atributos del barco.  <a href="classBarco.html#a1d8beae9db574feab5e6b4e8d07c5bf2">Más...</a><br /></td></tr>
+<tr class="separator:a1d8beae9db574feab5e6b4e8d07c5bf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aca280ae3722e21830a0cdd63f3245675"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBarco.html#aca280ae3722e21830a0cdd63f3245675">restante</a> () const</td></tr>
+<tr class="memdesc:aca280ae3722e21830a0cdd63f3245675"><td class="mdescLeft">&#160;</td><td class="mdescRight">Consulta la suma del numero de productos que quiere comprar y vender el parametro implicito.  <a href="classBarco.html#aca280ae3722e21830a0cdd63f3245675">Más...</a><br /></td></tr>
 <tr class="separator:aca280ae3722e21830a0cdd63f3245675"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3f1c26f2f0565e375924dae85b2e89a0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBarco.html#a3f1c26f2f0565e375924dae85b2e89a0">escribir_barco</a> () const</td></tr>
+<tr class="memdesc:a3f1c26f2f0565e375924dae85b2e89a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Escribe los atributos del barco y el vector de viajes.  <a href="classBarco.html#a3f1c26f2f0565e375924dae85b2e89a0">Más...</a><br /></td></tr>
 <tr class="separator:a3f1c26f2f0565e375924dae85b2e89a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Atributos públicos</h2></td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Atributos privados</h2></td></tr>
 <tr class="memitem:a18ee6e2799fba957af616a42d54d005b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBarco.html#a18ee6e2799fba957af616a42d54d005b">id_compra</a></td></tr>
+<tr class="memdesc:a18ee6e2799fba957af616a42d54d005b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Identificador del producto que quiere comprar el parametro implicito.  <a href="classBarco.html#a18ee6e2799fba957af616a42d54d005b">Más...</a><br /></td></tr>
 <tr class="separator:a18ee6e2799fba957af616a42d54d005b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b8a9917814f1f80564f9cf95bfe465d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBarco.html#a7b8a9917814f1f80564f9cf95bfe465d">num_compra</a></td></tr>
+<tr class="memdesc:a7b8a9917814f1f80564f9cf95bfe465d"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structCantidad.html" title="Struct que almacena la cantidad poseida y requerida de los productos que posee.">Cantidad</a> de productos que quiere comprar el parametro implicito.  <a href="classBarco.html#a7b8a9917814f1f80564f9cf95bfe465d">Más...</a><br /></td></tr>
 <tr class="separator:a7b8a9917814f1f80564f9cf95bfe465d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7dd3fe7762f9362219acc1fde2845504"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBarco.html#a7dd3fe7762f9362219acc1fde2845504">id_venta</a></td></tr>
+<tr class="memdesc:a7dd3fe7762f9362219acc1fde2845504"><td class="mdescLeft">&#160;</td><td class="mdescRight">Identificador del producto que quiere vender el parametro implicito.  <a href="classBarco.html#a7dd3fe7762f9362219acc1fde2845504">Más...</a><br /></td></tr>
 <tr class="separator:a7dd3fe7762f9362219acc1fde2845504"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a06142671610200b49d0a399cc6b0e2d7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBarco.html#a06142671610200b49d0a399cc6b0e2d7">num_venta</a></td></tr>
+<tr class="memdesc:a06142671610200b49d0a399cc6b0e2d7"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="structCantidad.html" title="Struct que almacena la cantidad poseida y requerida de los productos que posee.">Cantidad</a> de productos que quiere vender el parametro implicito.  <a href="classBarco.html#a06142671610200b49d0a399cc6b0e2d7">Más...</a><br /></td></tr>
 <tr class="separator:a06142671610200b49d0a399cc6b0e2d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
-Atributos privados estáticos</h2></td></tr>
-<tr class="memitem:a7f83cc30b7977cf63364b4e814933ed9"><td class="memItemLeft" align="right" valign="top">static vector&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBarco.html#a7f83cc30b7977cf63364b4e814933ed9">viajes</a></td></tr>
-<tr class="separator:a7f83cc30b7977cf63364b4e814933ed9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77b20c4f1a8a565f43462a522e2c4509"><td class="memItemLeft" align="right" valign="top">vector&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classBarco.html#a77b20c4f1a8a565f43462a522e2c4509">viajes</a></td></tr>
+<tr class="memdesc:a77b20c4f1a8a565f43462a522e2c4509"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector en el que se guardan las ultimas ciudades en las que se ha comerciado en cada viaje.  <a href="classBarco.html#a77b20c4f1a8a565f43462a522e2c4509">Más...</a><br /></td></tr>
+<tr class="separator:a77b20c4f1a8a565f43462a522e2c4509"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
 <div class="textblock"><p>Representa el barco de comercio de la cuenca fluvial. </p>
 
-<p class="definition">Definición en la línea <a class="el" href="Barco_8hh_source.html#l00024">24</a> del archivo <a class="el" href="Barco_8hh_source.html">Barco.hh</a>.</p>
+<p class="definition">Definición en la línea <a class="el" href="Barco_8hh_source.html#l00026">26</a> del archivo <a class="el" href="Barco_8hh_source.html">Barco.hh</a>.</p>
 </div><h2 class="groupheader">Documentación del constructor y destructor</h2>
 <a id="aea54a1f00318af549e695999ccf08e38"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aea54a1f00318af549e695999ccf08e38">&#9670;&nbsp;</a></span>Barco()</h2>
@@ -129,20 +158,11 @@ Atributos privados estáticos</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Creadora por defecto. Se ejecuta automaticamente al declarar un barco. </p>
-<dl class="section pre"><dt>Precondición</dt><dd><em>Cierto.</em> </dd></dl>
+<dl class="section pre"><dt>Precondición</dt><dd>Cierto. </dd></dl>
 <dl class="section post"><dt>Postcondición</dt><dd>El resultado es un barco el cual todos sus atributos estan sin inicializar. </dd></dl>
 
-<p class="definition">Definición en la línea <a class="el" href="Barco_8cc_source.html#l00005">5</a> del archivo <a class="el" href="Barco_8cc_source.html">Barco.cc</a>.</p>
-<div class="fragment"><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;{</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <a class="code" href="classBarco.html#a18ee6e2799fba957af616a42d54d005b">id_compra</a> = 0;</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <a class="code" href="classBarco.html#a7b8a9917814f1f80564f9cf95bfe465d">num_compra</a> = 0;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <a class="code" href="classBarco.html#a7dd3fe7762f9362219acc1fde2845504">id_venta</a> = 0;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <a class="code" href="classBarco.html#a06142671610200b49d0a399cc6b0e2d7">num_venta</a> = 0;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;}</div>
-<div class="ttc" id="aclassBarco_html_a06142671610200b49d0a399cc6b0e2d7"><div class="ttname"><a href="classBarco.html#a06142671610200b49d0a399cc6b0e2d7">Barco::num_venta</a></div><div class="ttdeci">int num_venta</div><div class="ttdef"><b>Definition:</b> <a href="Barco_8hh_source.html#l00032">Barco.hh:32</a></div></div>
-<div class="ttc" id="aclassBarco_html_a18ee6e2799fba957af616a42d54d005b"><div class="ttname"><a href="classBarco.html#a18ee6e2799fba957af616a42d54d005b">Barco::id_compra</a></div><div class="ttdeci">int id_compra</div><div class="ttdef"><b>Definition:</b> <a href="Barco_8hh_source.html#l00029">Barco.hh:29</a></div></div>
-<div class="ttc" id="aclassBarco_html_a7b8a9917814f1f80564f9cf95bfe465d"><div class="ttname"><a href="classBarco.html#a7b8a9917814f1f80564f9cf95bfe465d">Barco::num_compra</a></div><div class="ttdeci">int num_compra</div><div class="ttdef"><b>Definition:</b> <a href="Barco_8hh_source.html#l00030">Barco.hh:30</a></div></div>
-<div class="ttc" id="aclassBarco_html_a7dd3fe7762f9362219acc1fde2845504"><div class="ttname"><a href="classBarco.html#a7dd3fe7762f9362219acc1fde2845504">Barco::id_venta</a></div><div class="ttdeci">int id_venta</div><div class="ttdef"><b>Definition:</b> <a href="Barco_8hh_source.html#l00031">Barco.hh:31</a></div></div>
+<p class="definition">Definición en la línea <a class="el" href="Barco_8cc_source.html#l00007">7</a> del archivo <a class="el" href="Barco_8cc_source.html">Barco.cc</a>.</p>
+<div class="fragment"><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -163,11 +183,15 @@ Atributos privados estáticos</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="Barco_8cc_source.html#l00022">22</a> del archivo <a class="el" href="Barco_8cc_source.html">Barco.cc</a>.</p>
-<div class="fragment"><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;{</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="classBarco.html#a7f83cc30b7977cf63364b4e814933ed9">viajes</a>.push_back(ciudad_id);</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;}</div>
-<div class="ttc" id="aclassBarco_html_a7f83cc30b7977cf63364b4e814933ed9"><div class="ttname"><a href="classBarco.html#a7f83cc30b7977cf63364b4e814933ed9">Barco::viajes</a></div><div class="ttdeci">static vector&lt; string &gt; viajes</div><div class="ttdef"><b>Definition:</b> <a href="Barco_8hh_source.html#l00027">Barco.hh:27</a></div></div>
+<p>Agrega un identificador de una ciudad al vector del parametro implicito. </p>
+<dl class="section pre"><dt>Precondición</dt><dd>Cierto. </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>Se ha añadido el identificador de la ciudad al vector del parametro implicito. </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="Barco_8cc_source.html#l00017">17</a> del archivo <a class="el" href="Barco_8cc_source.html">Barco.cc</a>.</p>
+<div class="fragment"><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="classBarco.html#a77b20c4f1a8a565f43462a522e2c4509">viajes</a>.push_back(ciudad_id);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;}</div>
+<div class="ttc" id="aclassBarco_html_a77b20c4f1a8a565f43462a522e2c4509"><div class="ttname"><a href="classBarco.html#a77b20c4f1a8a565f43462a522e2c4509">Barco::viajes</a></div><div class="ttdeci">vector&lt; string &gt; viajes</div><div class="ttdoc">Vector en el que se guardan las ultimas ciudades en las que se ha comerciado en cada viaje.</div><div class="ttdef"><b>Definition:</b> <a href="Barco_8hh_source.html#l00038">Barco.hh:38</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -186,10 +210,70 @@ Atributos privados estáticos</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Vacia el vector del parametro implicito. </p>
+<dl class="section pre"><dt>Precondición</dt><dd>Cierto. </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>El vector del parametro implicito queda vacio. </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="Barco_8cc_source.html#l00022">22</a> del archivo <a class="el" href="Barco_8cc_source.html">Barco.cc</a>.</p>
+<div class="fragment"><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;{</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="classBarco.html#a77b20c4f1a8a565f43462a522e2c4509">viajes</a>.clear();</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a1d8beae9db574feab5e6b4e8d07c5bf2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d8beae9db574feab5e6b4e8d07c5bf2">&#9670;&nbsp;</a></span>consultar_barco()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Barco::consultar_barco </td>
+          <td>(</td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>id_compra</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>num_compra</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>id_venta</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>num_venta</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Consulta los atributos del barco. </p>
+<dl class="section pre"><dt>Precondición</dt><dd>El barco esta inicializado. </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>Los parametros pasados por referencia tienen los valores de los atributos del barco. </dd></dl>
+
 <p class="definition">Definición en la línea <a class="el" href="Barco_8cc_source.html#l00027">27</a> del archivo <a class="el" href="Barco_8cc_source.html">Barco.cc</a>.</p>
 <div class="fragment"><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="classBarco.html#a7f83cc30b7977cf63364b4e814933ed9">viajes</a>.clear();</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;}</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="classBarco.html#a18ee6e2799fba957af616a42d54d005b">id_compra</a> = this-&gt;<a class="code" href="classBarco.html#a18ee6e2799fba957af616a42d54d005b">id_compra</a>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="classBarco.html#a7b8a9917814f1f80564f9cf95bfe465d">num_compra</a> = this-&gt;<a class="code" href="classBarco.html#a7b8a9917814f1f80564f9cf95bfe465d">num_compra</a>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="classBarco.html#a7dd3fe7762f9362219acc1fde2845504">id_venta</a> = this-&gt;<a class="code" href="classBarco.html#a7dd3fe7762f9362219acc1fde2845504">id_venta</a>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="classBarco.html#a06142671610200b49d0a399cc6b0e2d7">num_venta</a> = this-&gt;<a class="code" href="classBarco.html#a06142671610200b49d0a399cc6b0e2d7">num_venta</a>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div>
+<div class="ttc" id="aclassBarco_html_a06142671610200b49d0a399cc6b0e2d7"><div class="ttname"><a href="classBarco.html#a06142671610200b49d0a399cc6b0e2d7">Barco::num_venta</a></div><div class="ttdeci">int num_venta</div><div class="ttdoc">Cantidad de productos que quiere vender el parametro implicito.</div><div class="ttdef"><b>Definition:</b> <a href="Barco_8hh_source.html#l00036">Barco.hh:36</a></div></div>
+<div class="ttc" id="aclassBarco_html_a18ee6e2799fba957af616a42d54d005b"><div class="ttname"><a href="classBarco.html#a18ee6e2799fba957af616a42d54d005b">Barco::id_compra</a></div><div class="ttdeci">int id_compra</div><div class="ttdoc">Identificador del producto que quiere comprar el parametro implicito.</div><div class="ttdef"><b>Definition:</b> <a href="Barco_8hh_source.html#l00030">Barco.hh:30</a></div></div>
+<div class="ttc" id="aclassBarco_html_a7b8a9917814f1f80564f9cf95bfe465d"><div class="ttname"><a href="classBarco.html#a7b8a9917814f1f80564f9cf95bfe465d">Barco::num_compra</a></div><div class="ttdeci">int num_compra</div><div class="ttdoc">Cantidad de productos que quiere comprar el parametro implicito.</div><div class="ttdef"><b>Definition:</b> <a href="Barco_8hh_source.html#l00032">Barco.hh:32</a></div></div>
+<div class="ttc" id="aclassBarco_html_a7dd3fe7762f9362219acc1fde2845504"><div class="ttname"><a href="classBarco.html#a7dd3fe7762f9362219acc1fde2845504">Barco::id_venta</a></div><div class="ttdeci">int id_venta</div><div class="ttdoc">Identificador del producto que quiere vender el parametro implicito.</div><div class="ttdef"><b>Definition:</b> <a href="Barco_8hh_source.html#l00034">Barco.hh:34</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -208,14 +292,18 @@ Atributos privados estáticos</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="Barco_8cc_source.html#l00037">37</a> del archivo <a class="el" href="Barco_8cc_source.html">Barco.cc</a>.</p>
-<div class="fragment"><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;{</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    cout &lt;&lt; <a class="code" href="classBarco.html#a18ee6e2799fba957af616a42d54d005b">id_compra</a> &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; <a class="code" href="classBarco.html#a7b8a9917814f1f80564f9cf95bfe465d">num_compra</a> &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; <a class="code" href="classBarco.html#a7dd3fe7762f9362219acc1fde2845504">id_venta</a> &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; <a class="code" href="classBarco.html#a06142671610200b49d0a399cc6b0e2d7">num_venta</a> &lt;&lt; endl;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">string</span> ciudad : <a class="code" href="classBarco.html#a7f83cc30b7977cf63364b4e814933ed9">viajes</a>)</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    {</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        cout &lt;&lt; ciudad &lt;&lt; endl;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    }</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;}</div>
+<p>Escribe los atributos del barco y el vector de viajes. </p>
+<dl class="section pre"><dt>Precondición</dt><dd>El barco esta inicializado. </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>Se han escrito los atributos del barco y el vector de viajes en el canal standard de salida. </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="Barco_8cc_source.html#l00040">40</a> del archivo <a class="el" href="Barco_8cc_source.html">Barco.cc</a>.</p>
+<div class="fragment"><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;{</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    cout &lt;&lt; <a class="code" href="classBarco.html#a18ee6e2799fba957af616a42d54d005b">id_compra</a> &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; <a class="code" href="classBarco.html#a7b8a9917814f1f80564f9cf95bfe465d">num_compra</a> &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; <a class="code" href="classBarco.html#a7dd3fe7762f9362219acc1fde2845504">id_venta</a> &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; <a class="code" href="classBarco.html#a06142671610200b49d0a399cc6b0e2d7">num_venta</a> &lt;&lt; endl;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">string</span> ciudad : <a class="code" href="classBarco.html#a77b20c4f1a8a565f43462a522e2c4509">viajes</a>)</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    {</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        cout &lt;&lt; ciudad &lt;&lt; endl;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    }</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -257,13 +345,17 @@ Atributos privados estáticos</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="Barco_8cc_source.html#l00014">14</a> del archivo <a class="el" href="Barco_8cc_source.html">Barco.cc</a>.</p>
-<div class="fragment"><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    this-&gt;<a class="code" href="classBarco.html#a18ee6e2799fba957af616a42d54d005b">id_compra</a> = <a class="code" href="classBarco.html#a18ee6e2799fba957af616a42d54d005b">id_compra</a>;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    this-&gt;<a class="code" href="classBarco.html#a7b8a9917814f1f80564f9cf95bfe465d">num_compra</a> = <a class="code" href="classBarco.html#a7b8a9917814f1f80564f9cf95bfe465d">num_compra</a>;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    this-&gt;<a class="code" href="classBarco.html#a7dd3fe7762f9362219acc1fde2845504">id_venta</a> = <a class="code" href="classBarco.html#a7dd3fe7762f9362219acc1fde2845504">id_venta</a>;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    this-&gt;<a class="code" href="classBarco.html#a06142671610200b49d0a399cc6b0e2d7">num_venta</a> = <a class="code" href="classBarco.html#a06142671610200b49d0a399cc6b0e2d7">num_venta</a>;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;}</div>
+<p>Modificadora de los atributos del barco. </p>
+<dl class="section pre"><dt>Precondición</dt><dd>Los identificadores de producto <em>id_compra</em>, <em>id_venta</em> son validos y diferentes. </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>Los atributos del barco quedan modificados con los valores de los parametros. </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="Barco_8cc_source.html#l00009">9</a> del archivo <a class="el" href="Barco_8cc_source.html">Barco.cc</a>.</p>
+<div class="fragment"><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;{</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    this-&gt;<a class="code" href="classBarco.html#a18ee6e2799fba957af616a42d54d005b">id_compra</a> = <a class="code" href="classBarco.html#a18ee6e2799fba957af616a42d54d005b">id_compra</a>;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    this-&gt;<a class="code" href="classBarco.html#a7b8a9917814f1f80564f9cf95bfe465d">num_compra</a> = <a class="code" href="classBarco.html#a7b8a9917814f1f80564f9cf95bfe465d">num_compra</a>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    this-&gt;<a class="code" href="classBarco.html#a7dd3fe7762f9362219acc1fde2845504">id_venta</a> = <a class="code" href="classBarco.html#a7dd3fe7762f9362219acc1fde2845504">id_venta</a>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    this-&gt;<a class="code" href="classBarco.html#a06142671610200b49d0a399cc6b0e2d7">num_venta</a> = <a class="code" href="classBarco.html#a06142671610200b49d0a399cc6b0e2d7">num_venta</a>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -282,10 +374,14 @@ Atributos privados estáticos</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="Barco_8cc_source.html#l00032">32</a> del archivo <a class="el" href="Barco_8cc_source.html">Barco.cc</a>.</p>
-<div class="fragment"><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;{</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classBarco.html#a7b8a9917814f1f80564f9cf95bfe465d">num_compra</a> + <a class="code" href="classBarco.html#a06142671610200b49d0a399cc6b0e2d7">num_venta</a>;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;}</div>
+<p>Consulta la suma del numero de productos que quiere comprar y vender el parametro implicito. </p>
+<dl class="section pre"><dt>Precondición</dt><dd>El barco esta inicializado. </dd></dl>
+<dl class="section post"><dt>Postcondición</dt><dd>Devuelve la suma del numero de productos que quiere comprar y vender el parametro implicito. </dd></dl>
+
+<p class="definition">Definición en la línea <a class="el" href="Barco_8cc_source.html#l00035">35</a> del archivo <a class="el" href="Barco_8cc_source.html">Barco.cc</a>.</p>
+<div class="fragment"><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;{</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classBarco.html#a7b8a9917814f1f80564f9cf95bfe465d">num_compra</a> + <a class="code" href="classBarco.html#a06142671610200b49d0a399cc6b0e2d7">num_venta</a>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -295,14 +391,24 @@ Atributos privados estáticos</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">int Barco::id_compra</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="Barco_8hh_source.html#l00029">29</a> del archivo <a class="el" href="Barco_8hh_source.html">Barco.hh</a>.</p>
+<p>Identificador del producto que quiere comprar el parametro implicito. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="Barco_8hh_source.html#l00030">30</a> del archivo <a class="el" href="Barco_8hh_source.html">Barco.hh</a>.</p>
 
 </div>
 </div>
@@ -311,14 +417,24 @@ Atributos privados estáticos</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">int Barco::id_venta</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="Barco_8hh_source.html#l00031">31</a> del archivo <a class="el" href="Barco_8hh_source.html">Barco.hh</a>.</p>
+<p>Identificador del producto que quiere vender el parametro implicito. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="Barco_8hh_source.html#l00034">34</a> del archivo <a class="el" href="Barco_8hh_source.html">Barco.hh</a>.</p>
 
 </div>
 </div>
@@ -327,14 +443,24 @@ Atributos privados estáticos</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">int Barco::num_compra</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="Barco_8hh_source.html#l00030">30</a> del archivo <a class="el" href="Barco_8hh_source.html">Barco.hh</a>.</p>
+<p><a class="el" href="structCantidad.html" title="Struct que almacena la cantidad poseida y requerida de los productos que posee.">Cantidad</a> de productos que quiere comprar el parametro implicito. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="Barco_8hh_source.html#l00032">32</a> del archivo <a class="el" href="Barco_8hh_source.html">Barco.hh</a>.</p>
 
 </div>
 </div>
@@ -343,19 +469,29 @@ Atributos privados estáticos</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">int Barco::num_venta</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="Barco_8hh_source.html#l00032">32</a> del archivo <a class="el" href="Barco_8hh_source.html">Barco.hh</a>.</p>
+<p><a class="el" href="structCantidad.html" title="Struct que almacena la cantidad poseida y requerida de los productos que posee.">Cantidad</a> de productos que quiere vender el parametro implicito. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="Barco_8hh_source.html#l00036">36</a> del archivo <a class="el" href="Barco_8hh_source.html">Barco.hh</a>.</p>
 
 </div>
 </div>
-<a id="a7f83cc30b7977cf63364b4e814933ed9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7f83cc30b7977cf63364b4e814933ed9">&#9670;&nbsp;</a></span>viajes</h2>
+<a id="a77b20c4f1a8a565f43462a522e2c4509"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77b20c4f1a8a565f43462a522e2c4509">&#9670;&nbsp;</a></span>viajes</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -364,17 +500,19 @@ Atributos privados estáticos</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">vector&lt; string &gt; Barco::viajes</td>
+          <td class="memname">vector&lt;string&gt; Barco::viajes</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definición en la línea <a class="el" href="Barco_8hh_source.html#l00027">27</a> del archivo <a class="el" href="Barco_8hh_source.html">Barco.hh</a>.</p>
+<p>Vector en el que se guardan las ultimas ciudades en las que se ha comerciado en cada viaje. </p>
+
+<p class="definition">Definición en la línea <a class="el" href="Barco_8hh_source.html#l00038">38</a> del archivo <a class="el" href="Barco_8hh_source.html">Barco.hh</a>.</p>
 
 </div>
 </div>
@@ -383,9 +521,13 @@ Atributos privados estáticos</h2></td></tr>
 <li><a class="el" href="Barco_8cc_source.html">Barco.cc</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="classBarco.html">Barco</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
 </body>
 </html>

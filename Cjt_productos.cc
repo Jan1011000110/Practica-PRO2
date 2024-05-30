@@ -1,3 +1,7 @@
+/** @file Cjt_productos.cc 
+ *  @brief Código de la clase Cjt_productos.
+ */
+
 #include "Cjt_productos.hh"
 
 Cjt_productos::Cjt_productos() 
@@ -26,12 +30,17 @@ void Cjt_productos::escribir_producto(int id) const
     productos.at(id - 1).escribir_producto();
 }
 
+Producto Cjt_productos::leer_producto()
+{
+    Producto p;
+    p.leer_producto();
+    return p;
+}
+
 void Cjt_productos::leer_productos(int n)
 {
     for (int i = 0; i < n; ++i) {
-        Producto p;
-        p.leer_producto();
-        productos.push_back(p);
+        productos.push_back(leer_producto());
         numero_de_productos += 1;
     }
 }

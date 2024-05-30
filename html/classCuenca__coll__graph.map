@@ -1,0 +1,5 @@
+<map id="Cuenca" name="Cuenca">
+<area shape="rect" id="node1" title="Representa la información y las operaciones de la cuenca fluvial." alt="" coords="91,95,161,121"/>
+<area shape="rect" id="node2" href="$classCjt__productos.html" title="Representa un conjunto de productos de la cuenca fluvial." alt="" coords="5,5,116,32"/>
+<area shape="rect" id="node3" href="$classCjt__ciudades.html" title="Representa el conjunto de ciudades de la cuenca fluvial." alt="" coords="140,5,245,32"/>
+</map>

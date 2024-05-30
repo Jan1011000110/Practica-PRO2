@@ -1,3 +1,7 @@
+/** @file Inventario.cc 
+ *  @brief Código de la clase Inventario.
+ */
+
 #include "Inventario.hh"
 
 Inventario::Inventario() 
@@ -15,33 +19,48 @@ void Inventario::borrar_inventario()
 
 void Inventario::comerciar(Inventario &inv2, const Cjt_productos &productos) 
 {
-    for (map<int, Cantidad>::iterator it = inv.begin(); it != inv.end(); ++it)
-    {
-        int id = it->first;
-        Cantidad cantidad = it->second;
-        if (inv2.contiene_producto(id))
+    map<int, Cantidad>::iterator it1 = inv.begin();
+    map<int, Cantidad>::iterator it2 = inv2.inv.begin();
+
+    // Iteramos hasta que llegamos al final de un inventario
+    while (it1 != inv.end() and it2 != inv2.inv.end()) {
+        int id1 = it1->first;
+        Cantidad cantidad1 = it1->second;
+        int id2 = it2->first;
+        Cantidad cantidad2 = it2->second;
+
+        if (id1 == id2) // Si los dos inventarios contienen el producto con identificador id1=id2
         {
-            if (cantidad.poseido < cantidad.requerido and 
-            inv2.consultar_cantidad_poseida(id) > inv2.consultar_cantidad_requerida(id))
-            {
-                int cantidad_comerciar = min(
-                    cantidad.requerido - cantidad.poseido, 
-                    inv2.consultar_cantidad_poseida(id) - inv2.consultar_cantidad_requerida(id)
-                );
-                modificar_cantidad_poseida(id, cantidad_comerciar, productos.consultar_producto(id));
-                inv2.modificar_cantidad_poseida(id, -cantidad_comerciar, productos.consultar_producto(id));
-            }
-            else if (cantidad.poseido > cantidad.requerido and 
-            inv2.consultar_cantidad_poseida(id) < inv2.consultar_cantidad_requerida(id))
-            {
-                int cantidad_comerciar = min(
-                    cantidad.poseido - cantidad.requerido, 
-                    inv2.consultar_cantidad_requerida(id) - inv2.consultar_cantidad_poseida(id)
-                );
-                modificar_cantidad_poseida(id, -cantidad_comerciar, productos.consultar_producto(id));
-                inv2.modificar_cantidad_poseida(id, cantidad_comerciar, productos.consultar_producto(id));
-            }
+            // Cojo el minimo entre lo que le falta a inv y lo que le sobra a inv2
+            int cantidad_comerciar = calculo_comercio(
+                cantidad1.poseido, cantidad1.requerido, 
+                cantidad2.poseido, cantidad2.requerido
+            );
+            // Comercio entre los dos inventarios la cantidad indicada
+            modificar_cantidad_poseida(id1, cantidad_comerciar, productos.consultar_producto(id1));
+            inv2.modificar_cantidad_poseida(id2, -cantidad_comerciar, productos.consultar_producto(id2));
+            
+            // Repito el proceso pero al reves
+            cantidad_comerciar = calculo_comercio(
+                cantidad2.poseido, cantidad2.requerido,
+                cantidad1.poseido, cantidad1.requerido
+            );
+            modificar_cantidad_poseida(id1, -cantidad_comerciar, productos.consultar_producto(id1));
+            inv2.modificar_cantidad_poseida(id2, cantidad_comerciar, productos.consultar_producto(id2));
+
+            // Avanzamos los dos iteradores
+            it1++;
+            it2++;
         }
+        else if (id1 < id2) // Avanzamos el primer iterador ya que el producto con id1 no esta en inv2
+        {
+            it1++;
+        }
+        else // Avanzamos el segundo iterador ya que el producto con id2 no esta en inv
+        {
+            it2++;  
+        }
+
     }
 }
 
@@ -86,7 +105,7 @@ int Inventario::consultar_cantidad_requerida(int id) const
     return inv.at(id).requerido;
 }
 
-void Inventario::leer_inventario(const Cjt_productos &productos)
+void Inventario::leer_inventario(const Cjt_productos &productos) 
 {
     borrar_inventario();
     int n;
@@ -123,4 +142,14 @@ void Inventario::escribir_inventario() const
         cout << it->second.poseido << " ";
         cout << it->second.requerido << endl;
     }
+}
+
+int Inventario::calculo_comercio(int x, int y, int p, int q) 
+{
+    int comercio = 0;
+    if (x < y and p > q)
+    {
+        comercio = min(y - x, p - q);
+    }
+    return comercio;
 }

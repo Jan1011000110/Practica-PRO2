@@ -2,7 +2,7 @@
 \label{classInventario}\index{Inventario@{Inventario}}
 
 
-Facilita la gestion de inventario.  
+Representa el inventario de una ciudad.  
 
 
 
@@ -19,27 +19,32 @@ void \mbox{\hyperlink{classInventario_ad315d15ebbf2d5e233c776ce39aeaaea}{borrar\
 void \mbox{\hyperlink{classInventario_a2fe5c8bf348eb58066f3c43fd7e15a1b}{comerciar}} (\mbox{\hyperlink{classInventario}{Inventario}} \&inventario2, const \mbox{\hyperlink{classCjt__productos}{Cjt\+\_\+productos}} \&productos)
 \begin{DoxyCompactList}\small\item\em Intercambia productos entre dos inventarios que le sobren a uno y le falten al otro. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classInventario_af42e91e2900c9a6f1085142c96b8c6e2}{modificar\+\_\+cantidad\+\_\+poseida}} (int id, int cantidad\+\_\+poseida, const \mbox{\hyperlink{classProducto}{Producto}} \&prod)
-\begin{DoxyCompactList}\small\item\em Modifica la cantidad poseida del producto con identificador {\itshape id}. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Modificadora de la cantidad poseida de un producto. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classInventario_a4022a32c14eb69a1a9521d99cb64618e}{modificar\+\_\+cantidad\+\_\+requerida}} (int id, int cantidad\+\_\+requerida)
-\begin{DoxyCompactList}\small\item\em Modifica la cantidad requerida del producto con identificador {\itshape id}. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Modificadora de la cantidad requerida de un producto. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classInventario_ac9f50cf3263f8fc21fe39a1d15dbfbbb}{poner\+\_\+producto}} (int id, int cantidad\+\_\+poseida, int cantidad\+\_\+requerida, const \mbox{\hyperlink{classProducto}{Producto}} \&prod)
-\begin{DoxyCompactList}\small\item\em Añade el producto prod con identificador {\itshape id} al inventario. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Añade un producto al inventario. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classInventario_a1778706cec5564bcaa70f224945f5e94}{quitar\+\_\+producto}} (int id, const \mbox{\hyperlink{classProducto}{Producto}} \&prod)
-\begin{DoxyCompactList}\small\item\em Quita el producto con identificador {\itshape id} del inventario. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Quita un producto del inventario. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classInventario_abb38481a98452a88f5e1b60443511a28}{contiene\+\_\+producto}} (int id) const
-\begin{DoxyCompactList}\small\item\em Comprueba si el inventario contiene un producto con identificador {\itshape id}. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Consulta si el inventario contiene un producto. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{classInventario_a10653d00f09b3f3cb21cbe9e4175445b}{consultar\+\_\+cantidad\+\_\+poseida}} (int id) const
-\begin{DoxyCompactList}\small\item\em Devuelve la cantidad poseida del producto con identificador {\itshape id}. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Consultora de la cantidad poseida de un producto. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{classInventario_aec3ff86ee51a3998f6395fc9e8b98481}{consultar\+\_\+cantidad\+\_\+requerida}} (int id) const
-\begin{DoxyCompactList}\small\item\em Devuelve la cantidad requerida del producto con identificador {\itshape id}. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Consultora de la cantidad requerida de un producto. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classInventario_a1efe04122176cb9043bbf33eab81cd91}{leer\+\_\+inventario}} (const \mbox{\hyperlink{classCjt__productos}{Cjt\+\_\+productos}} \&productos)
-\begin{DoxyCompactList}\small\item\em Lee el inventario. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Operación de lectura del inventario. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classInventario_a267ea5a01a51e42a97c030637f925323}{consultar\+\_\+producto}} (int id) const
-\begin{DoxyCompactList}\small\item\em Imprime la cantidad poseida y requerida del producto con identificador {\itshape id}. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Operación de escritura de la cantidad de un prodcucto. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classInventario_a8cbe864ffe64e5c2781f5e9522df2777}{escribir\+\_\+atributos\+\_\+totales}} () const
-\begin{DoxyCompactList}\small\item\em Imprime el peso y volumen total del parametro implicito. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Operación de escritura del peso y volumen total. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classInventario_a443c1bea51231135e50136ccdaa0ab15}{escribir\+\_\+inventario}} () const
-\begin{DoxyCompactList}\small\item\em Imprime el inventario. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Operación de escritura del inventario. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Métodos privados estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{classInventario_a2be8d13f714c701fba911c3fad7fba09}{calculo\+\_\+comercio}} (int x, int y, int p, int q)
+\begin{DoxyCompactList}\small\item\em Calculo de la cantidad de productos que se pueden comerciar. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Atributos privados}
 \begin{DoxyCompactItemize}
 \item 
@@ -52,9 +57,9 @@ int \mbox{\hyperlink{classInventario_ae5e99f33e8a74635f6e0446562d85e58}{volumen\
 
 
 \doxysubsection{Descripción detallada}
-Facilita la gestion de inventario. 
+Representa el inventario de una ciudad. 
 
-Definición en la línea 29 del archivo Inventario.\+hh.
+Definición en la línea 34 del archivo Inventario.\+hh.
 
 
 
@@ -77,14 +82,14 @@ El resultado es un inventario con el peso y volumen total inicializados a zero.
 \end{DoxyPostcond}
 
 
-Definición en la línea 3 del archivo Inventario.\+cc.
+Definición en la línea 7 del archivo Inventario.\+cc.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{4 \{}
-\DoxyCodeLine{5     \mbox{\hyperlink{classInventario_aba17fb21d17d1908f75fc27c6292bfe0}{peso\_total}} = 0;}
-\DoxyCodeLine{6     \mbox{\hyperlink{classInventario_ae5e99f33e8a74635f6e0446562d85e58}{volumen\_total}} = 0;}
-\DoxyCodeLine{7 \}}
+\DoxyCodeLine{8 \{}
+\DoxyCodeLine{9     \mbox{\hyperlink{classInventario_aba17fb21d17d1908f75fc27c6292bfe0}{peso\_total}} = 0;}
+\DoxyCodeLine{10     \mbox{\hyperlink{classInventario_ae5e99f33e8a74635f6e0446562d85e58}{volumen\_total}} = 0;}
+\DoxyCodeLine{11 \}}
 
 \end{DoxyCode}
 
@@ -108,15 +113,47 @@ El inventario queda vacio.
 \end{DoxyPostcond}
 
 
-Definición en la línea 9 del archivo Inventario.\+cc.
+Definición en la línea 13 del archivo Inventario.\+cc.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{10 \{}
-\DoxyCodeLine{11     \mbox{\hyperlink{classInventario_a0f6c269a5160f0399a7745a7e345a6fd}{inv}}.clear();}
-\DoxyCodeLine{12     \mbox{\hyperlink{classInventario_aba17fb21d17d1908f75fc27c6292bfe0}{peso\_total}} = 0;}
-\DoxyCodeLine{13     \mbox{\hyperlink{classInventario_ae5e99f33e8a74635f6e0446562d85e58}{volumen\_total}} = 0;}
-\DoxyCodeLine{14 \}}
+\DoxyCodeLine{14 \{}
+\DoxyCodeLine{15     \mbox{\hyperlink{classInventario_a0f6c269a5160f0399a7745a7e345a6fd}{inv}}.clear();}
+\DoxyCodeLine{16     \mbox{\hyperlink{classInventario_aba17fb21d17d1908f75fc27c6292bfe0}{peso\_total}} = 0;}
+\DoxyCodeLine{17     \mbox{\hyperlink{classInventario_ae5e99f33e8a74635f6e0446562d85e58}{volumen\_total}} = 0;}
+\DoxyCodeLine{18 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classInventario_a2be8d13f714c701fba911c3fad7fba09}\label{classInventario_a2be8d13f714c701fba911c3fad7fba09}} 
+\index{Inventario@{Inventario}!calculo\_comercio@{calculo\_comercio}}
+\index{calculo\_comercio@{calculo\_comercio}!Inventario@{Inventario}}
+\doxysubsubsection{\texorpdfstring{calculo\_comercio()}{calculo\_comercio()}}
+{\footnotesize\ttfamily int Inventario\+::calculo\+\_\+comercio (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{p,  }\item[{int}]{q }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Calculo de la cantidad de productos que se pueden comerciar. 
+
+\begin{DoxyPrecond}{Precondición}
+Cierto. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondición}
+Devuelve la cantidad de productos que se pueden comerciar, si x$<$y (al primer inventario le faltan unidades) y p$>$q (al segundo inventario le sobran unidades) entonces se comercia el maximo unidades que se pueda (min(y-\/x, p-\/q)). 
+\end{DoxyPostcond}
+
+
+Definición en la línea 147 del archivo Inventario.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{148 \{}
+\DoxyCodeLine{149     \textcolor{keywordtype}{int} comercio = 0;}
+\DoxyCodeLine{150     \textcolor{keywordflow}{if} (x < y and p > q)}
+\DoxyCodeLine{151     \{}
+\DoxyCodeLine{152         comercio = min(y -\/ x, p -\/ q);}
+\DoxyCodeLine{153     \}}
+\DoxyCodeLine{154     \textcolor{keywordflow}{return} comercio;}
+\DoxyCodeLine{155 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classInventario_a2fe5c8bf348eb58066f3c43fd7e15a1b}\label{classInventario_a2fe5c8bf348eb58066f3c43fd7e15a1b}} 
@@ -137,40 +174,55 @@ Se han intercambiado productos entre los dos inventarios que le sobraban a uno y
 \end{DoxyPostcond}
 
 
-Definición en la línea 16 del archivo Inventario.\+cc.
+Definición en la línea 20 del archivo Inventario.\+cc.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{17 \{}
-\DoxyCodeLine{18     \textcolor{keywordflow}{for} (map<int, Cantidad>::iterator it = \mbox{\hyperlink{classInventario_a0f6c269a5160f0399a7745a7e345a6fd}{inv}}.begin(); it != \mbox{\hyperlink{classInventario_a0f6c269a5160f0399a7745a7e345a6fd}{inv}}.end(); ++it)}
-\DoxyCodeLine{19     \{}
-\DoxyCodeLine{20         \textcolor{keywordtype}{int} \textcolor{keywordtype}{id} = it-\/>first;}
-\DoxyCodeLine{21         \mbox{\hyperlink{structCantidad}{Cantidad}} cantidad = it-\/>second;}
-\DoxyCodeLine{22         \textcolor{keywordflow}{if} (inv2.contiene\_producto(\textcolor{keywordtype}{id}))}
-\DoxyCodeLine{23         \{}
-\DoxyCodeLine{24             \textcolor{keywordflow}{if} (cantidad.\mbox{\hyperlink{structCantidad_a2635b7d9f7562c749f0da6f0e5be4a00}{poseido}} < cantidad.\mbox{\hyperlink{structCantidad_a35fad64d0a8c89ca1ea2d9db6b12e1e5}{requerido}} and }
-\DoxyCodeLine{25             inv2.consultar\_cantidad\_poseida(\textcolor{keywordtype}{id}) > inv2.consultar\_cantidad\_requerida(\textcolor{keywordtype}{id}))}
-\DoxyCodeLine{26             \{}
-\DoxyCodeLine{27                 \textcolor{keywordtype}{int} cantidad\_comerciar = min(}
-\DoxyCodeLine{28                     cantidad.\mbox{\hyperlink{structCantidad_a35fad64d0a8c89ca1ea2d9db6b12e1e5}{requerido}} -\/ cantidad.\mbox{\hyperlink{structCantidad_a2635b7d9f7562c749f0da6f0e5be4a00}{poseido}}, }
-\DoxyCodeLine{29                     inv2.consultar\_cantidad\_poseida(\textcolor{keywordtype}{id}) -\/ inv2.consultar\_cantidad\_requerida(\textcolor{keywordtype}{id})}
-\DoxyCodeLine{30                 );}
-\DoxyCodeLine{31                 \mbox{\hyperlink{classInventario_af42e91e2900c9a6f1085142c96b8c6e2}{modificar\_cantidad\_poseida}}(\textcolor{keywordtype}{id}, cantidad\_comerciar, productos.\mbox{\hyperlink{classCjt__productos_a7365dfd4b738d4da0834cd2a75e9b8c5}{consultar\_producto}}(\textcolor{keywordtype}{id}));}
-\DoxyCodeLine{32                 inv2.modificar\_cantidad\_poseida(\textcolor{keywordtype}{id}, -\/cantidad\_comerciar, productos.\mbox{\hyperlink{classCjt__productos_a7365dfd4b738d4da0834cd2a75e9b8c5}{consultar\_producto}}(\textcolor{keywordtype}{id}));}
-\DoxyCodeLine{33             \}}
-\DoxyCodeLine{34             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (cantidad.\mbox{\hyperlink{structCantidad_a2635b7d9f7562c749f0da6f0e5be4a00}{poseido}} > cantidad.\mbox{\hyperlink{structCantidad_a35fad64d0a8c89ca1ea2d9db6b12e1e5}{requerido}} and }
-\DoxyCodeLine{35             inv2.consultar\_cantidad\_poseida(\textcolor{keywordtype}{id}) < inv2.consultar\_cantidad\_requerida(\textcolor{keywordtype}{id}))}
-\DoxyCodeLine{36             \{}
-\DoxyCodeLine{37                 \textcolor{keywordtype}{int} cantidad\_comerciar = min(}
-\DoxyCodeLine{38                     cantidad.\mbox{\hyperlink{structCantidad_a2635b7d9f7562c749f0da6f0e5be4a00}{poseido}} -\/ cantidad.\mbox{\hyperlink{structCantidad_a35fad64d0a8c89ca1ea2d9db6b12e1e5}{requerido}}, }
-\DoxyCodeLine{39                     inv2.consultar\_cantidad\_requerida(\textcolor{keywordtype}{id}) -\/ inv2.consultar\_cantidad\_poseida(\textcolor{keywordtype}{id})}
-\DoxyCodeLine{40                 );}
-\DoxyCodeLine{41                 \mbox{\hyperlink{classInventario_af42e91e2900c9a6f1085142c96b8c6e2}{modificar\_cantidad\_poseida}}(\textcolor{keywordtype}{id}, -\/cantidad\_comerciar, productos.\mbox{\hyperlink{classCjt__productos_a7365dfd4b738d4da0834cd2a75e9b8c5}{consultar\_producto}}(\textcolor{keywordtype}{id}));}
-\DoxyCodeLine{42                 inv2.modificar\_cantidad\_poseida(\textcolor{keywordtype}{id}, cantidad\_comerciar, productos.\mbox{\hyperlink{classCjt__productos_a7365dfd4b738d4da0834cd2a75e9b8c5}{consultar\_producto}}(\textcolor{keywordtype}{id}));}
-\DoxyCodeLine{43             \}}
-\DoxyCodeLine{44         \}}
-\DoxyCodeLine{45     \}}
-\DoxyCodeLine{46 \}}
+\DoxyCodeLine{21 \{}
+\DoxyCodeLine{22     map<int, Cantidad>::iterator it1 = \mbox{\hyperlink{classInventario_a0f6c269a5160f0399a7745a7e345a6fd}{inv}}.begin();}
+\DoxyCodeLine{23     map<int, Cantidad>::iterator it2 = inv2.inv.begin();}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25     \textcolor{comment}{// Iteramos hasta que llegamos al final de un inventario}}
+\DoxyCodeLine{26     \textcolor{keywordflow}{while} (it1 != \mbox{\hyperlink{classInventario_a0f6c269a5160f0399a7745a7e345a6fd}{inv}}.end() and it2 != inv2.inv.end()) \{}
+\DoxyCodeLine{27         \textcolor{keywordtype}{int} id1 = it1-\/>first;}
+\DoxyCodeLine{28         \mbox{\hyperlink{structCantidad}{Cantidad}} cantidad1 = it1-\/>second;}
+\DoxyCodeLine{29         \textcolor{keywordtype}{int} id2 = it2-\/>first;}
+\DoxyCodeLine{30         \mbox{\hyperlink{structCantidad}{Cantidad}} cantidad2 = it2-\/>second;}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32         \textcolor{keywordflow}{if} (id1 == id2) \textcolor{comment}{// Si los dos inventarios contienen el producto con identificador id1=id2}}
+\DoxyCodeLine{33         \{}
+\DoxyCodeLine{34             \textcolor{comment}{// Cojo el minimo entre lo que le falta a inv y lo que le sobra a inv2}}
+\DoxyCodeLine{35             \textcolor{keywordtype}{int} cantidad\_comerciar = \mbox{\hyperlink{classInventario_a2be8d13f714c701fba911c3fad7fba09}{calculo\_comercio}}(}
+\DoxyCodeLine{36                 cantidad1.\mbox{\hyperlink{structCantidad_a2635b7d9f7562c749f0da6f0e5be4a00}{poseido}}, cantidad1.\mbox{\hyperlink{structCantidad_a35fad64d0a8c89ca1ea2d9db6b12e1e5}{requerido}}, }
+\DoxyCodeLine{37                 cantidad2.\mbox{\hyperlink{structCantidad_a2635b7d9f7562c749f0da6f0e5be4a00}{poseido}}, cantidad2.\mbox{\hyperlink{structCantidad_a35fad64d0a8c89ca1ea2d9db6b12e1e5}{requerido}}}
+\DoxyCodeLine{38             );}
+\DoxyCodeLine{39             \textcolor{comment}{// Comercio entre los dos inventarios la cantidad indicada}}
+\DoxyCodeLine{40             \mbox{\hyperlink{classInventario_af42e91e2900c9a6f1085142c96b8c6e2}{modificar\_cantidad\_poseida}}(id1, cantidad\_comerciar, productos.\mbox{\hyperlink{classCjt__productos_a7365dfd4b738d4da0834cd2a75e9b8c5}{consultar\_producto}}(id1));}
+\DoxyCodeLine{41             inv2.modificar\_cantidad\_poseida(id2, -\/cantidad\_comerciar, productos.\mbox{\hyperlink{classCjt__productos_a7365dfd4b738d4da0834cd2a75e9b8c5}{consultar\_producto}}(id2));}
+\DoxyCodeLine{42             }
+\DoxyCodeLine{43             \textcolor{comment}{// Repito el proceso pero al reves}}
+\DoxyCodeLine{44             cantidad\_comerciar = \mbox{\hyperlink{classInventario_a2be8d13f714c701fba911c3fad7fba09}{calculo\_comercio}}(}
+\DoxyCodeLine{45                 cantidad2.\mbox{\hyperlink{structCantidad_a2635b7d9f7562c749f0da6f0e5be4a00}{poseido}}, cantidad2.\mbox{\hyperlink{structCantidad_a35fad64d0a8c89ca1ea2d9db6b12e1e5}{requerido}},}
+\DoxyCodeLine{46                 cantidad1.\mbox{\hyperlink{structCantidad_a2635b7d9f7562c749f0da6f0e5be4a00}{poseido}}, cantidad1.\mbox{\hyperlink{structCantidad_a35fad64d0a8c89ca1ea2d9db6b12e1e5}{requerido}}}
+\DoxyCodeLine{47             );}
+\DoxyCodeLine{48             \mbox{\hyperlink{classInventario_af42e91e2900c9a6f1085142c96b8c6e2}{modificar\_cantidad\_poseida}}(id1, -\/cantidad\_comerciar, productos.\mbox{\hyperlink{classCjt__productos_a7365dfd4b738d4da0834cd2a75e9b8c5}{consultar\_producto}}(id1));}
+\DoxyCodeLine{49             inv2.modificar\_cantidad\_poseida(id2, cantidad\_comerciar, productos.\mbox{\hyperlink{classCjt__productos_a7365dfd4b738d4da0834cd2a75e9b8c5}{consultar\_producto}}(id2));}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51             \textcolor{comment}{// Avanzamos los dos iteradores}}
+\DoxyCodeLine{52             it1++;}
+\DoxyCodeLine{53             it2++;}
+\DoxyCodeLine{54         \}}
+\DoxyCodeLine{55         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (id1 < id2) \textcolor{comment}{// Avanzamos el primer iterador ya que el producto con id1 no esta en inv2}}
+\DoxyCodeLine{56         \{}
+\DoxyCodeLine{57             it1++;}
+\DoxyCodeLine{58         \}}
+\DoxyCodeLine{59         \textcolor{keywordflow}{else} \textcolor{comment}{// Avanzamos el segundo iterador ya que el producto con id2 no esta en inv}}
+\DoxyCodeLine{60         \{}
+\DoxyCodeLine{61             it2++;  }
+\DoxyCodeLine{62         \}}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{64     \}}
+\DoxyCodeLine{65 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classInventario_a10653d00f09b3f3cb21cbe9e4175445b}\label{classInventario_a10653d00f09b3f3cb21cbe9e4175445b}} 
@@ -181,7 +233,7 @@ Definición en la línea 16 del archivo Inventario.\+cc.
 
 
 
-Devuelve la cantidad poseida del producto con identificador {\itshape id}. 
+Consultora de la cantidad poseida de un producto. 
 
 \begin{DoxyPrecond}{Precondición}
 El inventario contiene el producto con identificador {\itshape id}. 
@@ -191,13 +243,13 @@ Devuelve la cantidad poseida del producto con identificador {\itshape id}.
 \end{DoxyPostcond}
 
 
-Definición en la línea 79 del archivo Inventario.\+cc.
+Definición en la línea 98 del archivo Inventario.\+cc.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{80 \{}
-\DoxyCodeLine{81     \textcolor{keywordflow}{return} \mbox{\hyperlink{classInventario_a0f6c269a5160f0399a7745a7e345a6fd}{inv}}.at(\textcolor{keywordtype}{id}).poseido;}
-\DoxyCodeLine{82 \}}
+\DoxyCodeLine{99 \{}
+\DoxyCodeLine{100     \textcolor{keywordflow}{return} \mbox{\hyperlink{classInventario_a0f6c269a5160f0399a7745a7e345a6fd}{inv}}.at(\textcolor{keywordtype}{id}).poseido;}
+\DoxyCodeLine{101 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classInventario_aec3ff86ee51a3998f6395fc9e8b98481}\label{classInventario_aec3ff86ee51a3998f6395fc9e8b98481}} 
@@ -208,7 +260,7 @@ Definición en la línea 79 del archivo Inventario.\+cc.
 
 
 
-Devuelve la cantidad requerida del producto con identificador {\itshape id}. 
+Consultora de la cantidad requerida de un producto. 
 
 \begin{DoxyPrecond}{Precondición}
 El inventario contiene el producto con identificador {\itshape id}. 
@@ -218,13 +270,13 @@ Devuelve la cantidad requerida del producto con identificador {\itshape id}.
 \end{DoxyPostcond}
 
 
-Definición en la línea 84 del archivo Inventario.\+cc.
+Definición en la línea 103 del archivo Inventario.\+cc.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{85 \{   }
-\DoxyCodeLine{86     \textcolor{keywordflow}{return} \mbox{\hyperlink{classInventario_a0f6c269a5160f0399a7745a7e345a6fd}{inv}}.at(\textcolor{keywordtype}{id}).requerido;}
-\DoxyCodeLine{87 \}}
+\DoxyCodeLine{104 \{   }
+\DoxyCodeLine{105     \textcolor{keywordflow}{return} \mbox{\hyperlink{classInventario_a0f6c269a5160f0399a7745a7e345a6fd}{inv}}.at(\textcolor{keywordtype}{id}).requerido;}
+\DoxyCodeLine{106 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classInventario_a267ea5a01a51e42a97c030637f925323}\label{classInventario_a267ea5a01a51e42a97c030637f925323}} 
@@ -235,7 +287,7 @@ Definición en la línea 84 del archivo Inventario.\+cc.
 
 
 
-Imprime la cantidad poseida y requerida del producto con identificador {\itshape id}. 
+Operación de escritura de la cantidad de un prodcucto. 
 
 \begin{DoxyPrecond}{Precondición}
 El inventario contiene el producto con identificador {\itshape id}. 
@@ -245,14 +297,14 @@ Se ha escrito la cantidad poseida y requerida del producto con identificador {\i
 \end{DoxyPostcond}
 
 
-Definición en la línea 107 del archivo Inventario.\+cc.
+Definición en la línea 126 del archivo Inventario.\+cc.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{108 \{}
-\DoxyCodeLine{109     cout << \mbox{\hyperlink{classInventario_a10653d00f09b3f3cb21cbe9e4175445b}{consultar\_cantidad\_poseida}}(\textcolor{keywordtype}{id}) << endl;}
-\DoxyCodeLine{110     cout << \mbox{\hyperlink{classInventario_aec3ff86ee51a3998f6395fc9e8b98481}{consultar\_cantidad\_requerida}}(\textcolor{keywordtype}{id}) << endl;}
-\DoxyCodeLine{111 \}}
+\DoxyCodeLine{127 \{}
+\DoxyCodeLine{128     cout << \mbox{\hyperlink{classInventario_a10653d00f09b3f3cb21cbe9e4175445b}{consultar\_cantidad\_poseida}}(\textcolor{keywordtype}{id}) << endl;}
+\DoxyCodeLine{129     cout << \mbox{\hyperlink{classInventario_aec3ff86ee51a3998f6395fc9e8b98481}{consultar\_cantidad\_requerida}}(\textcolor{keywordtype}{id}) << endl;}
+\DoxyCodeLine{130 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classInventario_abb38481a98452a88f5e1b60443511a28}\label{classInventario_abb38481a98452a88f5e1b60443511a28}} 
@@ -263,7 +315,7 @@ Definición en la línea 107 del archivo Inventario.\+cc.
 
 
 
-Comprueba si el inventario contiene un producto con identificador {\itshape id}. 
+Consulta si el inventario contiene un producto. 
 
 \begin{DoxyPrecond}{Precondición}
 Cierto. 
@@ -273,13 +325,13 @@ Devuelve cierto si el inventario contiene un producto con identificador {\itshap
 \end{DoxyPostcond}
 
 
-Definición en la línea 74 del archivo Inventario.\+cc.
+Definición en la línea 93 del archivo Inventario.\+cc.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{75 \{}
-\DoxyCodeLine{76     \textcolor{keywordflow}{return} \mbox{\hyperlink{classInventario_a0f6c269a5160f0399a7745a7e345a6fd}{inv}}.count(\textcolor{keywordtype}{id});}
-\DoxyCodeLine{77 \}}
+\DoxyCodeLine{94 \{}
+\DoxyCodeLine{95     \textcolor{keywordflow}{return} \mbox{\hyperlink{classInventario_a0f6c269a5160f0399a7745a7e345a6fd}{inv}}.count(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{96 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classInventario_a8cbe864ffe64e5c2781f5e9522df2777}\label{classInventario_a8cbe864ffe64e5c2781f5e9522df2777}} 
@@ -290,7 +342,7 @@ Definición en la línea 74 del archivo Inventario.\+cc.
 
 
 
-Imprime el peso y volumen total del parametro implicito. 
+Operación de escritura del peso y volumen total. 
 
 \begin{DoxyPrecond}{Precondición}
 Cierto. 
@@ -300,13 +352,13 @@ Se ha escrito el peso y volumen total del parametro implicito en el canal standa
 \end{DoxyPostcond}
 
 
-Definición en la línea 113 del archivo Inventario.\+cc.
+Definición en la línea 132 del archivo Inventario.\+cc.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{114 \{}
-\DoxyCodeLine{115     cout << \mbox{\hyperlink{classInventario_aba17fb21d17d1908f75fc27c6292bfe0}{peso\_total}} << \textcolor{stringliteral}{"{} "{}} << \mbox{\hyperlink{classInventario_ae5e99f33e8a74635f6e0446562d85e58}{volumen\_total}} << endl;}
-\DoxyCodeLine{116 \}}
+\DoxyCodeLine{133 \{}
+\DoxyCodeLine{134     cout << \mbox{\hyperlink{classInventario_aba17fb21d17d1908f75fc27c6292bfe0}{peso\_total}} << \textcolor{stringliteral}{"{} "{}} << \mbox{\hyperlink{classInventario_ae5e99f33e8a74635f6e0446562d85e58}{volumen\_total}} << endl;}
+\DoxyCodeLine{135 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classInventario_a443c1bea51231135e50136ccdaa0ab15}\label{classInventario_a443c1bea51231135e50136ccdaa0ab15}} 
@@ -317,28 +369,28 @@ Definición en la línea 113 del archivo Inventario.\+cc.
 
 
 
-Imprime el inventario. 
+Operación de escritura del inventario. 
 
 \begin{DoxyPrecond}{Precondición}
-{\itshape Cierto.} 
+Cierto. 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondición}
 Se ha escrito por cada producto del inventario\+: su identificador y la cantidad poseida y requerida. 
 \end{DoxyPostcond}
 
 
-Definición en la línea 118 del archivo Inventario.\+cc.
+Definición en la línea 137 del archivo Inventario.\+cc.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{119 \{}
-\DoxyCodeLine{120     \textcolor{keywordflow}{for} (map<int, Cantidad>::const\_iterator it = \mbox{\hyperlink{classInventario_a0f6c269a5160f0399a7745a7e345a6fd}{inv}}.begin(); it != \mbox{\hyperlink{classInventario_a0f6c269a5160f0399a7745a7e345a6fd}{inv}}.end(); ++it)}
-\DoxyCodeLine{121     \{}
-\DoxyCodeLine{122         cout << it-\/>first << \textcolor{stringliteral}{"{} "{}};}
-\DoxyCodeLine{123         cout << it-\/>second.poseido << \textcolor{stringliteral}{"{} "{}};}
-\DoxyCodeLine{124         cout << it-\/>second.requerido << endl;}
-\DoxyCodeLine{125     \}}
-\DoxyCodeLine{126 \}}
+\DoxyCodeLine{138 \{}
+\DoxyCodeLine{139     \textcolor{keywordflow}{for} (map<int, Cantidad>::const\_iterator it = \mbox{\hyperlink{classInventario_a0f6c269a5160f0399a7745a7e345a6fd}{inv}}.begin(); it != \mbox{\hyperlink{classInventario_a0f6c269a5160f0399a7745a7e345a6fd}{inv}}.end(); ++it)}
+\DoxyCodeLine{140     \{}
+\DoxyCodeLine{141         cout << it-\/>first << \textcolor{stringliteral}{"{} "{}};}
+\DoxyCodeLine{142         cout << it-\/>second.poseido << \textcolor{stringliteral}{"{} "{}};}
+\DoxyCodeLine{143         cout << it-\/>second.requerido << endl;}
+\DoxyCodeLine{144     \}}
+\DoxyCodeLine{145 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classInventario_a1efe04122176cb9043bbf33eab81cd91}\label{classInventario_a1efe04122176cb9043bbf33eab81cd91}} 
@@ -349,36 +401,36 @@ Definición en la línea 118 del archivo Inventario.\+cc.
 
 
 
-Lee el inventario. 
+Operación de lectura del inventario. 
 
 \begin{DoxyPrecond}{Precondición}
-Se encuentra en el canal estandard de entrada un natural {\itshape n} y a continuacion {\itshape n} lineas con el identificador del producto y la cantidad poseida y requerida. 
+Se encuentra en el canal estandard de entrada un natural {\itshape N} y a continuacion {\itshape N/em$>$ lineas con el identificador valido de un producto, un entero no negativo con la cantidad poseida y un entero positivo con la cantidad requerida. }
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondición}
-Se ha leido el inventario del parametro implicito. 
+{\itshape  Se ha leido el inventario del parametro implicito. }
 \end{DoxyPostcond}
 
 
-Definición en la línea 89 del archivo Inventario.\+cc.
+Definición en la línea 108 del archivo Inventario.\+cc.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{90 \{}
-\DoxyCodeLine{91     \mbox{\hyperlink{classInventario_ad315d15ebbf2d5e233c776ce39aeaaea}{borrar\_inventario}}();}
-\DoxyCodeLine{92     \textcolor{keywordtype}{int} n;}
-\DoxyCodeLine{93     cin >> n;}
-\DoxyCodeLine{94     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < n; ++i) }
-\DoxyCodeLine{95     \{}
-\DoxyCodeLine{96         \textcolor{keywordtype}{int} id;}
-\DoxyCodeLine{97         \textcolor{keywordtype}{int} cantidad\_poseida;}
-\DoxyCodeLine{98         \textcolor{keywordtype}{int} cantidad\_requerida;}
-\DoxyCodeLine{99         cin >> id;}
-\DoxyCodeLine{100         cin >> cantidad\_poseida;}
-\DoxyCodeLine{101         cin >> cantidad\_requerida;}
-\DoxyCodeLine{102         \mbox{\hyperlink{classInventario_ac9f50cf3263f8fc21fe39a1d15dbfbbb}{poner\_producto}}(\textcolor{keywordtype}{id}, cantidad\_poseida, cantidad\_requerida, productos.\mbox{\hyperlink{classCjt__productos_a7365dfd4b738d4da0834cd2a75e9b8c5}{consultar\_producto}}(\textcolor{keywordtype}{id}));}
-\DoxyCodeLine{103     \}}
-\DoxyCodeLine{104 }
-\DoxyCodeLine{105 \}}
+\DoxyCodeLine{109 \{}
+\DoxyCodeLine{110     \mbox{\hyperlink{classInventario_ad315d15ebbf2d5e233c776ce39aeaaea}{borrar\_inventario}}();}
+\DoxyCodeLine{111     \textcolor{keywordtype}{int} n;}
+\DoxyCodeLine{112     cin >> n;}
+\DoxyCodeLine{113     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < n; ++i) }
+\DoxyCodeLine{114     \{}
+\DoxyCodeLine{115         \textcolor{keywordtype}{int} id;}
+\DoxyCodeLine{116         \textcolor{keywordtype}{int} cantidad\_poseida;}
+\DoxyCodeLine{117         \textcolor{keywordtype}{int} cantidad\_requerida;}
+\DoxyCodeLine{118         cin >> id;}
+\DoxyCodeLine{119         cin >> cantidad\_poseida;}
+\DoxyCodeLine{120         cin >> cantidad\_requerida;}
+\DoxyCodeLine{121         \mbox{\hyperlink{classInventario_ac9f50cf3263f8fc21fe39a1d15dbfbbb}{poner\_producto}}(\textcolor{keywordtype}{id}, cantidad\_poseida, cantidad\_requerida, productos.\mbox{\hyperlink{classCjt__productos_a7365dfd4b738d4da0834cd2a75e9b8c5}{consultar\_producto}}(\textcolor{keywordtype}{id}));}
+\DoxyCodeLine{122     \}}
+\DoxyCodeLine{123 }
+\DoxyCodeLine{124 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classInventario_af42e91e2900c9a6f1085142c96b8c6e2}\label{classInventario_af42e91e2900c9a6f1085142c96b8c6e2}} 
@@ -389,7 +441,7 @@ Definición en la línea 89 del archivo Inventario.\+cc.
 
 
 
-Modifica la cantidad poseida del producto con identificador {\itshape id}. 
+Modificadora de la cantidad poseida de un producto. 
 
 \begin{DoxyPrecond}{Precondición}
 El inventario contiene el producto con identificador {\itshape id}. 
@@ -399,15 +451,15 @@ Se ha modificado la cantidad poseida del producto con identificador {\itshape id
 \end{DoxyPostcond}
 
 
-Definición en la línea 48 del archivo Inventario.\+cc.
+Definición en la línea 67 del archivo Inventario.\+cc.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{49 \{}
-\DoxyCodeLine{50     \mbox{\hyperlink{classInventario_aba17fb21d17d1908f75fc27c6292bfe0}{peso\_total}} += cantidad\_poseida * prod.\mbox{\hyperlink{classProducto_a90e4cd5cab49d54c688b6ae4bec890e4}{consultar\_peso}}();}
-\DoxyCodeLine{51     \mbox{\hyperlink{classInventario_ae5e99f33e8a74635f6e0446562d85e58}{volumen\_total}} += cantidad\_poseida * prod.\mbox{\hyperlink{classProducto_ac51d2327dd5d4ff66029c7a985eab3f7}{consultar\_volumen}}();}
-\DoxyCodeLine{52     \mbox{\hyperlink{classInventario_a0f6c269a5160f0399a7745a7e345a6fd}{inv}}.at(\textcolor{keywordtype}{id}).poseido += cantidad\_poseida;}
-\DoxyCodeLine{53 \}}
+\DoxyCodeLine{68 \{}
+\DoxyCodeLine{69     \mbox{\hyperlink{classInventario_aba17fb21d17d1908f75fc27c6292bfe0}{peso\_total}} += cantidad\_poseida * prod.\mbox{\hyperlink{classProducto_a90e4cd5cab49d54c688b6ae4bec890e4}{consultar\_peso}}();}
+\DoxyCodeLine{70     \mbox{\hyperlink{classInventario_ae5e99f33e8a74635f6e0446562d85e58}{volumen\_total}} += cantidad\_poseida * prod.\mbox{\hyperlink{classProducto_ac51d2327dd5d4ff66029c7a985eab3f7}{consultar\_volumen}}();}
+\DoxyCodeLine{71     \mbox{\hyperlink{classInventario_a0f6c269a5160f0399a7745a7e345a6fd}{inv}}.at(\textcolor{keywordtype}{id}).poseido += cantidad\_poseida;}
+\DoxyCodeLine{72 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classInventario_a4022a32c14eb69a1a9521d99cb64618e}\label{classInventario_a4022a32c14eb69a1a9521d99cb64618e}} 
@@ -418,7 +470,7 @@ Definición en la línea 48 del archivo Inventario.\+cc.
 
 
 
-Modifica la cantidad requerida del producto con identificador {\itshape id}. 
+Modificadora de la cantidad requerida de un producto. 
 
 \begin{DoxyPrecond}{Precondición}
 El inventario contiene el producto con identificador {\itshape id}. 
@@ -428,13 +480,13 @@ Se ha modificado la cantidad requerida del producto con identificador {\itshape 
 \end{DoxyPostcond}
 
 
-Definición en la línea 55 del archivo Inventario.\+cc.
+Definición en la línea 74 del archivo Inventario.\+cc.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{56 \{}
-\DoxyCodeLine{57     \mbox{\hyperlink{classInventario_a0f6c269a5160f0399a7745a7e345a6fd}{inv}}.at(\textcolor{keywordtype}{id}).requerido += cantidad\_requerida;}
-\DoxyCodeLine{58 \}}
+\DoxyCodeLine{75 \{}
+\DoxyCodeLine{76     \mbox{\hyperlink{classInventario_a0f6c269a5160f0399a7745a7e345a6fd}{inv}}.at(\textcolor{keywordtype}{id}).requerido += cantidad\_requerida;}
+\DoxyCodeLine{77 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classInventario_ac9f50cf3263f8fc21fe39a1d15dbfbbb}\label{classInventario_ac9f50cf3263f8fc21fe39a1d15dbfbbb}} 
@@ -445,26 +497,26 @@ Definición en la línea 55 del archivo Inventario.\+cc.
 
 
 
-Añade el producto prod con identificador {\itshape id} al inventario. 
+Añade un producto al inventario. 
 
 \begin{DoxyPrecond}{Precondición}
-{\itshape El inventario no contiene el producto con identificador {\itshape id}.} 
+{\itshape El inventario no contiene el producto con identificador {\itshape id}. }
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondición}
-Se ha añadido el producto con identificador {\itshape id} al inventario con la cantidad poseida y requerida indicada. 
+{\itshape  Se ha añadido el producto con identificador {\itshape id} al inventario con la cantidad poseida y requerida indicada. }
 \end{DoxyPostcond}
 
 
-Definición en la línea 60 del archivo Inventario.\+cc.
+Definición en la línea 79 del archivo Inventario.\+cc.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{61 \{}
-\DoxyCodeLine{62     \mbox{\hyperlink{classInventario_a0f6c269a5160f0399a7745a7e345a6fd}{inv}}[id].poseido = 0;}
-\DoxyCodeLine{63     \mbox{\hyperlink{classInventario_a0f6c269a5160f0399a7745a7e345a6fd}{inv}}[id].requerido = 0;}
-\DoxyCodeLine{64     \mbox{\hyperlink{classInventario_af42e91e2900c9a6f1085142c96b8c6e2}{modificar\_cantidad\_poseida}}(\textcolor{keywordtype}{id}, cantidad\_poseida, prod);}
-\DoxyCodeLine{65     \mbox{\hyperlink{classInventario_a4022a32c14eb69a1a9521d99cb64618e}{modificar\_cantidad\_requerida}}(\textcolor{keywordtype}{id}, cantidad\_requerida);}
-\DoxyCodeLine{66 \}}
+\DoxyCodeLine{80 \{}
+\DoxyCodeLine{81     \mbox{\hyperlink{classInventario_a0f6c269a5160f0399a7745a7e345a6fd}{inv}}[id].poseido = 0;}
+\DoxyCodeLine{82     \mbox{\hyperlink{classInventario_a0f6c269a5160f0399a7745a7e345a6fd}{inv}}[id].requerido = 0;}
+\DoxyCodeLine{83     \mbox{\hyperlink{classInventario_af42e91e2900c9a6f1085142c96b8c6e2}{modificar\_cantidad\_poseida}}(\textcolor{keywordtype}{id}, cantidad\_poseida, prod);}
+\DoxyCodeLine{84     \mbox{\hyperlink{classInventario_a4022a32c14eb69a1a9521d99cb64618e}{modificar\_cantidad\_requerida}}(\textcolor{keywordtype}{id}, cantidad\_requerida);}
+\DoxyCodeLine{85 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classInventario_a1778706cec5564bcaa70f224945f5e94}\label{classInventario_a1778706cec5564bcaa70f224945f5e94}} 
@@ -475,7 +527,7 @@ Definición en la línea 60 del archivo Inventario.\+cc.
 
 
 
-Quita el producto con identificador {\itshape id} del inventario. 
+Quita un producto del inventario. 
 
 \begin{DoxyPrecond}{Precondición}
 El inventario contiene el producto con identificador {\itshape id}. 
@@ -485,14 +537,14 @@ Se ha eliminado el producto con identificador {\itshape id} del inventario.
 \end{DoxyPostcond}
 
 
-Definición en la línea 68 del archivo Inventario.\+cc.
+Definición en la línea 87 del archivo Inventario.\+cc.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{69 \{}
-\DoxyCodeLine{70     \mbox{\hyperlink{classInventario_af42e91e2900c9a6f1085142c96b8c6e2}{modificar\_cantidad\_poseida}}(\textcolor{keywordtype}{id}, -\/\mbox{\hyperlink{classInventario_a0f6c269a5160f0399a7745a7e345a6fd}{inv}}[\textcolor{keywordtype}{id}].poseido, prod);}
-\DoxyCodeLine{71     \mbox{\hyperlink{classInventario_a0f6c269a5160f0399a7745a7e345a6fd}{inv}}.erase(\textcolor{keywordtype}{id});}
-\DoxyCodeLine{72 \}}
+\DoxyCodeLine{88 \{}
+\DoxyCodeLine{89     \mbox{\hyperlink{classInventario_af42e91e2900c9a6f1085142c96b8c6e2}{modificar\_cantidad\_poseida}}(\textcolor{keywordtype}{id}, -\/\mbox{\hyperlink{classInventario_a0f6c269a5160f0399a7745a7e345a6fd}{inv}}[\textcolor{keywordtype}{id}].poseido, prod);}
+\DoxyCodeLine{90     \mbox{\hyperlink{classInventario_a0f6c269a5160f0399a7745a7e345a6fd}{inv}}.erase(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{91 \}}
 
 \end{DoxyCode}
 
@@ -510,7 +562,7 @@ Map que almacena la cantidad poseida y requerida de cada producto que posee.
 
 
 
-Definición en la línea 33 del archivo Inventario.\+hh.
+Definición en la línea 38 del archivo Inventario.\+hh.
 
 \mbox{\Hypertarget{classInventario_aba17fb21d17d1908f75fc27c6292bfe0}\label{classInventario_aba17fb21d17d1908f75fc27c6292bfe0}} 
 \index{Inventario@{Inventario}!peso\_total@{peso\_total}}
@@ -524,7 +576,7 @@ Peso total de todos los productoss del inventario.
 
 
 
-Definición en la línea 35 del archivo Inventario.\+hh.
+Definición en la línea 40 del archivo Inventario.\+hh.
 
 \mbox{\Hypertarget{classInventario_ae5e99f33e8a74635f6e0446562d85e58}\label{classInventario_ae5e99f33e8a74635f6e0446562d85e58}} 
 \index{Inventario@{Inventario}!volumen\_total@{volumen\_total}}
@@ -538,7 +590,7 @@ Volumen total de todos los productos del inventario.
 
 
 
-Definición en la línea 37 del archivo Inventario.\+hh.
+Definición en la línea 42 del archivo Inventario.\+hh.
 
 
 

@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -45,6 +49,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('program_8cc.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,7 +80,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#func-members">Funciones</a>  </div>
@@ -75,6 +95,16 @@ $(function() {
 Dependencia gráfica adjunta para program.cc:</div>
 <div class="dyncontent">
 <div class="center"><img src="program_8cc__incl.png" border="0" usemap="#aprogram_8cc" alt=""/></div>
+<map name="aprogram_8cc" id="aprogram_8cc">
+<area shape="rect" title="Programa principal para la práctica de PRO2." alt="" coords="86,5,181,32"/>
+<area shape="rect" href="Cuenca_8hh.html" title="Especificación de la clase Cuenca." alt="" coords="88,80,179,107"/>
+<area shape="rect" href="Cjt__ciudades_8hh.html" title="Especificacion de la clase Cjt_ciudades." alt="" coords="8,155,133,181"/>
+<area shape="rect" href="Barco_8hh.html" title="Especificación de la clase Ciudad." alt="" coords="158,155,237,181"/>
+<area shape="rect" href="Inventario_8hh.html" title="Especificación de la clase Inventario." alt="" coords="17,229,125,256"/>
+<area shape="rect" href="Cjt__productos_8hh.html" title="Especificación de la clase Cjt_productos." alt="" coords="5,304,136,331"/>
+<area shape="rect" href="Producto_8hh.html" title="Especificación de la clase Producto." alt="" coords="21,379,120,405"/>
+<area shape="rect" title=" " alt="" coords="152,229,243,256"/>
+</map>
 </div>
 </div>
 <p><a href="program_8cc_source.html">Ir al código fuente de este archivo.</a></p>
@@ -108,47 +138,50 @@ Funciones</h2></td></tr>
 
 <p>Programa principal para la práctica de PRO2: <em>Comercio fluvial</em>. </p>
 
-<p class="definition">Definición en la línea <a class="el" href="program_8cc_source.html#l00023">23</a> del archivo <a class="el" href="program_8cc_source.html">program.cc</a>.</p>
-<div class="fragment"><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;{</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="classCuenca.html">Cuenca</a> c;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="classBarco.html">Barco</a> b;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">int</span> n;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    cin &gt;&gt; n;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    c.<a class="code" href="classCuenca.html#afd65f95da65e39aec64e4508b9eacc0b">leer_productos</a>(n);</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    c.<a class="code" href="classCuenca.html#a529e35e876f731b016dbca367cb064d2">leer_rio</a>();</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    c.<a class="code" href="classCuenca.html#a05536a225b9bfc7290184c8202985871">modificar_barco</a>(b);</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">string</span> cm;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordflow">while</span> (cin &gt;&gt; cm)</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    {</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keywordflow">if</span> (cm == <span class="stringliteral">&quot;fin&quot;</span>) {</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        }</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="keywordflow">if</span> (cm == <span class="stringliteral">&quot;//&quot;</span>) {</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            <span class="keywordtype">string</span> igs;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            getline(cin, igs);</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            <span class="keywordflow">continue</span>;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        }</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;#&quot;</span> &lt;&lt; cm; </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keywordflow">if</span> (cm == <span class="stringliteral">&quot;leer_rio&quot;</span> or cm == <span class="stringliteral">&quot;lr&quot;</span>) {</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            cout &lt;&lt; endl;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            c.<a class="code" href="classCuenca.html#a529e35e876f731b016dbca367cb064d2">leer_rio</a>();</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            b.<a class="code" href="classBarco.html#a0c10121667902699dfe5eb9fc98ea666">borrar_viajes</a>();</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        }</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (cm == <span class="stringliteral">&quot;leer_inventario&quot;</span> or cm == <span class="stringliteral">&quot;li&quot;</span>) {</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            <span class="keywordtype">string</span> ciudad_id;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            cin &gt;&gt; ciudad_id;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            cout &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; ciudad_id &lt;&lt; endl;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            c.<a class="code" href="classCuenca.html#a1a2c3d8b5c2721c4c1d264933e61f055">leer_inventario</a>(ciudad_id);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        }</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (cm == <span class="stringliteral">&quot;leer_inventarios&quot;</span> or cm == <span class="stringliteral">&quot;ls&quot;</span>) {</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            cout &lt;&lt; endl;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            c.<a class="code" href="classCuenca.html#a1ef343481e4d5994c5e4393693a5895b">leer_inventarios</a>();</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        }</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (cm == <span class="stringliteral">&quot;modificar_barco&quot;</span> or cm == <span class="stringliteral">&quot;mb&quot;</span>) {</div>
+<p class="definition">Definición en la línea <a class="el" href="program_8cc_source.html#l00020">20</a> del archivo <a class="el" href="program_8cc_source.html">program.cc</a>.</p>
+<div class="fragment"><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="classCuenca.html">Cuenca</a> c;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="classBarco.html">Barco</a> b;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">int</span> n;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    cin &gt;&gt; n;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    c.<a class="code" href="classCuenca.html#afd65f95da65e39aec64e4508b9eacc0b">leer_productos</a>(n);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    c.<a class="code" href="classCuenca.html#a529e35e876f731b016dbca367cb064d2">leer_rio</a>();</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">int</span> id_compra, num_compra, id_venta, num_venta;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    cin &gt;&gt; id_compra &gt;&gt; num_compra &gt;&gt; id_venta &gt;&gt; num_venta;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    c.<a class="code" href="classCuenca.html#afd5f7b695b2d41bc037a74372536a5a7">modificar_barco</a>(id_compra, num_compra, id_venta, num_venta, b);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">string</span> cm;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordflow">while</span> (cin &gt;&gt; cm)</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keywordflow">if</span> (cm == <span class="stringliteral">&quot;fin&quot;</span>) {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        }</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keywordflow">if</span> (cm == <span class="stringliteral">&quot;//&quot;</span>) {</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            <span class="keywordtype">string</span> igs;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            getline(cin, igs);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        }</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;#&quot;</span> &lt;&lt; cm; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keywordflow">if</span> (cm == <span class="stringliteral">&quot;leer_rio&quot;</span> or cm == <span class="stringliteral">&quot;lr&quot;</span>) {</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            cout &lt;&lt; endl;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            c.<a class="code" href="classCuenca.html#a529e35e876f731b016dbca367cb064d2">leer_rio</a>();</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            b.<a class="code" href="classBarco.html#a0c10121667902699dfe5eb9fc98ea666">borrar_viajes</a>();</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        }</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (cm == <span class="stringliteral">&quot;leer_inventario&quot;</span> or cm == <span class="stringliteral">&quot;li&quot;</span>) {</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            <span class="keywordtype">string</span> ciudad_id;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            cin &gt;&gt; ciudad_id;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            cout &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; ciudad_id &lt;&lt; endl;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            c.<a class="code" href="classCuenca.html#a1a2c3d8b5c2721c4c1d264933e61f055">leer_inventario</a>(ciudad_id);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        }</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (cm == <span class="stringliteral">&quot;leer_inventarios&quot;</span> or cm == <span class="stringliteral">&quot;ls&quot;</span>) {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            cout &lt;&lt; endl;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            c.<a class="code" href="classCuenca.html#a1ef343481e4d5994c5e4393693a5895b">leer_inventarios</a>();</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        }</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (cm == <span class="stringliteral">&quot;modificar_barco&quot;</span> or cm == <span class="stringliteral">&quot;mb&quot;</span>) {</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            cin &gt;&gt; id_compra &gt;&gt; num_compra &gt;&gt; id_venta &gt;&gt; num_venta;</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            cout &lt;&lt; endl;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            c.<a class="code" href="classCuenca.html#a05536a225b9bfc7290184c8202985871">modificar_barco</a>(b);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            c.<a class="code" href="classCuenca.html#afd5f7b695b2d41bc037a74372536a5a7">modificar_barco</a>(id_compra, num_compra, id_venta, num_venta, b);</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        }</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (cm == <span class="stringliteral">&quot;escribir_barco&quot;</span> or cm == <span class="stringliteral">&quot;eb&quot;</span>) {</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            cout &lt;&lt; endl;</div>
@@ -174,7 +207,7 @@ Funciones</h2></td></tr>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            <span class="keywordtype">string</span> ciudad_id;</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            cin &gt;&gt; ciudad_id;</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            cout &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; ciudad_id &lt;&lt; endl;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            c.<a class="code" href="classCuenca.html#a4b086a60a63c1799974a04dc4f397bbe">escribir_ciudad</a>(ciudad_id);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            c.<a class="code" href="classCuenca.html#aafac7485e941805dbb71e72893e9372a">escribir_ciudad</a>(ciudad_id);</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        }</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (cm == <span class="stringliteral">&quot;poner_prod&quot;</span> or cm == <span class="stringliteral">&quot;pp&quot;</span>) {</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            <span class="keywordtype">string</span> ciudad_id;</div>
@@ -202,7 +235,7 @@ Funciones</h2></td></tr>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            <span class="keywordtype">int</span> prod_id;</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            cin &gt;&gt; ciudad_id &gt;&gt; prod_id;</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;            cout &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; ciudad_id &lt;&lt; <span class="charliteral">&#39; &#39;</span> &lt;&lt; prod_id &lt;&lt; endl;</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            c.<a class="code" href="classCuenca.html#afd0e89adecf56b6ecdf230baa1e9bc4b">consultar_producto_ciudad</a>(ciudad_id, prod_id);</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            c.<a class="code" href="classCuenca.html#aefd1dfe30d0059417549e3b2837a81d7">consultar_producto_ciudad</a>(ciudad_id, prod_id);</div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        }</div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (cm == <span class="stringliteral">&quot;comerciar&quot;</span> or cm == <span class="stringliteral">&quot;co&quot;</span>) {</div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;            <span class="keywordtype">string</span> ciudad_id1, ciudad_id2;</div>
@@ -221,32 +254,36 @@ Funciones</h2></td></tr>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    }</div>
 <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160; </div>
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;}</div>
-<div class="ttc" id="aclassBarco_html"><div class="ttname"><a href="classBarco.html">Barco</a></div><div class="ttdoc">Representa el barco de comercio de la cuenca fluvial.</div><div class="ttdef"><b>Definition:</b> <a href="Barco_8hh_source.html#l00024">Barco.hh:25</a></div></div>
-<div class="ttc" id="aclassBarco_html_a0c10121667902699dfe5eb9fc98ea666"><div class="ttname"><a href="classBarco.html#a0c10121667902699dfe5eb9fc98ea666">Barco::borrar_viajes</a></div><div class="ttdeci">void borrar_viajes()</div><div class="ttdef"><b>Definition:</b> <a href="Barco_8cc_source.html#l00027">Barco.cc:27</a></div></div>
-<div class="ttc" id="aclassBarco_html_a3f1c26f2f0565e375924dae85b2e89a0"><div class="ttname"><a href="classBarco.html#a3f1c26f2f0565e375924dae85b2e89a0">Barco::escribir_barco</a></div><div class="ttdeci">void escribir_barco() const</div><div class="ttdef"><b>Definition:</b> <a href="Barco_8cc_source.html#l00037">Barco.cc:37</a></div></div>
-<div class="ttc" id="aclassCuenca_html"><div class="ttname"><a href="classCuenca.html">Cuenca</a></div><div class="ttdoc">Representa la cuenca fluvial.</div><div class="ttdef"><b>Definition:</b> <a href="Cuenca_8hh_source.html#l00018">Cuenca.hh:19</a></div></div>
-<div class="ttc" id="aclassCuenca_html_a05536a225b9bfc7290184c8202985871"><div class="ttname"><a href="classCuenca.html#a05536a225b9bfc7290184c8202985871">Cuenca::modificar_barco</a></div><div class="ttdeci">void modificar_barco(Barco &amp;barco)</div><div class="ttdef"><b>Definition:</b> <a href="Cuenca_8cc_source.html#l00146">Cuenca.cc:146</a></div></div>
-<div class="ttc" id="aclassCuenca_html_a1a2c3d8b5c2721c4c1d264933e61f055"><div class="ttname"><a href="classCuenca.html#a1a2c3d8b5c2721c4c1d264933e61f055">Cuenca::leer_inventario</a></div><div class="ttdeci">void leer_inventario(const string &amp;ciudad_id)</div><div class="ttdef"><b>Definition:</b> <a href="Cuenca_8cc_source.html#l00247">Cuenca.cc:247</a></div></div>
-<div class="ttc" id="aclassCuenca_html_a1ef343481e4d5994c5e4393693a5895b"><div class="ttname"><a href="classCuenca.html#a1ef343481e4d5994c5e4393693a5895b">Cuenca::leer_inventarios</a></div><div class="ttdeci">void leer_inventarios()</div><div class="ttdef"><b>Definition:</b> <a href="Cuenca_8cc_source.html#l00266">Cuenca.cc:266</a></div></div>
-<div class="ttc" id="aclassCuenca_html_a1f5bbbd5dc0fff8176b70ffc0de9d233"><div class="ttname"><a href="classCuenca.html#a1f5bbbd5dc0fff8176b70ffc0de9d233">Cuenca::modificar_producto</a></div><div class="ttdeci">void modificar_producto(const string &amp;ciudad_id, int prod_id, int cantidad_disponible, int cantidad_requerida)</div><div class="ttdef"><b>Definition:</b> <a href="Cuenca_8cc_source.html#l00185">Cuenca.cc:185</a></div></div>
-<div class="ttc" id="aclassCuenca_html_a255b863bef1c20afb87e485d42c46896"><div class="ttname"><a href="classCuenca.html#a255b863bef1c20afb87e485d42c46896">Cuenca::poner_producto</a></div><div class="ttdeci">void poner_producto(const string &amp;ciudad_id, int prod_id, int cantidad_disponible, int cantidad_requerida)</div><div class="ttdef"><b>Definition:</b> <a href="Cuenca_8cc_source.html#l00165">Cuenca.cc:165</a></div></div>
-<div class="ttc" id="aclassCuenca_html_a4b086a60a63c1799974a04dc4f397bbe"><div class="ttname"><a href="classCuenca.html#a4b086a60a63c1799974a04dc4f397bbe">Cuenca::escribir_ciudad</a></div><div class="ttdeci">void escribir_ciudad(const string &amp;ciudad_id)</div><div class="ttdef"><b>Definition:</b> <a href="Cuenca_8cc_source.html#l00309">Cuenca.cc:309</a></div></div>
-<div class="ttc" id="aclassCuenca_html_a50322cf958ca7c16f47c0fa3b7a22ace"><div class="ttname"><a href="classCuenca.html#a50322cf958ca7c16f47c0fa3b7a22ace">Cuenca::hacer_viaje</a></div><div class="ttdeci">void hacer_viaje(Barco &amp;barco)</div><div class="ttdef"><b>Definition:</b> <a href="Cuenca_8cc_source.html#l00065">Cuenca.cc:65</a></div></div>
-<div class="ttc" id="aclassCuenca_html_a51870d649b499f3b73d4ea1532e2b526"><div class="ttname"><a href="classCuenca.html#a51870d649b499f3b73d4ea1532e2b526">Cuenca::redistribuir</a></div><div class="ttdeci">void redistribuir()</div><div class="ttdef"><b>Definition:</b> <a href="Cuenca_8cc_source.html#l00110">Cuenca.cc:110</a></div></div>
-<div class="ttc" id="aclassCuenca_html_a529e35e876f731b016dbca367cb064d2"><div class="ttname"><a href="classCuenca.html#a529e35e876f731b016dbca367cb064d2">Cuenca::leer_rio</a></div><div class="ttdeci">void leer_rio()</div><div class="ttdef"><b>Definition:</b> <a href="Cuenca_8cc_source.html#l00277">Cuenca.cc:277</a></div></div>
-<div class="ttc" id="aclassCuenca_html_aa7dbb8bd9399fc9322cd8913a8ce1d5b"><div class="ttname"><a href="classCuenca.html#aa7dbb8bd9399fc9322cd8913a8ce1d5b">Cuenca::quitar_producto</a></div><div class="ttdeci">void quitar_producto(const string &amp;ciudad_id, int prod_id)</div><div class="ttdef"><b>Definition:</b> <a href="Cuenca_8cc_source.html#l00215">Cuenca.cc:215</a></div></div>
-<div class="ttc" id="aclassCuenca_html_acce42ec6f63c1770ca00af1298a6dfbc"><div class="ttname"><a href="classCuenca.html#acce42ec6f63c1770ca00af1298a6dfbc">Cuenca::comerciar</a></div><div class="ttdeci">void comerciar(const string &amp;ciudad_id1, const string &amp;ciudad_id2)</div><div class="ttdef"><b>Definition:</b> <a href="Cuenca_8cc_source.html#l00130">Cuenca.cc:130</a></div></div>
-<div class="ttc" id="aclassCuenca_html_ae134ae0e7e68fedf2f6a9e33663eca70"><div class="ttname"><a href="classCuenca.html#ae134ae0e7e68fedf2f6a9e33663eca70">Cuenca::escribir_producto</a></div><div class="ttdeci">void escribir_producto(int prod_id) const</div><div class="ttdef"><b>Definition:</b> <a href="Cuenca_8cc_source.html#l00297">Cuenca.cc:297</a></div></div>
-<div class="ttc" id="aclassCuenca_html_aea95fd8fb86b0cbb69f6001df5dcf9ac"><div class="ttname"><a href="classCuenca.html#aea95fd8fb86b0cbb69f6001df5dcf9ac">Cuenca::numero_productos</a></div><div class="ttdeci">void numero_productos() const</div><div class="ttdef"><b>Definition:</b> <a href="Cuenca_8cc_source.html#l00236">Cuenca.cc:236</a></div></div>
-<div class="ttc" id="aclassCuenca_html_afd0e89adecf56b6ecdf230baa1e9bc4b"><div class="ttname"><a href="classCuenca.html#afd0e89adecf56b6ecdf230baa1e9bc4b">Cuenca::consultar_producto_ciudad</a></div><div class="ttdeci">void consultar_producto_ciudad(const string &amp;ciudad_id, int prod_id)</div><div class="ttdef"><b>Definition:</b> <a href="Cuenca_8cc_source.html#l00322">Cuenca.cc:322</a></div></div>
-<div class="ttc" id="aclassCuenca_html_afd65f95da65e39aec64e4508b9eacc0b"><div class="ttname"><a href="classCuenca.html#afd65f95da65e39aec64e4508b9eacc0b">Cuenca::leer_productos</a></div><div class="ttdeci">void leer_productos(int n)</div><div class="ttdef"><b>Definition:</b> <a href="Cuenca_8cc_source.html#l00241">Cuenca.cc:241</a></div></div>
+<div class="ttc" id="aclassBarco_html"><div class="ttname"><a href="classBarco.html">Barco</a></div><div class="ttdoc">Representa el barco de comercio de la cuenca fluvial.</div><div class="ttdef"><b>Definition:</b> <a href="Barco_8hh_source.html#l00026">Barco.hh:27</a></div></div>
+<div class="ttc" id="aclassBarco_html_a0c10121667902699dfe5eb9fc98ea666"><div class="ttname"><a href="classBarco.html#a0c10121667902699dfe5eb9fc98ea666">Barco::borrar_viajes</a></div><div class="ttdeci">void borrar_viajes()</div><div class="ttdoc">Vacia el vector del parametro implicito.</div><div class="ttdef"><b>Definition:</b> <a href="Barco_8cc_source.html#l00022">Barco.cc:22</a></div></div>
+<div class="ttc" id="aclassBarco_html_a3f1c26f2f0565e375924dae85b2e89a0"><div class="ttname"><a href="classBarco.html#a3f1c26f2f0565e375924dae85b2e89a0">Barco::escribir_barco</a></div><div class="ttdeci">void escribir_barco() const</div><div class="ttdoc">Escribe los atributos del barco y el vector de viajes.</div><div class="ttdef"><b>Definition:</b> <a href="Barco_8cc_source.html#l00040">Barco.cc:40</a></div></div>
+<div class="ttc" id="aclassCuenca_html"><div class="ttname"><a href="classCuenca.html">Cuenca</a></div><div class="ttdoc">Representa la información y las operaciones de la cuenca fluvial.</div><div class="ttdef"><b>Definition:</b> <a href="Cuenca_8hh_source.html#l00019">Cuenca.hh:20</a></div></div>
+<div class="ttc" id="aclassCuenca_html_a1a2c3d8b5c2721c4c1d264933e61f055"><div class="ttname"><a href="classCuenca.html#a1a2c3d8b5c2721c4c1d264933e61f055">Cuenca::leer_inventario</a></div><div class="ttdeci">void leer_inventario(const string &amp;ciudad_id)</div><div class="ttdoc">Operación de lectura del inventario de una ciudad.</div><div class="ttdef"><b>Definition:</b> <a href="Cuenca_8cc_source.html#l00289">Cuenca.cc:289</a></div></div>
+<div class="ttc" id="aclassCuenca_html_a1ef343481e4d5994c5e4393693a5895b"><div class="ttname"><a href="classCuenca.html#a1ef343481e4d5994c5e4393693a5895b">Cuenca::leer_inventarios</a></div><div class="ttdeci">void leer_inventarios()</div><div class="ttdoc">Operación de lectura de varios inventarios.</div><div class="ttdef"><b>Definition:</b> <a href="Cuenca_8cc_source.html#l00308">Cuenca.cc:308</a></div></div>
+<div class="ttc" id="aclassCuenca_html_a1f5bbbd5dc0fff8176b70ffc0de9d233"><div class="ttname"><a href="classCuenca.html#a1f5bbbd5dc0fff8176b70ffc0de9d233">Cuenca::modificar_producto</a></div><div class="ttdeci">void modificar_producto(const string &amp;ciudad_id, int prod_id, int cantidad_disponible, int cantidad_requerida)</div><div class="ttdoc">Modificadora de la cantidad poseida de un producto en una ciudad..</div><div class="ttdef"><b>Definition:</b> <a href="Cuenca_8cc_source.html#l00227">Cuenca.cc:227</a></div></div>
+<div class="ttc" id="aclassCuenca_html_a255b863bef1c20afb87e485d42c46896"><div class="ttname"><a href="classCuenca.html#a255b863bef1c20afb87e485d42c46896">Cuenca::poner_producto</a></div><div class="ttdeci">void poner_producto(const string &amp;ciudad_id, int prod_id, int cantidad_disponible, int cantidad_requerida)</div><div class="ttdoc">Añade un producto a una ciudad.</div><div class="ttdef"><b>Definition:</b> <a href="Cuenca_8cc_source.html#l00207">Cuenca.cc:207</a></div></div>
+<div class="ttc" id="aclassCuenca_html_a50322cf958ca7c16f47c0fa3b7a22ace"><div class="ttname"><a href="classCuenca.html#a50322cf958ca7c16f47c0fa3b7a22ace">Cuenca::hacer_viaje</a></div><div class="ttdeci">void hacer_viaje(Barco &amp;barco)</div><div class="ttdoc">Operación que realiza un viaje de comercio con el barco.</div><div class="ttdef"><b>Definition:</b> <a href="Cuenca_8cc_source.html#l00089">Cuenca.cc:89</a></div></div>
+<div class="ttc" id="aclassCuenca_html_a51870d649b499f3b73d4ea1532e2b526"><div class="ttname"><a href="classCuenca.html#a51870d649b499f3b73d4ea1532e2b526">Cuenca::redistribuir</a></div><div class="ttdeci">void redistribuir()</div><div class="ttdoc">Operación de redistribución de productos entre ciudades.</div><div class="ttdef"><b>Definition:</b> <a href="Cuenca_8cc_source.html#l00155">Cuenca.cc:155</a></div></div>
+<div class="ttc" id="aclassCuenca_html_a529e35e876f731b016dbca367cb064d2"><div class="ttname"><a href="classCuenca.html#a529e35e876f731b016dbca367cb064d2">Cuenca::leer_rio</a></div><div class="ttdeci">void leer_rio()</div><div class="ttdoc">Operación de lectura de la cuenca.</div><div class="ttdef"><b>Definition:</b> <a href="Cuenca_8cc_source.html#l00319">Cuenca.cc:319</a></div></div>
+<div class="ttc" id="aclassCuenca_html_aa7dbb8bd9399fc9322cd8913a8ce1d5b"><div class="ttname"><a href="classCuenca.html#aa7dbb8bd9399fc9322cd8913a8ce1d5b">Cuenca::quitar_producto</a></div><div class="ttdeci">void quitar_producto(const string &amp;ciudad_id, int prod_id)</div><div class="ttdoc">Quita un producto del inventario de una ciudad.</div><div class="ttdef"><b>Definition:</b> <a href="Cuenca_8cc_source.html#l00257">Cuenca.cc:257</a></div></div>
+<div class="ttc" id="aclassCuenca_html_aafac7485e941805dbb71e72893e9372a"><div class="ttname"><a href="classCuenca.html#aafac7485e941805dbb71e72893e9372a">Cuenca::escribir_ciudad</a></div><div class="ttdeci">void escribir_ciudad(const string &amp;ciudad_id) const</div><div class="ttdoc">Operación de escritura de una ciudad.</div><div class="ttdef"><b>Definition:</b> <a href="Cuenca_8cc_source.html#l00351">Cuenca.cc:351</a></div></div>
+<div class="ttc" id="aclassCuenca_html_acce42ec6f63c1770ca00af1298a6dfbc"><div class="ttname"><a href="classCuenca.html#acce42ec6f63c1770ca00af1298a6dfbc">Cuenca::comerciar</a></div><div class="ttdeci">void comerciar(const string &amp;ciudad_id1, const string &amp;ciudad_id2)</div><div class="ttdoc">Operación de comercio entre dos ciudades.</div><div class="ttdef"><b>Definition:</b> <a href="Cuenca_8cc_source.html#l00175">Cuenca.cc:175</a></div></div>
+<div class="ttc" id="aclassCuenca_html_ae134ae0e7e68fedf2f6a9e33663eca70"><div class="ttname"><a href="classCuenca.html#ae134ae0e7e68fedf2f6a9e33663eca70">Cuenca::escribir_producto</a></div><div class="ttdeci">void escribir_producto(int prod_id) const</div><div class="ttdoc">Operación de escritura de un producto.</div><div class="ttdef"><b>Definition:</b> <a href="Cuenca_8cc_source.html#l00339">Cuenca.cc:339</a></div></div>
+<div class="ttc" id="aclassCuenca_html_aea95fd8fb86b0cbb69f6001df5dcf9ac"><div class="ttname"><a href="classCuenca.html#aea95fd8fb86b0cbb69f6001df5dcf9ac">Cuenca::numero_productos</a></div><div class="ttdeci">void numero_productos() const</div><div class="ttdoc">Consultora del numero total de productos.</div><div class="ttdef"><b>Definition:</b> <a href="Cuenca_8cc_source.html#l00278">Cuenca.cc:278</a></div></div>
+<div class="ttc" id="aclassCuenca_html_aefd1dfe30d0059417549e3b2837a81d7"><div class="ttname"><a href="classCuenca.html#aefd1dfe30d0059417549e3b2837a81d7">Cuenca::consultar_producto_ciudad</a></div><div class="ttdeci">void consultar_producto_ciudad(const string &amp;ciudad_id, int prod_id) const</div><div class="ttdoc">Operación de escritura de un producto en una ciudad.</div><div class="ttdef"><b>Definition:</b> <a href="Cuenca_8cc_source.html#l00364">Cuenca.cc:364</a></div></div>
+<div class="ttc" id="aclassCuenca_html_afd5f7b695b2d41bc037a74372536a5a7"><div class="ttname"><a href="classCuenca.html#afd5f7b695b2d41bc037a74372536a5a7">Cuenca::modificar_barco</a></div><div class="ttdeci">void modificar_barco(int id_compra, int num_compra, int id_venta, int num_venta, Barco &amp;barco)</div><div class="ttdoc">Modificadora de los atributos del barco.</div><div class="ttdef"><b>Definition:</b> <a href="Cuenca_8cc_source.html#l00191">Cuenca.cc:191</a></div></div>
+<div class="ttc" id="aclassCuenca_html_afd65f95da65e39aec64e4508b9eacc0b"><div class="ttname"><a href="classCuenca.html#afd65f95da65e39aec64e4508b9eacc0b">Cuenca::leer_productos</a></div><div class="ttdeci">void leer_productos(int n)</div><div class="ttdoc">Operacion de lectura de un conjuto de productos.</div><div class="ttdef"><b>Definition:</b> <a href="Cuenca_8cc_source.html#l00283">Cuenca.cc:283</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="program_8cc.html">program.cc</a></li>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
 </body>
 </html>

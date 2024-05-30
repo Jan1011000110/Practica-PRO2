@@ -2,7 +2,7 @@
 \label{classProducto}\index{Producto@{Producto}}
 
 
-Representa un producto.  
+Representa un producto de un conjunto de productos.  
 
 
 
@@ -15,15 +15,15 @@ Representa un producto.
 \mbox{\hyperlink{classProducto_abdf37557185a4660251488b2db47fc7d}{Producto}} ()
 \begin{DoxyCompactList}\small\item\em Creadora por defecto. Se ejecuta automáticamente al declarar un producto. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classProducto_abf87cc63a1e018d20104cdb04d515dd2}{Producto}} (int \mbox{\hyperlink{classProducto_a5432f079d648035abccdf978b5ab6c74}{peso}}, int \mbox{\hyperlink{classProducto_a6d13a8d1a5dbe354f421e14e88a08273}{volumen}})
-\begin{DoxyCompactList}\small\item\em Creadora con valores concretos. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Creadora con valores definidos. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{classProducto_a90e4cd5cab49d54c688b6ae4bec890e4}{consultar\+\_\+peso}} () const
-\begin{DoxyCompactList}\small\item\em Devuelve el peso del parametro implicito. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Consultora del peso del parametro implicito. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{classProducto_ac51d2327dd5d4ff66029c7a985eab3f7}{consultar\+\_\+volumen}} () const
-\begin{DoxyCompactList}\small\item\em Devuelve el volumen del parametro implicito. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Consultora del volumen del parametro implicito. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classProducto_af3546b67d16efa3ddc66caf069f0c3ec}{escribir\+\_\+producto}} () const
 \begin{DoxyCompactList}\small\item\em Operación de escritura. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classProducto_ab6fe512a8aabc2ffb9be35646206e705}{leer\+\_\+producto}} ()
-\begin{DoxyCompactList}\small\item\em Operación de lectura del producto. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Operación de lectura. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Atributos privados}
 \begin{DoxyCompactItemize}
 \item 
@@ -34,9 +34,9 @@ int \mbox{\hyperlink{classProducto_a6d13a8d1a5dbe354f421e14e88a08273}{volumen}}
 
 
 \doxysubsection{Descripción detallada}
-Representa un producto. 
+Representa un producto de un conjunto de productos. 
 
-Definición en la línea 19 del archivo Producto.\+hh.
+Definición en la línea 22 del archivo Producto.\+hh.
 
 
 
@@ -59,11 +59,11 @@ El resultado es un producto el cual todos sus atributos no estan inicializados.
 \end{DoxyPostcond}
 
 
-Definición en la línea 3 del archivo Producto.\+cc.
+Definición en la línea 7 del archivo Producto.\+cc.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{3 \{\};}
+\DoxyCodeLine{7 \{\};}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classProducto_abf87cc63a1e018d20104cdb04d515dd2}\label{classProducto_abf87cc63a1e018d20104cdb04d515dd2}} 
@@ -74,7 +74,7 @@ Definición en la línea 3 del archivo Producto.\+cc.
 
 
 
-Creadora con valores concretos. 
+Creadora con valores definidos. 
 
 \begin{DoxyPrecond}{Precondición}
 Cierto. 
@@ -84,14 +84,14 @@ El resultado es un producto con peso = peso y volumen = volumen.
 \end{DoxyPostcond}
 
 
-Definición en la línea 5 del archivo Producto.\+cc.
+Definición en la línea 9 del archivo Producto.\+cc.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{6 \{}
-\DoxyCodeLine{7     this-\/>\mbox{\hyperlink{classProducto_a5432f079d648035abccdf978b5ab6c74}{peso}} = \mbox{\hyperlink{classProducto_a5432f079d648035abccdf978b5ab6c74}{peso}};}
-\DoxyCodeLine{8     this-\/>\mbox{\hyperlink{classProducto_a6d13a8d1a5dbe354f421e14e88a08273}{volumen}} = \mbox{\hyperlink{classProducto_a6d13a8d1a5dbe354f421e14e88a08273}{volumen}};}
-\DoxyCodeLine{9 \}}
+\DoxyCodeLine{10 \{}
+\DoxyCodeLine{11     this-\/>\mbox{\hyperlink{classProducto_a5432f079d648035abccdf978b5ab6c74}{peso}} = \mbox{\hyperlink{classProducto_a5432f079d648035abccdf978b5ab6c74}{peso}};}
+\DoxyCodeLine{12     this-\/>\mbox{\hyperlink{classProducto_a6d13a8d1a5dbe354f421e14e88a08273}{volumen}} = \mbox{\hyperlink{classProducto_a6d13a8d1a5dbe354f421e14e88a08273}{volumen}};}
+\DoxyCodeLine{13 \}}
 
 \end{DoxyCode}
 
@@ -105,7 +105,7 @@ Definición en la línea 5 del archivo Producto.\+cc.
 
 
 
-Devuelve el peso del parametro implicito. 
+Consultora del peso del parametro implicito. 
 
 \begin{DoxyPrecond}{Precondición}
 Cierto. 
@@ -115,13 +115,13 @@ Devuelve el peso del parametro implicito.
 \end{DoxyPostcond}
 
 
-Definición en la línea 11 del archivo Producto.\+cc.
+Definición en la línea 15 del archivo Producto.\+cc.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{12 \{}
-\DoxyCodeLine{13     \textcolor{keywordflow}{return} \mbox{\hyperlink{classProducto_a5432f079d648035abccdf978b5ab6c74}{peso}};}
-\DoxyCodeLine{14 \}}
+\DoxyCodeLine{16 \{}
+\DoxyCodeLine{17     \textcolor{keywordflow}{return} \mbox{\hyperlink{classProducto_a5432f079d648035abccdf978b5ab6c74}{peso}};}
+\DoxyCodeLine{18 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classProducto_ac51d2327dd5d4ff66029c7a985eab3f7}\label{classProducto_ac51d2327dd5d4ff66029c7a985eab3f7}} 
@@ -132,7 +132,7 @@ Definición en la línea 11 del archivo Producto.\+cc.
 
 
 
-Devuelve el volumen del parametro implicito. 
+Consultora del volumen del parametro implicito. 
 
 \begin{DoxyPrecond}{Precondición}
 Cierto. 
@@ -142,13 +142,13 @@ Devuelve el volumen del parametro implicito.
 \end{DoxyPostcond}
 
 
-Definición en la línea 16 del archivo Producto.\+cc.
+Definición en la línea 20 del archivo Producto.\+cc.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{17 \{}
-\DoxyCodeLine{18     \textcolor{keywordflow}{return} \mbox{\hyperlink{classProducto_a6d13a8d1a5dbe354f421e14e88a08273}{volumen}};}
-\DoxyCodeLine{19 \}}
+\DoxyCodeLine{21 \{}
+\DoxyCodeLine{22     \textcolor{keywordflow}{return} \mbox{\hyperlink{classProducto_a6d13a8d1a5dbe354f421e14e88a08273}{volumen}};}
+\DoxyCodeLine{23 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classProducto_af3546b67d16efa3ddc66caf069f0c3ec}\label{classProducto_af3546b67d16efa3ddc66caf069f0c3ec}} 
@@ -169,13 +169,13 @@ Se han escrito los atributos del parámetro implicito en el canal standard de sa
 \end{DoxyPostcond}
 
 
-Definición en la línea 21 del archivo Producto.\+cc.
+Definición en la línea 25 del archivo Producto.\+cc.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{22 \{}
-\DoxyCodeLine{23     cout << \mbox{\hyperlink{classProducto_a5432f079d648035abccdf978b5ab6c74}{peso}} << \textcolor{stringliteral}{"{} "{}} << \mbox{\hyperlink{classProducto_a6d13a8d1a5dbe354f421e14e88a08273}{volumen}} << endl;}
-\DoxyCodeLine{24 \}}
+\DoxyCodeLine{26 \{}
+\DoxyCodeLine{27     cout << \mbox{\hyperlink{classProducto_a5432f079d648035abccdf978b5ab6c74}{peso}} << \textcolor{stringliteral}{"{} "{}} << \mbox{\hyperlink{classProducto_a6d13a8d1a5dbe354f421e14e88a08273}{volumen}} << endl;}
+\DoxyCodeLine{28 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{classProducto_ab6fe512a8aabc2ffb9be35646206e705}\label{classProducto_ab6fe512a8aabc2ffb9be35646206e705}} 
@@ -186,7 +186,7 @@ Definición en la línea 21 del archivo Producto.\+cc.
 
 
 
-Operación de lectura del producto. 
+Operación de lectura. 
 
 \begin{DoxyPrecond}{Precondición}
 Està disponible en el canal estandard de entrada dos naturales, los atributos del parametro implicito. 
@@ -196,14 +196,14 @@ El paramentro implicito ahora tiene los atributos con los valores leidos.
 \end{DoxyPostcond}
 
 
-Definición en la línea 26 del archivo Producto.\+cc.
+Definición en la línea 30 del archivo Producto.\+cc.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{27 \{}
-\DoxyCodeLine{28     cin >> \mbox{\hyperlink{classProducto_a5432f079d648035abccdf978b5ab6c74}{peso}};}
-\DoxyCodeLine{29     cin >> \mbox{\hyperlink{classProducto_a6d13a8d1a5dbe354f421e14e88a08273}{volumen}};}
-\DoxyCodeLine{30 \}}
+\DoxyCodeLine{31 \{}
+\DoxyCodeLine{32     cin >> \mbox{\hyperlink{classProducto_a5432f079d648035abccdf978b5ab6c74}{peso}};}
+\DoxyCodeLine{33     cin >> \mbox{\hyperlink{classProducto_a6d13a8d1a5dbe354f421e14e88a08273}{volumen}};}
+\DoxyCodeLine{34 \}}
 
 \end{DoxyCode}
 
@@ -221,7 +221,7 @@ Peso del producto.
 
 
 
-Definición en la línea 23 del archivo Producto.\+hh.
+Definición en la línea 26 del archivo Producto.\+hh.
 
 \mbox{\Hypertarget{classProducto_a6d13a8d1a5dbe354f421e14e88a08273}\label{classProducto_a6d13a8d1a5dbe354f421e14e88a08273}} 
 \index{Producto@{Producto}!volumen@{volumen}}
@@ -235,7 +235,7 @@ Volumen del producto.
 
 
 
-Definición en la línea 25 del archivo Producto.\+hh.
+Definición en la línea 28 del archivo Producto.\+hh.
 
 
 

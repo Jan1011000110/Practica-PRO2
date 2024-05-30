@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +50,22 @@ $(function() {
 /* @license-end */</script>
 <div id="main-nav"></div>
 </div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('functions.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -85,7 +105,10 @@ $(function() {
 
 <h3><a id="index_c"></a>- c -</h3><ul>
 <li>calcular_viaje()
-: <a class="el" href="classCuenca.html#ab08023cdd20bbefe3ad6506502b4576c">Cuenca</a>
+: <a class="el" href="classCuenca.html#af717eab3a33f6029febfa3a975d150ef">Cuenca</a>
+</li>
+<li>calculo_comercio()
+: <a class="el" href="classInventario.html#a2be8d13f714c701fba911c3fad7fba09">Inventario</a>
 </li>
 <li>ciudades
 : <a class="el" href="classCjt__ciudades.html#a2ade4ab65c3151f4622e52c28734daf0">Cjt_ciudades</a>
@@ -104,6 +127,9 @@ $(function() {
 </li>
 <li>construir_estructura()
 : <a class="el" href="classCuenca.html#a54368a39d24f75b4171ae23b9d3771a4">Cuenca</a>
+</li>
+<li>consultar_barco()
+: <a class="el" href="classBarco.html#a1d8beae9db574feab5e6b4e8d07c5bf2">Barco</a>
 </li>
 <li>consultar_cantidad_poseida()
 : <a class="el" href="classCjt__ciudades.html#a051625bafd93c934caca6acc937b9c7d">Cjt_ciudades</a>
@@ -125,7 +151,7 @@ $(function() {
 , <a class="el" href="classInventario.html#a267ea5a01a51e42a97c030637f925323">Inventario</a>
 </li>
 <li>consultar_producto_ciudad()
-: <a class="el" href="classCuenca.html#afd0e89adecf56b6ecdf230baa1e9bc4b">Cuenca</a>
+: <a class="el" href="classCuenca.html#aefd1dfe30d0059417549e3b2837a81d7">Cuenca</a>
 </li>
 <li>consultar_volumen()
 : <a class="el" href="classProducto.html#ac51d2327dd5d4ff66029c7a985eab3f7">Producto</a>
@@ -149,7 +175,7 @@ $(function() {
 : <a class="el" href="classBarco.html#a3f1c26f2f0565e375924dae85b2e89a0">Barco</a>
 </li>
 <li>escribir_ciudad()
-: <a class="el" href="classCuenca.html#a4b086a60a63c1799974a04dc4f397bbe">Cuenca</a>
+: <a class="el" href="classCuenca.html#aafac7485e941805dbb71e72893e9372a">Cuenca</a>
 </li>
 <li>escribir_inventario()
 : <a class="el" href="classCjt__ciudades.html#ae7e30eab6b9697e8809f900d1b9d9620">Cjt_ciudades</a>
@@ -205,7 +231,8 @@ $(function() {
 : <a class="el" href="classCuenca.html#a1ef343481e4d5994c5e4393693a5895b">Cuenca</a>
 </li>
 <li>leer_producto()
-: <a class="el" href="classProducto.html#ab6fe512a8aabc2ffb9be35646206e705">Producto</a>
+: <a class="el" href="classCjt__productos.html#a5caf94e47e59fc718d3098e43e925195">Cjt_productos</a>
+, <a class="el" href="classProducto.html#ab6fe512a8aabc2ffb9be35646206e705">Producto</a>
 </li>
 <li>leer_productos()
 : <a class="el" href="classCjt__productos.html#a789883a0ec2b88a0d091a7503f16f87e">Cjt_productos</a>
@@ -220,7 +247,7 @@ $(function() {
 <h3><a id="index_m"></a>- m -</h3><ul>
 <li>modificar_barco()
 : <a class="el" href="classBarco.html#a367058928ea7f359cbc1854eff4442b1">Barco</a>
-, <a class="el" href="classCuenca.html#a05536a225b9bfc7290184c8202985871">Cuenca</a>
+, <a class="el" href="classCuenca.html#afd5f7b695b2d41bc037a74372536a5a7">Cuenca</a>
 </li>
 <li>modificar_cantidad_poseida()
 : <a class="el" href="classCjt__ciudades.html#ae6890381a27485565e0dc40b6f9d8b2b">Cjt_ciudades</a>
@@ -305,7 +332,7 @@ $(function() {
 
 <h3><a id="index_v"></a>- v -</h3><ul>
 <li>viajes
-: <a class="el" href="classBarco.html#a7f83cc30b7977cf63364b4e814933ed9">Barco</a>
+: <a class="el" href="classBarco.html#a77b20c4f1a8a565f43462a522e2c4509">Barco</a>
 </li>
 <li>volumen
 : <a class="el" href="classProducto.html#a6d13a8d1a5dbe354f421e14e88a08273">Producto</a>
@@ -315,9 +342,12 @@ $(function() {
 </li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generado por <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
 </body>
 </html>
